@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Gps Tracker') }}</title>
+    <title>Gps Tracker</title>
 
     <link href="css/vendors.min.css" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
