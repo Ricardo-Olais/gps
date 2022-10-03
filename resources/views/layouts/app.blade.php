@@ -141,7 +141,7 @@
   <div class="brand-sidebar" style="background-color:black !important;">
     <h1 class="logo-wrapper">
       <a class="brand-logo darken-1" href="index.html">
-        <img src="http://fasttransfer.com.mx:8080/images/color.png" alt="materialize logo">
+        <img src="images/color.png" alt="materialize logo">
         <span class="logo-text hide-on-med-and-down">Gps Tracker</span>
       </a>
       <a class="navbar-toggler" href="#">
