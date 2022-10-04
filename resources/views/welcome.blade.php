@@ -101,9 +101,14 @@ function autoplay() {
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
    <center><h2 style="font-weight: bold;font-family: secondary; font-size: 30px;">GPS tracker para un adecuado monitoreo de vehículos</h2></center>
+</div>
 
 <p style="text-align: justify;">
-Antes de adentrarnos a los detalles y beneficios que puede brindarle su GPS tracker a su empresa, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker. 
+Dale una segunda vida a tu celular, úsalo como GPS tracker, nuestra aplicación se instala fácilmente en equipos con sistema Android. Es importante que cuente con datos para que se comunique con  nuestros servidores.
+</p>
+
+<p style="text-align: justify;">
+Antes de adentrarnos a los detalles y beneficios que puede brindarle nuestro servicio de GPS, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker (localizaminave.com.mx)
 </p>
 
 <p style="text-align: justify;">
@@ -115,7 +120,6 @@ La función del GPS tracker es simple, se coloca este dispositivo a las unidades
 </p>
 
 
-</div>
 
 
 </div>
@@ -155,15 +159,15 @@ La función del GPS tracker es simple, se coloca este dispositivo a las unidades
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
-               <center><h4 class="card-title mb-0"><b>Historial de rutas y kilometrajes</b></h4></center>
+               <center><h4 class="card-title mb-0"><b>Historial de rutas</b></h4></center>
               
               
                <p style="text-align: justify;">
-                  Conozca el histórico de recorridos o la cantidad de kilómetros de las unidades de su flota vehicular y verifique que las entregas previamente planificadas se han cumplido en el tiempo establecido
+                  Conozca el histórico de recorridos de los vehículos, puedes consultar hasta 1 año de histórico, podrás descargar la información en un reporte excel.
                </p>
 
             <img src="img/home/rutas.png" width="100%">
-
+            <div id="espacio" style="width:100%;height:60px;"></div>
 
             </div>
          </div>
@@ -172,11 +176,7 @@ La función del GPS tracker es simple, se coloca este dispositivo a las unidades
 
 
 
-   
-
-
-
-       <div class="col s12 m5 l12 animate fadeRight">
+    <div class="col s12 m5 l12 animate fadeRight">
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
@@ -184,13 +184,36 @@ La función del GPS tracker es simple, se coloca este dispositivo a las unidades
               
               
                <p style="text-align: justify;">
-                  Verifique el uso adecuado que le están dando sus choferes a sus unidades, conozca si éstas se encuentran encendidas o apagadas, con o sin movimiento.
+                  Verifique el estatus de sus vehículos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas.
                </p>
 
                 <img src="img/home/vehiculos.png" width="100%">
             </div>
          </div>
       </div>
+
+
+      <div class="col s12 m5 l12 animate fadeRight">
+         <!-- Total Transaction -->
+         <div class="card">
+            <div class="card-content">
+               <center><h4 class="card-title mb-0"><b>Comparte la ubicación</b></h4></center>
+              
+              
+               <p style="text-align: justify;">
+                 Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real.
+               </p>
+
+            <center>
+            <img src="img/ubica.jpg" width="50%">
+            </center>
+   
+               
+            </div>
+         </div>
+      </div>
+
+
 
     
 
