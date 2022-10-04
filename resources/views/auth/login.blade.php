@@ -5,13 +5,15 @@
  <div id="main">
   <div class="row  vertical-modern-dashboard">
 
-   <center>
-    <div class="col s6 offset-s3">
+   <div class="col s3"></div>
+
+
+    <div class="col s12 m2 l5 center-a">
       <div class="card">
         <div class="card-content">
-          <span class="card-title">Acceso</span>
+          <center><span class="card-title"><b>Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
           
-          <div class="card-body">
+          <div class="card-body" style="margin-top:10px;">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -49,8 +51,8 @@
                            
                                 <center>
                               
-                                <button type="submit" class="waves-light btn"><i class="material-icons right">cloud</i>
-                                    {{ __('Login') }}
+                                <button type="submit" class="waves-light btn" style="border-radius:7px;"><i class="material-icons right">navigate_next</i>
+                                    {{ __('Entrar') }}
                                 </button></center>
 
                                 @if (Route::has('password.request'))
@@ -74,7 +76,7 @@
       </div>
     </div>
 
-</center>
+
   </div>
 
 
