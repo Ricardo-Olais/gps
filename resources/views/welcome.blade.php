@@ -105,8 +105,8 @@ function autoplay() {
 
  <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card">
-            <div class="card-content">
+         
+            
              
         <p style="text-align: justify;">
         Dale una segunda vida a tu celular, úsalo como GPS tracker, nuestra aplicación se instala fácilmente en equipos con sistema Android. Es importante que cuente con datos para que se comunique con  nuestros servidores.
@@ -124,8 +124,8 @@ function autoplay() {
         La función del GPS tracker es simple, se coloca este dispositivo a las unidades que desee monitorear y tendrá acceso a la ubicación precisa de ellas. Esto es posible gracias a que la señal enviada por GPS viaja a gran velocidad, lo que le brinda los datos de ubicación y demás de manera inmediata.
         </p>
         
-            </div>
-         </div>
+            
+        
       </div>
 
 
