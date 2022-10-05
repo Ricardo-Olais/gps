@@ -103,38 +103,42 @@ function autoplay() {
    <center><h2 style="font-weight: bold;font-family: secondary; font-size: 30px;">GPS tracker para un adecuado monitoreo de vehículos</h2></center>
 </div>
 
-<p style="text-align: justify;">
-Dale una segunda vida a tu celular, úsalo como GPS tracker, nuestra aplicación se instala fácilmente en equipos con sistema Android. Es importante que cuente con datos para que se comunique con  nuestros servidores.
-</p>
+ <div class="col s12 m2 l12 animate fadeRight">
+         <!-- Total Transaction -->
+         <div class="card">
+            <div class="card-content">
+             
+        <p style="text-align: justify;">
+        Dale una segunda vida a tu celular, úsalo como GPS tracker, nuestra aplicación se instala fácilmente en equipos con sistema Android. Es importante que cuente con datos para que se comunique con  nuestros servidores.
+        </p>
 
-<p style="text-align: justify;">
-Antes de adentrarnos a los detalles y beneficios que puede brindarle nuestro servicio de GPS, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker (localizaminave.com.mx)
-</p>
+        <p style="text-align: justify;margin-top: 15px;">
+        Antes de adentrarnos a los detalles y beneficios que puede brindarle nuestro servicio de GPS, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker <span style="color:#00bcd4;">(localizaminave.com.mx)</span>
+        </p>
 
-<p style="text-align: justify;">
-Dicho esto, un GPS tracker, conocido también como GPS para carros o rastreador GPS, es un dispositivo que se instala en los vehículos con la finalidad de localizarlos, a través de señales móviles, en cualquier lugar donde se encuentren.
-</p>
+        <p style="text-align: justify;margin-top: 15px;">
+        Dicho esto, un GPS tracker, conocido también como GPS para carros o rastreador GPS, es un dispositivo que se instala en los vehículos con la finalidad de localizarlos, a través de señales móviles, en cualquier lugar donde se encuentren.
+        </p>
 
-<p style="text-align: justify;">
-La función del GPS tracker es simple, se coloca este dispositivo a las unidades que desee monitorear y tendrá acceso a la ubicación precisa de ellas. Esto es posible gracias a que la señal enviada por GPS viaja a gran velocidad, lo que le brinda los datos de ubicación y demás de manera inmediata.
-</p>
+        <p style="text-align: justify;margin-top: 15px;">
+        La función del GPS tracker es simple, se coloca este dispositivo a las unidades que desee monitorear y tendrá acceso a la ubicación precisa de ellas. Esto es posible gracias a que la señal enviada por GPS viaja a gran velocidad, lo que le brinda los datos de ubicación y demás de manera inmediata.
+        </p>
+        
+            </div>
+         </div>
+      </div>
 
-
-
-
-</div>
 
 
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
          <div class="card" style="background-color: #00bcd4;border-radius: 15px;">
-            <div class="card-content">
-              <center> <h5 style="color:#fff !important;"><b>Funciones de una plataforma de control vehicular con sistema GPS tracker</h5></b></center>
+            
+              <center><b><h5 style="color:#fff;">Funciones de sistema GPS tracker</h5></b></center>
         
-            </div>
          </div>
-      </div>
+    </div>
 
 
       <div class="col s12 m2 l6 animate fadeRight">
@@ -205,7 +209,7 @@ La función del GPS tracker es simple, se coloca este dispositivo a las unidades
                </p>
 
             <center>
-            <img src="img/ubica.jpg" width="50%">
+            <img src="img/ubica.jpg" width="50%" style="margin-top: 10px;">
             </center>
    
                
