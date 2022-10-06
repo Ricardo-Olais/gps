@@ -135,6 +135,12 @@
   </div>
 </header>
 
+ <?php
+
+          function isMobile() {
+                      return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+                    }
+?>
 
 
 <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light navbar-full sidenav-active-rounded">
@@ -157,7 +163,11 @@
 
 
     <li class="navigation-header">
-      <a class="navigation-header-text">Localiza mi nave</a>
+     <?php if(isMobile()) { ?>
+      <img src="images/color.png" alt="materialize logo" width="80">
+
+    <?php } ?>
+      <!--a class="navigation-header-text" style="color:#00bcd4;">Localiza mi nave</a-->
       <i class="navigation-header-icon material-icons">more_horiz</i>
     </li>
     <li class="bold">
