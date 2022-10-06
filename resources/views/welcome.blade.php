@@ -77,7 +77,7 @@ function autoplay() {
        }
    </style>
 
-  <div class="col s12 m2 l12">
+  <div class="col s12 m2 l12" style="background-color: #fff;">
    
             <center>
               <video  autoplay muted id="video"  src="img/home/home.mp4"></video>
