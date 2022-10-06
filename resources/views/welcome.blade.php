@@ -66,36 +66,27 @@ function autoplay() {
    <div class="row vertical-modern-dashboard">
 
 
-   <div class="carousel carousel-slider center">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect" style="color:#fff !important;">Comienza ahora</a>
-    </div>
-    <div class="carousel-item white white-text" href="#one!" style="background-image:url('img/2mis beneficios-02.png');background-repeat: no-repeat;background-size:  1100px 250px;">
-      <!--h2>Localiza mi nave </h2>
-      <p class="orange-text">Expertos en localización vehicular</p-->
-    </div>
-    <div class="carousel-item white white-text" href="#two!" style="background-image:url('img/3mis beneficios-03.png');background-repeat: no-repeat;background-size: 1100px 250px;">
-      <!--h2>Localiza mi nave </h2>
-      <p class="orange-text">Expertos en localización vehicular</p-->
-    </div>
-    <div class="carousel-item white white-text" href="#three!" style="background-image:url('img/2mis beneficios-04.png');background-repeat: no-repeat;background-size:  1100px 250px;">
-      <!--h2>Localiza mi nave</h2>
-      <p class="orange-text">Expertos en localización vehicular</p-->
-    </div>
-    <div class="carousel-item white white-text" href="#four!" style="background-image:url('img/2mis beneficios-05.png');background-repeat: no-repeat;background-size:  1100px 250px;">
-      <!--h2>Localiza mi nave</h2>
-      <p class="orange-text">Expertos en localización vehicular</p-->
-    </div>
+   <style type="text/css">
+       
+       #video{
 
-     <div class="carousel-item white white-text" href="#four!" style="background-image:url('img/2mis beneficios-06.png');background-repeat: no-repeat;background-size:  1100px 250px;">
-      <!--h2>Localiza mi nave</h2>
-     <p class="orange-text">Expertos en localización vehicular</p-->
-    </div>
+        width: 80%;
+        outline:none;
+        border:none;
+       
+       }
+   </style>
 
-     <div class="carousel-item white white-text" href="#four!" style="background-image:url('img/2mis beneficios-07.png');background-repeat: no-repeat;background-size: 1100px 250px;">
-      <!--h2>Localiza mi nave</h2>
-     <p class="orange-text">Expertos en localización vehicular</p-->
-    </div>
+  <div class="col s12 m2 l12">
+   
+            <center>
+              <video  autoplay muted id="video"  src="img/home/home.mp4"></video>
+
+              <div id="iniciogps" style="margin-top:-45px;">
+                  <a class="waves-effect waves-light btn">Comenzar Ahora</a>
+              </div>
+            </center>
+      
   </div>
 
 
