@@ -125,7 +125,7 @@ function autoplay() {
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card" style="background-color: #00bcd4;border-radius: 15px;">
+         <div class="card" style="background-color: #00bcd4;">
             
               <center><b><h5 style="color:#fff;">Funciones de sistema GPS tracker</h5></b></center>
         
