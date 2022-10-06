@@ -70,7 +70,7 @@ function autoplay() {
        
        #video{
 
-        width: 90%;
+        width: 100%;
         outline:none;
         border:none;
        
