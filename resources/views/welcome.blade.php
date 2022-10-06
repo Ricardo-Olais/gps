@@ -80,7 +80,7 @@ function autoplay() {
   <div class="col s12 m2 l12" style="background-color: #fff;">
    
             <center>
-              <video  autoplay muted id="video"  src="img/home/home.mp4"></video>
+              <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
               <div id="iniciogps" style="margin-top:-45px;">
                   <a class="waves-effect waves-light btn">Comenzar Ahora</a>
