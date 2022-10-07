@@ -63,6 +63,8 @@
     var map;
 
 
+
+
     $(document).ready(function(){
 
          var fijo=0;
@@ -193,6 +195,8 @@
          $("#share-ubi").html("");
          imei=$(this).val();
 
+         $("#colorgps").css("color","#37E209");
+
          sensar();
 
         
@@ -256,8 +260,9 @@
                 var alerta2=data.rows.alerta2;
                
 
-                 if(lat==0){
+                 if(lat==0 && imei!=0){
 
+                 
                   $("#ubicacion").html("<span style='color:red'>Sin GPS, Registra tu vehículo en el apartado mis vehículos</span>");
                   $("#fijaubi").prop( "checked", false );
                   $("#onnotificaciones").prop( "checked", false );
@@ -484,7 +489,7 @@
                   
                      <div class="card">
                         <div class="card-content">
-                           <h4 class="card-title mb-0">Ubicación actual <i class="material-icons">my_location</i></h4>
+                           <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i></h4>
 
 
                              <div class="input-field col s12">
@@ -577,6 +582,46 @@
 </div>
 </div>
 </div>
+
+<div class="row">
+
+     <div class="row vertical-modern-dashboard">
+
+      <div class="col s12 m2 l12 animate fadeRight">
+        <div class="card">
+            <div class="card-content">
+                  <table>
+                    <thead>
+                      <tr>
+                          <th>Vehículo</th>
+                          <th>Ubicación</th>
+                          <th>Estatus</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Mi kia</td>
+                        <td>Abundio Gómez 74, Ahuizotla, 53378 Naucalpan de Juárez, Méx., México</td>
+                        <td><span style="color: #00bcd4;">En movimiento</span></td>
+                      </tr>
+                      <tr>
+                        <td>Auto 2</td>
+                        <td>Jellybean dedede 5</td>
+                        <td><span style="color:red;">Detenido</span></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+        </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+
+
 </div>
 
 
