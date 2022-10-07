@@ -66,6 +66,9 @@
 
         font-weight: bold;
     }
+    .modal {
+      max-height: 100% !important;
+    }
 </style>
 
 <div id="main" >
