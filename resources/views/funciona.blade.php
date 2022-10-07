@@ -60,7 +60,7 @@
               
                Únete a nosotros, ve al apartado de registro, ingresa tus datos (son pocos).
 
-               <img src="img/home/paso-1.jpg" width="100%">
+               <img src="img/home/paso-1.jpg" width="100%" style="margin-top: 10px;">
 
 
             </div>
@@ -77,7 +77,7 @@
               <p style="text-align:justify;">
                Descarga la aplicación has clic aquí <a href="gps.apk" style="color:#00bcd4;">GPS TRACKER</a>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
                <center>
-              <img src="img/home/paso-4.png" width="40%"></center>
+              <img src="img/home/paso-4.png" width="40%" style="margin-top: 10px;"></center>
 
 
             </div>
@@ -94,7 +94,7 @@
               <p style="text-align:justify;">
                En el menú, selecciona mis dispositivos, haz clic en el botón agregar vehículo (+), una vez registrado escanea el código QR generado con la aplicación <span style="color:#00bcd4;">gps tracker</span> de localizaminave.com.mx, con esto se vinculará el equipo celular con nuestros servidores.</p>
 
-               <img src="img/home/paso-2.jpg" width="100%">
+               <img src="img/home/paso-2.jpg" width="100%" style="margin-top: 10px;">
 
 
             </div>
@@ -112,6 +112,8 @@
 
               Seleccionamos Pagar Licencia y elegimos el plan que más te convenga, una vez pagada, abrir la aplicación <span style="color:#00bcd4;">gps tracker</span> (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME, en el menu Rastrear del sitio web podrás seleccionar tu vehículo a localizar.</p>
 
+              
+               <img src="img/imgapp.jpeg" width="100%" style="margin-top: 10px;">
 
             </div>
          </div>
