@@ -67,51 +67,34 @@
          </div>
       </div>
 
-          <div class="col s12 m2 l6 animate fadeRight">
-         <!-- Total Transaction -->
-         <div class="card">
-            <div class="card-content">
-               <h4 class="card-title mb-0">2.- Regístra tus dispositivos</h4>
-              
-              <p style="text-align:justify;">
-               En mi cuenta, selecciona mis vehículos, haz clic en el botón agregar vehículo (+), una vez registrado, descarga nuestra aplicación. </p>
-
-               <img src="img/home/paso-2.jpg" width="100%">
-
-
-            </div>
-         </div>
-      </div>
-
-        <div class="col s12 m2 l12 animate fadeRight">
-         <!-- Total Transaction -->
-         <div class="card">
-            <div class="card-content">
-               <h4 class="card-title mb-0">3.- Instalación fácil</h4>
-              
-              
-              <p style="text-align:justify;">
-               Una vez descargada la aplicación, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá al vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
-
-              <img src="img/home/paso-4.png" width="100%">
-
-
-            </div>
-         </div>
-      </div>
-
        <div class="col s12 m2 l6 animate fadeRight">
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
-               <h4 class="card-title mb-0">4.- Configuración de aplicación Android</h4>
+               <h4 class="card-title mb-0">2.- Instalación de aplicación android</h4>
               
               
               <p style="text-align:justify;">
-              Una vez instalada la aplicación, ingresa el id de dispositivo que aparece al abrir la aplicación instalada ejemplo: 13709f71c31ya970, ingresamos ese identificador en el apartado mis vehículos y damos clic en el botón de guardar, saldrá una ventana de confirmación.</p>
+               Descarga la aplicación has clic aquí <a href="gps.apk" style="color:#00bcd4;">GPS TRACKER</a>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
+               <center>
+              <img src="img/home/paso-4.png" width="40%"></center>
 
-               
 
+            </div>
+         </div>
+
+      </div>
+
+          <div class="col s12 m2 l6 animate fadeRight">
+         <!-- Total Transaction -->
+         <div class="card">
+            <div class="card-content">
+               <h4 class="card-title mb-0">3.- Regístra tus dispositivos en la plataforma</h4>
+              
+              <p style="text-align:justify;">
+               En el menú, selecciona mis dispositivos, haz clic en el botón agregar vehículo (+), una vez registrado escanea el código QR generado con la aplicación <span style="color:#00bcd4;">gps tracker</span> de localizaminave.com.mx, con esto se vinculará el equipo celular con nuestros servidores.</p>
+
+               <img src="img/home/paso-2.jpg" width="100%">
 
 
             </div>
@@ -122,16 +105,22 @@
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
-               <h4 class="card-title mb-0">5.- Pagar Licencia</h4>
+               <h4 class="card-title mb-0">4.- Pagar Licencia</h4>
               
               
               <p style="text-align:justify;">
-              Seleccionamos Pagar Licencia y elegimos el plan que más te convenga, una vez pagada, abrir la aplicación gps (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME, en el apartado Rastrear del sitio web podrás seleccionar tu vehículo a localizar.</p>
+
+              Seleccionamos Pagar Licencia y elegimos el plan que más te convenga, una vez pagada, abrir la aplicación <span style="color:#00bcd4;">gps tracker</span> (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME, en el menu Rastrear del sitio web podrás seleccionar tu vehículo a localizar.</p>
 
 
             </div>
          </div>
       </div>
+    
+
+      
+
+       
 
 
       
