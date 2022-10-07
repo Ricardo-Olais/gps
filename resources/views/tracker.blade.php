@@ -558,6 +558,8 @@
                          
                           <a class="waves-effect waves-warning btn reportar" style="background-color: red;width: 100%;border-radius: 15px;"><i class="material-icons right">report</i>Reportar</a>
 
+                          <a  href="tel:911" class="waves-effect waves-warning btn" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">local_phone</i>911</a>
+
                           <a class="waves-effect waves-warning btn" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">reorder</i>Histórico</a>
 
                           <a href='dispositivos' class="waves-effect waves-warning btn" style="background-color: '';margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">drive_eta</i>Mis dispositivos</a>

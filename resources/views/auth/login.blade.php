@@ -51,7 +51,7 @@
                            
                                 <center>
                               
-                                <button type="submit" class="waves-light btn" style="border-radius:7px;"><i class="material-icons right">navigate_next</i>
+                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%;"><i class="material-icons right">navigate_next</i>
                                     {{ __('Entrar') }}
                                 </button></center>
 
