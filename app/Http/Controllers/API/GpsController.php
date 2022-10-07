@@ -152,10 +152,12 @@ class GpsController extends Controller
                         $formattedAddrTo = str_replace(' ','+',$direccion);
                         
                         //Send request and receive json data
-                        $geocodeFrom = file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$formattedAddrFrom.'&sensor=false&key=$llave');
+                        $geocodeFrom = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrFrom&sensor=false&key=$llave");
                         $outputFrom = json_decode($geocodeFrom);
-                        $geocodeTo = file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$formattedAddrTo.'&sensor=false&key=$llave');
+                        $geocodeTo = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrTo&sensor=false&key=$llave");
                         $outputTo = json_decode($geocodeTo);
+
+                       
                         
                         //Get latitude and longitude from geo data
                         @$latitudeFrom = $outputFrom->results[0]->geometry->location->lat;
@@ -182,15 +184,15 @@ class GpsController extends Controller
                             if($alerta==0){
 
           
-                                $message = $twilio->messages
+                                /*$message = $twilio->messages
                                       ->create("whatsapp:+5215571136711", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);
+                                               ]);*/
                                       
-                               // print_r($message);    
-
+                               // print_r($message); 
+                              
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
 
 
@@ -234,9 +236,9 @@ class GpsController extends Controller
                         $formattedAddrTo = str_replace(' ','+',$direccion);
                         
                         //Send request and receive json data
-                        $geocodeFrom = file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$formattedAddrFrom.'&sensor=false&key=$llave');
+                        $geocodeFrom = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrFrom&sensor=false&key=$llave");
                         $outputFrom = json_decode($geocodeFrom);
-                        $geocodeTo = file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$formattedAddrTo.'&sensor=false&key=$llave');
+                        $geocodeTo = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrTo&sensor=false&key=$llave");
                         $outputTo = json_decode($geocodeTo);
                         
                         //Get latitude and longitude from geo data
@@ -262,12 +264,12 @@ class GpsController extends Controller
 
                             if($alerta2==0){
 
-                                $message = $twilio->messages
+                               /* $message = $twilio->messages
                                       ->create("whatsapp:+5215571136711", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Alerta de Geocerca: El vehículo $alias está fuera la geocerca establecida de $geocerca km., se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);
+                                               ]);*/
                                       
                                // print_r($message);    
 
