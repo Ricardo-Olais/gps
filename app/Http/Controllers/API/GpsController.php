@@ -40,6 +40,8 @@ class GpsController extends Controller
 
         $llave=env('LLAVE_API_MAPS');
 
+        date_default_timezone_set("America/Mexico_City");
+
 
         //consultar estatus de vehículo
 
@@ -67,7 +69,7 @@ class GpsController extends Controller
               $outputFrom = json_decode($geocodeFrom);
               $direccion=$outputFrom->results[0]->formatted_address;
 
-              date_default_timezone_set('Etc/UTC');
+             
 
 
 
