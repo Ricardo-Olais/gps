@@ -52,6 +52,8 @@ class RastreoController extends Controller
                     "activaGeocerca"=>$gps[0]->activaGeocerca,
                     "geocerca"=>$gps[0]->geocerca,
                     "alerta2"=>$gps[0]->alerta2,
+                    "pila"=>$gps[0]->pila,
+                    "fecha"=>$gps[0]->fecha_gps
 
 
                 );
@@ -68,7 +70,9 @@ class RastreoController extends Controller
                     "notificaciones"=>"",
                     "activaGeocerca"=>"",
                     "geocerca"=>"",
-                    "alerta2"=>""
+                    "alerta2"=>"",
+                    "pila"=>"",
+                    "fecha"=>""
 
 
                 );
