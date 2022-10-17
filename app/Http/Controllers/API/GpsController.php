@@ -144,7 +144,7 @@ class GpsController extends Controller
                         }
 
                     
-                        if($direccion_fija){
+                        if($direccion_fija!=""){
                         //fin de consulta
                         
                         //Change address format
@@ -229,7 +229,7 @@ class GpsController extends Controller
                                     
                         }
 
-                        if($address_geocerca){
+                        if($address_geocerca!=""){
 
                             //Change address format
                         $formattedAddrFrom = str_replace(' ','+',$address_geocerca);

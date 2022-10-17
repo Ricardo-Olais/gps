@@ -258,6 +258,8 @@
                 var activaGeocerca=data.rows.activaGeocerca;
                 var geocerca=data.rows.geocerca;
                 var alerta2=data.rows.alerta2;
+                var pila=data.rows.pila;
+                var fecha=data.rows.fecha;
                
 
                  if(lat==0 && imei!=0){
@@ -297,7 +299,18 @@
                            // alert(lat);
 
                             $("#share").css("display","");
-                            $("#ubicacion").html(direccion);
+
+                            if(pila<15){
+                                $("#ubicacion").html(direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+pila+ "%, último registro: "+fecha);
+
+                            }else{
+
+                                $("#ubicacion").html(direccion+ " , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+pila+ "%, último registro: "+fecha);
+
+                            }
+                            
+
+
                             $("#share-ubi").html(direccion);
 
                            //var mensaje="Hola el vehículo "+alias+" está en movimiento se encuentra en :"+ direccion+ ", consulta en localizaminave.com.mx.";  $(".parpadea").css("display","");
@@ -352,7 +365,7 @@
                         icon:icon,
                         title: 'el auto se encuentra aquí',
                         infoWindow: {
-                        content: "<div>Vehículo "+alias+" conducido por "+conductor+"</div>",
+                        content: "<div>Vehículo "+alias+" conducido por "+conductor+" batería: "+pila+"%, Último registro: "+fecha+"</div>",
                           maxWidth: 300
 
                          }
