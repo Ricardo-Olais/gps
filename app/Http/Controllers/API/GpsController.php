@@ -88,7 +88,7 @@ class GpsController extends Controller
                                         'longitud' =>$longitud,
                                         'velocidad' =>$velocidad,
                                         'fecha_gps' =>date("Y-m-d H:i:s"),
-                                        'pila' =>$velocidad,
+                                        'pila' =>$pila,
 
                                   ));
                          //insertamos registro en bitácora
