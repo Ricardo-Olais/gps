@@ -152,7 +152,7 @@
         el: '#map',
         lat: 19.3911668,
         lng: -99.4238191,
-        zoom:16
+        zoom:17
       });
 
 
@@ -243,6 +243,8 @@
 
 
           map.removeMarkers();
+
+
          $.get("consultacoordenadas",{numero:imei,_token:token},
 
             function(data){
@@ -411,14 +413,6 @@
             },'json');
 
          }
-
-
-
-
-
-       
-
-    
 
 
 
