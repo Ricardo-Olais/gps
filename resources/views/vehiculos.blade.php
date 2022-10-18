@@ -219,7 +219,7 @@
                       <div class="card-title">Dispositivo:</b> {{ $valor['alias_vehiculo'] }}</div>
                       <center>
                       <div class="title m-b-md" >
-                              {!!QrCode::size(150)->color(69, 187,194)->backgroundColor(0,0,0)->generate($valor['email'].'-'.$valor['id']) !!}
+                              {!!QrCode::size(170)->color(69, 187,194)->generate($valor['email'].'-'.$valor['id']) !!}
                              </div>
                              <span style="color:#45bbc2;">Escanea el código con la app localiza mi nave</span><br></center>
 
