@@ -24,6 +24,23 @@ class GpsController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    public function recibeqr($datos){
+
+      
+        $ext=explode('-', $datos);
+
+        $id=$ext[0];
+        $email=$ext[1];
+        $imei=$ext[2];
+
+        DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
+
+
+    }
+
+
+
     public function gps($imei,$ubicacion,$pila)
     {
       
