@@ -30,8 +30,8 @@ class GpsController extends Controller
       
         $ext=explode('-', $datos);
 
-        $id=$ext[0];
-        $email=$ext[1];
+        $id=$ext[1];
+        $email=$ext[0];
         $imei=$ext[2];
 
         DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
