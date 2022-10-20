@@ -45,6 +45,10 @@ Route::get('/planes', function () {
     return view('planes');
 });
 
+Route::get('/pago', function () {
+    return view('pago');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -63,6 +67,9 @@ Route::post('/alerta', 'RastreoController@alerta');
 Route::post('/guardafijo', 'RastreoController@guardafijo');
 Route::post('/guardafijonotificacion', 'RastreoController@guardafijonotificacion');
 Route::post('/activageocerca', 'RastreoController@activageocerca');
+Route::post('/actualizasubscripcion', 'RastreoController@actualizasubscripcion');
+Route::post('/licenciagratis', 'RastreoController@licenciagratis');
+
 
 
 Route::get('/test', 'NotificacionesController@whatsapp');

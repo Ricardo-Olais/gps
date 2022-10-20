@@ -2,6 +2,15 @@
 
 @section('content')
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+ <script src="https://js.stripe.com/v3/"></script>
+ <script src="js/script.js" defer></script>
+
+ <?php
+    session_start(); 
+    $_SESSION["id"]=$_REQUEST['id'];
+
+ ?>
+
 <script type="text/javascript">
   
 
@@ -9,12 +18,30 @@
    $('.fixed-action-btn').floatingActionButton();
 
 
+   $("#gratis").click(function(){
+
+        $("#basico").css("display","");
+
+   });
+
+   $("#basic-plan-btn").click(function(){
+
+        $("#plan1").css("display","");
+
+   });
+
+    $("#pro-plan-btn").click(function(){
+
+        $("#plan2").css("display","");
+
+   });
+
+
   });
 </script>
 
 <div id="main" >
       <div class="row">
-
       <div class="fixed-action-btn">
            <a class="btn-floating btn-large red">
              <i class="large material-icons">sms</i>
@@ -32,11 +59,6 @@
             <div class="section">
    <!-- Current balance & total transactions cards-->
    <div class="row vertical-modern-dashboard">
-
-
-
-
-
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
@@ -58,10 +80,53 @@
                <p style="text-align:justify;">Conoce la ubicación de tus seres queridos, de tu auto, motocicleta, en tiempo real.<br>
                Podrás tener la tranquilidad de saber dónde se encuentran en todo momento a través de tu PC o smartphone.</p>
 
+               
+
               <center><img src="img/home/real.png" width="50%"></center>
 
-             <button class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: #fff;color:#000;">Conseguir Plan
+             <button class="btn waves-effect waves-light" id='gratis' style="width:100%;background-color: #fff;color:#000;">Conseguir Plan
                 <i class="material-icons right">send</i>
+                 <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="basico">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
               </button>
 
 
@@ -82,9 +147,52 @@
 
               <center><img src="img/home/real.png" width="50%"></center>
 
-             <button class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: black;">Conseguir Plan
+
+
+             <a class="btn waves-effect waves-light" id="basic-plan-btn"  style="width:100%;background-color: black;">Conseguir Plan
                 <i class="material-icons right">send</i>
-              </button>
+                <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan1">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
+              </a>
 
 
             </div>
@@ -102,8 +210,50 @@
 
               <center><img src="img/home/real.png" width="50%"></center>
 
-              <button class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;">Conseguir Plan
+              <button class="btn waves-effect waves-light" id="pro-plan-btn"  style="width:100%;">Conseguir Plan
                 <i class="material-icons right">send</i>
+
+                <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan2">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
               </button>
 
 

@@ -345,6 +345,44 @@ class RastreoController extends Controller
               return json_encode($datos);
          }
 
+         public function actualizasubscripcion(){
+
+          session_start(); 
+
+          $user = Auth::user();
+
+          $id=$_SESSION["id"];
+
+          $email=$user->email;
+          $subscripcion=$_SESSION["subscripcion"];
+          DB::table('vehiculos')->where('email',$email)->where('id_vehiculo',$id)
+                                    ->update( array(
+                                             'estatus' =>2,
+                                             'subscripcion'=>$subscripcion
+                                             
+                                             ));
+
+         }
+
+
+
+         public function licenciagratis(){
+
+
+          $id=$_REQUEST["id"];
+
+          $user = Auth::user();
+          $email=$user->email;
+       
+          DB::table('vehiculos')->where('email',$email)->where('id_vehiculo',$id)
+                                ->update( 
+                                    array('estatus' =>5,'subscripcion'=>'Gratis'));
+
+          $datos['rows']=array("valida"=>"true");
+
+              return json_encode($datos);
+
+         }
 
 
          
