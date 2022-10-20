@@ -248,7 +248,7 @@
                               @if ($valor['estatus']==0) 
 
 
-                        <span class="badge pink lighten-5 pink-text text-accent-2 btn" onclick="pagar({{ $valor['id'] }})" style="width:100%;height: 40px;padding: 9px;">Pagar Licencia</span>
+                        <span class="badge green lighten-5 blue-text text-accent-2 btn" onclick="pagar({{ $valor['id'] }})" style="width:100%;height: 40px;padding: 9px;">Comienza prueba gratuita</span>
 
                           @else
 

@@ -147,7 +147,7 @@
 <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light navbar-full sidenav-active-rounded">
   <div class="brand-sidebar" style="background-color:black !important;">
     <h1 class="logo-wrapper">
-      <a class="brand-logo darken-1" href="index.html">
+      <a class="brand-logo darken-1" href="index">
         <img src="images/color.png" alt="materialize logo">
         <span class="logo-text hide-on-med-and-down">Gps Tracker</span>
       </a>
