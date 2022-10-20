@@ -245,16 +245,27 @@
                         </td></tr>
 
                         <tr><td class="colorcolum">Estatus</td> <td>
-                              @if ($valor['estatus']==0) 
+                        
+                        @if ($valor['estatus']==0) 
 
 
                         <span class="badge green lighten-5 blue-text text-accent-2 btn" onclick="pagar({{ $valor['id'] }})" style="width:100%;height: 40px;padding: 9px;">Comienza prueba gratuita</span>
 
-                          @else
+                        @endif
+
+                        @if ($valor['estatus']==1) 
+
+                         <span class="badge pink lighten-5 pink-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Pagar Licencia</span>
+
+                         @endif
+
+                        @if ($valor['estatus']==2) 
 
                          <span class="badge blue lighten-5 blue-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Licencia activa</span>
 
-                        @endif
+                         @endif
+
+                        
                         </td></tr>
 
                         <tr><td class="colorcolum">Acciones</td>  <td class="center-align">
