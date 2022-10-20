@@ -93,7 +93,7 @@ class RastreoController extends Controller
        $email=Auth::user()->email;
 
 
-        $gps = DB::table('vehiculos')->where('email',$email)->get()->where('estatus',2);
+        $gps = DB::table('vehiculos')->where('email',$email)->get()->whereIn('estatus', [2, 5]);
         date_default_timezone_set('America/Mexico_City');
 
          $datos=array();
