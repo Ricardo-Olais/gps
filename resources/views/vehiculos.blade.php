@@ -51,7 +51,59 @@
 
         function pagar(id){
 
-            alert("pagar "+id);
+           // alert("pagar "+id);
+           if($("#"+id).val()==""){
+                Swal.fire('Escanea el código QR con la app gps Tracker');
+
+            }else{
+            location.href="planes?id="+id;
+            
+            }
+
+
+        }
+
+        function pagargratis(id){
+
+            if($("#"+id).val()==""){
+                Swal.fire('Escanea el código QR con la app gps Tracker');
+
+            }else{
+
+                //actualizamos vehículo a estatus 5 que es pagar despues de la membrecía
+
+                
+                $.post("licenciagratis",{id:id,_token:token},
+
+                function(data){
+
+                    Swal.fire({
+                      title: 'Disfruta de los beneficios de localizaminave, tu licencia gratuita ha sido activada',
+                      showDenyButton: false,
+                      showCancelButton: false,
+                      confirmButtonText: 'Aceptar',
+                      denyButtonText: `Don't save`,
+                    }).then((result) => {
+                      /* Read more about isConfirmed, isDenied below */
+                      if (result.isConfirmed) {
+                        
+                        location.reload();
+
+                      } 
+                    });
+
+
+
+                   
+
+                },'json');
+
+
+            }
+
+            
+
+            //alert("gratis");
         }
       
   </script>
@@ -249,19 +301,25 @@
                         @if ($valor['estatus']==0) 
 
 
-                        <span class="badge green lighten-5 blue-text text-accent-2 btn" onclick="pagar({{ $valor['id'] }})" style="width:100%;height: 40px;padding: 9px;">Comienza prueba gratuita</span>
+                        <span class="badge green lighten-5 blue-text text-accent-2 btn" onclick="pagargratis({{ $valor['id'] }})" style="width:100%;height: 40px;padding: 9px;">Comienza prueba gratuita</span>
 
                         @endif
 
                         @if ($valor['estatus']==1) 
 
-                         <span class="badge pink lighten-5 pink-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Pagar Licencia</span>
+                         <span class="badge pink lighten-5 pink-text text-accent-2 btn" onclick="pagar({{ $valor['id'] }})" style="width:100%;height: 40px;padding: 9px;">Pagar Licencia</span>
 
                          @endif
 
                         @if ($valor['estatus']==2) 
 
                          <span class="badge blue lighten-5 blue-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Licencia activa</span>
+
+                         @endif
+
+                         @if ($valor['estatus']==5) 
+
+                         <span class="badge blue lighten-5 blue-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Licencia Gratuita 1 mes</span>
 
                          @endif
 

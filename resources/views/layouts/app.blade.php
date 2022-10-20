@@ -17,6 +17,7 @@
     <link href="css/themes//style.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/jquery.dataTables.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@4.0.5/bulma.css" rel="stylesheet">
 
     
 
@@ -271,11 +272,11 @@
    <script src="js/jquery.dataTables.js" ></script>
 
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+
    <script type="text/javascript">
-     document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems, options);
-  });
+  
 
   // Or with jQuery
 
@@ -287,7 +288,19 @@
     <script>
         var token="{{ csrf_token() }}";
 
+
+
     </script>
+
+      @if (Auth::guest())
+      <script type="text/javascript">
+         var sesion="";
+      </script>
+      @else
+      <script type="text/javascript">
+         var sesion="{{ auth()->user()->name}}";
+      </script>
+      @endif
 
         <main class="py-4">
             @yield('content')
