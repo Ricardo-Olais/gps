@@ -37,8 +37,9 @@ fetch("./config.php")
       .getElementById("basic-plan-btn")
       .addEventListener("click", function(evt) {
 
-      
-        if(sesion==""){
+        
+
+       if(sesion==""){
 
           location.href="login";
         }
@@ -66,7 +67,7 @@ fetch("./config.php")
          if(sesion==""){
 
           location.href="login";
-          
+
         }else{
         createCheckoutSession(proPriceId).then(function(data) {
           // Call Stripe.js method to redirect to the new Checkout page
