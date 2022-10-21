@@ -90,7 +90,7 @@ class GpsController extends Controller
 
 
 
-                if($estatus==1){
+                if($estatus==2 || $estatus==5){
 
                    // echo "activo y pagado";
 
