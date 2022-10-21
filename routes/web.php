@@ -57,6 +57,7 @@ Route::post('/vehiculosasignados', 'RastreoController@vehiculosasignados');
 Route::get('/dispositivos', 'RastreoController@gridvehiculos');
 Route::post('/actualizanumero', 'RastreoController@actualizanumero');
 Route::post('/guardavehiculo', 'RastreoController@guardavehiculo');
+Route::get('/historico', 'RastreoController@historico');
 
 
 
@@ -69,7 +70,7 @@ Route::post('/guardafijonotificacion', 'RastreoController@guardafijonotificacion
 Route::post('/activageocerca', 'RastreoController@activageocerca');
 Route::post('/actualizasubscripcion', 'RastreoController@actualizasubscripcion');
 Route::post('/licenciagratis', 'RastreoController@licenciagratis');
-
+Route::post('/eliminavehiculogps', 'RastreoController@eliminavehiculogps');
 
 
 Route::get('/test', 'NotificacionesController@whatsapp');
