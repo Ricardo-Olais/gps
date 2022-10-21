@@ -101,9 +101,35 @@
 
             }
 
-            
 
             //alert("gratis");
+        }
+
+        function eliminar(id){
+
+             Swal.fire({
+                      title: 'El vehículo será eliminado, al eliminarlo se perderá tu licencia pero mantendremos tu histórico, realmente deseas eliminarlo?',
+                      showDenyButton: false,
+                      showCancelButton: true,
+                      confirmButtonText: 'Si, lo quiero eliminar',
+                      denyButtonText: `Don't save`,
+                    }).then((result) => {
+                      /* Read more about isConfirmed, isDenied below */
+                      if (result.isConfirmed) {
+                        
+                        //location.reload();
+                         $.post("eliminavehiculogps",{id:id,_token:token},
+
+                                   function(data){
+
+                                     location.reload();
+
+                                   },'json');
+
+                      } 
+                      
+                    });
+
         }
       
   </script>
@@ -138,7 +164,7 @@
                       <div class="row">
                         <div class="input-field col s12 m2 l6">
                           <i class="material-icons prefix">android</i>
-                           <select name="tipovehiculo" id="tipovehiculo" required>
+                           <select name="tipovehiculo" id="tipovehiculo" required style="font-size:18px;">
                                  <option value="" disabled selected>Selecciona Tipo</option>
                                  <option>Auto</option>
                                  <option>Motocicleta</option>
@@ -146,26 +172,26 @@
                                  <option>Mascota</option>
                                  
                                </select>
-                               <label>Vehículo</label>
+                               <label style="font-size:18px;">Vehículo</label>
                         </div>
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">data_usage</i>
-                          <input id="alias" name='alias' type="text" class="validate" placeholder="Por ejemplo: Mi carro rojo" required>
-                          <label for="icon_telephone">Alias del dispositivo</label>
+                          <input id="alias" name='alias' type="text" class="validate" placeholder="Por ejemplo: Mi carro rojo" required style="font-size:18px;">
+                          <label for="icon_telephone" style="font-size:18px;">Alias del dispositivo</label>
                         </div>
                       </div>
 
                     <div class="row">
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">account_circle</i>
-                          <input  id="conductor" name="conductor" type="text" class="validate" placeholder="Conductor" required>
-                          <label for="icon_prefix">Nombre de conductor</label>
+                          <input  id="conductor" name="conductor" type="text" class="validate" placeholder="Conductor" required style="font-size:18px;">
+                          <label for="icon_prefix" style="font-size:18px;">Nombre de conductor</label>
                         </div>
 
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">phone</i>
-                          <input id="telefono" name="telefono" type="number" class="validate" placeholder="Teléfono" required>
-                          <label for="icon_telephone">Teléfono para notificaciones</label>
+                          <input id="telefono" name="telefono" type="number" class="validate" placeholder="Teléfono" required style="font-size:18px;">
+                          <label for="icon_telephone" style="font-size:18px;">Teléfono</label>
                         </div>
                       </div>
 
@@ -173,18 +199,18 @@
                        <div class="row">
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">directions_car</i>
-                          <input id="marca" name='marca' type="text" class="validate" placeholder="Opcional" required>
-                          <label for="icon_prefix">Marca del vehículo</label>
+                          <input id="marca" name='marca' type="text" class="validate" placeholder="Opcional" style="font-size:18px;">
+                          <label for="icon_prefix" style="font-size:18px;">Marca del vehículo</label>
                         </div>
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">event_note</i>
-                          <input id="placas" name='placas' type="text" class="validate" placeholder="Opcional" required>
-                          <label for="icon_telephone">No.Placas</label>
+                          <input id="placas" name='placas' type="text" class="validate" placeholder="Opcional" style="font-size:18px;">
+                          <label for="icon_telephone" style="font-size:18px;">No.Placas</label>
                         </div>
 
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">android</i>
-                           <select name="geocerca" id="geocerca" required>
+                           <select name="geocerca" id="geocerca" required style="font-size:18px;">
                                  <option value="" disabled selected>Selecciona Km</option>
                                  <?php
                                     for($i=1; $i<50;$i++){
@@ -195,7 +221,7 @@
                                  ?>
                                  
                                </select>
-                               <label>Geocerca (Km)</label>
+                               <label style="font-size:18px;">Geocerca (Km)</label>
                         </div>
                       </div>
 
@@ -328,7 +354,7 @@
 
                         <tr><td class="colorcolum">Acciones</td>  <td class="center-align">
 
-                        <a href="#" ><i class="material-icons pink-text" style="font-size:30px !important;">clear</i></a>
+                        <a href="#" ><i class="material-icons pink-text" style="font-size:30px !important;"  onclick="eliminar({{ $valor['id'] }})">clear</i></a>
                         <a href="#"><i class="material-icons yellow-text" style="font-size:30px !important;">edit</i></a>
 
                         </td></tr>

@@ -70,6 +70,13 @@
          var fijo=0;
          //var email='r.hernandez@lidcorp.mx';
 
+          $("#historico").click(function(){
+
+            //alert(imei);
+            location.href="historico?imei="+imei;
+
+        });
+
          //fijar ubicación
          $("#fijaubi").click(function(){
 
@@ -442,6 +449,8 @@
 
 
 
+
+
      
         
   });
@@ -530,7 +539,7 @@
                           <span id="resplandorverde" class="parpadea" style="display:none;font-size: 10px;">Alerta <i class="material-icons" style="color:red;padding: 2px;">notifications</i></strong></span></center>
                            
 
-                           <h4 class="card-title mb-0">Fijar ubicación</h4>
+                           <h4 class="card-title mb-0">Fijar ubicación (Auto estacionado)</h4>
 
                            <!-- Switch -->
                              <div class="switch">
@@ -572,7 +581,7 @@
 
                           <a  href="tel:911" class="waves-effect waves-warning btn" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">local_phone</i>911</a>
 
-                          <a class="waves-effect waves-warning btn" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">reorder</i>Histórico</a>
+                          <a class="waves-effect waves-warning btn" id="historico" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">reorder</i>Histórico</a>
 
                           <a href='dispositivos' class="waves-effect waves-warning btn" style="background-color: '';margin-top: 10px;width: 100%;border-radius: 15px;"><i class="material-icons right">drive_eta</i>Mis dispositivos</a>
 

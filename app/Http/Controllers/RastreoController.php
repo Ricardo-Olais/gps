@@ -192,6 +192,16 @@ class RastreoController extends Controller
 
             date_default_timezone_set('America/Mexico_City');
             $fecha=date("Y-m-d H:i:s");
+
+            $consultamosLicencias=DB::select("SELECT * FROM vehiculos WHERE email='$email' AND estatus in(5,2)");
+
+            if(count($consultamosLicencias)>0){
+
+                $estatus=1;
+            }else{
+
+                $estatus=0;
+            }
            
 
             DB::table('vehiculos')->insert(
@@ -204,7 +214,7 @@ class RastreoController extends Controller
                   'tipo' =>$tipovehiculo,
                   'id_imei_android'=>"",
                   'fecha'=>$fecha,
-                  'estatus'=>0,
+                  'estatus'=>$estatus,
                   'subscripcion'=>'',
                   'geocerca'=>$geocerca,
                   'telefono'=>"+52".$telefono,
@@ -383,6 +393,61 @@ class RastreoController extends Controller
               return json_encode($datos);
 
          }
+
+         public function eliminavehiculogps(){
+
+             $id=$_REQUEST['id'];
+             $user = Auth::user();
+             $email=$user->email;
+
+             $delete=DB::select("DELETE FROM vehiculos WHERE id_vehiculo=$id and email='$email'");
+
+
+             $datos['rows']=array("valida"=>"true");
+
+              return json_encode($datos);
+
+         }
+
+
+       public function historico(){
+
+       // $email="r.hernandez@lidcorp.mx";
+
+        $email=Auth::user()->email;
+        $imei=$_REQUEST['imei'];
+
+
+        $gps = DB::table('v_historico')->where('sesion',$email)->where('numero',$imei)->limit(100)->get();
+        date_default_timezone_set('America/Mexico_City');
+
+     
+
+       $datos=array();   
+        if(count($gps)>0){
+
+             foreach ($gps as $key => $value) {
+
+               
+            
+                       $datos[]=array(
+                               
+                                "alias_vehiculo"=>$value->alias_vehiculo,
+                                "direccion"=>$value->direccion,
+                                "fecha"=>$value->fecha_gps
+                               
+                            );
+                }
+
+        }
+
+        /* $result = json_encode($datos);
+
+         return $result;*/
+
+
+        return view('historico', ['datos' => $datos]);
+    }
 
 
          
