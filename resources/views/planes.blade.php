@@ -42,7 +42,7 @@
 
 <div id="main" >
       <div class="row">
-     <input type="text" name="valida" id="valida" value="<?php echo $_REQUEST['id']; ?>">
+     <input type="hidden" name="valida" id="valida" value="<?php echo $_REQUEST['id']; ?>">
       <div class="fixed-action-btn">
            <a class="btn-floating btn-large red">
              <i class="large material-icons">sms</i>
