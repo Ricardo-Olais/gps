@@ -22,6 +22,8 @@
 
         $("#basico").css("display","");
 
+
+
    });
 
    $("#basic-plan-btn").click(function(){
@@ -35,6 +37,8 @@
         $("#plan2").css("display","");
 
    });
+
+
 
 
   });
@@ -85,7 +89,7 @@
 
               <center><img src="img/home/real.png" width="50%"></center>
 
-             <button class="btn waves-effect waves-light" id='gratis' style="width:100%;background-color: #fff;color:#000;">Conseguir Plan
+             <a href="dispositivos"  class="btn waves-effect waves-light" id='gratis' style="width:100%;background-color: #fff;color:#000;">Conseguir Plan
                 <i class="material-icons right">send</i>
                  <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="basico">
                       <div class="spinner-layer spinner-blue">
@@ -128,7 +132,7 @@
                         </div>
                       </div>
                 </div>
-              </button>
+              </a>
 
 
             </div>
