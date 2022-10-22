@@ -197,7 +197,7 @@ class GpsController extends Controller
 
                         $km=($miles * 1.6093444);
 
-                       if($km>.05){ //mayor a 50 metros, activar alerta enviar notificación
+                       if($km>1){ //mayor a 50 metros, activar alerta enviar notificación
 
                     
                             if($alerta==0){
