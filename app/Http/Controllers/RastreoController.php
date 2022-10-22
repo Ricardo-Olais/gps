@@ -224,13 +224,16 @@ class RastreoController extends Controller
 
             $telefono="+52".$telefono;
 
+            $consultamax=DB::select("SELECT max(id_vehiculo) as ultimo FROM vehiculos WHERE email='$email' AND id_imei_android=''");
+           $ultimo= $consultamax[0]->ultimo;
+
            
             $mensaje="Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores.";
 
 
             $this->whatsapp($mensaje,$telefono);
 
-            return response()->json(['valida' =>"true"]);
+            return response()->json(['ultimo' =>$ultimo]);
 
     }
 

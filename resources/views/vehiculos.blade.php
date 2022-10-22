@@ -10,6 +10,10 @@
         $('.tooltipped').tooltip();
         $('.modal').modal();
 
+        var ultimo=localStorage.getItem("ultimo");
+
+       // alert(ultimo);
+
 
         $("#guardavehiculo").submit(function(){
 
@@ -18,6 +22,9 @@
             $.post("guardavehiculo",datos,
 
                 function(data){
+
+                   // alert(data.ultimo);
+                    localStorage.setItem("ultimo", data.ultimo);
 
                    location.reload();
 
@@ -41,6 +48,8 @@
 
                     if(data.rows.valida="true"){
 
+                        localStorage.setItem("id", id);
+
                         location.reload();
                     }
 
@@ -62,6 +71,8 @@
 
 
         }
+
+
 
         function pagargratis(id){
 
@@ -200,7 +211,7 @@
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">directions_car</i>
                           <input id="marca" name='marca' type="text" class="validate" placeholder="Opcional" style="font-size:18px;">
-                          <label for="icon_prefix" style="font-size:18px;">Marca del vehículo</label>
+                          <label for="icon_prefix" style="font-size:18px;">Marca</label>
                         </div>
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">event_note</i>
