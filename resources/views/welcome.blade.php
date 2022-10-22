@@ -84,7 +84,7 @@ function autoplay() {
               <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
               <div id="iniciogps" style="margin-top:-45px;">
-                  <a class="waves-effect waves-light btn">Prueba Gratis 1 mes</a>
+                  <a href="dispositivos" class="waves-effect waves-light btn">Prueba Gratis 1 mes</a>
               </div>
             </center>
       
