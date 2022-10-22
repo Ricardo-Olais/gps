@@ -60,7 +60,9 @@
           <li>
             <a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown">
               <span class="avatar-status avatar-online">
-                <img src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/avatar/avatar-7.png" alt="avatar">
+                <img src="img/cuenta.jpg" alt="avatar">
+
+
                 <i></i>
               </span>
             </a>
@@ -73,7 +75,10 @@
                   <i class="material-icons">person_outline</i>{{ Auth::user()->name }}</a>
               </li>
 
-          
+             <li tabindex="0">
+                <a class="grey-text text-darken-1" href="page-faq.html">
+                  <i class="material-icons">help_outline</i>Mi cuenta</a>
+              </li>
              
               <li tabindex="0">
                 <a class="grey-text text-darken-1" href="page-faq.html">
@@ -100,11 +105,7 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a class="waves-effect waves-block waves-light sidenav-trigger" href="#" data-target="slide-out-right">
-              <i class="material-icons">format_indent_increase</i>
-            </a>
-          </li>
+          
         </ul>
 
       @endguest
