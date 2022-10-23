@@ -482,17 +482,7 @@
                <a href="#!" class="modal-close waves-effect waves-green btn-flat">whatsapp</a>
              </div>
            </div-->
-         <div class="fixed-action-btn">
-           <a class="btn-floating btn-large red">
-             <i class="large material-icons">sms</i>
-           </a>
-           <ul>
-             <li><a class="btn-floating" style="background-color: #66E209;"><iconify-icon icon="mdi:whatsapp" style='font-size: 40px';></iconify-icon></a></li>
-             <li><a class="btn-floating  darken-1" style="background-color: #09A0E2;"><iconify-icon icon="fa-brands:facebook-messenger" style='font-size: 40px';></iconify-icon></a></li>
-             <!--li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-             <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li-->
-           </ul>
-         </div>
+       
 
         <div class="content-wrapper-before blue-grey lighten-5"></div>
           <div class="col s12">
