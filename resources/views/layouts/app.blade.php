@@ -35,6 +35,30 @@
 
 </head>
 <body>
+   <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your plugin de chat code -->
+      <div class="fb-customerchat"
+        attribution="biz_inbox"
+        greeting_dialog_display="hide"
+        page_id="102256168946438">
+      </div>
 <div id="app">
 
 <header class="page-topbar" id="header">
