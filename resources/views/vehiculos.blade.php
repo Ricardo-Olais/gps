@@ -255,7 +255,7 @@
            </div>
 
         <div class="fixed-action-btn" >
-           <a class="btn-floating btn-large red modal-trigger" href="#modal1" style="margin-bottom: 40px !important;">
+           <a class="btn-floating btn-large red modal-trigger" href="#modal1" style="margin-bottom: 70px !important;">
              <i class="large material-icons">add</i>
            </a>
            <!--ul>
