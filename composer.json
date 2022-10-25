@@ -17,7 +17,8 @@
         "laravel/ui": "2.4",
         "simplesoftwareio/simple-qrcode": "~2",
         "stripe/stripe-php": "^9.7",
-        "twilio/sdk": "^6.41"
+        "twilio/sdk": "^6.41",
+        "wisembly/elephant.io": "^3.3"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

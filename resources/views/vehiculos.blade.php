@@ -3,6 +3,34 @@
 @section('content')
 
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+ <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
+ <script>
+  var socket = io('http://localizaminave.com:3000');
+
+  var messages = document.getElementById('messages');
+
+
+  socket.on('message', function(msg) {
+    
+    Swal.fire({
+                      title: 'Dispositivo sincronizado correctamente',
+                      showDenyButton: false,
+                      showCancelButton: false,
+                      confirmButtonText: 'Aceptar',
+                      denyButtonText: `Don't save`,
+                    }).then((result) => {
+                      /* Read more about isConfirmed, isDenied below */
+                      if (result.isConfirmed) {
+                        
+                        location.reload();
+
+                      } 
+                    });
+
+
+
+  });
+</script>
 
 <script type="text/javascript">
      $(document).ready(function(){

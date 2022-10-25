@@ -22,3 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/gps/{imei}/{ubicacion}/{pila}', 'API\GpsController@gps');
 
 Route::get('/recibeqr/{datos}', 'API\GpsController@recibeqr');
+
+Route::get('/socketweb', 'API\GpsController@socketweb');
+

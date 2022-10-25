@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Twilio\Rest\Client;
+use ElephantIO\Client as Socket;
+use ElephantIO\Engine\SocketIO\Version2X;
+
+
 
 class GpsController extends Controller
 {
@@ -36,6 +40,21 @@ class GpsController extends Controller
 
         DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
 
+        $this->socketweb();
+
+
+    }
+
+    public function socketweb(){
+
+        $client = new Socket(new Version2X('http://localhost:3000'));
+        $client->initialize();
+        $client->emit('send-message', [
+            'email' => 'r.hernandez@lidcorp.mx',
+            'latitud' => '-39.777777',
+            'longitud'=> '100.883232'
+        ]);
+        $client->close();
 
     }
 
