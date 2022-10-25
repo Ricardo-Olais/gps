@@ -5,7 +5,7 @@
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
  <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
  <script>
-  var socket = io('https://localizaminave.com:3000');
+  var socket = io('http://localizaminave.com:3000');
 
   var messages = document.getElementById('messages');
 
