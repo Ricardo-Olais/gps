@@ -5,7 +5,7 @@
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
  <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
  <script>
-  var socket = io('http://localhost:3000');
+  var socket = io('http://187.245.4.2:3000');
 
   var messages = document.getElementById('messages');
 
