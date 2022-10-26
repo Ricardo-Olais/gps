@@ -40,7 +40,18 @@ class GpsController extends Controller
 
         DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
 
-        $this->socketweb();
+
+        $fields=array("prueba"=>1);
+       
+                    $fields_string = http_build_query($fields);
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/index.php?".$fields_string);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+               
+                    $string = curl_exec($ch);
+
+        //$this->socketweb();
 
 
     }
