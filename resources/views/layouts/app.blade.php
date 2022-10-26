@@ -263,7 +263,7 @@
 
     
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <i class="material-icons">settings_power</i>
         <span class="menu-title" data-i18n="User Profile">Salir</span>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
