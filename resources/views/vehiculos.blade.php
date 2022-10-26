@@ -4,13 +4,26 @@
 
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
  <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
  <script>
+
+    var myCanvas = document.createElement('canvas');
+    document.body.appendChild(myCanvas);
+
+    var myConfetti = confetti.create(myCanvas, {
+      resize: true,
+      useWorker: true
+    });
+
+
   var socket = io('http://187.245.4.2:3000');
 
   var messages = document.getElementById('messages');
 
 
   socket.on('message', function(msg) {
+
+    confetti();
     
     Swal.fire({
                       title: 'Dispositivo sincronizado correctamente',
