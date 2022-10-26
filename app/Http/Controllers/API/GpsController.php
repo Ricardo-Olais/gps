@@ -41,7 +41,7 @@ class GpsController extends Controller
         DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
 
 
-        $fields=array("prueba"=>1);
+        $fields=array("email"=>$email);
        
                     $fields_string = http_build_query($fields);
                     $ch = curl_init();
