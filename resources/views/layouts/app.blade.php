@@ -266,7 +266,7 @@
       <a class="waves-effect waves-cyan " href="https://localizaminave.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <i class="material-icons">settings_power</i>
         <span class="menu-title" data-i18n="User Profile">Salir</span>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        <form id="logout-form" action="https://localizaminave.com/logout" method="POST" class="d-none">
             @csrf
         </form>
       </a>
