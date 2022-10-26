@@ -199,7 +199,7 @@
       <i class="navigation-header-icon material-icons">more_horiz</i>
     </li>
     <li class="bold">
-      <a class="waves-effect waves-cyan " href="index">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/index">
         <i class="material-icons">home</i>
         <span class="menu-title" data-i18n="User Profile">Inicio</span>
       </a>
@@ -209,14 +209,14 @@
     
     @else
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="tracker">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/tracker">
         <i class="material-icons" style="color:Red;">location_on</i>
         <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
     </li>
 
       <li class="bold">
-      <a class="waves-effect waves-cyan " href="dispositivos">
+      <a class="waves-effect waves-cyan " href="http://localizaminave.com:8080/dispositivos">
         <i class="material-icons">drive_eta</i>
         <span class="menu-title" data-i18n="User Profile">Mis dispositivos</span>
       </a>
@@ -224,19 +224,19 @@
     @endif
 
     <li class="bold">
-      <a class="waves-effect waves-cyan" href="como-funciona">
+      <a class="waves-effect waves-cyan" href="https://localizaminave.com/como-funciona">
         <i class="material-icons">help_outline</i>
         <span class="menu-title" data-i18n="Support">Cómo funciona</span>
       </a>
     </li>
     <li class="bold">
-      <a class="waves-effect waves-cyan " href="planes">
+      <a class="waves-effect waves-cyan " href=https://localizaminave.com/planes">
         <i class="material-icons">monetization_on</i>
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
     </li>
     <li class="bold">
-      <a class="waves-effect waves-cyan " href="terminos">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/terminos">
         <i class="material-icons">view_headline</i>
         <span class="menu-title" data-i18n="User Profile">Términos y condiciones</span>
       </a>
@@ -245,7 +245,7 @@
     @if (Auth::guest())
 
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="register">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/register">
         <i class="material-icons">person_add</i>
         <span class="menu-title" data-i18n="User Profile">Regístrate</span>
       </a>
