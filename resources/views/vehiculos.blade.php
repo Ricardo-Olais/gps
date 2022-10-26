@@ -10,7 +10,7 @@
     var myCanvas = document.createElement('canvas');
     document.body.appendChild(myCanvas);
 
-    alert(email);
+
 
     var myConfetti = confetti.create(myCanvas, {
       resize: true,
@@ -26,9 +26,11 @@
   socket.on('message', function(msg) {
 
     confetti();
+
+   if(email==msg.email){
     
     Swal.fire({
-                      title: 'Dispositivo sincronizado correctamente '+msg.email,
+                      title: 'Dispositivo sincronizado correctamente',
                       showDenyButton: false,
                       showCancelButton: false,
                       confirmButtonText: 'Aceptar',
@@ -41,7 +43,7 @@
 
                       } 
                     });
-
+        }
 
 
   });
