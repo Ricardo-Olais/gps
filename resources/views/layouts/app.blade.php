@@ -252,7 +252,7 @@
     </li>
 
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="{{ route('login') }}">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/login">
         <i class="material-icons">vpn_key</i>
         <span class="menu-title" data-i18n="User Profile">Login</span>
       </a>
