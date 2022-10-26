@@ -230,7 +230,7 @@
       </a>
     </li>
     <li class="bold">
-      <a class="waves-effect waves-cyan " href=https://localizaminave.com/planes">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/planes">
         <i class="material-icons">monetization_on</i>
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
