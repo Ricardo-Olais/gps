@@ -10,6 +10,8 @@
     var myCanvas = document.createElement('canvas');
     document.body.appendChild(myCanvas);
 
+    alert(email);
+
     var myConfetti = confetti.create(myCanvas, {
       resize: true,
       useWorker: true

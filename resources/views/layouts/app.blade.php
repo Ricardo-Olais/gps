@@ -321,10 +321,12 @@
       @if (Auth::guest())
       <script type="text/javascript">
          var sesion="";
+         var email="";
       </script>
       @else
       <script type="text/javascript">
          var sesion="{{ auth()->user()->name}}";
+         var email="{{ auth()->user()->email}}";
       </script>
       @endif
 
