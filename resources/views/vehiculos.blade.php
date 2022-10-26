@@ -26,7 +26,7 @@
     confetti();
     
     Swal.fire({
-                      title: 'Dispositivo sincronizado correctamente',
+                      title: 'Dispositivo sincronizado correctamente '+msg.email,
                       showDenyButton: false,
                       showCancelButton: false,
                       confirmButtonText: 'Aceptar',
