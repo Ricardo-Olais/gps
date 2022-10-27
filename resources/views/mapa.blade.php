@@ -156,7 +156,7 @@
       console.log(msg);
 
       var customIcon = new L.Icon({
-      iconUrl: 'http://localizaminave.com:8080/img/auto.png',
+      iconUrl: 'http://localizaminave.com:8080/img/gps.png',
       iconSize: [50, 50],
       iconAnchor: [25, 50]
     });
