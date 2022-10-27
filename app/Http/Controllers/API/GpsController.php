@@ -81,7 +81,7 @@ class GpsController extends Controller
         $velocidad=$gps[2];
 
 
-        $fields=array("latitud"=>$latitud,"longitud"=>$longitud);
+        $fields=array("latitud"=>$longitud,"longitud"=>$latitud);
        
                     $fields_string = http_build_query($fields);
                     $ch = curl_init();
