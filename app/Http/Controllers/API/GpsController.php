@@ -80,15 +80,6 @@ class GpsController extends Controller
         $longitud=$gps[1];
         $velocidad=$gps[2];
 
-        $fields=array("latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,"direccion"=>"test test","pila"=>"55","fecha"=>date("Y-m-d H:i:s"));
-       
-              $fields_string = http_build_query($fields);
-                    $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubica.php?".$fields_string);
-                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-
-               
-                    $string = curl_exec($ch);
 
       
 
@@ -129,7 +120,16 @@ class GpsController extends Controller
               $direccion=$outputFrom->results[0]->formatted_address;
 
 
-              
+              $fields=array("latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,"direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s"));
+       
+              $fields_string = http_build_query($fields);
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubica.php?".$fields_string);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+               
+                    $string = curl_exec($ch);
+
 
              
 
