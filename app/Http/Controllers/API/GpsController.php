@@ -81,6 +81,17 @@ class GpsController extends Controller
         $velocidad=$gps[2];
 
 
+        $fields=array("latitud"=>$latitud,"longitud"=>$longitud);
+       
+                    $fields_string = http_build_query($fields);
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubica.php?".$fields_string);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+               
+                    $string = curl_exec($ch);
+
+
         $sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
         $token = '55d0bd36b35f624de6c39f1a8914dd0f';
         $twilio = new Client($sid, $token);
