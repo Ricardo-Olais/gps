@@ -135,7 +135,7 @@
 <script>
 
 
-  var socket = io('http://localhost:3000');
+  var socket = io('http://187.245.4.2:3000'); //187.245.4.2
 
   var messages = document.getElementById('messages');
 
