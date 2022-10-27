@@ -49,6 +49,10 @@ Route::get('/pago', function () {
     return view('pago');
 });
 
+Route::get('/mapa', function () {
+    return view('mapa');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
