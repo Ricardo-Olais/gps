@@ -151,16 +151,16 @@
 
 
 
-    
   socket.on('ubicacion', function(msg) {
 
       console.log(msg);
 
       var customIcon = new L.Icon({
       iconUrl: 'http://localizaminave.com:8080/img/carro.png',
-      iconSize: [30, 40], //30, 40 carro
-     // iconSize: [45, 60], 
+      iconSize: [30, 40],
       iconAnchor: [25, 50]
+    });
+
     
 
 
