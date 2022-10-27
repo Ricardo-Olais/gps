@@ -134,12 +134,131 @@
 
 <script>
 
+ 
+ $(document).ready(function(){
 
+//llenamos select vehiculos
+  $.post("vehiculosasignados",{_token:token},
+            function(data){
+
+              // alert(data.rows.length);
+               for (var i = 0; i < data.rows.length; i++) {
+                  
+                //  alert(data.rows[i].id_imei_android);
+
+                  $("#vehiculo").append("<option value='"+data.rows[i].id_imei_android+"'>"+data.rows[i].alias_vehiculo+"</option>");
+                   $("#vehiculo").formSelect();
+
+
+
+               }
+
+ },'json');
+
+
+  //detectar cambio de vehiculo
+     var imei=0;
+      $("#vehiculo").change(function(){
+
+         $("#share").css("display","none");
+         $("#ubicacion").html("");
+         $("#share-ubi").html("");
+         imei=$(this).val();
+        
+
+         $("#colorgps").css("color","#37E209");
+
+        });
+ 
+ //controles
+         var fijo=0;
+         //var email='r.hernandez@lidcorp.mx';
+
+          $("#historico").click(function(){
+
+            //alert(imei);
+            location.href="historico?imei="+imei;
+
+        });
+
+         //fijar ubicación
+         $("#fijaubi").click(function(){
+
+            if($(this).prop('checked') ) {
+          
+                $.post("guardafijo",{numero:imei,_token:token,estatus:1},
+                   function(data){
+                       $("#fijaubi").prop( "checked", true );
+                  },'json');
+
+
+               
+             }else{
+              $.post("guardafijo",{numero:imei,_token:token,estatus:0},
+                   function(data){
+                      $("#fijaubi").prop( "checked", false );
+                  },'json');
+              
+
+               $(".parpadea").css("display","none");
+             }
+
+        });
+
+        //fijar notificaciones
+
+           $("#onnotificaciones").click(function(){
+
+            if($(this).prop('checked') ) {
+          
+                $.post("guardafijonotificacion",{numero:imei,_token:token,estatus:1},
+                   function(data){
+                       $("#onnotificaciones").prop( "checked", true );
+                  },'json');
+
+
+               
+             }else{
+              $.post("guardafijonotificacion",{numero:imei,_token:token,estatus:0},
+                   function(data){
+                      $("#onnotificaciones").prop( "checked", false );
+                  },'json');
+              
+
+               $(".parpadea").css("display","none");
+             }
+
+        });
+
+        //activar geocerca 
+             $("#activageocerca").click(function(){
+
+            if($(this).prop('checked') ) {
+          
+                $.post("activageocerca",{numero:imei,_token:token,estatus:1},
+                   function(data){
+
+                       $("#activageocerca").prop( "checked", true );
+                  },'json');
+
+
+               
+             }else{
+              $.post("activageocerca",{numero:imei,_token:token,estatus:0},
+                   function(data){
+                      $("#activageocerca").prop( "checked", false );
+                  },'json');
+              
+
+               $(".parpadea").css("display","none");
+             }
+
+        });
+
+//fin de controles
   var socket = io('http://187.245.4.2:3000'); //187.245.4.2
 
   var messages = document.getElementById('messages');
-
-  
 
 
   const map = L.map('map').setView([0, 0], 17);
@@ -153,30 +272,39 @@
 
   socket.on('ubicacion', function(msg) {
 
-      console.log(msg);
+      console.log(msg.imei);
 
-      var customIcon = new L.Icon({
+
+      if(msg.imei==imei){
+
+
+    $("#ubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+
+
+    var customIcon = new L.Icon({
       iconUrl: 'http://localizaminave.com:8080/img/carro.png',
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
 
-    
-
-
-
 
   const marker = L.marker([msg.longitud, msg.latitud],{icon: customIcon}).addTo(map).bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
 
+  
 
   const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
     .setContent('Vehículo Ricardo')
     .openOn(map);
 
+    }
+
 
   });
 
+
+
+});
  
 
 </script>
