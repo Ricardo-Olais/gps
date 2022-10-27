@@ -41,7 +41,7 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
-socket.on('message', function(msg) {
+socket.on('ubicacion', function(msg) {
 
             console.log(msg);
   const marker = L.marker([msg.longitud, msg.latitud]).addTo(map).bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
