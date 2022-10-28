@@ -127,7 +127,7 @@ class GpsController extends Controller
                         "alias"=>$alias,
                         "conductor"=>$conductor
 
-                   ));
+                   );
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
