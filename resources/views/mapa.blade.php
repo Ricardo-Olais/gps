@@ -28,7 +28,7 @@
        <div class="container">
          <div class="section">
            <div class="row vertical-modern-dashboard">
-             <div id="map" style="width:100%;height: 500px;"></div>
+             <div id="map" style="width:100%;height: 300px;"></div>
              <div class="col s12 m2 l5 animate fadeRight">
                <div class="card">
                  <div class="card-content">
