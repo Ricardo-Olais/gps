@@ -257,6 +257,8 @@
 
 //fin de controles
   var socket = io('http://187.245.4.2:3000'); //187.245.4.2
+  var marker;
+  var theMarker = {};
 
   var messages = document.getElementById('messages');
 
@@ -275,6 +277,7 @@
       console.log(msg.imei);
 
 
+
       if(msg.imei==imei){
 
 
@@ -287,12 +290,16 @@
       iconAnchor: [25, 50]
     });
 
+    if (theMarker != undefined) {
+              map.removeLayer(theMarker);
+        };
 
-  const marker = L.marker([msg.longitud, msg.latitud],{icon: customIcon}).addTo(map).bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
+
+      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon}).addTo(map).bindPopup('<b>Dispositivo se encuentra en </b><br />'+msg.direccion).openPopup();
 
   
 
-  const popup = L.popup()
+    const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
     .setContent('Vehículo Ricardo')
     .openOn(map);
