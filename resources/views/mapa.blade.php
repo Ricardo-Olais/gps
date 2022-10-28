@@ -295,7 +295,7 @@
         };
 
 
-      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon}).addTo(map).bindPopup('<b>Dispositivo se encuentra en </b><br />'+msg.direccion).openPopup();
+      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
   
 

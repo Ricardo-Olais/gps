@@ -120,7 +120,14 @@ class GpsController extends Controller
               $direccion=$outputFrom->results[0]->formatted_address;
 
 
-              $fields=array("latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,"direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s"));
+              $fields=array(
+
+                       "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
+                       "direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s",
+                        "alias"=>$alias,
+                        "conductor"=>$conductor
+
+                   ));
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
