@@ -310,7 +310,7 @@
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent('Vehículo Ricardo')
+    .setContent(msg.alias)
     .openOn(map);
 
     }
