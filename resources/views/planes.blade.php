@@ -140,6 +140,8 @@
                <p style="text-align:justify;">Conoce la ubicación de tus seres queridos, de tu auto, motocicleta, en tiempo real.<br>
                Podrás tener la tranquilidad de saber dónde se encuentran en todo momento a través de tu PC o smartphone.</p>
 
+               
+
               <center><img src="img/home/real.png" width="50%"></center>
 
 
