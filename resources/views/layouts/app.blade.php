@@ -209,7 +209,7 @@
     
     @else
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="https://localizaminave.com/tracker">
+      <a class="waves-effect waves-cyan " href="http://localizaminave.com:8080/tracker">
         <i class="material-icons" style="color:Red;">location_on</i>
         <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
