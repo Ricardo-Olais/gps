@@ -29,6 +29,58 @@ class RastreoController extends Controller
         return view('home');
     }
 
+    public function inicializasocket(){
+
+         $imei=$_REQUEST['imei'];
+         $llave=env('LLAVE_API_MAPS');
+
+        //consultamos los datos 
+        $vehiclesEstatus=DB::select("SELECT * FROM v_gps WHERE id_imei_android='$imei'");
+
+          if(count($vehiclesEstatus)>0){
+
+             $email=$vehiclesEstatus[0]->email;
+             $conductor=$vehiclesEstatus[0]->conductor;
+             $alias=$vehiclesEstatus[0]->alias_vehiculo;
+          
+             
+             $latitud=$vehiclesEstatus[0]->latitud;
+             $longitud=$vehiclesEstatus[0]->longitud;
+             $pila=$vehiclesEstatus[0]->pila;
+             $fecha=$vehiclesEstatus[0]->fecha_gps;
+
+              $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
+
+              $outputFrom = json_decode($geocodeFrom);
+              $direccion=$outputFrom->results[0]->formatted_address;
+
+
+              $fields=array(
+
+                       "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
+                       "direccion"=>$direccion,"pila"=>$pila,"fecha"=>$fecha,
+                        "alias"=>$alias,
+                        "conductor"=>$conductor
+
+                   );
+       
+              $fields_string = http_build_query($fields);
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubica.php?".$fields_string);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+               
+                    $string = curl_exec($ch);
+
+            }
+
+
+
+    }
+
+
+
+
     public function coordenadas(){
 
          $numero=$_REQUEST['numero'];
