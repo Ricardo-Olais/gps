@@ -69,6 +69,8 @@ class GpsController extends Controller
 
     }
 
+    
+
 
 
     public function gps($imei,$ubicacion,$pila)

@@ -164,6 +164,9 @@
          $("#ubicacion").html("");
          $("#share-ubi").html("");
          imei=$(this).val();
+
+         //invocamos al socket
+         $.post("inicializasocket",{_token:token,imei:imei});
         
 
          $("#colorgps").css("color","#37E209");

@@ -62,6 +62,7 @@ Route::get('/dispositivos', 'RastreoController@gridvehiculos');
 Route::post('/actualizanumero', 'RastreoController@actualizanumero');
 Route::post('/guardavehiculo', 'RastreoController@guardavehiculo');
 Route::get('/historico', 'RastreoController@historico');
+Route::post('/inicializasocket', 'RastreoController@inicializasocket');
 
 
 
