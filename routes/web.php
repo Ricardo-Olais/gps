@@ -32,7 +32,7 @@ Route::get('/como-funciona', function () {
 Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/tracker', function () {
-            return view('tracker');
+            return view('mapa');
         });
 
 });
@@ -49,8 +49,8 @@ Route::get('/pago', function () {
     return view('pago');
 });
 
-Route::get('/mapa', function () {
-    return view('mapa');
+Route::get('/tracker2', function () {
+    return view('tracker');
 });
 
 Auth::routes();
