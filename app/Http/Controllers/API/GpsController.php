@@ -126,7 +126,7 @@ class GpsController extends Controller
 
                if($alerta==1){
 
-                $mensajealerta="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion"
+                $mensajealerta="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion";
                
                 }
 
