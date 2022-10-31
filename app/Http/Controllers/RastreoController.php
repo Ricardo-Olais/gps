@@ -48,6 +48,9 @@ class RastreoController extends Controller
              $longitud=$vehiclesEstatus[0]->longitud;
              $pila=$vehiclesEstatus[0]->pila;
              $fecha=$vehiclesEstatus[0]->fecha_gps;
+             $fija=$vehiclesEstatus[0]->fija;
+             $activaGeocerca=$vehiclesEstatus[0]->activaGeocerca;
+
 
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
@@ -60,13 +63,15 @@ class RastreoController extends Controller
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
                        "direccion"=>$direccion,"pila"=>$pila,"fecha"=>$fecha,
                         "alias"=>$alias,
-                        "conductor"=>$conductor
+                        "conductor"=>$conductor,
+                        "fija"=>$fija,
+                        "activaGeocerca"=>$activageocerca
 
                    );
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubica.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubicaini.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
                
