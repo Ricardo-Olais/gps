@@ -18,6 +18,53 @@
       max-width: 100%;
       max-height: 100%;
     }
+
+     #resplandorverde{   
+               -moz-box-shadow: 0px 0px 30px red; 
+               -webkit-box-shadow: 0px 0px 30px red; 
+               box-shadow: 0px 0px 30px red;
+               
+               padding: 10px;
+               width: 80px;
+               margin: 40px;
+            }
+         .text {
+           font-size:28px;
+           font-family:helvetica;
+           font-weight:bold;
+           color:#71d90b;
+           text-transform:uppercase;
+         }
+         .parpadea {
+           
+           animation-name: parpadeo;
+           animation-duration: 1s;
+           animation-timing-function: linear;
+           animation-iteration-count: infinite;
+
+           -webkit-animation-name:parpadeo;
+           -webkit-animation-duration: 1s;
+           -webkit-animation-timing-function: linear;
+           -webkit-animation-iteration-count: infinite;
+         }
+
+         @-moz-keyframes parpadeo{  
+           0% { opacity: 1.0; }
+           50% { opacity: 0.0; }
+           100% { opacity: 1.0; }
+         }
+
+         @-webkit-keyframes parpadeo {  
+           0% { opacity: 1.0; }
+           50% { opacity: 0.0; }
+            100% { opacity: 1.0; }
+         }
+
+         @keyframes parpadeo {  
+           0% { opacity: 1.0; }
+            50% { opacity: 0.0; }
+           100% { opacity: 1.0; }
+         }
   </style>
 
 
@@ -29,7 +76,7 @@
          <div class="section">
            <div class="row vertical-modern-dashboard">
              <div id="map" style="width:100%;height: 300px;"></div>
-             <div class="col s12 m2 l5 animate fadeRight">
+               <div class="col s12 m2 l5 animate fadeRight">
                <div class="card">
                  <div class="card-content">
                    <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
@@ -283,6 +330,12 @@
   socket.on('ubicacion', function(msg) {
 
       console.log(msg.msjalerta1);
+      if(msg.msjalerta1!=""){
+
+        $(".parpadea").css("display","");
+      }
+
+
       if(msg.fija==1){
 
          $("#fijaubi").prop( "checked", true );
