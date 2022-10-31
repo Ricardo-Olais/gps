@@ -287,6 +287,14 @@
         $("#fijaubi").prop( "checked", false);
       }
 
+      if(msg.activaGeocerca==1){
+
+          $("#activageocerca").prop( "checked", true );
+      }else{
+
+         $("#activageocerca").prop( "checked", false );
+      }
+
 
       if(msg.imei==imei){
 
