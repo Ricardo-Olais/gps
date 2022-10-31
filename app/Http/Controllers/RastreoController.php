@@ -65,7 +65,7 @@ class RastreoController extends Controller
                         "alias"=>$alias,
                         "conductor"=>$conductor,
                         "fija"=>$fija,
-                        "activaGeocerca"=>$activageocerca
+                        "activaGeocerca"=>$activaGeocerca
 
                    );
        
