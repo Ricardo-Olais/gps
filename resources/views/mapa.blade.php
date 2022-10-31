@@ -277,12 +277,12 @@
   }).addTo(map);
 
 
- 
+
 
 
   socket.on('ubicacion', function(msg) {
 
-      console.log(msg.imei);
+      console.log(msg.msjalerta1);
       if(msg.fija==1){
 
          $("#fijaubi").prop( "checked", true );
