@@ -69,7 +69,7 @@ class GpsController extends Controller
 
     }
 
-    
+
 
 
 
@@ -116,6 +116,8 @@ class GpsController extends Controller
              $alerta2=$vehiclesEstatus[0]->alerta2;
 
 
+
+
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
               $outputFrom = json_decode($geocodeFrom);
@@ -127,13 +129,15 @@ class GpsController extends Controller
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
                        "direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s"),
                         "alias"=>$alias,
-                        "conductor"=>$conductor
+                        "conductor"=>$conductor,
+                        "fija"=>$fija,
+                        "activaGeocerca"=>$activaGeocerca
 
                    );
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubica.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubicaini.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
                
