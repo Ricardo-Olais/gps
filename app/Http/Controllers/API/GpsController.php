@@ -270,7 +270,7 @@ class GpsController extends Controller
                                       
                                // print_r($message); 
 
-                              $fields=array(
+                             /* $fields=array(
 
                                     "imei"=>$imei,
                                     "tipo"=>1,
@@ -284,7 +284,7 @@ class GpsController extends Controller
                                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
                                
-                                    $string = curl_exec($ch);
+                                    $string = curl_exec($ch);*/
 
 
 
