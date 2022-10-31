@@ -280,8 +280,11 @@
       console.log(msg.imei);
       if(msg.fija==1){
 
-         console.log("marcar");
+         $("#fijaubi").prop( "checked", true );
 
+      }else{
+
+        $("#fijaubi").prop( "checked", false);
       }
 
 
