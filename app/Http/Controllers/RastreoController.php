@@ -50,12 +50,26 @@ class RastreoController extends Controller
              $fecha=$vehiclesEstatus[0]->fecha_gps;
              $fija=$vehiclesEstatus[0]->fija;
              $activaGeocerca=$vehiclesEstatus[0]->activaGeocerca;
+             $alerta=$vehiclesEstatus[0]->alerta;
+             $alerta2=$vehiclesEstatus[0]->alerta2;
+
+             $mensajealerta="";
+
+
+
 
 
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
               $outputFrom = json_decode($geocodeFrom);
               $direccion=$outputFrom->results[0]->formatted_address;
+
+
+               if($alerta==1){
+
+                $mensajealerta="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion"
+               
+                }
 
 
               $fields=array(
@@ -65,7 +79,8 @@ class RastreoController extends Controller
                         "alias"=>$alias,
                         "conductor"=>$conductor,
                         "fija"=>$fija,
-                        "activaGeocerca"=>$activaGeocerca
+                        "activaGeocerca"=>$activaGeocerca,
+                        "msjalerta1"=>$mensajealerta
 
                    );
        

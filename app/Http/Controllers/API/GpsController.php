@@ -114,6 +114,7 @@ class GpsController extends Controller
              $alerta=$vehiclesEstatus[0]->alerta;
              $alias=$vehiclesEstatus[0]->alias_vehiculo;
              $alerta2=$vehiclesEstatus[0]->alerta2;
+             $mensajealerta="";
 
 
 
@@ -123,6 +124,12 @@ class GpsController extends Controller
               $outputFrom = json_decode($geocodeFrom);
               $direccion=$outputFrom->results[0]->formatted_address;
 
+               if($alerta==1){
+
+                $mensajealerta="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion"
+               
+                }
+
 
               $fields=array(
 
@@ -131,7 +138,8 @@ class GpsController extends Controller
                         "alias"=>$alias,
                         "conductor"=>$conductor,
                         "fija"=>$fija,
-                        "activaGeocerca"=>$activaGeocerca
+                        "activaGeocerca"=>$activaGeocerca,
+                         "msjalerta1"=>$mensajealerta
 
                    );
        
