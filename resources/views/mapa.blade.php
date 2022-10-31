@@ -25,7 +25,7 @@
                box-shadow: 0px 0px 30px red;
                
                padding: 10px;
-               width: 80px;
+               width: 100%;
                margin: 40px;
             }
          .text {
@@ -101,7 +101,7 @@
                <div class="card">
                  <div class="card-content">
                    <center>
-                     <span id="resplandorverde" class="parpadea" style="display:none;font-size: 10px;">Alerta <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                     <span id="resplandorverde" class="parpadea" style="display:none;font-size: 10px;width: 100%;">Alerta <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
                        </strong>
                      </span>
                    </center>
