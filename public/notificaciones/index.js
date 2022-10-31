@@ -18,11 +18,6 @@ io.on('connection',function (socket){
        io.emit('ubicacion',data);
    });
 
-   socket.on('alerta',function (data){
-       console.log(data);
-       io.emit('alertas',data);
-   });
-
    socket.on('disconnect',function (){
        console.log('disconnected')
    });

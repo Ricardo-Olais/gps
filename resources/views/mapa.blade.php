@@ -277,12 +277,7 @@
   }).addTo(map);
 
 
-   socket.on('alertas', function(msgalerta) {
-
-        console.log(msgalerta.msj);
-
-   }); 
-
+ 
 
 
   socket.on('ubicacion', function(msg) {
