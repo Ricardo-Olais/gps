@@ -278,7 +278,11 @@
   socket.on('ubicacion', function(msg) {
 
       console.log(msg.imei);
+      if(msg.fija==1){
 
+         console.log("marcar");
+
+      }
 
 
       if(msg.imei==imei){
