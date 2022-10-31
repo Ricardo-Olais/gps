@@ -138,11 +138,7 @@
  $(document).ready(function(){
 
 
-   socket.on('alertas', function(msgalerta) {
 
-        console.log(msgalerta.msj);
-
-   }); 
 
 //llenamos select vehiculos
   $.post("vehiculosasignados",{_token:token},
@@ -279,6 +275,13 @@
     maxZoom: 25,
     attribution: '&copy; <a href="https://localizaminave.com">LocalizaMiNave</a>'
   }).addTo(map);
+
+
+   socket.on('alertas', function(msgalerta) {
+
+        console.log(msgalerta.msj);
+
+   }); 
 
 
 
