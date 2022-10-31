@@ -269,6 +269,25 @@ class GpsController extends Controller
                                                ]);*/
                                       
                                // print_r($message); 
+
+                              $fields=array(
+
+                                    "imei"=>$imei,
+                                    "tipo"=>1,
+                                    "mensaje"=>"Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
+                     
+                               );
+       
+                              $fields_string = http_build_query($fields);
+                                    $ch = curl_init();
+                                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/alertas.php?".$fields_string);
+                                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+                               
+                                    $string = curl_exec($ch);
+
+
+
                               
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
 

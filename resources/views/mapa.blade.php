@@ -137,6 +137,13 @@
  
  $(document).ready(function(){
 
+
+   socket.on('alertas', function(msgalerta) {
+
+        console.log(msgalerta.msj);
+
+   }); 
+
 //llenamos select vehiculos
   $.post("vehiculosasignados",{_token:token},
             function(data){
