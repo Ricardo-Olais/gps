@@ -308,6 +308,7 @@
 
   $(document).ready(function(){
     $('.parallax').parallax();
+     $(".navbar-toggler")[0].click();
   });
    </script>
 
