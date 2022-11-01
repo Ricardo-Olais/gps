@@ -52,6 +52,7 @@ class RastreoController extends Controller
              $activaGeocerca=$vehiclesEstatus[0]->activaGeocerca;
              $alerta=$vehiclesEstatus[0]->alerta;
              $alerta2=$vehiclesEstatus[0]->alerta2;
+             $tipo=$vehiclesEstatus[0]->tipo;
 
              $mensajealerta="";
 
@@ -80,7 +81,8 @@ class RastreoController extends Controller
                         "conductor"=>$conductor,
                         "fija"=>$fija,
                         "activaGeocerca"=>$activaGeocerca,
-                        "msjalerta1"=>$mensajealerta
+                        "msjalerta1"=>$mensajealerta,
+                        "tipo"=>$tipo
 
                    );
        
