@@ -370,7 +370,7 @@
 
 
     var customIcon = new L.Icon({
-      iconUrl: 'http://localizaminave.com:8080/img/carro.png',
+      iconUrl: 'http://localizaminave.com:8080/img/niño.png',
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
@@ -386,7 +386,7 @@
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias)
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/niño.png'></center>")
     .openOn(map);
 
     }
