@@ -209,7 +209,7 @@
       <div class="row">
 
          <!-- Modal Structure -->
-           <div id="modal1" class="modal">
+           <div id="modal1" class="modal" style="z-index: 2000; position: absolute;">
              <div class="modal-content">
                <h6>Nuevo dispositivo</h6><br>
 
@@ -291,12 +291,13 @@
 
              </div>
              <div class="modal-footer">
+                <center>
                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
 
                <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
                     <i class="material-icons right">send</i>
                   </button>
-              
+              </center>
              </div>
              </form>
            </div>
