@@ -73,7 +73,7 @@ function autoplay() {
               <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
               <div id="iniciogps" style="margin-top:-45px;">
-                  <a href="dispositivos" class="waves-effect waves-light btn">Prueba Gratis 1 mes</a>
+                  <a href="dispositivos" class="waves-effect waves-light btn" style="border-radius: 7px;">Prueba Gratis 1 mes</a>
               </div>
             </center>
       
@@ -81,13 +81,16 @@ function autoplay() {
 
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
-   <center><h2 style="font-weight: bold;font-family: secondary; font-size: 30px;">GPS tracker para un adecuado monitoreo de vehículos</h2></center>
+   <center><h2 style="font-weight: bold;font-family: secondary; font-size: 25px;">GPS tracker (Conóce en donde se encuentran tus seres queridos, tu vehículo)</h2></center>
 </div>
 
  <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
          
-            
+         <p style="text-align: justify;">
+         Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma.
+
+        </p>
              
         <p style="text-align: justify;">
         Dale una segunda vida a tu celular, úsalo como GPS tracker, nuestra aplicación se instala fácilmente en equipos con sistema Android. Es importante que cuente con datos para que se comunique con  nuestros servidores.
@@ -248,9 +251,9 @@ function autoplay() {
 
               <center><img src="img/home/real.png" width="50%"></center>
 
-             <button class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: #fff;color:#000;">Conseguir Plan
+             <a href='dispositivos' class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: #fff;color:#000;">Conseguir Plan
                 <i class="material-icons right">send</i>
-              </button>
+              </a>
 
 
             </div>
@@ -270,9 +273,9 @@ function autoplay() {
 
               <center><img src="img/home/real.png" width="50%"></center>
 
-             <button class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: black;">Conseguir Plan
+             <a href='dispositivos' class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: black;">Conseguir Plan
                 <i class="material-icons right">send</i>
-              </button>
+              </a>
 
 
             </div>
@@ -290,9 +293,9 @@ function autoplay() {
 
               <center><img src="img/home/real.png" width="50%"></center>
 
-              <button class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;">Conseguir Plan
+              <a href='dispositivos' class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;">Conseguir Plan
                 <i class="material-icons right">send</i>
-              </button>
+              </a>
 
 
 

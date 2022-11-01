@@ -83,9 +83,9 @@
                    </h4>
                    <div class="input-field col s12">
                      <select name="vehiculo" id="vehiculo">
-                       <option value="" disabled selected>Selecciona Vehículo</option>
+                       <option value="" disabled selected>Selecciona Dipositivo</option>
                      </select>
-                     <label>Vehículo</label>
+                     <label>Dispositivo</label>
                    </div>
                    <span id="ubicacion"></span>
                    <a class="waves-effect waves-light  modal-trigger" id="comparte">

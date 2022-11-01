@@ -164,7 +164,7 @@
         function eliminar(id){
 
              Swal.fire({
-                      title: 'El vehículo será eliminado, al eliminarlo se perderá tu licencia pero mantendremos tu histórico, realmente deseas eliminarlo?',
+                      title: 'El Dispositivo será eliminado, al eliminarlo se perderá tu licencia pero mantendremos tu histórico, realmente deseas eliminarlo?',
                       showDenyButton: false,
                       showCancelButton: true,
                       confirmButtonText: 'Si, lo quiero eliminar',
@@ -211,7 +211,7 @@
          <!-- Modal Structure -->
            <div id="modal1" class="modal">
              <div class="modal-content">
-               <h5>Nuevo dispositivo</h5>
+               <h6>Nuevo dispositivo</h6><br>
 
             <div class="row">
                     <form class="col s12" name="guardavehiculo" id="guardavehiculo">
@@ -222,13 +222,15 @@
                           <i class="material-icons prefix">android</i>
                            <select name="tipovehiculo" id="tipovehiculo" required style="font-size:18px;">
                                  <option value="" disabled selected>Selecciona Tipo</option>
+                                 <option>Adulto</option>
+                                 <option>Niño</option>
                                  <option>Auto</option>
                                  <option>Motocicleta</option>
-                                 <option>Persona</option>
-                                 <option>Mascota</option>
+                                
+                                
                                  
                                </select>
-                               <label style="font-size:18px;">Vehículo</label>
+                               <label style="font-size:18px;">Dispositivo</label>
                         </div>
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">data_usage</i>
@@ -240,8 +242,8 @@
                     <div class="row">
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">account_circle</i>
-                          <input  id="conductor" name="conductor" type="text" class="validate" placeholder="Conductor" required style="font-size:18px;">
-                          <label for="icon_prefix" style="font-size:18px;">Nombre de conductor</label>
+                          <input  id="conductor" name="conductor" type="text" class="validate" placeholder="Juán Pérez" required style="font-size:18px;">
+                          <label for="icon_prefix" style="font-size:18px;">Nombre de familiar</label>
                         </div>
 
                         <div class="input-field input-field col s12 m2 l6">
