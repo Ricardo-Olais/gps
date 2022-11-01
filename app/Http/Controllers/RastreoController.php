@@ -293,6 +293,10 @@ class RastreoController extends Controller
                   'geocerca'=>$geocerca,
                   'telefono'=>"+52".$telefono,
                   'address_geocerca'=>''
+                  'alerta'=>0,
+                  "alerta2"=>0,
+                  "fija"=>0,
+                  "activaGeocerca"=>0
 
                  ] );
 
