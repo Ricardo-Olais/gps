@@ -142,7 +142,7 @@
        </div>
      </div>
    </div>
-   <div class="row">
+   <!--div class="row">
      <div class="row vertical-modern-dashboard">
        <div class="col s12 m2 l12 animate fadeRight">
          <div class="card">
@@ -176,7 +176,9 @@
          </div>
        </div>
      </div>
-   </div>
+   </div-->
+
+
  </div>
 
 <script>
@@ -213,6 +215,8 @@
          $("#share").css("display","none");
          $("#ubicacion").html("");
          $("#share-ubi").html("");
+         $("#share").css("display","");
+
          imei=$(this).val();
 
          //invocamos al socket
@@ -308,6 +312,21 @@
 
         });
 
+
+      $('.tooltipped').tooltip();
+            $('.modal').modal();
+            $('.fixed-action-btn').floatingActionButton();
+
+            
+
+            $(".reportar").click(function(){
+
+                window.location.href='https://sfpya.edomexico.gob.mx/controlv/rev/CVRoboVehiculo.jsp';
+
+            });
+
+
+
 //fin de controles
   var socket = io('http://187.245.4.2:3000'); //187.245.4.2
   var marker;
@@ -330,6 +349,14 @@
   socket.on('ubicacion', function(msg) {
 
       console.log(msg.msjalerta1);
+      $("#comparte").click(function(){
+
+                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ "<a href='http://localizaminave.com:8080/tracker'>http://localizaminave.com:8080/tracker</a>";
+
+            });
+
+
+
       if(msg.msjalerta1!=""){
 
         $(".parpadea").css("display","");
