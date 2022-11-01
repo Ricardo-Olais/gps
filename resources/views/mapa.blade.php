@@ -386,7 +386,7 @@
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/niño.png'></center>")
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/niño.png' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
     }
