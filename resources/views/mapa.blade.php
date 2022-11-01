@@ -370,7 +370,7 @@
 
 
     var customIcon = new L.Icon({
-      iconUrl: 'http://localizaminave.com:8080/img/niño.png',
+      iconUrl: 'http://localizaminave.com:8080/img/'+msg.tipo,
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
@@ -386,7 +386,7 @@
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/niño.png' style='width: 20px; height: 30px;'></center>")
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
     }

@@ -115,6 +115,7 @@ class GpsController extends Controller
              $alias=$vehiclesEstatus[0]->alias_vehiculo;
              $alerta2=$vehiclesEstatus[0]->alerta2;
              $mensajealerta="";
+             $tipo=$vehiclesEstatus[0]->tipo;
 
 
 
@@ -139,7 +140,8 @@ class GpsController extends Controller
                         "conductor"=>$conductor,
                         "fija"=>$fija,
                         "activaGeocerca"=>$activaGeocerca,
-                         "msjalerta1"=>$mensajealerta
+                        "msjalerta1"=>$mensajealerta,
+                        "tipo"=>$tipo
 
                    );
        

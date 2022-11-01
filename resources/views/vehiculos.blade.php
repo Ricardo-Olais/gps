@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.sinchat')
 
 @section('content')
 
@@ -222,10 +222,10 @@
                           <i class="material-icons prefix">android</i>
                            <select name="tipovehiculo" id="tipovehiculo" required style="font-size:18px;">
                                  <option value="" disabled selected>Selecciona Tipo</option>
-                                 <option>Adulto</option>
-                                 <option>Niño</option>
-                                 <option>Auto</option>
-                                 <option>Motocicleta</option>
+                                 <option value="adulto.png">Adulto</option>
+                                 <option value="niño.png">Niño</option>
+                                 <option value="auto.png">Auto</option>
+                                 <option value="moto.png">Motocicleta</option>
                                 
                                 
                                  
@@ -291,19 +291,19 @@
 
              </div>
              <div class="modal-footer">
-                <center>
+               
                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
 
                <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
                     <i class="material-icons right">send</i>
                   </button>
-              </center>
+             
              </div>
              </form>
            </div>
 
         <div class="fixed-action-btn" >
-           <a class="btn-floating btn-large red modal-trigger" href="#modal1" style="margin-bottom: 70px !important;">
+           <a class="btn-floating btn-large red modal-trigger" href="#modal1" style="margin-bottom: 5px !important;">
              <i class="large material-icons">add</i>
            </a>
            <!--ul>
