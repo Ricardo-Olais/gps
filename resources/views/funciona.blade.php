@@ -64,7 +64,7 @@
               
               
               <p style="text-align:justify;">
-               Descarga la aplicación has clic aquí <a href="gps.apk" style="color:#00bcd4;">GPS TRACKER</a>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
+               Descarga la aplicación has clic aquí <a href="apk/tracker.apk" style="color:#00bcd4;">GPS TRACKER</a>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
                <center>
               <img src="img/home/paso-4.png" width="40%" style="margin-top: 10px;"></center>
 
