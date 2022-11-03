@@ -408,8 +408,17 @@ class RastreoController extends Controller
 
          public function guardafijo(){
 
-            DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
+            if($_REQUEST['estatus']==0){
+
+                 DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
                                   ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0));
+            }else{
+
+                 DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
+                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0, "direccion_fija"=>""));
+            }
+
+           
 
               $datos['rows']=array("valida"=>"true");
 
