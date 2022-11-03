@@ -69,6 +69,7 @@
 
 
  <div id="main">
+  <input type="hidden" name="dir" id="dir">
    <div class="row">
      <div class="content-wrapper-before blue-grey lighten-5"></div>
      <div class="col s12">
@@ -101,7 +102,11 @@
                <div class="card">
                  <div class="card-content">
                    <center>
-                     <span id="resplandorverde" class="parpadea" style="display:none;font-size: 10px;width: 100%;">Alerta <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                     <span id="resplandorverde" class="parpadea" style="display:none;font-size: 10px;width: 100%;">Alerta de Parking <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </span>
+
+                      <span id="resplandorrojo" class="parpadea" style="display:none;font-size: 10px;width: 100%;">Alerta de Geocerca <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
                        </strong>
                      </span>
                    </center>
@@ -241,9 +246,13 @@
          //fijar ubicación
          $("#fijaubi").click(function(){
 
+          var auxDir=$("#dir").val();
+
+         
+
             if($(this).prop('checked') ) {
           
-                $.post("guardafijo",{numero:imei,_token:token,estatus:1},
+                $.post("guardafijo",{numero:imei,_token:token,estatus:1, direccionfija: auxDir},
                    function(data){
                        $("#fijaubi").prop( "checked", true );
                        $.post("inicializasocket",{_token:token,imei:imei});
@@ -259,7 +268,7 @@
                   },'json');
               
 
-               $(".parpadea").css("display","none");
+               $("#resplandorverde").css("display","none");
              }
 
         });
@@ -284,7 +293,7 @@
                   },'json');
               
 
-               $(".parpadea").css("display","none");
+               $("#resplandorverde").css("display","none");
              }
 
         });
@@ -292,12 +301,15 @@
         //activar geocerca 
              $("#activageocerca").click(function(){
 
+             var auxDir=$("#dir").val();
+
             if($(this).prop('checked') ) {
           
-                $.post("activageocerca",{numero:imei,_token:token,estatus:1},
+                $.post("activageocerca",{numero:imei,_token:token,estatus:1,direcciongeocerca: auxDir},
                    function(data){
 
                        $("#activageocerca").prop( "checked", true );
+                        $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
 
 
@@ -306,10 +318,11 @@
               $.post("activageocerca",{numero:imei,_token:token,estatus:0},
                    function(data){
                       $("#activageocerca").prop( "checked", false );
+                       $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
               
 
-               $(".parpadea").css("display","none");
+              $("#resplandorrojo").css("display","none");
              }
 
         });
@@ -361,7 +374,12 @@
 
       if(msg.msjalerta1!=""){
 
-        $(".parpadea").css("display","");
+        $("#resplandorverde").css("display","");
+      }
+      if(msg.msjalerta2!=""){
+
+        $("#resplandorrojo").css("display","");
+      
       }
 
 
@@ -384,6 +402,8 @@
 
 
       if(msg.imei==imei){
+
+        $("#dir").val(msg.direccion);
 
         if(msg.pila<15){
 

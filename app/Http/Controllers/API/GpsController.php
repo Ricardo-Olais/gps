@@ -114,7 +114,7 @@ class GpsController extends Controller
              $alerta=$vehiclesEstatus[0]->alerta;
              $alias=$vehiclesEstatus[0]->alias_vehiculo;
              $alerta2=$vehiclesEstatus[0]->alerta2;
-             $mensajealerta="";
+          
              $tipo=$vehiclesEstatus[0]->tipo;
 
 
@@ -125,10 +125,19 @@ class GpsController extends Controller
               $outputFrom = json_decode($geocodeFrom);
               $direccion=$outputFrom->results[0]->formatted_address;
 
+              $mensajealerta="";
+              $mensajealerta2="";
+
                if($alerta==1){ //alerta fija
 
                 $mensajealerta="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion";
                
+                }
+
+                if($alerta2==1){
+
+                $mensajealerta2="El vehículo $alias está fuera del área permitida, se encuentra en $direccion";
+
                 }
 
 
@@ -141,7 +150,8 @@ class GpsController extends Controller
                         "fija"=>$fija,
                         "activaGeocerca"=>$activaGeocerca,
                         "msjalerta1"=>$mensajealerta,
-                        "tipo"=>$tipo
+                        "tipo"=>$tipo,
+                        "msjalerta2"=>$mensajealerta2
 
                    );
        
@@ -224,11 +234,11 @@ class GpsController extends Controller
                         //extraer la dirección fija, compararla con la nueva direccióm ==> obtener la distancia de ambas si es mayor a 30 metros encender alarma.=1
 
                         //consultamos campo de dirección fija si no tiene valor, actualizarlo por variable dirección
-                        if($direccion_fija==""){
+                       /* if($direccion_fija==""){
                          //actualizamos el registro 
                          DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('direccion_fija' =>$direccion));
                                     
-                        }
+                        }*/
 
                     
                         if($direccion_fija!=""){
@@ -314,11 +324,11 @@ class GpsController extends Controller
 
                         //borrar campo dirección fija de tabla vehiculos
 
-                         if($direccion_fija!=""){
+                         /*if($direccion_fija!=""){
                              //actualizamos el registro 
                              DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('direccion_fija' =>"",'alerta'=>0));
                                     
-                          }
+                          }*/
                     }
 
 
@@ -329,11 +339,11 @@ class GpsController extends Controller
                     if($activaGeocerca==1 && $geocerca>0){
 
 
-                        if($address_geocerca==""){
+                       /* if($address_geocerca==""){
                          //actualizamos el registro 
                          DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('address_geocerca' =>$direccion));
                                     
-                        }
+                        }*/
 
                         if($address_geocerca!=""){
 
@@ -399,11 +409,11 @@ class GpsController extends Controller
 
                         //borrar campo dirección fija de tabla vehiculos
 
-                         if($address_geocerca!=""){
+                         /*if($address_geocerca!=""){
                              //actualizamos el registro 
                              DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('address_geocerca' =>"",'alerta2'=>0));
                                     
-                          }
+                          }*/
                     }
 
 
