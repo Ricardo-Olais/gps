@@ -125,7 +125,7 @@ class GpsController extends Controller
               $outputFrom = json_decode($geocodeFrom);
               $direccion=$outputFrom->results[0]->formatted_address;
 
-               if($alerta==1){
+               if($alerta==1){ //alerta fija
 
                 $mensajealerta="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion";
                
