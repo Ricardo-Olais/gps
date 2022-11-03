@@ -55,6 +55,7 @@ class RastreoController extends Controller
              $tipo=$vehiclesEstatus[0]->tipo;
 
              $mensajealerta="";
+             $mensajealerta2="";
 
 
 
@@ -72,6 +73,12 @@ class RastreoController extends Controller
                
                 }
 
+                if($alerta2==1){
+
+                $mensajealerta2="El vehículo $alias está fuera del área permitida, se encuentra en $direccion";
+
+                }
+
 
               $fields=array(
 
@@ -82,7 +89,8 @@ class RastreoController extends Controller
                         "fija"=>$fija,
                         "activaGeocerca"=>$activaGeocerca,
                         "msjalerta1"=>$mensajealerta,
-                        "tipo"=>$tipo
+                        "tipo"=>$tipo,
+                        "msjalerta2"=>$mensajealerta2
 
                    );
        
@@ -411,11 +419,13 @@ class RastreoController extends Controller
             if($_REQUEST['estatus']==0){
 
                  DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0));
+                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0,"direccion_fija"=>""));
             }else{
 
+                 $dir=$_REQUEST['direccionfija'];
+
                  DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0, "direccion_fija"=>""));
+                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0, "direccion_fija"=>$dir));
             }
 
            
@@ -437,8 +447,22 @@ class RastreoController extends Controller
 
         public function activageocerca(){
 
+            //direcciongeocerca
+             if($_REQUEST['estatus']==0){
+                
+
             DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0));
+                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0,"address_geocerca"=>""));
+
+                }else{
+
+
+             $direcciongeocerca=$_REQUEST['direcciongeocerca'];
+
+             DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
+                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0,"address_geocerca"=>$direcciongeocerca));
+
+                }
 
               $datos['rows']=array("valida"=>"true");
 
