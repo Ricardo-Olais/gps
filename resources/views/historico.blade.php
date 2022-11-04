@@ -147,7 +147,7 @@
     .modal {
       max-height: 100% !important;
     }
-    td, th {
+    th {
    
     text-align: center !important;
   
@@ -174,7 +174,7 @@
                    
                       <tr>
                        
-                        <td><a href="https://maps.google.com/?q={{ $valor['long'] }},{{ $valor['lat'] }}" >{{ $valor['direccion'] }}</a></td>
+                        <td>{{ $valor['direccion'] }}</td>
                         <td>{{ $valor['fecha'] }}</td>
 
                         <td><a href="https://maps.google.com/?q={{ $valor['long'] }},{{ $valor['lat'] }}" > Ver <i class="material-icons">gps_fixed</i></a></td>
