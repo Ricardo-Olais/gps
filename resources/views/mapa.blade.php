@@ -255,7 +255,7 @@
                 $.post("guardafijo",{numero:imei,_token:token,estatus:1, direccionfija: auxDir},
                    function(data){
                        $("#fijaubi").prop( "checked", true );
-                       $.post("inicializasocket",{_token:token,imei:imei});
+                       //$.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
 
 
@@ -264,7 +264,7 @@
               $.post("guardafijo",{numero:imei,_token:token,estatus:0},
                    function(data){
                       $("#fijaubi").prop( "checked", false );
-                      $.post("inicializasocket",{_token:token,imei:imei});
+                      //$.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
               
 
@@ -309,7 +309,7 @@
                    function(data){
 
                        $("#activageocerca").prop( "checked", true );
-                        $.post("inicializasocket",{_token:token,imei:imei});
+                       // $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
 
 
@@ -318,7 +318,7 @@
               $.post("activageocerca",{numero:imei,_token:token,estatus:0},
                    function(data){
                       $("#activageocerca").prop( "checked", false );
-                       $.post("inicializasocket",{_token:token,imei:imei});
+                     //  $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
               
 
