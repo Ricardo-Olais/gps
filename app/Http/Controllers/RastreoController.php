@@ -548,7 +548,9 @@ class RastreoController extends Controller
                                
                                 "alias_vehiculo"=>$value->alias_vehiculo,
                                 "direccion"=>$value->direccion,
-                                "fecha"=>$value->fecha_gps
+                                "fecha"=>$value->fecha_gps,
+                                "lat"=>$value->latitud,
+                                "long"=>$value->longitud
                                
                             );
                 }
