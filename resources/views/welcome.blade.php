@@ -86,6 +86,10 @@ function autoplay() {
 
  <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
+         <p style="text-align: justify;">
+         <span style="color:#00bcd4;">Gps Tracker</span> de Localizaminave.com es una aplicación que permite instalarse en dispositivos android para obtener y monitorear la ubicación de personas, de tu auto. No se requiere comprar ningún localizador.
+
+        </p>
          
          <p style="text-align: justify;">
          Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma.
