@@ -64,6 +64,10 @@ function autoplay() {
         border:none;
        
        }
+       p{
+
+        font-size: 18px;
+       }
    </style>
 
   <div class="col s12 m2 l12" style="background-color: #fff;">
