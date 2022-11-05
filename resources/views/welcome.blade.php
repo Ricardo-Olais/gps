@@ -73,7 +73,7 @@ function autoplay() {
   <div class="col s12 m2 l12" style="background-color: #fff;">
    
             <center>
-            <span style="color:#00bcd4;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo, solo pagas por el uso de la plataforma.</span>
+            <span style="color:#00bcd4;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span>
               <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
               <div id="iniciogps" style="margin-top:-45px;">
@@ -85,7 +85,7 @@ function autoplay() {
 
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
-   <center><h2 style="font-weight: bold;font-family: secondary; font-size: 25px;">GPS tracker (Conóce en donde se encuentran tus seres queridos, tu vehículo)</h2></center>
+   <center><h2 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#00bcd4">GPS tracker (Conóce en donde se encuentran tus seres queridos, tu vehículo)</h2></center>
 </div>
 
  <div class="col s12 m2 l12 animate fadeRight">
