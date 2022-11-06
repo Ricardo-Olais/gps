@@ -350,7 +350,7 @@
   var messages = document.getElementById('messages');
 
 
-  const map = L.map('map').setView([0, 0], 17);
+  const map = L.map('map').setView([0, 0], 15);
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -445,7 +445,7 @@
    if (circle != undefined) {
       map.removeLayer(circle);
     };
-    
+
 
   if(msg.latitud_geocerca!= undefined){
    var circleCenter = [msg.latitud_geocerca, msg.longitud_geocerca];
