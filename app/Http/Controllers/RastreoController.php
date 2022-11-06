@@ -454,7 +454,12 @@ class RastreoController extends Controller
                 
 
             DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0,"address_geocerca"=>""));
+                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0,
+                                    "address_geocerca"=>"",
+                                    'alerta'=>0,"address_geocerca"=>$direcciongeocerca,
+                                    'latitud_geocerca'=>"",
+                                    'longitud_geocerca'=>""
+                                ));
 
                 }else{
 
