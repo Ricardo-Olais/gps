@@ -313,7 +313,7 @@
            </ul-->
          </div>
 
-        <center><h6>Mis dispositivos</h6></center>
+        <center><h6 style="color:#00bcd4;font-size: 18px;">Mis dispositivos</h6></center>
 
         @if(count($datos)==0)
 
@@ -353,7 +353,7 @@
                     <div class="card-content">
                        <!--center><h6 style="color:#000 !important;">{{ $valor['alias_vehiculo'] }}</h6></center-->
 
-                      <div class="card-title">Dispositivo:</b> {{ $valor['alias_vehiculo'] }}</div>
+                      <div class="card-title" >Dispositivo:</b> {{ $valor['alias_vehiculo'] }}</div>
                       <center>
                       <div class="title m-b-md" >
                               {!!QrCode::size(170)->color(69, 187,194)->generate($valor['email'].'-'.$valor['id']) !!}
@@ -371,7 +371,7 @@
 
                         <tr><td class="colorcolum">Id</td> <td>{{ $valor['id'] }}</td></tr>
                         
-                        <tr><td class="colorcolum">Conductor</td> <td>{{ $valor['conductor'] }}</td></tr>
+                        <tr><td class="colorcolum">Nombre</td> <td>{{ $valor['conductor'] }}</td></tr>
                         <tr><td class="colorcolum">Geocerca</td> <td>{{ $valor['geocerca'] }} Km</td></tr>
                         <tr><td class="colorcolum">Identificador</td> <td>
                             @if ($valor['id_imei_android']=='') 
