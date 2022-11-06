@@ -441,7 +441,7 @@
 
 
   //geocerca  obtener la latitud y longitud de geocerca y pintarlas
-   var circleCenter = [msg.longitud,  msg.latitud];
+   var circleCenter = [msg.longitud_geocerca,  msg.latitud_geocerca];
 
     var circleOptions = {
      color: 'red',
