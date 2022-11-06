@@ -309,7 +309,7 @@
                    function(data){
 
                        $("#activageocerca").prop( "checked", true );
-                       // $.post("inicializasocket",{_token:token,imei:imei});
+                        $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
 
 
