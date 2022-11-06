@@ -442,6 +442,12 @@
     console.log(msg.longitud_geocerca);
 
   //geocerca  obtener la latitud y longitud de geocerca y pintarlas
+   if (circle != undefined) {
+      map.removeLayer(circle);
+    };
+    
+
+  if(msg.latitud_geocerca!= undefined){
    var circleCenter = [msg.latitud_geocerca, msg.longitud_geocerca];
 
     var circleOptions = {
@@ -450,12 +456,12 @@
      fillOpacity: 0
   }
 
-   if (circle != undefined) {
-      map.removeLayer(circle);
-    };
+  
 
     circle = L.circle(circleCenter,500, circleOptions); //500 metros de radio - 1 km de diametro
     circle.addTo(map);
+
+  }
 
     //fin de geocerca
 
