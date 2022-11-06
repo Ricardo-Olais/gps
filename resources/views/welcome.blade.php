@@ -70,7 +70,7 @@ function autoplay() {
        }
    </style>
 
-  <div class="col s12 m2 l12" style="background-color: #fff;">
+  <div class="col s12 m2 l12" style="background-color: #000;">
    
             <center>
             <span style="color:#00bcd4;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span>
