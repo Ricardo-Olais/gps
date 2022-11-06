@@ -351,35 +351,23 @@
 
 
   const map = L.map('map').setView([0, 0], 17);
+  
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 25,
     attribution: '&copy; <a href="https://localizaminave.com">LocalizaMiNave</a>'
   }).addTo(map);
 
+ 
+
 
   ///---yo
-  var browserLat;
-  var browserLong;  
 
-navigator.geolocation.getCurrentPosition(function(position) {
-    browserLat =  position.coords.latitude;
-    browserLong = position.coords.longitude;
- 
-    marker_actual = L.marker([browserLat,browserLong]).addTo(map);
-    marker_actual.bindPopup('Hola Tu estas aquí').openPopup();
-    map.setView([browserLat,browserLong], 18);  
-    
-    console.log(browserLat);
-    console.log(browserLong);
-}, function(err) {
-    console.error(err);
-});
 
   //fin de yo
 
 
-
+  var circle;
 
   socket.on('ubicacion', function(msg) {
 
@@ -443,6 +431,31 @@ navigator.geolocation.getCurrentPosition(function(position) {
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
+
+
+  //geocerca  obtener la latitud y longitud de geocerca y pintarlas
+   var circleCenter = [msg.longitud,  msg.latitud];
+
+    var circleOptions = {
+     color: 'red',
+     fillColor: '#f03',
+     fillOpacity: 0
+  }
+
+   if (circle != undefined) {
+      map.removeLayer(circle);
+    };
+
+    circle = L.circle(circleCenter,500, circleOptions); //500 metros de radio - 1 km de diametro
+    circle.addTo(map);
+
+    //fin de geocerca
+
+   // L.circle([50.5, 30.5], {radius: 200}).addTo(map);
+
+
+
+
 
     if (theMarker != undefined) {
               map.removeLayer(theMarker);

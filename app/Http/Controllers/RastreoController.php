@@ -447,6 +447,8 @@ class RastreoController extends Controller
 
         public function activageocerca(){
 
+            $llave=env('LLAVE_API_MAPS');
+
             //direcciongeocerca
              if($_REQUEST['estatus']==0){
                 
@@ -459,8 +461,25 @@ class RastreoController extends Controller
 
              $direcciongeocerca=$_REQUEST['direcciongeocerca'];
 
+             //obtener coordenadas de la dirección
+
+             $formattedAddrFrom = str_replace(' ','+',$direcciongeocerca);
+             $geocodeFrom = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrFrom&sensor=false&key=$llave");
+             $outputFrom = json_decode($geocodeFrom);
+
+             @$latitudeFrom = $outputFrom->results[0]->geometry->location->lat;
+             @$longitudeFrom = $outputFrom->results[0]->geometry->location->lng;
+
+
+
+
              DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0,"address_geocerca"=>$direcciongeocerca));
+                                  ->update(
+                                    array('activaGeocerca'=>$_REQUEST['estatus'],
+                                        'alerta'=>0,"address_geocerca"=>$direcciongeocerca,
+                                        'latitud_geocerca'=>$latitudeFrom,
+                                        'longitud_geocerca'=>$longitudeFrom
+                                    ));
 
                 }
 
