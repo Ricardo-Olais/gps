@@ -371,7 +371,10 @@
 
   socket.on('ubicacion', function(msg) {
 
-      console.log(msg.msjalerta1);
+      
+
+      if(msg.imei==imei){
+
       $("#comparte").click(function(){
 
                 window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ "<a href='http://localizaminave.com:8080/tracker'>http://localizaminave.com:8080/tracker</a>";
@@ -407,6 +410,10 @@
 
          $("#activageocerca").prop( "checked", false );
       }
+
+    }
+
+
 
 
       if(msg.imei==imei){
