@@ -85,7 +85,7 @@ function autoplay() {
 
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
-   <center><h2 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#00bcd4">GPS tracker (Conóce en donde se encuentran tus seres queridos, tu vehículo)</h2></center>
+   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#00bcd4">GPS tracker (Conóce en donde se encuentran tus seres queridos.)</h3></center>
 </div>
 
  <div class="col s12 m2 l12 animate fadeRight">
