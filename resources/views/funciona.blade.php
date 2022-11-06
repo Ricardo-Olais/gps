@@ -11,6 +11,11 @@
 
   });
 </script>
+<style type="text/css">
+   p{
+      font-size: 18px;
+   }
+</style>
 
 <div id="main" >
       <div class="row">
@@ -47,7 +52,8 @@
                <h4 class="card-title mb-0">1.- Regístrate</h4>
               
               
-               Únete a nosotros, ve al apartado de registro, ingresa tus datos (son pocos).
+               <p style="text-align:justify;">Únete a nosotros, ve al apartado de registro, ingresa tus datos (son pocos).
+               </p>
 
                <img src="img/home/paso-1.jpg" width="100%" style="margin-top: 10px;">
 
