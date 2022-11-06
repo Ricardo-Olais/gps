@@ -358,7 +358,14 @@
                       <div class="title m-b-md" >
                               {!!QrCode::size(170)->color(69, 187,194)->generate($valor['email'].'-'.$valor['id']) !!}
                              </div>
-                             <span style="color:#45bbc2;">Escanea el código con la app localiza mi nave</span><br></center>
+                             <span style="color:#45bbc2;">Escanea el código con la app localiza mi nave</span><br
+                             >
+
+              <a href="https://play.google.com/store/apps/details?id=family.tracker.my&hl=es_MX"> <img src="img/play.png" width="30%" style="margin-top: 10px;"></a>
+
+             </center>
+
+               
 
                        <table class="highlight">
 
