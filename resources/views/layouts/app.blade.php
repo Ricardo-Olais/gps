@@ -31,6 +31,9 @@
     bottom: 0;
     z-index: 100;
 }*/
+    .sidenav li>a {
+        font-size: 18px;
+      }
     </style>
 
 </head>
