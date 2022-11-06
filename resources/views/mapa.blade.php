@@ -439,6 +439,7 @@
       iconAnchor: [25, 50]
     });
 
+    console.log(msg.longitud_geocerca);
 
   //geocerca  obtener la latitud y longitud de geocerca y pintarlas
    var circleCenter = [msg.longitud_geocerca,  msg.latitud_geocerca];
