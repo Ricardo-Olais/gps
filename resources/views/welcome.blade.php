@@ -91,7 +91,7 @@ function autoplay() {
  <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
          <p style="text-align: justify;">
-         <span style="color:#00bcd4;">Gps Tracker</span> de Localizaminave.com es una aplicación que permite instalarse en dispositivos android para obtener y monitorear la ubicación de personas, de tu auto. No se requiere comprar ningún localizador.
+         <span style="color:#00bcd4;">Gps Tracker</span> de Localizaminave es una aplicación que permite instalarse en dispositivos android para obtener y monitorear la ubicación de personas, de tu auto. No se requiere comprar ningún localizador.
 
         </p>
          
@@ -105,7 +105,7 @@ function autoplay() {
         </p>
 
         <p style="text-align: justify;margin-top: 15px;">
-        Antes de adentrarnos a los detalles y beneficios que puede brindarle nuestro servicio de GPS, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker <span style="color:#00bcd4;">(localizaminave.com.mx)</span>
+        Antes de adentrarnos a los detalles y beneficios que puede brindarle nuestro servicio de GPS, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker <span style="color:#00bcd4;">(https://localizaminave.com)</span>
         </p>
 
         <p style="text-align: justify;margin-top: 15px;">
