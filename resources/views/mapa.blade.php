@@ -13,6 +13,9 @@
 
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
 
+<link rel="stylesheet" href="css/leaflet-control-condended-attribution.css" />
+<script type="text/javascript" src="js/leaflet-control-condended-attribution.js"></script>
+
   <style>
     html, body {
       height: 100%;
@@ -82,10 +85,10 @@
            100% { opacity: 1.0; }
          }
 
-         .leaflet-control-attribution{
+        /* .leaflet-control-attribution{
 
           display: none;
-         }
+         }*/
   </style>
 
 
@@ -382,7 +385,7 @@
   var messages = document.getElementById('messages');
 
 
-  const map = L.map('map').setView([0, 0], 15);
+  const map = L.map('map',{condensedAttributionControl: false}).setView([0, 0], 15);
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -390,6 +393,11 @@
     attribution: '&copy; <a href="https://localizaminave.com">LocalizaMiNave</a>'
   }).addTo(map);
 
+
+L.control.condensedAttribution({
+  emblem: '<div class="emblem-wrap"><img src="http://localizaminave.com:8080/images/color.png"/ width="50"></div>',
+  prefix: '<a href="https://localizaminave.com" title="Travel time analysis by Motion Intelligence"></a>GPS'
+}).addTo(map);
  
 
 
