@@ -82,10 +82,10 @@
            100% { opacity: 1.0; }
          }
 
-        /* .leaflet-control-attribution{
+         .leaflet-control-attribution{
 
           display: none;
-         }*/
+         }
   </style>
 
 
