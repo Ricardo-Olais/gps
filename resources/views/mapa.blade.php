@@ -371,7 +371,7 @@
   var messages = document.getElementById('messages');
 
 
-  const map = L.map('map').setView([0, 0], 15);
+  const map = L.map('map').setView([0, 0], 17);
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
