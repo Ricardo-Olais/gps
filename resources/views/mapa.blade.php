@@ -142,7 +142,7 @@
                    <div class="switch">
                      <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
                        <span class="lever"></span> On </label>
-                     <span id="geocercaactual" class="lever"></span>
+                     <span id="geocercaactual" class="lever"></span><i class="material-icons">do_not_disturb_on</i>5<i class="material-icons">add_circle</i>
                    </div>
                  </div>
                </div>
@@ -487,7 +487,7 @@
     var circleOptions = {
      color: 'red',
      fillColor: '#f03',
-     fillOpacity: 0
+     fillOpacity: .1
   }
 
   
