@@ -77,6 +77,13 @@
          <div class="section">
            <div class="row vertical-modern-dashboard">
              <div id="map" style="width:100%;height: 400px;"></div>
+             <div class="col s12 m2 l12 animate fadeRight">
+               <div class="card">
+                 <span id="msjalerta"></span>
+               </div>
+             </div>
+
+
                <div class="col s12 m2 l5 animate fadeRight">
                <div class="card">
                  <div class="card-content">
@@ -386,10 +393,12 @@
       if(msg.msjalerta1!=""){
 
         $("#resplandorverde").css("display","");
+        $("#msjalerta").html(msg.msjalerta1);
       }
       if(msg.msjalerta2!=""){
 
         $("#resplandorrojo").css("display","");
+        $("#msjalerta").html(msg.msjalerta2);
       
       }
 
