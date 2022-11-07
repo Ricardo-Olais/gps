@@ -19,7 +19,17 @@
       max-height: 100%;
     }
 
-     #resplandorverde{   
+        #resplandorverde{   
+               -moz-box-shadow: 0px 0px 30px red; 
+               -webkit-box-shadow: 0px 0px 30px red; 
+               box-shadow: 0px 0px 30px red;
+               
+               padding: 10px;
+               width: 100%;
+               margin: 40px;
+            }
+
+         #resplandorrojo{   
                -moz-box-shadow: 0px 0px 30px red; 
                -webkit-box-shadow: 0px 0px 30px red; 
                box-shadow: 0px 0px 30px red;
@@ -79,7 +89,17 @@
              <div id="map" style="width:100%;height: 400px;"></div>
              <div class="col s12 m2 l12 animate fadeRight">
                <div class="card">
-                 <span id="msjalerta"></span>
+                 
+                 <!--span id="msjalerta"></span-->
+                 <center>
+                   <div id="resplandorverde" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Parking <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </div>
+
+                      <div id="resplandorrojo" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Geocerca <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </div>
+                  </center>
                </div>
              </div>
 
@@ -109,13 +129,7 @@
                <div class="card">
                  <div class="card-content">
                    <center>
-                     <span id="resplandorverde" class="parpadea" style="display:none;font-size: 10px;width: 100%;">Alerta de Parking <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
-                       </strong>
-                     </span>
-
-                      <span id="resplandorrojo" class="parpadea" style="display:none;font-size: 10px;width: 100%;">Alerta de Geocerca <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
-                       </strong>
-                     </span>
+                   
                    </center>
                    <h4 class="card-title mb-0">Fijar ubicación (Auto estacionado)</h4>
                    <!-- Switch -->
@@ -395,11 +409,22 @@
         $("#resplandorverde").css("display","");
         $("#msjalerta").html(msg.msjalerta1);
       }
+      else{
+        $("#resplandorverde").css("display","none");
+        $("#msjalerta").html("");
+
+      }
+
+
       if(msg.msjalerta2!=""){
 
         $("#resplandorrojo").css("display","");
         $("#msjalerta").html(msg.msjalerta2);
       
+      }else{
+
+        $("#resplandorrojo").css("display","none");
+        $("#msjalerta").html("");
       }
 
 
