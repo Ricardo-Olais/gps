@@ -339,7 +339,7 @@
               $.post("activageocerca",{numero:imei,_token:token,estatus:0},
                    function(data){
                       $("#activageocerca").prop( "checked", false );
-                      // $.post("inicializasocket",{_token:token,imei:imei});
+                      $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
               
 
