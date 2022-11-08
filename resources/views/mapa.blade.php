@@ -384,8 +384,10 @@
 
   var messages = document.getElementById('messages');
 
+ 
 
-  const map = L.map('map',{condensedAttributionControl: false}).setView([0, 0], 15);
+
+  const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
