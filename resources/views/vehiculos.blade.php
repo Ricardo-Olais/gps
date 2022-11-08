@@ -203,6 +203,9 @@
     .modal {
       max-height: 100% !important;
     }
+    .red {
+    background-color: #000 !important;
+}
 </style>
 
 <div id="main" >
@@ -269,9 +272,11 @@
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">android</i>
                            <select name="geocerca" id="geocerca" required style="font-size:18px;">
-                                 <option value="" disabled selected>Selecciona Km</option>
+                                 <option value="" disabled selected>Metros...</option>
                                  <?php
-                                    for($i=1; $i<50;$i++){
+                                   for($i = 100; $i < 10100; $i+=100){
+
+                                        
 
                                         echo "<option value='$i'>$i</option>";
                                     }
@@ -279,7 +284,7 @@
                                  ?>
                                  
                                </select>
-                               <label style="font-size:18px;">Geocerca (Km)</label>
+                               <label style="font-size:18px;">Geocerca</label>
                         </div>
                       </div>
 
