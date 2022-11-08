@@ -543,7 +543,7 @@ L.control.condensedAttribution({
 
      if(msg.latitud_geocerca!="" || msg.latitud_geocerca!=null) {
 
-      if(isInside==false){
+      if(isInside==false && msg.latitud_geocerca!=""){
 
         //alert("fuera de geocerca");
         $("#resplandorrojo").css("display","");
