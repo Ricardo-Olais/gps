@@ -87,7 +87,8 @@ class GpsController extends Controller
 
 
         $sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
-        $token = '55d0bd36b35f624de6c39f1a8914dd0f';
+        $token = 'de15674a3cd4d98c54d6b6bb93d1a7b8';
+
         $twilio = new Client($sid, $token);
 
         $llave=env('LLAVE_API_MAPS');
@@ -280,18 +281,18 @@ class GpsController extends Controller
 
                         $km=($miles * 1.6093444);
 
-                       if($km>1){ //mayor a 50 metros, activar alerta enviar notificación
+                       if($km>.50){ //mayor a 50 metros, activar alerta enviar notificación
 
                     
                             if($alerta==0){
 
           
-                                /*$message = $twilio->messages
-                                      ->create("whatsapp:+5215571136711", // to
+                                $message = $twilio->messages
+                                      ->create("whatsapp:+5215586779297", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);*/
+                                               ]);
                                       
                                // print_r($message); 
 
@@ -385,12 +386,12 @@ class GpsController extends Controller
 
                             if($alerta2==0){
 
-                               /* $message = $twilio->messages
-                                      ->create("whatsapp:+5215571136711", // to
+                                $message = $twilio->messages
+                                      ->create("whatsapp:+5215586779297", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Alerta de Geocerca: El vehículo $alias está fuera la geocerca establecida de $geocerca km., se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);*/
+                                               ]);
                                       
                                // print_r($message);    
 

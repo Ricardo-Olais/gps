@@ -437,7 +437,7 @@ L.control.condensedAttribution({
       }
 
 
-      if(msg.msjalerta2!=""){
+      /*if(msg.msjalerta2!=""){
 
         $("#resplandorrojo").css("display","");
         $("#msjalerta").html(msg.msjalerta2);
@@ -446,7 +446,7 @@ L.control.condensedAttribution({
 
         $("#resplandorrojo").css("display","none");
         $("#msjalerta").html("");
-      }
+      }*/
 
 
       if(msg.fija==1){
@@ -503,6 +503,8 @@ L.control.condensedAttribution({
 
 
   if(msg.latitud_geocerca!= undefined){
+
+
    var circleCenter = [msg.latitud_geocerca, msg.longitud_geocerca];
 
     var circleOptions = {
@@ -534,12 +536,19 @@ L.control.condensedAttribution({
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
+      alert(msg.latitud_geocerca);
+
       var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
       var isInside = d < circle.getRadius();
 
       if(isInside==false){
 
-        alert("fuera de geocerca");
+        //alert("fuera de geocerca");
+        $("#resplandorrojo").css("display","");
+
+      }else{
+
+        $("#resplandorrojo").css("display","none");
       }
 
      console.log(d);
