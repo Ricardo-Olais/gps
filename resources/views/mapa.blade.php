@@ -541,6 +541,8 @@ L.control.condensedAttribution({
       var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
       var isInside = d < circle.getRadius();
 
+     if(msg.latitud_geocerca!="" || msg.latitud_geocerca!=null) {
+
       if(isInside==false){
 
         //alert("fuera de geocerca");
@@ -550,6 +552,8 @@ L.control.condensedAttribution({
 
         $("#resplandorrojo").css("display","none");
       }
+
+    }
 
      console.log(d);
 
