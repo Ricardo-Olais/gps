@@ -120,6 +120,7 @@ class GpsController extends Controller
 
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
+             $geocerca=$vehiclesEstatus[0]->geocerca;
 
 
 
@@ -157,7 +158,8 @@ class GpsController extends Controller
                         "tipo"=>$tipo,
                         "msjalerta2"=>$mensajealerta2,
                         "latitud_geocerca"=>$latitud_geocerca,
-                        "longitud_geocerca"=>$longitud_geocerca
+                        "longitud_geocerca"=>$longitud_geocerca,
+                        "geocerca"=>$geocerca
 
                    );
        

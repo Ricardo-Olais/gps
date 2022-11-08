@@ -156,7 +156,10 @@
                    <div class="switch">
                      <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
                        <span class="lever"></span> On </label>
-                     <span id="geocercaactual" class="lever"></span><i class="material-icons">do_not_disturb_on</i>5<i class="material-icons">add_circle</i>
+                     <span id="geocercaactual" class="lever"></span><br>
+                     <i class="material-icons" id='menos' style="cursor:pointer;font-size: 24px;">do_not_disturb_on</i>
+                     <span id='geo'>100 mtros.</span>
+                     <i class="material-icons" id='mas' style="cursor:pointer;font-size: 24px !important;">add_circle</i>
                    </div>
                  </div>
                </div>
@@ -225,6 +228,28 @@
 
  
  $(document).ready(function(){
+
+  var geo=0;
+  $("#menos").click(function(){
+
+    geo=geo-100;
+
+
+    $("#geo").html(geo+ " mtros.");
+
+   
+
+
+  });
+
+   $("#mas").click(function(){
+
+    geo=geo+100;
+
+   $("#geo").html(geo+ " mtros.");
+
+
+  });
 
 
 
@@ -513,9 +538,9 @@ L.control.condensedAttribution({
      fillOpacity: .1
   }
 
-  
+    $("#geo").html(msg.geocerca+ " mtros.");
 
-    circle = L.circle(circleCenter,500, circleOptions); //500 metros de radio - 1 km de diametro
+    circle = L.circle(circleCenter,msg.geocerca, circleOptions); //500 metros de radio - 1 km de diametro
     circle.addTo(map);
 
   }
