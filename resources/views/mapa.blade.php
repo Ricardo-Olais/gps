@@ -534,10 +534,15 @@ L.control.condensedAttribution({
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
-      var d = map.distance([msg.latitud_geocerca, msg.longitud_geocerca], circle.getLatLng());
+      var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
       var isInside = d < circle.getRadius();
 
-      //  console.log(d);
+      if(isInside==false){
+
+        alert("fuera de geocerca");
+      }
+
+     console.log(d);
 
        /* theMarker.on('drag', function(e) {
         var d = map.distance(e.latlng, circle.getLatLng());
