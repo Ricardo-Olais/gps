@@ -531,13 +531,28 @@ L.control.condensedAttribution({
         };
 
 
-      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
+      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
+    autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
+
+      var d = map.distance([msg.latitud_geocerca, msg.longitud_geocerca], circle.getLatLng());
+      var isInside = d < circle.getRadius();
+
+      //  console.log(d);
+
+       /* theMarker.on('drag', function(e) {
+        var d = map.distance(e.latlng, circle.getLatLng());
+        var isInside = d < circle.getRadius();
+        console.log(isInside);
+        circle.setStyle({
+            fillColor: isInside ? 'green' : '#f03'
+        })
+    });*/
 
   
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'> "+isInside+"</center>")
     .openOn(map);
 
     }
