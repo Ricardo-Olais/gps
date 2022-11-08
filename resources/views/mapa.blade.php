@@ -536,7 +536,7 @@ L.control.condensedAttribution({
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
-      alert(msg.latitud_geocerca);
+     // alert(msg.latitud_geocerca);
 
       var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
       var isInside = d < circle.getRadius();
