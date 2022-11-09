@@ -145,21 +145,42 @@
                    <center>
                    
                    </center>
-                   <h4 class="card-title mb-0">Fijar ubicación (Auto estacionado)</h4>
+                   <h4 class="card-title mb-0 " >Fijar ubicación</h4>
                    <!-- Switch -->
-                   <div class="switch">
+                   <div class="switch tooltipped" data-position="right" data-tooltip="Si el dispositivo comienza a moverse se activará un Alerta">
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
                        <span class="lever"></span> On </label>
                    </div>
-                   <h4 class="card-title mb-0">Geocerca</h4>
+                   <hr style="margin-top:15px;">
+                   <h4 class="card-title mb-0"><b>Geocerca</b></h4>
                    <!-- Switch -->
                    <div class="switch">
                      <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
                        <span class="lever"></span> On </label>
-                     <span id="geocercaactual" class="lever"></span>
-                     <i class="material-icons md-30" id='menos' style="cursor:pointer;font-size: 50px;">do_not_disturb_on</i>
-                     <span id='geo' style="font-size:20px;">0 mtros.</span>
-                     <i class="material-icons" id='mas' style="cursor:pointer;font-size: 50px;">add_circle</i>
+                     <!--span id="geocercaactual" class="lever"></span--><br>
+                     <table>
+                    <thead>
+                      <tr>
+                          
+                          <th><i class="material-icons tooltipped" id='menos' data-position="right" data-tooltip="Reducir geocerca" style="cursor:pointer;font-size: 50px;color: red;">do_not_disturb_on</i></th>
+                          <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
+                          <th><i class="material-icons tooltipped" id='mas' data-position="right" data-tooltip="Incrementar geocerca" style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
+                      </tr>
+                    </thead>
+
+                
+            </table>
+
+                     
+                     
+
+
+
+                     
+
+
+
+
                    </div>
                  </div>
                </div>
@@ -229,28 +250,38 @@
  
  $(document).ready(function(){
 
-  var geo=0;
+  var valorgeo=0;
+
   $("#menos").click(function(){
 
-    geo=Number(valorgeo)-100;
+    valorgeo=Number(valorgeo)-100;
 
-  
+    $("#geo").html(valorgeo+ " mtros.");
 
+    //actualizamos la geocerca establecidad en relación al imei
+    $.post("actualizageocerca",{_token:token,imei:imei, geocerca: valorgeo},
+      function(data){
 
-    $("#geo").html(geo+ " mtros.");
-
-   
+          $.post("inicializasocket",{_token:token,imei:imei});
+      },'json');
 
 
   });
 
    $("#mas").click(function(){
 
-    geo=Number(valorgeo)+100;
+    valorgeo=Number(valorgeo)+100;
 
-    console.log(geo);
+   // console.log(geo);
 
-   $("#geo").html(geo+ " mtros.");
+   $("#geo").html(valorgeo+ " mtros.");
+
+   $.post("actualizageocerca",{_token:token,imei:imei, geocerca: valorgeo},
+      function(data){
+
+          $.post("inicializasocket",{_token:token,imei:imei});
+      },'json');
+
 
 
   });
