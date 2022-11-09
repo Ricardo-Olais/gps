@@ -601,7 +601,7 @@ L.control.condensedAttribution({
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'> "+isInside+"</center>")
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
     }
