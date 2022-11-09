@@ -115,6 +115,19 @@ class RastreoController extends Controller
     }
 
 
+    public function actualizageocerca(){
+
+        DB::table('vehiculos')->where('id_imei_android', $_REQUEST['imei'])
+                            ->update( array(
+                            'geocerca'=>$_REQUEST['geocerca']));
+
+        $datos['rows']=array("valida"=>"true");
+
+        return json_encode($datos);
+
+    }
+
+
 
 
     public function coordenadas(){
