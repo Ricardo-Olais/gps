@@ -156,7 +156,7 @@
                    <div class="switch">
                      <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
                        <span class="lever"></span> On </label>
-                     <span id="geocercaactual" class="lever"></span><br>
+                     <span id="geocercaactual" class="lever"></span>
                      <i class="material-icons md-30" id='menos' style="cursor:pointer;font-size: 50px;">do_not_disturb_on</i>
                      <span id='geo' style="font-size:20px;">0 mtros.</span>
                      <i class="material-icons" id='mas' style="cursor:pointer;font-size: 50px;">add_circle</i>
