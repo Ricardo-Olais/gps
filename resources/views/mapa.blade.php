@@ -542,7 +542,7 @@ L.control.condensedAttribution({
 
     console.log(msg.geocerca);
 
-    circle = L.circle(circleCenter,500, circleOptions); //500 metros de radio - 1 km de diametro
+    circle = L.circle(circleCenter,Number(msg.geocerca), circleOptions); //500 metros de radio - 1 km de diametro
     circle.addTo(map);
 
   }
