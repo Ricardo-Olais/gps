@@ -158,6 +158,7 @@
                      <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
                        <span class="lever"></span> On </label>
                      <!--span id="geocercaactual" class="lever"></span--><br>
+                    <center>
                      <table>
                     <thead>
                       <tr>
@@ -167,17 +168,8 @@
                           <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
                       </tr>
                     </thead>
-
-                
-            </table>
-
-                     
-                     
-
-
-
-                     
-
+                   </table>
+                   </center>
 
 
 
