@@ -204,7 +204,7 @@
       max-height: 100% !important;
     }
     .red {
-    background-color: #000 !important;
+    background-color: #00bcd4 !important;
 }
 </style>
 
