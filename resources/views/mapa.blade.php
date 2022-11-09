@@ -147,7 +147,7 @@
                    </center>
                    <h4 class="card-title mb-0 " >Fijar ubicación</h4>
                    <!-- Switch -->
-                   <div class="switch tooltipped" data-position="right" data-tooltip="Si el dispositivo comienza a moverse se activará un Alerta">
+                   <div class="switch tooltipped">
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
                        <span class="lever"></span> On </label>
                    </div>
@@ -162,9 +162,9 @@
                     <thead>
                       <tr>
                           
-                          <th><i class="material-icons tooltipped" id='menos' data-position="right" data-tooltip="Reducir geocerca" style="cursor:pointer;font-size: 50px;color: red;">do_not_disturb_on</i></th>
+                          <th><i class="material-icons tooltipped" id='menos' style="cursor:pointer;font-size: 50px;color: red;">do_not_disturb_on</i></th>
                           <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
-                          <th><i class="material-icons tooltipped" id='mas' data-position="right" data-tooltip="Incrementar geocerca" style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
+                          <th><i class="material-icons tooltipped" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
                       </tr>
                     </thead>
 
