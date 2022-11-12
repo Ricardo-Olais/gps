@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style type="text/css">
+    
+    body{
+
+        background-image: url('img/fondo-login.png');
+    }
+</style>
+
  <div id="main">
   <div class="row  vertical-modern-dashboard">
 
