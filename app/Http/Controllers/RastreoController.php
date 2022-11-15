@@ -246,7 +246,8 @@ class RastreoController extends Controller
                                 "placas"=>$value->placa,
                                 "estatus"=>$value->estatus,
                                 "colorestatus"=>$estatusColor,
-                                "email"=>$email
+                                "email"=>$email,
+                                "subscripcion"=>$value->subscripcion
 
 
                             );
