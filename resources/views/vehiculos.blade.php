@@ -187,6 +187,33 @@
                     });
 
         }
+
+
+        function cancelarSub(id){
+
+                   Swal.fire({
+                      title: 'Desea cancelar la subscripción para este Dispositivo?',
+                      showDenyButton: false,
+                      showCancelButton: true,
+                      confirmButtonText: 'Si, la quiero cancelar',
+                      denyButtonText: `Don't save`,
+                    }).then((result) => {
+                      /* Read more about isConfirmed, isDenied below */
+                      if (result.isConfirmed) {
+                        
+                        //location.reload();
+                         $.get("cancelarSubscripcion.php",{id:id},
+
+                                   function(data){
+
+                                    Swal.fire('La subscripción caducará el día '+data.expira);
+
+                                   },'json');
+
+                      } 
+                      
+                    });
+        }
       
   </script>
         
@@ -422,6 +449,18 @@
 
                         
                         </td></tr>
+                        <script type="text/javascript">
+                            var subs="{{ $valor['subscripcion'] }}";
+                        </script>
+
+                        <tr>
+                            <td class="colorcolum">Subscripción</td>
+                            <td>
+                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick="cancelarSub(subs)" style="width:100%;height: 40px;padding: 9px;">Cancelar Subscripción</span>
+                                
+                            </td>
+
+                        </tr>
 
                         <tr><td class="colorcolum">Acciones</td>  <td class="center-align">
 
