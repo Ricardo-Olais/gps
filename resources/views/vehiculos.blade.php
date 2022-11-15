@@ -189,10 +189,10 @@
         }
 
 
-        function cancelarSub(id){
+        function cancelarSub(id,alias){
 
                    Swal.fire({
-                      title: 'Desea cancelar la subscripción para este Dispositivo?',
+                      title: 'Desea cancelar la subscripción para este Dispositivo: '+alias+ '?',
                       showDenyButton: false,
                       showCancelButton: true,
                       confirmButtonText: 'Si, la quiero cancelar',
@@ -451,12 +451,13 @@
                         </td></tr>
                         <script type="text/javascript">
                             var subs="{{ $valor['subscripcion'] }}";
+                            var alias="{{ $valor['alias_vehiculo'] }}";
                         </script>
 
                         <tr>
                             <td class="colorcolum">Subscripción</td>
                             <td>
-                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick="cancelarSub(subs)" style="width:100%;height: 40px;padding: 9px;">Cancelar Subscripción</span>
+                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick="cancelarSub(subs,alias)" style="width:100%;height: 40px;padding: 9px;">Cancelar Subscripción</span>
                                 
                             </td>
 
