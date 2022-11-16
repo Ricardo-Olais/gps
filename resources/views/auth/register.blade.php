@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style type="text/css">
+    
+    body{
+
+        background-image: url('img/fondo-login.png');
+    }
+</style>
+
 
 <div id="main">
   <div class="row  vertical-modern-dashboard">
@@ -10,7 +18,7 @@
 
 
     <div class="col s12 m2 l5 center-a">
-      <div class="card">
+      <div class="card" style="border-radius: 10px;">
         <div class="card-content">
             <center><h2 class="card-title mb-0"><b>Registro a Gps Tracker</b></h2></center>
 

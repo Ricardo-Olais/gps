@@ -189,22 +189,26 @@
         }
 
 
-        function cancelarSub(id,alias){
+        function cancelarSub(id){
+
+                    $("#"+id).css("display","");
 
                    Swal.fire({
-                      title: 'Desea cancelar la subscripción para este Dispositivo: '+alias+ '?',
+                      title: 'Desea cancelar la subscripción para este Dispositivo ?',
                       showDenyButton: false,
                       showCancelButton: true,
                       confirmButtonText: 'Si, la quiero cancelar',
                       denyButtonText: `Don't save`,
                     }).then((result) => {
-                      /* Read more about isConfirmed, isDenied below */
+                     
                       if (result.isConfirmed) {
                         
                         //location.reload();
                          $.get("cancelarSubscripcion.php",{id:id},
 
                                    function(data){
+
+                                    $("#"+id).css("display","none");
 
                                     Swal.fire('La subscripción caducará el día '+data.expira);
 
@@ -450,18 +454,65 @@
                         
                         </td></tr>
                         <script type="text/javascript">
-                            var subs="{{ $valor['subscripcion'] }}";
-                            var alias="{{ $valor['alias_vehiculo'] }}";
+                           var subs="{{ $valor['subscripcion'] }}";
+                           var alias="{{ $valor['alias_vehiculo'] }}";
                         </script>
-
+                         @if ($valor['estatus']==2) 
                         <tr>
                             <td class="colorcolum">Subscripción</td>
                             <td>
-                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick="cancelarSub(subs,alias)" style="width:100%;height: 40px;padding: 9px;">Cancelar Subscripción</span>
+                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick='cancelarSub("{{ $valor["subscripcion"] }}");' style="width:100%;height: 40px;padding: 9px;">
+                                Cancelar Subscripción
+                                    <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="{{ $valor['subscripcion'] }}">
+                                      <div class="spinner-layer spinner-blue">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-red">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-yellow">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-green">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+                                </div>
+
+                            </span>
                                 
                             </td>
 
                         </tr>
+                        @endif
+
+                        
 
                         <tr><td class="colorcolum">Acciones</td>  <td class="center-align">
 
