@@ -520,13 +520,19 @@ class RastreoController extends Controller
           $user = Auth::user();
 
           $id=$_SESSION["id"];
+          date_default_timezone_set('America/Mexico_City');
 
           $email=$user->email;
           $subscripcion=$_SESSION["subscripcion"];
+
+          //sumanos 30 días
+
+
           DB::table('vehiculos')->where('email',$email)->where('id_vehiculo',$id)
                                     ->update( array(
                                              'estatus' =>2,
-                                             'subscripcion'=>$subscripcion
+                                             'subscripcion'=>$subscripcion,
+                                             'Fecha_inicio'=>date("Y-m-d H:i:s")
                                              
                                              ));
 

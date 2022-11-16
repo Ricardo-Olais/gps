@@ -10,19 +10,39 @@
     }
 </style>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+
+
+
+   
+     $("#slogin2").submit(function(){
+
+     
+
+        $("#slogin").css("display","");
+
+      
+
+       });
+
+    });
+
+</script>
+
  <div id="main">
   <div class="row  vertical-modern-dashboard">
 
    <div class="col s3"></div>
 
 
-    <div class="col s12 m2 l5 center-a">
-      <div class="card">
+    <div class="col s12 m2 l5 center-a" >
+      <div class="card" style="border-radius: 10px;">
         <div class="card-content">
           <center><span class="card-title"><b>Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
           
           <div class="card-body" style="margin-top:20px;">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" id="slogin2">
                         @csrf
 
                         <div class="form-group row">
@@ -59,8 +79,50 @@
                            
                                 <center>
                               
-                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;"><i class="material-icons right">navigate_next</i>
+                        <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;" id="btnlogin"><i class="material-icons right">navigate_next</i>
                                     {{ __('Entrar') }}
+
+                    <div class="preloader-wrapper big active" style="width:25px;height: 25px;margin-left: 40px;display: none;" id="slogin">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
                                 </button></center>
 
                                 <a href="{{ route('register') }}" class="waves-effect waves-light btn" style="width: 100%;margin-top: 20px;height: 50px;font-size: 15px;background-color: #000;padding: 7px;"><i class="material-icons right">navigate_next</i>
