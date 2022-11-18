@@ -237,34 +237,26 @@ class RastreoController extends Controller
 
                 $estatusColor=($value->estatus==0) ? "<span class='badge pink lighten-5 pink-text text-accent-2'>" :'';
 
-                     /* $fields=array(
+                      $fields=array(
 
-                       "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
-                       "direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s"),
-                        "alias"=>$alias,
-                        "conductor"=>$conductor,
-                        "fija"=>$fija,
-                        "activaGeocerca"=>$activaGeocerca,
-                        "msjalerta1"=>$mensajealerta,
-                        "tipo"=>$tipo,
-                        "msjalerta2"=>$mensajealerta2,
-                        "latitud_geocerca"=>$latitud_geocerca,
-                        "longitud_geocerca"=>$longitud_geocerca,
-                        "geocerca"=>$geocerca
-
+                       "subscripcion"=>$value->subscripcion
+                      
                    );
        
-                  $fields_string = http_build_query($fields);
+                   $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubicaini.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/gps/public/consultaSubscripcion.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
+                    
+                    $string = curl_exec($ch);
+
+                    $res=json_decode($string);
+¿
+                    $activo=$res->estatus;
+
                
-                    $string = curl_exec($ch);*/
-
-
-            
-                       $datos[]=array(
+                    $datos[]=array(
                                 "id"=>$value->id_vehiculo, 
                                 "id_imei_android"=>$value->id_imei_android, 
                                 "alias_vehiculo"=>$value->alias_vehiculo,
@@ -275,7 +267,8 @@ class RastreoController extends Controller
                                 "colorestatus"=>$estatusColor,
                                 "email"=>$email,
                                 "subscripcion"=>$value->subscripcion,
-                                "Fecha_termino"=>$value->Fecha_termino
+                                "Fecha_termino"=>$value->Fecha_termino,
+                                "activo"=>$activo
 
 
                             );
