@@ -236,6 +236,33 @@ class RastreoController extends Controller
              foreach ($gps as $key => $value) {
 
                 $estatusColor=($value->estatus==0) ? "<span class='badge pink lighten-5 pink-text text-accent-2'>" :'';
+
+                     /* $fields=array(
+
+                       "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
+                       "direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s"),
+                        "alias"=>$alias,
+                        "conductor"=>$conductor,
+                        "fija"=>$fija,
+                        "activaGeocerca"=>$activaGeocerca,
+                        "msjalerta1"=>$mensajealerta,
+                        "tipo"=>$tipo,
+                        "msjalerta2"=>$mensajealerta2,
+                        "latitud_geocerca"=>$latitud_geocerca,
+                        "longitud_geocerca"=>$longitud_geocerca,
+                        "geocerca"=>$geocerca
+
+                   );
+       
+                  $fields_string = http_build_query($fields);
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubicaini.php?".$fields_string);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+               
+                    $string = curl_exec($ch);*/
+
+
             
                        $datos[]=array(
                                 "id"=>$value->id_vehiculo, 
@@ -247,7 +274,8 @@ class RastreoController extends Controller
                                 "estatus"=>$value->estatus,
                                 "colorestatus"=>$estatusColor,
                                 "email"=>$email,
-                                "subscripcion"=>$value->subscripcion
+                                "subscripcion"=>$value->subscripcion,
+                                "Fecha_termino"=>$value->Fecha_termino
 
 
                             );
@@ -547,10 +575,22 @@ class RastreoController extends Controller
 
           $user = Auth::user();
           $email=$user->email;
+
+          date_default_timezone_set('America/Mexico_City');
+
+          $fecha_actual = date("Y-m-d");
+          $fechaFin=date("Y-m-d",strtotime($fecha_actual."+ 30 days")); 
        
           DB::table('vehiculos')->where('email',$email)->where('id_vehiculo',$id)
                                 ->update( 
-                                    array('estatus' =>5,'subscripcion'=>'Gratis'));
+                                    array(
+                                        'estatus' =>5,
+                                        'subscripcion'=>'Gratis',
+                                        'Fecha_inicio'=>date("Y-m-d H:i:s"),
+                                        'Fecha_termino'=>$fechaFin
+
+
+                                         ));
 
           $datos['rows']=array("valida"=>"true");
 
