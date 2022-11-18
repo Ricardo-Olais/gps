@@ -445,9 +445,9 @@
 
                          @endif
 
-                         @if ($valor['estatus']==5) 
+                         @if ($valor['estatus']==5 ) 
 
-                         <span class="badge blue lighten-5 blue-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Licencia Gratuita 1 mes</span>
+                         <span class="badge blue lighten-5 blue-text text-accent-2 btn" style="width:100%;height: auto;padding: 9px;">Licencia Gratuita 1 mes<br>Expira el día {{ $valor['Fecha_termino'] }}</span>
 
                          @endif
 
@@ -462,7 +462,17 @@
                             <td class="colorcolum">Subscripción</td>
                             <td>
                                 <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick='cancelarSub("{{ $valor["subscripcion"] }}");' style="width:100%;height: 40px;padding: 9px;">
-                                Cancelar Subscripción
+
+                                 @if ($valor['Fecha_termino']!='' && $valor['Fecha_termino']!='0000-00-00') 
+                                    Expira el día {{ $valor['Fecha_termino'] }}
+                                 @else
+                                 Cancelar Subscripción
+
+                                 @endif
+                                
+
+
+
                                     <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="{{ $valor['subscripcion'] }}">
                                       <div class="spinner-layer spinner-blue">
                                         <div class="circle-clipper left">
@@ -506,6 +516,8 @@
                                 </div>
 
                             </span>
+
+
                                 
                             </td>
 
