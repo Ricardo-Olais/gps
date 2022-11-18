@@ -439,7 +439,7 @@
 
                          @endif
 
-                        @if ($valor['estatus']==2) 
+                        @if ($valor['estatus']==2 && $valor['activo']=='active') 
 
                          <span class="badge blue lighten-5 blue-text text-accent-2 btn" style="width:100%;height: 40px;padding: 9px;">Licencia activa</span>
 

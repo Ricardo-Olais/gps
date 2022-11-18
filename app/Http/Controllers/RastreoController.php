@@ -253,7 +253,15 @@ class RastreoController extends Controller
 
                     $res=json_decode($string);
 
-                    $activo=$res->estatus;
+                    $activo='gratis';
+
+                    if(isset($res->estatus)){
+                        
+                         $activo=$res->estatus;
+
+                    }
+
+                   
 
                
                     $datos[]=array(
