@@ -30,6 +30,8 @@ $fechaExpira=date("Y-m-d H:i:s", $cancelarSubscripcion['current_period_end']);
 $sql = "UPDATE vehiculos SET Fecha_termino='$fechaExpira' WHERE subscripcion='$subscription'";
 $query = mysqli_query($conexion, $sql);
 
+echo "UPDATE vehiculos SET Fecha_termino='$fechaExpira' WHERE subscripcion='$subscription'";
+
 $response->expira=$fechaExpira;
 
 echo json_encode($response);
