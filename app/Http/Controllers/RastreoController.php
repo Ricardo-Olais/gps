@@ -252,7 +252,7 @@ class RastreoController extends Controller
                     $string = curl_exec($ch);
 
                     $res=json_decode($string);
-¿
+
                     $activo=$res->estatus;
 
                
