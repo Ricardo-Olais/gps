@@ -604,7 +604,8 @@ class RastreoController extends Controller
                                     ->update( array(
                                              'estatus' =>2,
                                              'subscripcion'=>$subscripcion,
-                                             'Fecha_inicio'=>date("Y-m-d H:i:s")
+                                             'Fecha_inicio'=>date("Y-m-d H:i:s"),
+                                             'Fecha_termino'=>""
                                              
                                              ));
 
