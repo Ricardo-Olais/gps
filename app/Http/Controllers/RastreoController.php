@@ -276,7 +276,7 @@ class RastreoController extends Controller
 
                     //sub_1M3TmRK9KYNU2QdI2clpDEnK
              
-                    if($fechaExpira>$fechaSistemaPro && $activo!="active"){
+                    if($fechaSistemaPro > $fechaExpira&& $activo!="active"){
 
                         $valorExpira=1;
 
@@ -285,7 +285,7 @@ class RastreoController extends Controller
                         //actualizamos el valor a estatus 1 de pagar
                     }
 
-                    if($fechaExpira>$fechaSistemaPro && $value->subscripcion=="gratis"){
+                    if($fechaSistemaPro > $fechaExpira && $value->subscripcion=="gratis"){
 
                         $valorExpira=1;
 
