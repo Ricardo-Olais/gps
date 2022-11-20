@@ -213,14 +213,14 @@
                                      Swal.fire({
                                       title: 'La subscripción caducará el día '+data.expira,
                                       showDenyButton: false,
-                                      showCancelButton: true,
+                                      showCancelButton:false,
                                       confirmButtonText: 'De acuerdo',
                                       denyButtonText: `Don't save`,
                                     }).then((result) => {
                                      
                                       if (result.isConfirmed) {
                                         
-                                        
+                                        location.reload();
 
                                       } 
                                       
