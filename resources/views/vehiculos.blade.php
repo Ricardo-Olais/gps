@@ -210,7 +210,29 @@
 
                                     $("#"+id).css("display","none");
 
-                                    Swal.fire('La subscripción caducará el día '+data.expira);
+                                     Swal.fire({
+                                      title: 'La subscripción caducará el día '+data.expira,
+                                      showDenyButton: false,
+                                      showCancelButton: true,
+                                      confirmButtonText: 'De acuerdo',
+                                      denyButtonText: `Don't save`,
+                                    }).then((result) => {
+                                     
+                                      if (result.isConfirmed) {
+                                        
+                                        
+
+                                      } 
+                                      
+                                    });
+
+
+                                   // Swal.fire('La subscripción caducará el día '+data.expira);
+
+
+
+
+
 
                                    },'json');
 
