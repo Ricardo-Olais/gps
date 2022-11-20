@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use DateTime;
 
 
 class RastreoController extends Controller
@@ -235,6 +236,9 @@ class RastreoController extends Controller
 
              foreach ($gps as $key => $value) {
 
+
+
+
                 $estatusColor=($value->estatus==0) ? "<span class='badge pink lighten-5 pink-text text-accent-2'>" :'';
 
                       $fields=array(
@@ -256,11 +260,47 @@ class RastreoController extends Controller
                     $activo='gratis';
 
                     if(isset($res->estatus)){
-                        
+
                          $activo=$res->estatus;
 
                     }
 
+                    $fechaSistema=date("Y-m-d");
+
+                    $fechaExpira= new DateTime($value->Fecha_termino);
+                    $fechaSistemaPro= new DateTime($fechaSistema);
+
+                    $valorExpira=0;
+
+                   // print_r($fechaExpira);
+
+                    //sub_1M3TmRK9KYNU2QdI2clpDEnK
+             
+                    if($fechaExpira>$fechaSistemaPro && $activo!="active"){
+
+                        $valorExpira=1;
+
+                 DB::table('vehiculos')->where('id_vehiculo', $value->id_vehiculo)->update( array('estatus'=>1));
+
+                        //actualizamos el valor a estatus 1 de pagar
+                    }
+
+                    if($fechaExpira>$fechaSistemaPro && $value->subscripcion=="gratis"){
+
+                        $valorExpira=1;
+
+
+                DB::table('vehiculos')->where('id_vehiculo', $value->id_vehiculo)->update( array('estatus'=>1));
+
+                        //actualizamos el valor a estatus 1 de pagar
+                    }
+
+                    $diff = $fechaSistemaPro->diff($fechaExpira);
+
+                   //print_r($diff);
+
+
+                   // echo $dias=@$diff->days; //validación de 7 para usuario normal
                    
 
                
@@ -276,13 +316,16 @@ class RastreoController extends Controller
                                 "email"=>$email,
                                 "subscripcion"=>$value->subscripcion,
                                 "Fecha_termino"=>$value->Fecha_termino,
-                                "activo"=>$activo
+                                "activo"=>$activo,
+                                "valorExpira"=>$valorExpira
 
 
                             );
                 }
 
         }
+
+      
 
         /* $result = json_encode($datos);
 
