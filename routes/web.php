@@ -53,6 +53,8 @@ Route::get('/tracker2', function () {
     return view('tracker');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -64,7 +66,7 @@ Route::post('/guardavehiculo', 'RastreoController@guardavehiculo');
 Route::get('/historico', 'RastreoController@historico');
 Route::post('/inicializasocket', 'RastreoController@inicializasocket');
 Route::post('/actualizageocerca', 'RastreoController@actualizageocerca');
-
+Route::get('/facturacion', 'RastreoController@facturas');
 
 
 

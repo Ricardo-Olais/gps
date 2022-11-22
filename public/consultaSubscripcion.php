@@ -5,7 +5,7 @@ require_once 'shared.php';
 
 $domain_url = $config['domain'];
 
-$subscripcion=$_REQUEST['subscripcion'];
+$subscripcion="sub_1M70G4K9KYNU2QdIqXAMR8fu";//$_REQUEST['subscripcion'];
 
 //$id=$_REQUEST['id'];
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -16,6 +16,10 @@ $resul=$stripe->subscriptions->retrieve(
   "$subscripcion",
   []
 );
+
+
+
+//print_r($resul['customer']);
 
 $response=new stdClass();
 
