@@ -704,6 +704,49 @@ class RastreoController extends Controller
         return view('historico', ['datos' => $datos]);
     }
 
+      public function facturas(){
+
+       // $email="r.hernandez@lidcorp.mx";
+
+        $email=Auth::user()->email;
+     
+
+
+        $gps = DB::table('vehiculos')->where('email',$email)->get();
+
+
+        date_default_timezone_set('America/Mexico_City');
+
+     
+
+       $datos=array();   
+        if(count($gps)>0){
+
+             foreach ($gps as $key => $value) {
+
+               
+            
+                       $datos[]=array(
+                               
+                                "id_vehiculo"=>$value->id_vehiculo,
+                                 "conductor"=>$value->conductor,
+                                 "estatus"=>$value->estatus,
+                                 "subscripcion"=>$value->subscripcion
+                              
+                               
+                            );
+                }
+
+        }
+
+        /* $result = json_encode($datos);
+
+         return $result;*/
+
+
+        return view('facturas', ['datos' => $datos]);
+    }
+
 
          
 
