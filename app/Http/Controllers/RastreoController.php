@@ -609,7 +609,7 @@ class RastreoController extends Controller
                                              'estatus' =>2,
                                              'subscripcion'=>$subscripcion,
                                              'Fecha_inicio'=>date("Y-m-d H:i:s"),
-                                             'Fecha_termino'=>$fechaFin
+                                             'Fecha_termino'=>null
                                              
                                              ));
 
