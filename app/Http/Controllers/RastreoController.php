@@ -597,6 +597,10 @@ class RastreoController extends Controller
           $email=$user->email;
           $subscripcion=$_SESSION["subscripcion"];
 
+
+          $fecha_actual = date("Y-m-d");
+          $fechaFin=date("Y-m-d",strtotime($fecha_actual."+ 30 days")); 
+
           //sumanos 30 días
 
 
@@ -605,7 +609,7 @@ class RastreoController extends Controller
                                              'estatus' =>2,
                                              'subscripcion'=>$subscripcion,
                                              'Fecha_inicio'=>date("Y-m-d H:i:s"),
-                                             'Fecha_termino'=>null
+                                             'Fecha_termino'=>$fechaFin
                                              
                                              ));
 
