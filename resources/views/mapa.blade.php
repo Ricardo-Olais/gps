@@ -95,7 +95,7 @@
  <div id="main">
   <input type="hidden" name="dir" id="dir">
    <div class="row">
-     <div class="content-wrapper-before blue-grey lighten-5"></div>
+    
      <div class="col s12">
        <div class="container">
          <div class="section">
