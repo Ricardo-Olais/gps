@@ -11,6 +11,12 @@
 
 
 });
+     
+
+    function cargar(id){
+
+         $("#"+id).css("display","");
+    }
 </script>
         
 
@@ -91,7 +97,50 @@
                      <td></td>
                      <td>
 
-                        <a  class="badge blue lighten-5 blue-text text-accent-2 btn" href="facturas.php?id={{ $valor['subscripcion'] }}" style="width:100%;">Ver Factura</a>
+                        <a  class="badge blue lighten-5 blue-text text-accent-2 btn" href="facturas.php?id={{ $valor['subscripcion'] }}" style="width:100%;" onclick='cargar("{{ $valor["subscripcion"] }}");'>Ver Factura
+                                <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="{{ $valor['subscripcion'] }}">
+                                      <div class="spinner-layer spinner-blue">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-red">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-yellow">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-green">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+                                </div>
+
+                        </a>
 
 
                     </td>

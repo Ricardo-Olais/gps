@@ -244,7 +244,7 @@ function autoplay() {
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card" style="background-color: #00bcd4;">
+         <div class="card" style="background-color: #00bcd4;padding: 1px;">
            
                <center><h5 style="color:#fff !important;">Conoce nuestros planes</h5></center>
           
@@ -259,8 +259,17 @@ function autoplay() {
                <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_not_fixed</i>Prueba Gratuita (1 mes)</b></h4></center><br>
               
               
-               <p style="text-align:justify;">Conoce la ubicación de tus seres queridos, de tu auto, motocicleta, en tiempo real.<br>
-               Podrás tener la tranquilidad de saber dónde se encuentran en todo momento a través de tu PC o smartphone.</p>
+                <ul class="collection with-header">
+       
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real</li>
+        <li class="collection-item" style="background-color:#D5D8D4;"><i class="material-icons" style="color:red">gps_fixed</i> Cuentas espejo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas</li>
+        <li class="collection-item" style="background-color:#D5D8D4;"><i class="material-icons" style="color:red">hdr_weak</i> Configura ubicación fija</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo</li>
+        <li class="collection-item" style="background-color:#D5D8D4;"><i class="material-icons" style="color:red">headset_mic</i> Atención personalizada por chat</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">notifications</i> Notificaciones vía whatsapp y correo electrónico</li>
+      </ul>
 
               <center><img src="img/home/real.png" width="50%"></center>
 
@@ -281,10 +290,21 @@ function autoplay() {
                <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_fixed</i>Plan Mensual $29.00 MXN</b></h4></center><br>
               
               
-               <p style="text-align:justify;">Conoce la ubicación de tus seres queridos, de tu auto, motocicleta, en tiempo real.<br>
-               Podrás tener la tranquilidad de saber dónde se encuentran en todo momento a través de tu PC o smartphone.</p>
+               <ul class="collection with-header">
+       
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">notifications</i> Notificaciones vía whatsapp y correo electrónico</li>
+      </ul>
 
-              <center><img src="img/home/real.png" width="50%"></center>
+               
+
+              <center><img src="img/home/rutas.png" width="50%"></center>
 
              <a href='dispositivos' class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color: black;">Conseguir Plan
                 <i class="material-icons right">send</i>
@@ -301,10 +321,19 @@ function autoplay() {
             <div class="card-content">
                <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_fixed</i>Plan anual $299.00 MXN</b></h4></center><br>
               
-               <p style="text-align:justify;">Conoce la ubicación de tus seres queridos, de tu auto, motocicleta, en tiempo real.<br>
-               Podrás tener la tranquilidad de saber dónde se encuentran en todo momento a través de tu PC o smartphone.</p>
+               <ul class="collection with-header">
+       
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">notifications</i> Notificaciones vía whatsapp y correo electrónico</li>
+      </ul>
 
-              <center><img src="img/home/real.png" width="50%"></center>
+              <center><img src="img/home/vehiculos.png" width="50%"></center>
 
               <a href='dispositivos' class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;">Conseguir Plan
                 <i class="material-icons right">send</i>
