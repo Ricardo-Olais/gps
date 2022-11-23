@@ -44,11 +44,18 @@
   });
 </script>
 
+<style type="text/css">
+   body{
+
+        background-image: url('img/fondo-login.png');
+    }
+</style>
+
 <div id="main" >
       <div class="row">
      <input type="hidden" name="valida" id="valida" value="<?php echo @$_REQUEST['id']; ?>">
     
-        <div class="content-wrapper-before blue-grey lighten-5"></div>
+       
         <div class="col s12">
           <div class="container">
             <div class="section">
