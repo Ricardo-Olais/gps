@@ -108,10 +108,7 @@
                   <i class="material-icons">help_outline</i>Mi cuenta</a>
               </li>
              
-              <li tabindex="0">
-                <a class="grey-text text-darken-1" href="page-faq.html">
-                  <i class="material-icons">help_outline</i> Ayuda</a>
-              </li>
+              
               <li class="divider" tabindex="0"></li>
               <li tabindex="0">
                 <a class="grey-text text-darken-1" href="facturacion">
@@ -213,7 +210,7 @@
     @else
      <li class="bold">
       <a class="waves-effect waves-cyan " href="http://localizaminave.com:8080/tracker">
-        <i class="material-icons" style="color:Red;">location_on</i>
+        <i class="material-icons" style="color:#00bcd4;">location_on</i>
         <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
     </li>

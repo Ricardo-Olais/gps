@@ -78,10 +78,6 @@
 
           
              
-              <li tabindex="0">
-                <a class="grey-text text-darken-1" href="page-faq.html">
-                  <i class="material-icons">help_outline</i> Ayuda</a>
-              </li>
               <li class="divider" tabindex="0"></li>
               <li tabindex="0">
                 <a class="grey-text text-darken-1" href="facturacion">
