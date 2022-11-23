@@ -84,7 +84,7 @@
               </li>
               <li class="divider" tabindex="0"></li>
               <li tabindex="0">
-                <a class="grey-text text-darken-1" href="user-lock-screen.html">
+                <a class="grey-text text-darken-1" href="facturacion">
                   <i class="material-icons">lock_outline</i> Factura</a>
               </li>
               <li tabindex="0">
