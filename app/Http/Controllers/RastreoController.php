@@ -731,7 +731,8 @@ class RastreoController extends Controller
                                 "id_vehiculo"=>$value->id_vehiculo,
                                  "conductor"=>$value->conductor,
                                  "estatus"=>$value->estatus,
-                                 "subscripcion"=>$value->subscripcion
+                                 "subscripcion"=>$value->subscripcion,
+                                 "alias"=>$value->alias_vehiculo
                               
                                
                             );

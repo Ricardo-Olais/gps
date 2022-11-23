@@ -8,131 +8,10 @@
      $(document).ready(function(){
 
         $('.tooltipped').tooltip();
-        $('.modal').modal();
 
 
-        $("#guardavehiculo").submit(function(){
-
-              var datos=$(this).serialize()+"&_token="+token;
-
-            $.post("guardavehiculo",datos,
-
-                function(data){
-
-                   location.reload();
-
-                },'json' );
-               
-
-            return false;
-
-        });
-
-
-         
-  });
-
-      function guardar(id,android){
-           // alert("actualizar "+id+ "con "+android);
-
-            $.post("actualizanumero",{id:id,android:android,_token:token},
-
-                function(data){
-
-                    if(data.rows.valida="true"){
-
-                        location.reload();
-                    }
-
-                },'json');
-
-                
-        }
-
-        function pagar(id){
-
-           // alert("pagar "+id);
-           if($("#"+id).val()==""){
-                Swal.fire('Escanea el código QR con la app gps Tracker');
-
-            }else{
-            location.href="planes?id="+id;
-            
-            }
-
-
-        }
-
-        function pagargratis(id){
-
-            if($("#"+id).val()==""){
-                Swal.fire('Escanea el código QR con la app gps Tracker');
-
-            }else{
-
-                //actualizamos vehículo a estatus 5 que es pagar despues de la membrecía
-
-                
-                $.post("licenciagratis",{id:id,_token:token},
-
-                function(data){
-
-                    Swal.fire({
-                      title: 'Disfruta de los beneficios de localizaminave, tu licencia gratuita ha sido activada',
-                      showDenyButton: false,
-                      showCancelButton: false,
-                      confirmButtonText: 'Aceptar',
-                      denyButtonText: `Don't save`,
-                    }).then((result) => {
-                      /* Read more about isConfirmed, isDenied below */
-                      if (result.isConfirmed) {
-                        
-                        location.reload();
-
-                      } 
-                    });
-
-
-
-                   
-
-                },'json');
-
-
-            }
-
-
-            //alert("gratis");
-        }
-
-        function eliminar(id){
-
-             Swal.fire({
-                      title: 'El vehículo será eliminado, al eliminarlo se perderá tu licencia pero mantendremos tu histórico, realmente deseas eliminarlo?',
-                      showDenyButton: false,
-                      showCancelButton: true,
-                      confirmButtonText: 'Si, lo quiero eliminar',
-                      denyButtonText: `Don't save`,
-                    }).then((result) => {
-                      /* Read more about isConfirmed, isDenied below */
-                      if (result.isConfirmed) {
-                        
-                        //location.reload();
-                         $.post("eliminavehiculogps",{id:id,_token:token},
-
-                                   function(data){
-
-                                     location.reload();
-
-                                   },'json');
-
-                      } 
-                      
-                    });
-
-        }
-      
-  </script>
+});
+</script>
         
 
 <style type="text/css">
@@ -147,43 +26,89 @@
     .modal {
       max-height: 100% !important;
     }
+
+
+    
+    body{
+
+        background-color: #000;
+    }
+
     
 </style>
 
+
+
+
+
+
+
+
 <div id="main" >
       <div class="row">
-         <center><h6><b>Mis Subscipciones</b></h6></center>
-             <div class="card">
-                <div class="card-content">
-                <table>
-                    <thead style="background-color:#00bcd4;color:#fff;padding: 30px;height: 40px;">
-                      <tr>
-                          
-                          <th>id</th>
-                          <th>Conductor</th>
-                          <th>Estatus</th>
-                          <th>Subscripción</th>
-                          <th></th>
-                      </tr>
-                    </thead>
 
+         <center>
+            <h6 style="color:#00bcd4;font-size: 18px;">Mis Subscripciónes</h6>
+         
 
-                    <tbody>
-                    @foreach($datos as $valor)
-                   
+        </center>
+
+        @foreach($datos as $valor)
+            <div class="col s12 m2 l6 animate fadeRight">
+                 <!-- Total Transaction -->
+
+                 <div class="card">
+                    <div class="card-content">
+                      
+
+                      <div class="card-title" >Dispositivo:</b> {{ $valor['alias'] }}</div>
+                      <center>
+
+                    <table class="highlight">
                       <tr>
-                       
+                        <td class="colorcolum">Id</td>
                         <td>{{ $valor['id_vehiculo'] }}</td>
+
+                    </tr>
+                     <tr>
+                        <td class="colorcolum">Conductor</td>
                         <td>{{ $valor['conductor'] }}</td>
+
+                    </tr>
+
+                      <tr>
+                        <td class="colorcolum">Estatus</td>
                         <td>{{ $valor['estatus'] }}</td>
+
+                     </tr>
+                     <tr>
+                        <td class="colorcolum">Subscripción</td>
                         <td>{{ $valor['subscripcion'] }}</td>
-                        <td><a href="facturas.php?id={{ $valor['subscripcion'] }}">Ver</a></td>
+                        
                       </tr>
-              @endforeach
-              </tbody>
-            </table>
-        </div>
-    </div>
+
+                     <tr>
+                     <td></td>
+                     <td>
+
+                        <a  class="badge blue lighten-5 blue-text text-accent-2 btn" href="facturas.php?id={{ $valor['subscripcion'] }}" style="width:100%;">Ver Factura</a>
+
+
+                    </td>
+                    </tr>
+
+                  </table>
+                    
+
+                      </center>
+                    </div>
+                </div>
+            </div>
+         @endforeach
+
+
+
+      
 </div>
 </div>
 
