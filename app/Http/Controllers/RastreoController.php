@@ -819,6 +819,18 @@ class RastreoController extends Controller
                             );
                 }
 
+        }else{
+
+            $datos[]=array(
+                               
+                                "alias_vehiculo"=>"",
+                                "direccion"=>"",
+                                "fecha"=>"",
+                                "lat"=>"",
+                                "long"=>""
+                               
+                            );
+
         }
 
         /* $result = json_encode($datos);
