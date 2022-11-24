@@ -335,6 +335,90 @@ class RastreoController extends Controller
         return view('vehiculos', ['datos' => $datos]);
     }
 
+
+      public function auxgridvehiculos(){
+
+       // $email="r.hernandez@lidcorp.mx";
+
+        $email=Auth::user()->email;
+
+
+        $gps = DB::table('vehiculos')->where('email',$email)->get();
+        date_default_timezone_set('America/Mexico_City');
+
+     
+
+       $datos=array();   
+        if(count($gps)>0){
+
+             foreach ($gps as $key => $value) {
+
+
+
+
+                $estatusColor=($value->estatus==0) ? "<span class='badge pink lighten-5 pink-text text-accent-2'>" :'';
+
+                      $fields=array(
+
+                       "subscripcion"=>$value->subscripcion
+                      
+                   );
+       
+                   $fields_string = http_build_query($fields);
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/gps/public/consultaSubscripcion.php?".$fields_string);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+                    
+                    $string = curl_exec($ch);
+
+                    $res=json_decode($string);
+
+                    $activo='gratis';
+
+                    if(isset($res->estatus)){
+
+                         $activo=$res->estatus;
+
+                    }
+
+                    $fechaSistema=date("Y-m-d");
+
+                    $fechaExpira= new DateTime($value->Fecha_termino);
+                    $fechaSistemaPro= new DateTime($fechaSistema);
+
+                    $valorExpira=0;
+
+                   // print_r($fechaExpira);
+
+                    //sub_1M3TmRK9KYNU2QdI2clpDEnK
+             
+                    if($fechaSistemaPro > $fechaExpira&& $activo!="active"){
+
+                        $valorExpira=1;
+
+                 DB::table('vehiculos')->where('id_vehiculo', $value->id_vehiculo)->update( array('estatus'=>1));
+
+                        //actualizamos el valor a estatus 1 de pagar
+                    }
+
+                    if($fechaSistemaPro > $fechaExpira && $value->subscripcion=="gratis"){
+
+                        $valorExpira=1;
+
+
+                DB::table('vehiculos')->where('id_vehiculo', $value->id_vehiculo)->update( array('estatus'=>1));
+
+                        //actualizamos el valor a estatus 1 de pagar
+                    }
+
+              
+                }
+
+        }
+
+    }
+
     public function actualizanumero(){
 
           DB::table('vehiculos')->where('id_vehiculo', $_REQUEST['id'])
