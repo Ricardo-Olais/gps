@@ -68,7 +68,7 @@ Route::post('/inicializasocket', 'RastreoController@inicializasocket');
 Route::post('/actualizageocerca', 'RastreoController@actualizageocerca');
 Route::get('/facturacion', 'RastreoController@facturas');
 Route::get('/auxgridvehiculos', 'RastreoController@auxgridvehiculos');
-
+Route::post('/consultavehi', 'RastreoController@consultavehi');
 
 //Notificaciones
 
