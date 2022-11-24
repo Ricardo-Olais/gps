@@ -192,6 +192,35 @@
 
         }
 
+        function editar(id){
+
+       
+               $.post("consultavehi",{id:id,_token:token},
+
+                   function(data){
+                    console.log(data);
+
+
+
+                    $("#alias").val(data[0].alias_vehiculo);
+                    $("#conductor").val(data[0].conductor);
+                    $("#telefono").val(data[0].telefono);
+                    $("#marca").val(data[0].marca);
+                    $("#placas").val(data[0].placas);
+
+                    
+
+                    
+
+                    
+                                   
+
+                },'json');
+
+        
+
+        }
+
 
         function cancelarSub(id){
 
@@ -601,7 +630,7 @@
                         <tr><td class="colorcolum">Acciones</td>  <td class="center-align">
 
                         <a href="#" ><i class="material-icons pink-text" style="font-size:30px !important;"  onclick="eliminar({{ $valor['id'] }})">clear</i></a>
-                        <a href="#"><i class="material-icons yellow-text" style="font-size:30px !important;">edit</i></a>
+                        <a class='modal-trigger' href="#modal1" ><i class="material-icons yellow-text" style="font-size:30px !important;"  onclick="editar({{ $valor['id'] }})">edit</i></a>
 
                         </td></tr>
 

@@ -419,6 +419,47 @@ class RastreoController extends Controller
 
     }
 
+     public function consultavehi(){
+
+       // $email="r.hernandez@lidcorp.mx";
+
+        $email=Auth::user()->email;
+        $id=$_REQUEST['id'];
+
+
+        $gps = DB::table('vehiculos')->where('id_vehiculo',$id)->get();
+        date_default_timezone_set('America/Mexico_City');
+
+     
+
+       $datos=array();   
+        if(count($gps)>0){
+
+             foreach ($gps as $key => $value) {
+                       $datos[]=array(
+                                "id"=>$value->id_vehiculo, 
+                                "tipo"=>$value->tipo,
+                                "alias_vehiculo"=>$value->alias_vehiculo,
+                                "conductor"=>$value->conductor,
+                                "geocerca"=>$value->geocerca,
+                                "placas"=>$value->placa,
+                                "telefono"=>$value->telefono,
+                                "marca"=>$value->marca
+                               
+                              
+
+                            );
+
+        }
+
+       }
+
+        $result = json_encode($datos);
+
+         return $result;
+
+    }
+
     public function actualizanumero(){
 
           DB::table('vehiculos')->where('id_vehiculo', $_REQUEST['id'])
