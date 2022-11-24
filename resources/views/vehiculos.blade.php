@@ -422,7 +422,7 @@
            </ul-->
          </div>
 
-        <center><h6 style="color:#00bcd4;font-size: 18px;">Mis dispositivos</h6></center>
+        <center><h6 style="color:#000;font-size: 18px;">Mis dispositivos</h6></center>
 
         @if(count($datos)==0)
 
