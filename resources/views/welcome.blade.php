@@ -129,7 +129,7 @@ function autoplay() {
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card" style="background-color: #00bcd4;">
+         <div class="card" style="background-color: #00bcd4;padding: 1px;border-radius: 15px;">
             
               <center><b><h5 style="color:#fff;">Funciones de sistema GPS tracker</h5></b></center>
         
@@ -243,7 +243,7 @@ function autoplay() {
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card" style="background-color: #00bcd4;padding: 1px;">
+         <div class="card" style="background-color: #00bcd4;padding: 1px;border-radius: 15px;">
            
                <center><h5 style="color:#fff !important;">Conoce nuestros planes</h5></center>
           

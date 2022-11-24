@@ -36,7 +36,7 @@
 
   <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card" style="background-color: #00bcd4;border-radius: 15px;">
+         <div class="card" style="background-color: #00bcd4;border-radius: 15px;padding: 1px;">
            
                <center><h5 style="color:#fff !important;">¿Cómo funciona?</h5></center>
           
