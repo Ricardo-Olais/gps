@@ -85,6 +85,11 @@
            100% { opacity: 1.0; }
          }
 
+        body{
+
+        background-image: url('img/fondo-login.png');
+        }
+
         /* .leaflet-control-attribution{
 
           display: none;
