@@ -66,6 +66,8 @@
 
               var datos=$(this).serialize()+"&_token="+token;
 
+              $("#guardad").css("display","");
+
             $.post("guardavehiculo",datos,
 
                 function(data){
@@ -361,6 +363,48 @@
 
                <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
                     <i class="material-icons right">send</i>
+
+                     <div class="preloader-wrapper big active" style="width:20px;height: 20px;display:none;" id="guardad">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
                   </button>
              
              </div>
