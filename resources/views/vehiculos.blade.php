@@ -266,7 +266,7 @@
 
   body{
 
-        background-color: #000;
+         background-image: url('img/fondo-login.png');
     }
 </style>
 
