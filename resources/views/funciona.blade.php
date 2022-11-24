@@ -15,6 +15,10 @@
    p{
       font-size: 18px;
    }
+    body{
+
+        background-image: url('img/fondo-login.png');
+    }
 </style>
 
 <div id="main" >
