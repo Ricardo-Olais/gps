@@ -57,6 +57,8 @@
 
         var ultimo=localStorage.getItem("ultimo");
 
+        $.get("auxgridvehiculos");
+
        // alert(ultimo);
 
 
@@ -259,6 +261,11 @@
     .red {
     background-color: #00bcd4 !important;
 }
+
+  body{
+
+        background-color: #000;
+    }
 </style>
 
 <div id="main" >
@@ -304,7 +311,7 @@
 
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">phone</i>
-                          <input id="telefono" name="telefono" type="number" class="validate" placeholder="Teléfono" required style="font-size:18px;">
+                          <input id="telefono" name="telefono" type="number" class="validate" placeholder="Opcional" style="font-size:18px;">
                           <label for="icon_telephone" style="font-size:18px;">Teléfono</label>
                         </div>
                       </div>
@@ -377,11 +384,11 @@
 
               <div class="col s12 m2 l12 animate fadeRight">
                  <!-- Total Transaction -->
-                 <div class="card">
-                    <div class="card-content">
+                
+                   
                        <center>
 
-                         <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="border-radius: 15px;">Agrega tus dispositivos</a>
+                         <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="border-radius: 15px;height: 60px;width: 50%;font-size: 24px;padding: 10px;">Agrega tus dispositivos <i class="large material-icons">add</i></a><br><br>
 
                          <!--img src="img/autov.gif" width="30"-->
 
@@ -391,8 +398,7 @@
                       
                    
 
-                    </div>
-                 </div>
+                 
               </div>
 
 
