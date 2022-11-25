@@ -38,10 +38,23 @@ class GpsController extends Controller
         $email=$ext[0];
         $imei=$ext[2];
 
-        DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
+        //validar si ya existe el imei
+
+        $consultamosLicencias=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='imei'");
+
+        $msg="";
+
+            if(count($consultamosLicencias)>0){
+
+                $msg="Ya existe una cuenta asociada al dispositivo, intenta desde otro equipo";
+            }else{
+
+                DB::table('vehiculos')->where('id_vehiculo', $id)->where('email', $email)->update(array('id_imei_android' =>$imei));
 
 
-        $fields=array("email"=>$email);
+            }
+
+        $fields=array("email"=>$email,"msg"=>$msg);
        
                     $fields_string = http_build_query($fields);
                     $ch = curl_init();
