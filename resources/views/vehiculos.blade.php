@@ -28,9 +28,17 @@
     confetti();
 
    if(email==msg.email){
+
+       if(msj.msg==""){
+
+         mensaje="Dispositivo sincronizado correctamente";
+       }else{
+
+        mensaje=msj.msg;
+       }
     
     Swal.fire({
-                      title: 'Dispositivo sincronizado correctamente',
+                      title: mensaje,
                       showDenyButton: false,
                       showCancelButton: false,
                       confirmButtonText: 'Aceptar',
