@@ -29,12 +29,12 @@
 
    if(email==msg.email){
 
-       if(msj.msg==""){
+       if(msg.msg==""){
 
          mensaje="Dispositivo sincronizado correctamente";
        }else{
 
-        mensaje=msj.msg;
+        mensaje=msg.msg;
        }
     
     Swal.fire({
