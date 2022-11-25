@@ -10,6 +10,20 @@
     }
 </style>
 
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+
+        $("#sw").submit(function(){
+
+            $("#re").css("display","");
+
+        })
+
+    });
+
+</script>
+
 
 <div id="main">
   <div class="row  vertical-modern-dashboard">
@@ -23,7 +37,7 @@
             <center><h2 class="card-title mb-0"><b>Registro a Gps Tracker</b></h2></center>
 
             <div class="card-body" style="margin-top:20px;">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" id="sw">
                         @csrf
 
                         <div class="form-group row">
@@ -78,8 +92,50 @@
 
                         <div class="row">
                             <div class="col s12 m2 l12">
-                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;">
+                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;" id="activasub">
                                     Registrarme<i class="material-icons right">chevron_right</i>
+
+                                      <div class="preloader-wrapper big active" style="width:20px;height: 20px;display:none;" id="re">
+                                      <div class="spinner-layer spinner-blue">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-red">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-yellow">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="spinner-layer spinner-green">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+                                </div>
                                 </button>
                             </div>
                         </div>
