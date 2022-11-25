@@ -469,7 +469,7 @@
                    
                        <center>
 
-                         <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="border-radius: 15px;height: 60px;width: 50%;font-size: 24px;padding: 10px;">Agrega tus dispositivos <i class="large material-icons">add</i></a><br><br>
+                         <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="border-radius: 15px;height: 60px;width: 100%;font-size: 18px;padding: 10px;">Agrega tus dispositivos <i class="large material-icons">add</i></a><br><br>
 
                          <!--img src="img/autov.gif" width="30"-->
 
