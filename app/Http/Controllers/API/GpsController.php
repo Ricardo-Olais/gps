@@ -40,7 +40,7 @@ class GpsController extends Controller
 
         //validar si ya existe el imei
 
-        $consultamosLicencias=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='imei'");
+        $consultamosLicencias=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
 
         $msg="";
 
