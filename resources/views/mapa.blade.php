@@ -15,6 +15,8 @@
 
 <link rel="stylesheet" href="css/leaflet-control-condended-attribution.css" />
 <script type="text/javascript" src="js/leaflet-control-condended-attribution.js"></script>
+<script src="js/StreetViewButtons.js"></script>
+
 
   <style>
     html, body {
@@ -453,6 +455,8 @@
     attribution: '&copy; <a href="https://localizaminave.com">LocalizaMiNave</a>'
   }).addTo(map);
 
+  
+
 
 L.control.condensedAttribution({
   emblem: '<div class="emblem-wrap"><img src="http://localizaminave.com:8080/images/color.png"/ width="50"></div>',
@@ -592,6 +596,8 @@ L.control.condensedAttribution({
               map.removeLayer(theMarker);
         };
 
+      //https://www.google.com/maps?layer=c&cbll=19.5441708,-99.0785885
+      L.streetView().addTo(map);
 
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
