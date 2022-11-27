@@ -444,7 +444,8 @@
  
 
 
-  const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
+ // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
+ const map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5);
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
