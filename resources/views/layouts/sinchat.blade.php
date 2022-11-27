@@ -235,12 +235,12 @@
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
     </li>
-    <li class="bold">
+    <!--li class="bold">
       <a class="waves-effect waves-cyan " href="https://localizaminave.com/terminos">
         <i class="material-icons">view_headline</i>
         <span class="menu-title" data-i18n="User Profile">Términos y condiciones</span>
       </a>
-    </li>
+    </li-->
 
     @if (Auth::guest())
 
