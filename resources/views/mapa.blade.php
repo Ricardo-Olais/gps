@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="css/leaflet-control-condended-attribution.css" />
 <script type="text/javascript" src="js/leaflet-control-condended-attribution.js"></script>
-<script src="js/StreetViewButtons.js"></script>
+<!--script src="js/StreetViewButtons.js"></script-->
 
 
   <style>
@@ -598,7 +598,7 @@ L.control.condensedAttribution({
       lat=msg.latitud;
       long=msg.longitud
       //https://www.google.com/maps?layer=c&cbll=19.5441708,-99.0785885
-      L.streetView().addTo(map);
+    //  L.streetView().addTo(map);
 
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
@@ -637,7 +637,7 @@ L.control.condensedAttribution({
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'><a href='https://www.google.com/maps?layer=c&cbll="+msg.longitud+","+msg.latitud+"'>Ver</a></center>")
     .openOn(map);
 
     }
