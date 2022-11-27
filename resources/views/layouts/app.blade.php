@@ -235,12 +235,12 @@
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
     </li>
-    <li class="bold">
+    <!--li class="bold">
       <a class="waves-effect waves-cyan " href="https://localizaminave.com/terminos">
         <i class="material-icons">view_headline</i>
         <span class="menu-title" data-i18n="User Profile">Términos y condiciones</span>
       </a>
-    </li>
+    </li-->
 
     @if (Auth::guest())
 
@@ -340,7 +340,7 @@
 
       <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow">
       <div class="footer-copyright">
-        <div class="container"><span>© <?php echo date("Y");?>       <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">Gps Tracker</a> All rights reserved.</span><span class="right hide-on-small-only">Design and Developed by <a href="https://pixinvent.com/">Localizaminave.com.mx</a></span></div>
+        <div class="container"><span>© <?php echo date("Y");?>       <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">Gps Tracker</a> All rights reserved.</span><span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
       </div>
     </footer>
 
