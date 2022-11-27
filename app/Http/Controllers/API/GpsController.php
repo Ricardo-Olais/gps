@@ -397,6 +397,8 @@ class GpsController extends Controller
 
                         $km=($miles * 1.6093444);
 
+                        $geocerca=$geocerca/1000;
+
                         if($km>$geocerca){
 
                             if($alerta2==0){
