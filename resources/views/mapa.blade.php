@@ -311,10 +311,10 @@
      var imei=0;
       $("#vehiculo").change(function(){
 
-         $("#share").css("display","none");
+       //  $("#share").css("display","none");
          $("#ubicacion").html("");
          $("#share-ubi").html("");
-         $("#share").css("display","");
+        
 
          imei=$(this).val();
 
@@ -323,6 +323,7 @@
         
 
          $("#colorgps").css("color","#37E209");
+          $("#share").css("display","");
 
         });
  
