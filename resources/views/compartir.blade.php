@@ -189,7 +189,7 @@
 
   var messages = document.getElementById('messages');
 
-
+  $.post("inicializasocket",{_token:token,imei:"3e480337a87ede4d"});
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
