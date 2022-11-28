@@ -180,7 +180,7 @@
  
  $(document).ready(function(){
 
-    $.post("inicializasocket",{_token:token,imei:"3e480337a87ede4d"});    
+ 
 
 //fin de controles
   var socket = io('http://187.245.4.2:3000'); //187.245.4.2
@@ -210,14 +210,6 @@ L.control.condensedAttribution({
 }).addTo(map);
  
 
-
-  ///---yo
-
-
-  //fin de yo
-
-
-  var circle;
 
   socket.on('ubicacion', function(msg) {
 
