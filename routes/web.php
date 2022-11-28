@@ -37,6 +37,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+Route::get('/compartiendo', function () {
+    return view('compartir');
+});
+
+
 Route::get('/terminos', function () {
     return view('terminos');
 });
