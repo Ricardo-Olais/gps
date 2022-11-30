@@ -63,7 +63,7 @@ class RastreoController extends Controller
 
 
 
-
+             echo "https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave";
 
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 

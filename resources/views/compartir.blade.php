@@ -118,7 +118,7 @@
                <div class="col s12 m2 l12 animate fadeRight">
                <div class="card">
                  <div class="card-content">
-                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
+                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:green;">my_location</i>
                    </h4>
                  
                    <span id="ubicacion"></span>
