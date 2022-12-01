@@ -163,7 +163,7 @@
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
- const map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5);
+ const map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 15);
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -213,7 +213,7 @@ L.control.condensedAttribution({
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'><a href='https://www.google.com/maps?layer=c&cbll="+msg.longitud+","+msg.latitud+"'>Ver</a></center>")
+    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
     
