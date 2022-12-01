@@ -482,7 +482,7 @@ L.control.condensedAttribution({
 
       $("#comparte").click(function(){
 
-                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ "<a href='http://localizaminave.com:8080/compartiendo?imei="+imei+"'>http://localizaminave.com:8080/compartiendo?imei="+imei+"</a>";
+                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta http://localizaminave.com:8080/compartiendo?imei='+imei;
 
             });
 
