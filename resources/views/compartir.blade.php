@@ -184,7 +184,7 @@ L.control.condensedAttribution({
   socket.on('ubicacion', function(msg) {
 
 
-     $("#ubicacion").html("El usuario: "+msg.conductor+" está compartiendo su ubicación en tiempo real, se encuentra en "+msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+     $("#ubicacion").html("El usuario: <b>"+msg.conductor+"</b> está compartiendo su ubicación en tiempo real, se encuentra en "+msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
 
 
     var customIcon = new L.Icon({
