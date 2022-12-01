@@ -33,7 +33,13 @@ class RastreoController extends Controller
     public function inicializasocket(){
 
          $imei=$_REQUEST['imei'];
-         $llave=env('LLAVE_API_MAPS');
+        // $llave=env('LLAVE_API_MAPS');
+
+         //consultamos la llave de google maps. google_maps
+
+        $llaveGoogle=DB::select("SELECT llave_maps FROM google_maps WHERE status=1");
+
+        $llave=$llaveGoogle[0]->llave_maps;
 
         //consultamos los datos 
         $vehiclesEstatus=DB::select("SELECT * FROM v_gps WHERE id_imei_android='$imei'");
