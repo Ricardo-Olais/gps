@@ -302,12 +302,12 @@ class GpsController extends Controller
                             if($alerta==0){
 
           
-                                $message = $twilio->messages
+                                /*$message = $twilio->messages
                                       ->create("whatsapp:+5215586779297", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);
+                                               ]);*/
                                       
                                // print_r($message); 
 
@@ -403,12 +403,12 @@ class GpsController extends Controller
 
                             if($alerta2==0){
 
-                                $message = $twilio->messages
+                               /* $message = $twilio->messages
                                       ->create("whatsapp:+5215586779297", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Alerta de Geocerca: El vehículo $alias está fuera la geocerca establecida de $geocerca km., se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);
+                                               ]);*/
                                       
                                // print_r($message);    
 

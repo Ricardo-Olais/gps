@@ -543,12 +543,12 @@ class RastreoController extends Controller
 
             $this->whatsapp($mensaje,$telefono);*/
 
-             $message = $twilio->messages
+            /* $message = $twilio->messages
                                       ->create("whatsapp:+5215586779297", // to
                                                [
                                                    "from" => "whatsapp:+14155238886",
                                                    "body" => "Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores https://localizaminave.com."
-                                               ]);
+                                               ]);*/
 
             return response()->json(['ultimo' =>$ultimo]);
 
