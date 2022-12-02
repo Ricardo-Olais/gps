@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use DateTime;
-
+use Twilio\Rest\Client;
 
 class RastreoController extends Controller
 {
@@ -481,9 +481,10 @@ class RastreoController extends Controller
     public function guardavehiculo(){
 
 
-        // $email = Auth::user()->email;
+           $sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
+           $token = 'ad17ead7faeb621196aed6a1e694bafa';
 
-          //$email ="r.hernandez@lidcorp.mx";
+           $twilio = new Client($sid, $token);
 
           $email=Auth::user()->email;
  
@@ -537,10 +538,17 @@ class RastreoController extends Controller
            $ultimo= $consultamax[0]->ultimo;
 
            
-            $mensaje="Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores.";
+            /*$mensaje="Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores.";
 
 
-            $this->whatsapp($mensaje,$telefono);
+            $this->whatsapp($mensaje,$telefono);*/
+
+             $message = $twilio->messages
+                                      ->create("whatsapp:+5215586779297", // to
+                                               [
+                                                   "from" => "whatsapp:+14155238886",
+                                                   "body" => "Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores https://localizaminave.com."
+                                               ]);
 
             return response()->json(['ultimo' =>$ultimo]);
 
