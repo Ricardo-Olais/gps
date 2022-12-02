@@ -70,7 +70,7 @@
 
 
           function contadorInactividad() {
-              t=setTimeout("inactividad()",7200000);
+              t=setTimeout("inactividad()",3600000);
           }
 
 
