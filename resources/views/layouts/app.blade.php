@@ -36,6 +36,65 @@
       }
     </style>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+@guest
+  @if (Route::has('register'))
+     @endif
+
+        @else
+    <script type="text/javascript">
+          
+          function inactividad() {
+
+             Swal.fire({
+                      title:"Tu sesión ha expirado, vuelve a hacer login",
+                      showDenyButton: false,
+                      showCancelButton: false,
+                      confirmButtonText: 'Aceptar',
+                      denyButtonText: `Don't save`,
+                    }).then((result) => {
+                      /* Read more about isConfirmed, isDenied below */
+                      if (result.isConfirmed) {
+
+                        $("#logout-form").submit();  // 10 minutos 600000 milisegundos
+                      //  window.location.href="login";
+
+                      } 
+                    });
+
+              
+          }
+          var t=null;
+
+
+          function contadorInactividad() {
+              t=setTimeout("inactividad()",7200000);
+          }
+
+
+          window.onblur=window.onmousemove=function() {
+              if(t) clearTimeout(t);
+              contadorInactividad();
+          }
+
+          window.onscroll = function() {
+
+            if(window.scrollY>0 || window.scrollX>0){
+              if(t) clearTimeout(t);
+              contadorInactividad();
+
+            }
+            
+
+          };
+
+
+</script>
+
+@endguest
+
 </head>
 <body>
    <div id="fb-root"></div>
@@ -63,6 +122,7 @@
         page_id="102256168946438">
       </div>
 <div id="app">
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
 
 <header class="page-topbar" id="header">
   <div class="navbar navbar-fixed">
@@ -296,6 +356,7 @@
    <script src="js/customizer.min.js" ></script>
    <script src="js/search.min.js" ></script>
    <script src="js/jquery.dataTables.js" ></script>
+
 
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
