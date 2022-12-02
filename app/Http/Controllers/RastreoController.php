@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use DateTime;
+use Mail; 
 use Twilio\Rest\Client;
+use App\Mail\Bienvenida;
 
 class RastreoController extends Controller
 {
@@ -536,6 +538,10 @@ class RastreoController extends Controller
 
             $consultamax=DB::select("SELECT max(id_vehiculo) as ultimo FROM vehiculos WHERE email='$email' AND id_imei_android=''");
            $ultimo= $consultamax[0]->ultimo;
+
+              $texto="Te damos la bienvenida a localizaminave.con";
+
+             // Mail::to($email)->send(new Bienvenida($conductor,$texto));
 
            
             /*$mensaje="Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores.";
