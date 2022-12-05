@@ -15,6 +15,8 @@
 
 <link rel="stylesheet" href="css/leaflet-control-condended-attribution.css" />
 <script type="text/javascript" src="js/leaflet-control-condended-attribution.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 <!--script src="js/StreetViewButtons.js"></script-->
 
 
@@ -449,6 +451,13 @@
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
  const map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5);
+
+ map.addControl(new L.Control.Fullscreen({
+    title: {
+        'false': 'Pantalla completa',
+        'true': 'Salir'
+    }
+}));
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
