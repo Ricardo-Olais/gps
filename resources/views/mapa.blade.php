@@ -612,7 +612,7 @@ L.control.condensedAttribution({
 
       map.setZoom(16);
 
-      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
+    theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
      console.log("aaa ="+msg.latitud_geocerca);
