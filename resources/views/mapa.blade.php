@@ -610,7 +610,7 @@ L.control.condensedAttribution({
       //https://www.google.com/maps?layer=c&cbll=19.5441708,-99.0785885
     //  L.streetView().addTo(map);
 
-      map.setZoom(15);
+      map.setZoom(16);
 
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: true,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
