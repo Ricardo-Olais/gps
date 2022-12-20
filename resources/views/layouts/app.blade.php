@@ -295,12 +295,19 @@
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
     </li>
-    <!--li class="bold">
+    <li class="bold">
       <a class="waves-effect waves-cyan " href="https://localizaminave.com/terminos">
         <i class="material-icons">view_headline</i>
-        <span class="menu-title" data-i18n="User Profile">Términos y condiciones</span>
+        <span class="menu-title" data-i18n="User Profile" style="font-size:15px;">Términos y condiciones</span>
       </a>
-    </li-->
+    </li>
+
+    <li class="bold">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/privacy-policy">
+        <i class="material-icons">security</i>
+        <span class="menu-title" data-i18n="User Profile" style="font-size:15px;">Política de privacidad</span>
+      </a>
+    </li>
 
     @if (Auth::guest())
 
