@@ -92,7 +92,10 @@
 
                         <div class="row">
                             <div class="col s12 m2 l12">
-                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;" id="activasub">
+  <a href="https://localizaminave.com/privacy-policy" target="_blank">Política de privacidad</a> Y <a href="https://localizaminave.com/terminos" target="_blank">Términos y condiciones</a>
+                           
+    
+                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;margin-top: 10px;" id="activasub">
                                     Registrarme<i class="material-icons right">chevron_right</i>
 
                                       <div class="preloader-wrapper big active" style="width:20px;height: 20px;display:none;" id="re">
@@ -153,7 +156,7 @@
         <div class="col s12 m2 l12 animate fadeRight" style="background-color:#000;">
             <div class="card" style="background-color:#000;color:#fff;">
                  <div class="card-content">
-            Estás a unos pasos de disfrutar de los beneficios que localizaminave tiene para ti, rastrea tus dispositivos de forma segura, activa  geocercas, alertas de movimiento y mucho más...
+            Estás a unos pasos de disfrutar de los beneficios que localizaminave tiene para ti, rastrea tus dispositivos de forma segura, activa  geocercas, alertas de movimiento y mucho más...Al registrarte aceptas los términos y condiciones de localizaminave.com
                 </div>
            </div>
         </div>
