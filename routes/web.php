@@ -58,6 +58,10 @@ Route::get('/tracker2', function () {
     return view('tracker');
 });
 
+Route::get('/privacy-policy', function () {
+    return view('politicas');
+});
+
 
 
 Auth::routes();
