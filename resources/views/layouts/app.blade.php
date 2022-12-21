@@ -418,10 +418,10 @@
 
           
 
-          <span class="left hide-on-small-only"><a href="terminos">Política de privacidad</a></span>
+          <span class="left hide-on-small-only"><a href="privacy-policy">Política de privacidad</a></span>
 
 
-        <span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
+          <span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
       </div>
     </footer>
 
