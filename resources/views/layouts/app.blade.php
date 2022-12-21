@@ -34,6 +34,18 @@
     .sidenav li>a {
         font-size: 18px;
       }
+     #inferior{
+     
+      position:absolute; /*El div será ubicado con relación a la pantalla*/
+      left:0px; /*A la derecha deje un espacio de 0px*/
+      right:0px; /*A la izquierda deje un espacio de 0px*/
+      bottom:50px; /*Abajo deje un espacio de 0px*/
+      height:50px; /*alto del div*/
+      z-index:0;
+       }
+
+
+
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -295,19 +307,7 @@
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
     </li>
-    <li class="bold">
-      <a class="waves-effect waves-cyan " href="https://localizaminave.com/terminos">
-        <i class="material-icons">view_headline</i>
-        <span class="menu-title" data-i18n="User Profile" style="font-size:15px;">Términos y condiciones</span>
-      </a>
-    </li>
-
-    <li class="bold">
-      <a class="waves-effect waves-cyan " href="https://localizaminave.com/privacy-policy">
-        <i class="material-icons">security</i>
-        <span class="menu-title" data-i18n="User Profile" style="font-size:15px;">Política de privacidad</span>
-      </a>
-    </li>
+   
 
     @if (Auth::guest())
 
@@ -324,6 +324,8 @@
         <span class="menu-title" data-i18n="User Profile">Login</span>
       </a>
     </li>
+
+
     
     @else
 
@@ -339,15 +341,19 @@
       </a>
     </li>
    @endif
+   <div id="inferior">
+    <center>
+     <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker</a> All rights reserved.</span></center>
+  </div>
 
 
     
-    <div class="ps__rail-x" style="left: 0px; bottom: -656px;">
+    <!--div class="ps__rail-x" style="left: 0px; bottom: -656px;">
       <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
     </div>
     <div class="ps__rail-y" style="top: 656px; height: 265px; right: 0px;">
       <div class="ps__thumb-y" tabindex="0" style="top: 82px; height: 33px;"></div>
-    </div>
+    </div-->
   </ul>
   <div class="navigation-background"></div>
   <a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out">
@@ -408,7 +414,14 @@
 
       <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow">
       <div class="footer-copyright">
-        <div class="container"><span>© <?php echo date("Y");?>       <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">Gps Tracker</a> All rights reserved.</span><span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
+        <div class="container">
+
+          
+
+          <span class="left hide-on-small-only"><a href="terminos">Política de privacidad</a></span>
+
+
+        <span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
       </div>
     </footer>
 

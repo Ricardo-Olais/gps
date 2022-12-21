@@ -294,19 +294,7 @@
         <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
       </a>
     </li>
-     <li class="bold">
-      <a class="waves-effect waves-cyan " href="https://localizaminave.com/terminos">
-        <i class="material-icons">view_headline</i>
-        <span class="menu-title" data-i18n="User Profile" style="font-size:15px;">Términos y condiciones</span>
-      </a>
-    </li>
-
-    <li class="bold">
-      <a class="waves-effect waves-cyan " href="https://localizaminave.com/privacy-policy">
-        <i class="material-icons">security</i>
-        <span class="menu-title" data-i18n="User Profile" style="font-size:15px;">Política de privacidad</span>
-      </a>
-    </li>
+  
 
     @if (Auth::guest())
 
@@ -341,12 +329,12 @@
 
 
     
-    <div class="ps__rail-x" style="left: 0px; bottom: -656px;">
+    <!--div class="ps__rail-x" style="left: 0px; bottom: -656px;">
       <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
     </div>
     <div class="ps__rail-y" style="top: 656px; height: 265px; right: 0px;">
       <div class="ps__thumb-y" tabindex="0" style="top: 82px; height: 33px;"></div>
-    </div>
+    </div-->
   </ul>
   <div class="navigation-background"></div>
   <a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out">
