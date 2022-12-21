@@ -34,6 +34,15 @@
     .sidenav li>a {
         font-size: 18px;
       }
+      #inferior{
+     
+      position:absolute; /*El div será ubicado con relación a la pantalla*/
+      left:0px; /*A la derecha deje un espacio de 0px*/
+      right:0px; /*A la izquierda deje un espacio de 0px*/
+      bottom:50px; /*Abajo deje un espacio de 0px*/
+      height:50px; /*alto del div*/
+      z-index:0;
+       }
     </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -327,6 +336,11 @@
     </li>
    @endif
 
+   <div id="inferior">
+    <center>
+     <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker</a> All rights reserved.</span></center>
+  </div>
+
 
     
     <!--div class="ps__rail-x" style="left: 0px; bottom: -656px;">
@@ -394,7 +408,14 @@
 
       <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow">
       <div class="footer-copyright">
-        <div class="container"><span>© <?php echo date("Y");?>       <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">Gps Tracker</a> All rights reserved.</span><span class="right hide-on-small-only">Design and Developed by <a href="https://pixinvent.com/">Localizaminave.com.mx</a></span></div>
+        <div class="container">
+
+          
+
+          <span class="left hide-on-small-only"><a href="privacy-policy">Política de privacidad</a></span>
+
+
+          <span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
       </div>
     </footer>
 
