@@ -338,7 +338,7 @@
 
    <div id="inferior">
     <center>
-     <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker</a> All rights reserved.</span></center>
+     <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker &#174;</a> All rights reserved.</span></center>
   </div>
 
 
