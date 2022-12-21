@@ -81,12 +81,12 @@
            <ul class="collection with-header">
        
         <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real</li>
-        <li class="collection-item" style="background-color:#D5D8D4;"><i class="material-icons" style="color:red">gps_fixed</i> Cuentas espejo</li>
+        
         <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas</li>
-        <li class="collection-item" style="background-color:#D5D8D4;"><i class="material-icons" style="color:red">hdr_weak</i> Configura ubicación fija</li>
-        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)</li>
+        
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 mes)</li>
         <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo</li>
-        <li class="collection-item" style="background-color:#D5D8D4;"><i class="material-icons" style="color:red">headset_mic</i> Atención personalizada por chat</li>
+        
         <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">notifications</i> Notificaciones vía whatsapp y correo electrónico</li>
       </ul>
 
