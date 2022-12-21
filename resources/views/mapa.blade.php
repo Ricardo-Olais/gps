@@ -17,6 +17,8 @@
 <script type="text/javascript" src="js/leaflet-control-condended-attribution.js"></script>
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+<script src="js/leaflet.rotatedMarker.js"></script>
+
 <!--script src="js/StreetViewButtons.js"></script-->
 
 
@@ -352,7 +354,7 @@
                 $.post("guardafijo",{numero:imei,_token:token,estatus:1, direccionfija: auxDir},
                    function(data){
                        $("#fijaubi").prop( "checked", true );
-                       //$.post("inicializasocket",{_token:token,imei:imei});
+                       $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
 
 
@@ -361,7 +363,7 @@
               $.post("guardafijo",{numero:imei,_token:token,estatus:0},
                    function(data){
                       $("#fijaubi").prop( "checked", false );
-                      //$.post("inicializasocket",{_token:token,imei:imei});
+                      $.post("inicializasocket",{_token:token,imei:imei});
                   },'json');
               
 
@@ -611,6 +613,8 @@ L.control.condensedAttribution({
     //  L.streetView().addTo(map);
 
       map.setZoom(16);
+
+    //rotationAngle: 146
 
     theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
