@@ -54,7 +54,7 @@ h6,
 
 p {
   margin: 0 0 16px;
-  text-align: justify !important;
+  
 }
 h1 {
   font-size: 40px;
