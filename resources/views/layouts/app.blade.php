@@ -12,7 +12,7 @@
     <meta name="description" content="Descripcion de pagina. No sueperar los 155 caracteres." />
 
       <!-- Open Graph data -->
-      <meta property="og:title" content="Conóce en donde se encuentran tus seres queridos" />
+      <meta property="og:title" content="Gps Tracker" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content=" https://localizaminave.com" />
       <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />
