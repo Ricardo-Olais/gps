@@ -4,12 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google" value="notranslate">
+    <title>Gps Tracker</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#00bcd4" />
+    <meta name="description" content="Descripcion de pagina. No sueperar los 155 caracteres." />
 
-    <title>Gps Tracker</title>
+      <!-- Open Graph data -->
+      <meta property="og:title" content="Gps Tracker" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content=" https://localizaminave.com" />
+      <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />
+      <meta property="og:description" content="Gps Tracker de Localizaminave es una aplicación que permite instalarse en dispositivos android para obtener y monitorear la ubicación de personas, de tu auto. No se requiere comprar ningún localizador, solo instala en el dispositivo que desees localizar y rastrea desde la plataforma" />
 
     <link href="css/vendors.min.css" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
