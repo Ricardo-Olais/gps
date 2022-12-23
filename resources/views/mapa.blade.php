@@ -473,7 +473,7 @@
 
 
 L.control.condensedAttribution({
-  emblem: '<div class="emblem-wrap"><img src="http://localizaminave.com:8080/images/color.png"/ width="50"></div>',
+  emblem: '<div class="emblem-wrap"><img src="https://localizaminave.comimages/color.png"/ width="50"></div>',
   prefix: '<a href="https://localizaminave.com" title="Travel time analysis by Motion Intelligence"></a>GPS'
 }).addTo(map);
  
