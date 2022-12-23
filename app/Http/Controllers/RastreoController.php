@@ -108,14 +108,18 @@ class RastreoController extends Controller
                         "geocerca"=>$geocerca
 
                    );
+
+
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/ubicaini.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com/soliSocket/ubicaini.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
                
                     $string = curl_exec($ch);
+
 
             }
 

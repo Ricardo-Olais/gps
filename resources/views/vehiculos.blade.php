@@ -18,7 +18,7 @@
     });
 
 
-  var socket = io('http://187.245.4.2:3000');
+  var socket = io('https://localizaminave.com:3000');
 
   var messages = document.getElementById('messages');
 

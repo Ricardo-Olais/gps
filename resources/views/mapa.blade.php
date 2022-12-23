@@ -442,7 +442,9 @@
 
 
 //fin de controles
-  var socket = io('http://187.245.4.2:3000'); //187.245.4.2
+  var socket = io('https://localizaminave.com:3000'); //187.245.4.2
+
+
   var marker;
   var theMarker = {};
 
