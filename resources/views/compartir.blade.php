@@ -153,7 +153,7 @@
  
 
 //fin de controles
-  var socket = io('http://187.245.4.2:3000'); //187.245.4.2
+  var socket = io('https://localizaminave.com:3000'); //187.245.4.2
   var marker;
   var theMarker = {};
 
@@ -188,7 +188,7 @@ L.control.condensedAttribution({
 
 
     var customIcon = new L.Icon({
-      iconUrl: 'http://localizaminave.com:8080/img/'+msg.tipo,
+      iconUrl: 'https://localizaminave.com/img/'+msg.tipo,
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
@@ -213,7 +213,7 @@ L.control.condensedAttribution({
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='http://localizaminave.com:8080/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .setContent(msg.alias+ "<center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
     
