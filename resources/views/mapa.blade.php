@@ -565,7 +565,7 @@ L.control.condensedAttribution({
 
 
     var customIcon = new L.Icon({
-      iconUrl: 'http://localizaminave.com:8080/img/'+msg.tipo,
+      iconUrl: 'https://localizaminave.com/img/'+msg.tipo,
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });

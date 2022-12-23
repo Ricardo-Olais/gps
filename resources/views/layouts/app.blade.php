@@ -292,14 +292,14 @@
     
     @else
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="http://localizaminave.com:8080/tracker">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/tracker">
         <i class="material-icons" style="color:#00bcd4;">location_on</i>
         <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
     </li>
 
       <li class="bold">
-      <a class="waves-effect waves-cyan " href="http://localizaminave.com:8080/dispositivos">
+      <a class="waves-effect waves-cyan " href="https://localizaminave.com/dispositivos">
         <i class="material-icons">drive_eta</i>
         <span class="menu-title" data-i18n="User Profile">Mis dispositivos</span>
       </a>
