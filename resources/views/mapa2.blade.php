@@ -586,7 +586,7 @@
 
                   lat: Number(msg.latitud_geocerca),
                   lng: Number(msg.longitud_geocerca),
-                  radius: msg.geocerca,
+                  radius: Number(msg.geocerca),
                   strokeColor: '#FF0000',
                   strokeOpacity: 1,
                   strokeWeight: 2,
