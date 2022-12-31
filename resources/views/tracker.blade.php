@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx61xi2oAGPxP80iHiJkhMM5YdLUhnOrQ&libraries=geometry"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUFvjmiSEws605N3hXN3mAv83MeG8ZL9k&libraries=geometry"></script>
   <script type="text/javascript" src="js/gmaps.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
   <style type="text/css">
@@ -319,47 +319,6 @@
                             }
                             
 
-
-                            $("#share-ubi").html(direccion);
-
-                           //var mensaje="Hola el vehículo "+alias+" está en movimiento se encuentra en :"+ direccion+ ", consulta en localizaminave.com.mx.";  $(".parpadea").css("display","");
-
-                            if(fija==1){
-
-                              $("#fijaubi").prop( "checked", true );
-                            }else{
-
-                              $("#fijaubi").prop( "checked", false );
-                            }
-
-                            if(notificaciones==1){
-                               $("#onnotificaciones").prop( "checked", true );
-
-                            }else{
-
-                               $("#onnotificaciones").prop( "checked", false );
-                            }
-
-                            if(activaGeocerca==1){
-                              //alert(geocerca);
-                              $("#geocercaactual").html(geocerca+ " Km");
-                              $("#activageocerca").prop( "checked", true );
-                            }else{
-
-                              $("#activageocerca").prop( "checked", false );
-                            }
-
-                            if(alerta==1 || alerta2==1){
-
-                              $(".parpadea").css("display","");
-                            }else{
-                              $(".parpadea").css("display","none");
-                            }
-
-
-
-
-                            //console.log(sessionStorage.getItem("direccionFija"));
 
 
                            });
