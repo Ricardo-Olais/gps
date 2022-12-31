@@ -461,7 +461,7 @@
   socket.on('ubicacion', function(msg) {
 
       map.removeMarkers();
-      map.setZoom(16);
+      map.setZoom(17);
 
       if(msg.imei==imei){
 
