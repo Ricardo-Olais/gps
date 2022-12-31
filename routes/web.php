@@ -58,6 +58,11 @@ Route::get('/tracker2', function () {
     return view('tracker');
 });
 
+
+Route::get('/tracker3', function () {
+    return view('mapa2');
+});
+
 Route::get('/privacy-policy', function () {
     return view('politicas');
 });
