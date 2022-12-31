@@ -7,7 +7,7 @@
 
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUFvjmiSEws605N3hXN3mAv83MeG8ZL9k&libraries=geometry"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry"></script>
 <script type="text/javascript" src="js/gmaps.js"></script>
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
 <!--script src="js/StreetViewButtons.js"></script-->
