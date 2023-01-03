@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.reset')
 
 @section('content')
 
 <style type="text/css">
     body{
 
-        background-image: url('img/fondo-login.png');
+        background-image: url('https://localizaminave.com/img/fondo-login.png');
     }
 
 </style>
