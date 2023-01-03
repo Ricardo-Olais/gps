@@ -495,7 +495,7 @@ L.control.condensedAttribution({
 
       $("#comparte").click(function(){
 
-                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta http://localizaminave.com:8080/compartiendo?imei='+imei;
+                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta https://localizaminave.com/compartiendo?imei='+imei;
 
             });
 
