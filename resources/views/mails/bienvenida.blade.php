@@ -364,7 +364,27 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td><a href="https://localizaminave.com/login" target="_blank">Comenzar a localizar</a> </td>
+                                      <td><a href="https://localizaminave.com/login" target="_blank" style="background-color:#00bcd4 !important;">Comenzar a localizar</a> </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                   
+                                        <img src="https://localizaminave.com/img/home/fondo-carro.jpeg">
+
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
