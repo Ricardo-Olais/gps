@@ -62,7 +62,7 @@ confetti();
               
               <center><img src="images/pago.jpg" width="50%"></center>
 
-             <a href="http://localizaminave.com:8080/tracker" class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color:#00d3ee;margin-top: 20px;">Comenzar a localizar mi dispositivo
+             <a href="https://localizaminave.com/tracker" class="btn waves-effect waves-light" type="submit" name="action" style="width:100%;background-color:#00d3ee;margin-top: 20px;">Comenzar a localizar mi dispositivo
                 <i class="material-icons right">send</i>
               </a>
 
