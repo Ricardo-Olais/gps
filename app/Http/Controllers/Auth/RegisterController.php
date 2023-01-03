@@ -8,6 +8,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Mail; 
+use App\Mail\Bienvenida;
 
 class RegisterController extends Controller
 {
@@ -64,6 +66,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+
+         $texto="Gracias por formar parte de la familia Gps Tracker de localizaminave.com, disfruta de los beneficios que te ofrecemos, conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma.";
+
+         Mail::to($data['email'])->send(new Bienvenida($data['name'],$texto));
+     
+
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

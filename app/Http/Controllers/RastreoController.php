@@ -744,6 +744,7 @@ class RastreoController extends Controller
           date_default_timezone_set('America/Mexico_City');
 
           $email=$user->email;
+          $name=$user->name;
           $subscripcion=$_SESSION["subscripcion"];
 
 
@@ -761,6 +762,15 @@ class RastreoController extends Controller
                                              'Fecha_termino'=>null
                                              
                                              ));
+
+
+
+         //enviamos correo notificando la subscripción.
+
+         $texto="La subscripcion se ha activado de manera exitosa, gracias por confiar en localizaminave.com.";
+
+         Mail::to($email)->send(new Bienvenida($name,$texto));
+     
 
          }
 

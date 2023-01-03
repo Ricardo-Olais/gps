@@ -34,8 +34,9 @@ class Bienvenida extends Mailable
      */
     public function build()
     {
+        $fecha=date("Y-m-d H:i:s");
   
-        return $this->from('atn_clientes@localizaminave.com', "GPS Tracker")->subject("Bienvenido a Localizaminave.com")->view('mails.bienvenida');
+        return $this->from('atn_clientes@localizaminave.com', "GPS Tracker")->subject("Bienvenido a localizaminave.com  $fecha ")->view('mails.bienvenida');
         //return $this->view('mails.notificaciones');
     }
 }
