@@ -8,6 +8,15 @@
 
         background-image: url('img/fondo-login.png');
     }
+
+    span.field-icon {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
 </style>
 
 <script type="text/javascript">
@@ -28,6 +37,32 @@
 
     });
 
+</script>
+
+<script>
+$(document).ready(function () {
+ var clicked = 0;
+
+  $(".toggle-password").click(function (e) {
+     e.preventDefault();
+
+    $(this).toggleClass("toggle-password");
+      if (clicked == 0) {
+        $(this).html('<span class="material-icons">visibility_off</span >');
+         clicked = 1;
+      } else {
+         $(this).html('<span class="material-icons">visibility</span >');
+          clicked = 0;
+       }
+
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+       input.attr("type", "text");
+    } else {
+       input.attr("type", "password");
+    }
+   });
+});
 </script>
 
  <div id="main">
@@ -52,21 +87,27 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus style="font-size: 18px;">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="color:red;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Contraseña</label>
 
+                    <div class='input-field col-md-12'>
+                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" required autocomplete="current-password" style="font-size: 18px;">
+                     <label for="password" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Contraseña</label>
+                      <span toggle="#password" class="field-icon toggle-password"><span class="material-icons">visibility</span></span>
+                     </div>
+
+                    <div class="form-group row">
+                         
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" style="font-size: 18px;">
+                               
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="color:red;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -78,6 +119,9 @@
                         <div class="form-group row mb-0">
                            
                                 <center>
+
+                        <label for="password"></label>
+      
                               
                         <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;" id="btnlogin"><i class="material-icons right">navigate_next</i>
                                     {{ __('Entrar') }}
@@ -132,9 +176,9 @@
                                 @if (Route::has('password.request'))
 
 
-                                    <!--a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a-->
+                                    <a style="width: 100%;margin-top: 5px;background-color: #DCDCDC;color:#000;" class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Olvidaste tu contraseña?') }}
+                                    </a>
                                 @endif
                            
                         </div>
