@@ -6,7 +6,8 @@
     
     body{
 
-        background-image: url('img/fondo-login.png');
+        background-image: url('img/test-gps3.gif');
+        
     }
 
     span.field-icon {
@@ -68,11 +69,14 @@ $(document).ready(function () {
  <div id="main">
   <div class="row  vertical-modern-dashboard">
 
-   <div class="col s3"></div>
+   <div class="col s3">
+     
+    
+   </div>
 
 
     <div class="col s12 m2 l5 center-a" >
-      <div class="card" style="border-radius: 10px;">
+      <div class="card" style="border-radius: 10px;opacity:.9;">
         <div class="card-content">
           <center><span class="card-title"><b>Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
           
