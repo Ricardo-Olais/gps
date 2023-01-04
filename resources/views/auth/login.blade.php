@@ -6,7 +6,7 @@
     
     body{
 
-        background-image: url('img/test-gps3.gif');
+        background-image: url('img/fondo-login.png');
         
     }
 
