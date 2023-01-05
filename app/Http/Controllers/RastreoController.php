@@ -754,7 +754,18 @@ class RastreoController extends Controller
           //sumanos 30 días
 
 
-          DB::table('vehiculos')->where('email',$email)->where('id_vehiculo',$id)
+         //enviamos correo notificando la subscripción.
+
+        $consultamax=DB::select("SELECT count(id_vehiculo) as ultimo FROM vehiculos WHERE email='$email' AND subscripcion='$subscripcion'");
+         $ultimo= $consultamax[0]->ultimo;
+
+        if($ultimo==0 && $subscripcion!=""){
+
+         $texto="La subscripcion se ha activado de manera exitosa, gracias por confiar en localizaminave.com. Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma. Verifique el estatus de sus vehículos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas. Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real.";
+
+         Mail::to($email)->send(new Bienvenida($name,$texto));
+
+         DB::table('vehiculos')->where('email',$email)->where('id_vehiculo',$id)
                                     ->update( array(
                                              'estatus' =>2,
                                              'subscripcion'=>$subscripcion,
@@ -763,16 +774,12 @@ class RastreoController extends Controller
                                              
                                              ));
 
+         }
 
-
-         //enviamos correo notificando la subscripción.
-
-         $texto="La subscripcion se ha activado de manera exitosa, gracias por confiar en localizaminave.com.";
-
-         Mail::to($email)->send(new Bienvenida($name,$texto));
+        
      
 
-         }
+}
 
 
 
