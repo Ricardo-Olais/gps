@@ -93,7 +93,7 @@
                         <div class="row">
                             <div class="col s12 m2 l12">
  <center>
-  <a href="https://localizaminave.com/privacy-policy" target="_blank">Política de privacidad</a> Y <a href="https://localizaminave.com/terminos" target="_blank">Términos y condiciones</a></center>
+  <a href="https://localizaminave.com/privacy-policy" target="_blank" style="color:#00bcd4;">Política de privacidad</a> Y <a href="https://localizaminave.com/terminos" target="_blank" style="color:#00bcd4;">Términos y condiciones</a></center>
                            
     
                                 <button type="submit" class="waves-effect waves-light btn" style="width: 100%;height: 50px;font-size: 20px;margin-top: 10px;" id="activasub">

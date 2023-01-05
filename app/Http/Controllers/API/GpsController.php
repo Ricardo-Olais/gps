@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Twilio\Rest\Client;
 use ElephantIO\Client as Socket;
 use ElephantIO\Engine\SocketIO\Version2X;
-
+use Mail; 
+use App\Mail\Bienvenida;
 
 
 class GpsController extends Controller
@@ -97,6 +98,7 @@ class GpsController extends Controller
         $latitud=$gps[0];
         $longitud=$gps[1];
         $velocidad=$gps[2];
+        $name="...";
 
 
       
@@ -337,6 +339,13 @@ class GpsController extends Controller
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
 
 
+                                //enviamos correo de notificación
+
+                                $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
+
+                                Mail::to($email)->send(new Bienvenida($name,$texto));
+
+
                             }
 
                        }
@@ -417,6 +426,11 @@ class GpsController extends Controller
                                // print_r($message);    
 
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta2' =>1));
+
+
+                                 $texto="Alerta de Geocerca: El vehículo $alias está fuera la geocerca establecida de $geocerca km., se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
+
+                                Mail::to($email)->send(new Bienvenida($name,$texto));
 
                             }
 
