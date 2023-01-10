@@ -8,7 +8,7 @@
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry"></script>
-<script type="text/javascript" src="js/gmaps.js"></script>
+<!--script type="text/javascript" src="js/gmaps.js"></script-->
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
 <!--script src="js/StreetViewButtons.js"></script-->
 
@@ -441,12 +441,18 @@
 //fin de controles
   var socket = io('https://localizaminave.com:3000'); //187.245.4.2
 
- var map = new GMaps({
+ /*var map = new GMaps({
         el: '#map',
         lat: 19.45105, 
         lng: -99.125519,
         zoom:5
-      });
+      });*/
+
+ var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 19.45105, lng: -99.125519,},
+          zoom: 5
+
+        });
 
 
 
@@ -546,30 +552,7 @@
 
       valorgeo=msg.geocerca;
 
-               GMaps.geolocate({
-                    
-                    success: function(position){
-                    var geocoder = new google.maps.Geocoder;
-                        const latlng = {
-                            lat: lat,
-                            lng: long,
-                        };
-
-                        geocoder.geocode({ location: latlng}, (results, status) => {
-
-                         
-                            direccion= results[0].formatted_address;
-
-                        
-                          //  $("#ubicacion").html(direccion);
-                            
-
-
-
-                           });
-                            
-
-
+             
                       map.setCenter(lat, long);
 
                         /*map.addMarker({
@@ -627,19 +610,6 @@
                   }
                 });
 
-
-
-                    },
-                    error: function(error){
-                      alert('Geolocation failed: '+error.message);
-                    },
-                    not_supported: function(){
-                      alert("Your browser does not support geolocation");
-                    },
-                    always: function(){
-                     // alert("Done!");
-                    }
-                  });
 
     
 
