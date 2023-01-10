@@ -4,10 +4,10 @@
  
 
 
+<?php  $llave=env('LLAVE_API_MAPS'); ?>
 
 
-
-<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry"></script>
 <script type="text/javascript" src="js/gmaps.js"></script>
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
 <!--script src="js/StreetViewButtons.js"></script-->
@@ -556,7 +556,7 @@
                             direccion= results[0].formatted_address;
 
                         
-                            $("#ubicacion").html(direccion);
+                          //  $("#ubicacion").html(direccion);
                             
 
 
@@ -615,7 +615,7 @@
                        
 
                          },
-                  draggable: false,
+                  draggable: true,
 
                   fences: [circle],
                   outside: function(m, f){
