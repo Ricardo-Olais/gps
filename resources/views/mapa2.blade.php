@@ -102,7 +102,11 @@
        <div class="container">
          <div class="section">
            <div class="row vertical-modern-dashboard">
+
+
              <div id="map" style="width:100%;height: 400px;"></div>
+
+
              <div class="col s12 m2 l12 animate fadeRight">
                <div class="card">
                  
@@ -245,7 +249,8 @@
  $(document).ready(function(){
 
   var valorgeo=0;
-    var map;
+  var map;
+  var circle
 
   $("#menos").click(function(){
 
@@ -581,16 +586,13 @@
 
                 console.log(msg.latitud_geocerca);
 
-             
-
-                if (circle != undefined) {
-
-                circle.setMap(null);
+           
+                 circle.setMap(null);
               
-               };
+               
 
 
-                var circle = map.drawCircle({
+                 circle = map.drawCircle({
 
                   lat: Number(msg.latitud_geocerca),
                   lng: Number(msg.longitud_geocerca),
@@ -610,7 +612,7 @@
                   icon:icon,
                   title: 'el auto se encuentra aquí',
                   infoWindow: {
-                        content: "<div>Vehículo</div>",
+                        content: '<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor,
                         maxWidth: 300
                        
 
