@@ -468,6 +468,8 @@
       map.removeMarkers();
       map.setZoom(17);
 
+      imei="3e480337a87ede4d";
+
       if(msg.imei==imei){
 
       $("#comparte").click(function(){
@@ -546,27 +548,7 @@
 
       valorgeo=msg.geocerca;
 
-               GMaps.geolocate({
-                    
-                    success: function(position){
-                    var geocoder = new google.maps.Geocoder;
-                        const latlng = {
-                            lat: lat,
-                            lng: long,
-                        };
-
-                        geocoder.geocode({ location: latlng}, (results, status) => {
-
-                         
-                            direccion= results[0].formatted_address;
-
-                        
-                          //  $("#ubicacion").html(direccion);
-                            
-
-
-
-                           });
+           
                             
 
 
@@ -588,8 +570,9 @@
 
            
                //  circle.setMap(null);
-              
-               
+
+              // map.removeCircle(circle);
+             
 
 
                  circle = map.drawCircle({
@@ -598,11 +581,12 @@
                   lng: Number(msg.longitud_geocerca),
                   radius: Number(msg.geocerca),
                   strokeColor: '#FF0000',
-                  strokeOpacity: 1,
-                  strokeWeight: 2,
+                  strokeOpacity: .9,
+                  strokeWeight: 1,
                   fillColor: '#432070',
-                  fillOpacity: 0.2
+                  fillOpacity: 0.1
                 });
+
 
 
 
@@ -622,24 +606,13 @@
                   fences: [circle],
                   outside: function(m, f){
 
-                    console.log("swsws");
-                    alert('This marker has been moved outside of its fence');
+                   // console.log(m);
+                    $("#resplandorrojo").css("display","");
                   }
                 });
 
 
 
-                    },
-                    error: function(error){
-                      alert('Geolocation failed: '+error.message);
-                    },
-                    not_supported: function(){
-                      alert("Your browser does not support geolocation");
-                    },
-                    always: function(){
-                     // alert("Done!");
-                    }
-                  });
 
     
 
