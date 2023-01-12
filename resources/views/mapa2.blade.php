@@ -573,7 +573,7 @@
 
               // map.removeCircle(circle);
              
-
+                map.removeOverlay(circle);
 
                  circle = map.drawCircle({
 
