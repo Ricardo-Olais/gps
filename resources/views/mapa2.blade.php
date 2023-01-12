@@ -445,7 +445,7 @@
         el: '#map',
         lat: 19.45105, 
         lng: -99.125519,
-        zoom:5
+        zoom:17
       });
 
 
@@ -466,7 +466,7 @@
   socket.on('ubicacion', function(msg) {
 
       map.removeMarkers();
-      map.setZoom(17);
+      //map.setZoom(17);
 
       imei="3e480337a87ede4d";
 
