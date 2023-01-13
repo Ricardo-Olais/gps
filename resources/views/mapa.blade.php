@@ -254,6 +254,7 @@
  $(document).ready(function(){
 
   var valorgeo=0;
+  var map;
 
   $("#menos").click(function(){
 
@@ -323,6 +324,7 @@
          imei=$(this).val();
 
          //invocamos al socket
+         map.setZoom(16);
          $.post("inicializasocket",{_token:token,imei:imei});
         
 
@@ -454,7 +456,7 @@
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
- const map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5);
+ map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5);
 
  map.addControl(new L.Control.Fullscreen({
     title: {
