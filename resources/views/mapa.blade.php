@@ -616,7 +616,7 @@ L.control.condensedAttribution({
       //https://www.google.com/maps?layer=c&cbll=19.5441708,-99.0785885
     //  L.streetView().addTo(map);
 
-      map.setZoom(16);
+     // map.setZoom(16);
 
     //rotationAngle: 146
 
