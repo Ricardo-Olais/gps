@@ -573,7 +573,20 @@
 
               // map.removeCircle(circle);
              
-                map.removeOverlay(circle);
+                //map.removeOverlay(circle);
+                  circle = map.drawCircle({
+
+                  lat: Number(msg.latitud_geocerca),
+                  lng: Number(msg.longitud_geocerca),
+                  radius: Number(msg.geocerca),
+                  strokeColor: '#FF0000',
+                  strokeOpacity: 0,
+                  strokeWeight: 0,
+                  fillColor: '#432070',
+                  fillOpacity: 0
+                });
+
+
 
                  circle = map.drawCircle({
 
