@@ -319,6 +319,9 @@
 
          imei=$(this).val();
 
+         map.setZoom(17);
+
+
          //invocamos al socket
          $.post("inicializasocket",{_token:token,imei:imei});
         
@@ -445,7 +448,7 @@
         el: '#map',
         lat: 19.45105, 
         lng: -99.125519,
-        zoom:15
+        zoom:5
       });
 
 
@@ -468,7 +471,7 @@
       map.removeMarkers();
       //map.setZoom(17);
 
-      imei="3e480337a87ede4d";
+     // imei="3e480337a87ede4d";
 
       if(msg.imei==imei){
 
@@ -552,7 +555,7 @@
                             
 
 
-                      map.setCenter(lat, long);
+                  map.setCenter(lat, long);
 
                         /*map.addMarker({
                         lat: lat,
@@ -566,7 +569,7 @@
                          }
                       });*/
 
-                console.log(msg.latitud_geocerca);
+                //console.log(msg.latitud_geocerca);
 
            
                //  circle.setMap(null);
@@ -574,31 +577,28 @@
               // map.removeCircle(circle);
              
                 //map.removeOverlay(circle);
-                  circle = map.drawCircle({
 
-                  lat: Number(msg.latitud_geocerca),
-                  lng: Number(msg.longitud_geocerca),
-                  radius: Number(msg.geocerca),
-                  strokeColor: '#FF0000',
-                  strokeOpacity: 0,
-                  strokeWeight: 0,
-                  fillColor: '#432070',
-                  fillOpacity: 0
-                });
+                if(circle != null){
+               
+                  circle.setMap(null);
+                  }
+                
 
-
+                console.log(valorgeo);
 
                  circle = map.drawCircle({
 
                   lat: Number(msg.latitud_geocerca),
                   lng: Number(msg.longitud_geocerca),
-                  radius: Number(msg.geocerca),
-                  strokeColor: '#FF0000',
+                  radius: Number(valorgeo),
+                  strokeColor: '#00bcd4',
                   strokeOpacity: .9,
-                  strokeWeight: 1,
+                  strokeWeight: 2,
                   fillColor: '#432070',
                   fillOpacity: 0.1
                 });
+
+                // console.log(circle);
 
 
 
@@ -607,14 +607,15 @@
                   lat:lat,
                   lng: long,
                   icon:icon,
-                  title: 'el auto se encuentra aquí',
+                  title: 'El Dispositivo '+ msg.alias+' se encuentra aquí',
                   infoWindow: {
                         content: '<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor,
                         maxWidth: 300
+
                        
 
                          },
-                  draggable: true,
+                  draggable: false,
 
                   fences: [circle],
                   outside: function(m, f){
