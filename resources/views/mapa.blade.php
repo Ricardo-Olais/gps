@@ -587,7 +587,7 @@ L.control.condensedAttribution({
 
     var circleOptions = {
      color: '#00bcd4',
-     fillColor: '#f03',
+     fillColor: '#fff',
      fillOpacity: .1
   }
 
