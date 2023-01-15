@@ -594,7 +594,7 @@
                   strokeColor: '#00bcd4',
                   strokeOpacity: .9,
                   strokeWeight: 2,
-                  fillColor: '#432070',
+                  fillColor: '#fff',//#432070
                   fillOpacity: 0.1
                 });
 
