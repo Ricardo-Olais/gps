@@ -586,7 +586,7 @@ L.control.condensedAttribution({
    var circleCenter = [msg.latitud_geocerca, msg.longitud_geocerca];
 
     var circleOptions = {
-     color: 'red',
+     color: '#00bcd4',
      fillColor: '#f03',
      fillOpacity: .1
   }
