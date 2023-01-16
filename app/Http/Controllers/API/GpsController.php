@@ -129,7 +129,7 @@ echo <<<EOT
          console.log("distancia es"+d);
 
 
-         $.get("https://localizaminave.com/pruebacorreo/67/$alias");
+         $.get("https://localizaminave.com/api/enviac/67/frfrfr");
 
        
           if(isInside==false){
@@ -151,6 +151,18 @@ EOT;
 
 
     }
+
+ public function enviac($distancia,$alias){
+
+    $email="developerzend.web@gmail.com";
+    $name="---";
+    //$distancia=$_REQUEST['distancia'];
+
+   $texto="ALERTA el dispositivo $alias está fuera de la geocerca establecida, se encuentra a una distancia de $distancia";
+
+    Mail::to($email)->send(new Bienvenida($name,$texto));
+
+ }
 
 
 
