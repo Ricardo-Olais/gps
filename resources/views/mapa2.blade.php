@@ -615,7 +615,7 @@
                        
 
                          },
-                  draggable: false,
+                  draggable: true,
 
                   fences: [circle],
                   outside: function(m, f){
