@@ -32,6 +32,22 @@ class RastreoController extends Controller
         return view('home');
     }
 
+    public function testcorreo(){
+
+
+    $email="developerzend.web@gmail.com";
+    $name="---";
+
+    $texto="Holaaaaa";
+
+    Mail::to($email)->send(new Bienvenida($name,$texto));
+
+
+
+
+    }
+
+
     public function inicializasocket(){
 
          $imei=$_REQUEST['imei'];
@@ -68,6 +84,12 @@ class RastreoController extends Controller
 
              $mensajealerta="";
              $mensajealerta2="";
+
+
+
+
+
+
 
 
 

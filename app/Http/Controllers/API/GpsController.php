@@ -142,6 +142,64 @@ class GpsController extends Controller
 
 
 
+echo <<<EOT
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/leaflet.js"></script>
+
+<script> 
+    $(document).ready(function () {
+      
+         map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5); //mapa
+         var circle;
+
+          var customIcon = new L.Icon({
+              iconUrl: 'https://localizaminave.com/img/auto.png',
+              iconSize: [30, 40],
+              iconAnchor: [25, 50]
+            });
+
+          if (circle != undefined) {
+          map.removeLayer(circle);
+         };
+
+         var circleCenter = [$latitud_geocerca, $longitud_geocerca]; //coordenadas geocerca
+
+            var circleOptions = {
+             color: '#00bcd4',
+             fillColor: '#fff',
+             fillOpacity: .1
+        }
+
+         circle = L.circle(circleCenter,500, circleOptions); //500 metros de radio - 1 km de diametro
+         circle.addTo(map);
+
+         var d = map.distance([$latitud, $longitud], circle.getLatLng()); //coordenadas actual del dispositivo
+         var isInside = d < circle.getRadius();
+
+         console.log("distancia es"+d);
+
+        $.get('http://localhost/gps/public/testcorreo');
+
+         if(d>0){
+
+            $.get('testcorreo');
+         }
+
+       
+          if(isInside==false){
+
+            //enviar notificacion
+          }
+
+
+    } );
+</script>
+ <div id="map" style="width:100%;height: 400px;"></div>
+
+EOT;
+
+
 
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
