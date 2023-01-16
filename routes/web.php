@@ -103,3 +103,7 @@ Route::post('/eliminavehiculogps', 'RastreoController@eliminavehiculogps');
 
 Route::get('/test', 'NotificacionesController@whatsapp');
 
+Route::get('/testcorreo', 'RastreoController@testcorreo');
+
+
+
