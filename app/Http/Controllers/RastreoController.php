@@ -88,13 +88,6 @@ class RastreoController extends Controller
 
 
 
-
-
-
-
-
-
-
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
               $outputFrom = json_decode($geocodeFrom);
