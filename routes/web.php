@@ -105,5 +105,8 @@ Route::get('/test', 'NotificacionesController@whatsapp');
 
 Route::get('/testcorreo', 'RastreoController@testcorreo');
 
+Route::get('/pruebacorreo/{distancia}/{alias}', 'RastreoController@pruebacorreo');
+
+
 
 

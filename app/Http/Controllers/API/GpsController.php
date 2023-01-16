@@ -86,6 +86,72 @@ class GpsController extends Controller
 
     }
 
+    public function enviacorreoemail($latitud,$longitud,$latitud_geocerca,$longitud_geocerca,$geocerca,$alias){
+
+
+
+
+echo <<<EOT
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/leaflet.js"></script>
+
+<script> 
+    $(document).ready(function () {
+      
+         map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5); //mapa
+         var circle;
+
+          var customIcon = new L.Icon({
+              iconUrl: 'https://localizaminave.com/img/auto.png',
+              iconSize: [30, 40],
+              iconAnchor: [25, 50]
+            });
+
+          if (circle != undefined) {
+          map.removeLayer(circle);
+         };
+
+         var circleCenter = [$latitud_geocerca, $longitud_geocerca]; //coordenadas geocerca
+
+            var circleOptions = {
+             color: '#00bcd4',
+             fillColor: '#fff',
+             fillOpacity: .1
+        }
+
+         circle = L.circle(circleCenter,$geocerca, circleOptions); //500 metros de radio - 1 km de diametro
+         circle.addTo(map);
+
+         var d = map.distance([$latitud, $longitud], circle.getLatLng()); //coordenadas actual del dispositivo
+         var isInside = d < circle.getRadius();
+
+         console.log("distancia es"+d);
+
+
+         $.get("https://localizaminave.com/pruebacorreo/67/$alias");
+
+       
+          if(isInside==false){
+
+            console.log("notifica");
+
+            //$.get("pruebacorreo/"+d+"/"+$alias);
+          }
+
+
+    } );
+</script>
+ <div id="map" style="width:100%;height: 400px;"></div>
+
+EOT;
+
+
+
+
+
+    }
+
 
 
 
@@ -139,6 +205,9 @@ class GpsController extends Controller
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
+
+
+             $this->enviacorreoemail($latitud,$longitud,$latitud_geocerca,$longitud_geocerca,$geocerca,$alias);
 
 
 
