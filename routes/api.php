@@ -25,3 +25,4 @@ Route::get('/recibeqr/{datos}', 'API\GpsController@recibeqr');
 
 Route::get('/socketweb', 'API\GpsController@socketweb');
 
+Route::get('/enviac/{distancia}/{alias}', 'API\GpsController@enviac');
