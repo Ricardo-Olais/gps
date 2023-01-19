@@ -673,13 +673,13 @@ class RastreoController extends Controller
             if($_REQUEST['estatus']==0){
 
                  DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0,"direccion_fija"=>""));
+                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta"=>0,"direccion_fija"=>""));
             }else{
 
                  $dir=$_REQUEST['direccionfija'];
 
                  DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta2"=>0, "direccion_fija"=>$dir));
+                                  ->update(array('fija'=>$_REQUEST['estatus'],"alerta"=>0, "direccion_fija"=>$dir));
             }
 
            
@@ -708,9 +708,9 @@ class RastreoController extends Controller
                 
 
             DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
-                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],'alerta'=>0,
+                                  ->update(array('activaGeocerca'=>$_REQUEST['estatus'],
                                     "address_geocerca"=>"",
-                                    'alerta'=>0,
+                                    'alerta2'=>0,
                                     'latitud_geocerca'=>"",
                                     'longitud_geocerca'=>""
                                 ));
@@ -735,7 +735,7 @@ class RastreoController extends Controller
              DB::table('vehiculos')->where('id_imei_android', $_REQUEST['numero'])
                                   ->update(
                                     array('activaGeocerca'=>$_REQUEST['estatus'],
-                                        'alerta'=>0,"address_geocerca"=>$direcciongeocerca,
+                                        'alerta2'=>0,"address_geocerca"=>$direcciongeocerca,
                                         'latitud_geocerca'=>$latitudeFrom,
                                         'longitud_geocerca'=>$longitudeFrom
                                     ));
