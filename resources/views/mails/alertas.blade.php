@@ -354,7 +354,7 @@
                       <td>
                         <br><br>
                         <p style="color:red;">AVISOS: GPS TRACKER </b></p>
-                        <p style="text-align:justify;font-family:nexa;font-size: 24px !important;">{{$texto}} </p>
+                        <p style="text-align:justify;font-family:sans-serif;font-size: 20px !important;">{{$texto}} </p>
 
                         <br><br>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
@@ -382,7 +382,7 @@
                                     <tr>
                                       <td>
                                    
-                                        <img src="https://localizaminave.com/img/home/fondo-carro.jpeg">
+                                        <img src="https://localizaminave.com/img/alerta.png">
 
                                       </td>
                                     </tr>
