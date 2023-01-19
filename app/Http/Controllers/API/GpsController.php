@@ -307,7 +307,7 @@ class GpsController extends Controller
 
                                 $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion, distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
 
-                                Mail::to($email)->send(new Bienvenida($name,$texto));
+                                Mail::to($email)->send(new Alertas($name,$texto));
 
 
                             }
@@ -357,13 +357,13 @@ class GpsController extends Controller
                                 $distancia=$d*1000;
                                 $isInside = $distancia < 500;
 
-                                if($isInside==false){
+                                if($isInside==false && $alerta2==0){
 
                                      //enviamos correo de notificación
 
-                              /*  $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
+                                $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
 
-                                Mail::to($email)->send(new Bienvenida($name,$texto));*/
+                                Mail::to($email)->send(new Alertas($name,$texto));
 
 
                                 }
