@@ -354,7 +354,7 @@
                       <td>
                         <br><br>
                         <p>Hola, <b>{{$usuario}}</b></p>
-                        <p style="text-align:justify;font-family:nexa;">{{$texto}} </p>
+                        <p style="text-align:justify;font-family:sans-serif;font-size: 20px !important;">{{$texto}} </p>
 
                         <br><br>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
