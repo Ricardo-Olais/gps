@@ -10,6 +10,8 @@ use ElephantIO\Client as Socket;
 use ElephantIO\Engine\SocketIO\Version2X;
 use Mail; 
 use App\Mail\Bienvenida;
+use App\Mail\Alertas;
+
 
 
 class GpsController extends Controller
