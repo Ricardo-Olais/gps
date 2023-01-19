@@ -32,7 +32,7 @@ class GpsController extends Controller
 
 
 
-    
+
 
     public function recibeqr($datos){
 
@@ -261,16 +261,6 @@ class GpsController extends Controller
                 //####################################### Validación de alertas #####################################################
                     if($fija==1){
 
-                  
-                        //extraer la dirección fija, compararla con la nueva direccióm ==> obtener la distancia de ambas si es mayor a 30 metros encender alarma.=1
-
-                        //consultamos campo de dirección fija si no tiene valor, actualizarlo por variable dirección
-                       /* if($direccion_fija==""){
-                         //actualizamos el registro 
-                         DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('direccion_fija' =>$direccion));
-                                    
-                        }*/
-
                     
                         if($direccion_fija!=""){
                         //fin de consulta
@@ -311,41 +301,11 @@ class GpsController extends Controller
                     
                             if($alerta==0){
 
-          
-                                /*$message = $twilio->messages
-                                      ->create("whatsapp:+5215586779297", // to
-                                               [
-                                                   "from" => "whatsapp:+14155238886",
-                                                   "body" => "Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);*/
-                                      
-                               // print_r($message); 
-
-                             /* $fields=array(
-
-                                    "imei"=>$imei,
-                                    "tipo"=>1,
-                                    "mensaje"=>"Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                     
-                               );
-       
-                              $fields_string = http_build_query($fields);
-                                    $ch = curl_init();
-                                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/soliSocket/alertas.php?".$fields_string);
-                                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-
-                               
-                                    $string = curl_exec($ch);*/
-
-
-
                               
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
-
-
                                 //enviamos correo de notificación
 
-                                $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
+                                $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion, distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
 
                                 Mail::to($email)->send(new Bienvenida($name,$texto));
 
@@ -376,76 +336,37 @@ class GpsController extends Controller
 
                     if($activaGeocerca==1 && $geocerca>0){
 
+                             //fórmula de Haversine para Geocerca
 
-                       /* if($address_geocerca==""){
-                         //actualizamos el registro 
-                         DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('address_geocerca' =>$direccion));
-                                    
-                        }*/
+                                $lat1 = (float) $latitud; //lat actual
+                                $lng1 = (float) $longitud;
 
-                        if($address_geocerca!=""){
+                                $lat2 = (float) $latitud_geocerca;  //geocerca
+                                $lng2 = (float) $longitud_geocerca;
 
-                            //Change address format
-                        $formattedAddrFrom = str_replace(' ','+',$address_geocerca);
-                        $formattedAddrTo = str_replace(' ','+',$direccion);
-                        
-                        //Send request and receive json data
-                        $geocodeFrom = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrFrom&sensor=false&key=$llave");
-                        $outputFrom = json_decode($geocodeFrom);
-                        $geocodeTo = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$formattedAddrTo&sensor=false&key=$llave");
-                        $outputTo = json_decode($geocodeTo);
-                        
-                        //Get latitude and longitude from geo data
-                        @$latitudeFrom = $outputFrom->results[0]->geometry->location->lat;
-                        @$longitudeFrom = $outputFrom->results[0]->geometry->location->lng;
-                        @$latitudeTo = $outputTo->results[0]->geometry->location->lat;
-                        @$longitudeTo = $outputTo->results[0]->geometry->location->lng;
-                        
-                        //Calculate distance from latitude and longitude
-                        @$theta = $longitudeFrom - $longitudeTo;
+                                $radius = 6371;
 
-                        @$dist = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
+                                $dLat = deg2rad($lat2 - $lat1);
+                                $dLon = deg2rad($lng2 - $lng1);
 
+                                $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($lat1)) 
+                                         * cos(deg2rad($lat2)) * sin($dLon/2) * sin($dLon/2);
+                                $c = 2 * asin(sqrt($a));
+                                $d = $radius * $c;
 
-                        $dist = acos($dist);
-                        $dist = rad2deg($dist);
-                       
-                        $miles = $dist * 60 * 1.853;
+                                $distancia=$d*1000;
+                                $isInside = $distancia < 500;
 
-                        $km=($miles * 1.6093444);
+                                if($isInside==false){
 
-                        $geocerca=$geocerca/1000;
+                                     //enviamos correo de notificación
 
-                        if($km>$geocerca){
-
-                            if($alerta2==0){
-
-                               /* $message = $twilio->messages
-                                      ->create("whatsapp:+5215586779297", // to
-                                               [
-                                                   "from" => "whatsapp:+14155238886",
-                                                   "body" => "Alerta de Geocerca: El vehículo $alias está fuera la geocerca establecida de $geocerca km., se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker"
-                                               ]);*/
-                                      
-                               // print_r($message);    
-
-                                DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta2' =>1));
-
-
-                                 $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
+                                $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
 
                                 Mail::to($email)->send(new Bienvenida($name,$texto));
 
-                            }
 
-
-                        }
-
-
-
-
-
-                        }
+                                }
 
           
                 }//fin de geocerca activa
