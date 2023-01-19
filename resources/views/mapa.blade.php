@@ -642,7 +642,7 @@ L.control.condensedAttribution({
 
     }
 
-     console.log(d);
+     console.log("distancia geocerca"+d);
 
        /* theMarker.on('drag', function(e) {
         var d = map.distance(e.latlng, circle.getLatLng());

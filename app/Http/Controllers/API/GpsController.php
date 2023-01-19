@@ -30,6 +30,10 @@ class GpsController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
+
+
+    
+
     public function recibeqr($datos){
 
       
