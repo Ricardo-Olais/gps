@@ -361,9 +361,9 @@ class GpsController extends Controller
 
                                      //enviamos correo de notificación
 
-                                $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
+                              /*  $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
 
-                                Mail::to($email)->send(new Bienvenida($name,$texto));
+                                Mail::to($email)->send(new Bienvenida($name,$texto));*/
 
 
                                 }
