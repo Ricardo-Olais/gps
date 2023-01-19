@@ -383,7 +383,7 @@
                                       <td>
                                         <center>
                                           <br>
-                                            <img src="https://localizaminave.com/img/alerta2.jpg" width="300">
+                                            <img src="https://localizaminave.com/img/alerta.png" width="300">
                                          <center>
                                       </td>
                                     </tr>
