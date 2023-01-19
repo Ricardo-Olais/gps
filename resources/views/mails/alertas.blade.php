@@ -353,7 +353,7 @@
                     <tr>
                       <td>
                         <br><br>
-                        <p style="color:red;">AVISOS: GPS TRACKER </b></p>
+                        <p style="color:red;font-size: 22px;">AVISOS: GPS TRACKER </b></p>
                         <p style="text-align:justify;font-family:sans-serif;font-size: 20px !important;">{{$texto}} </p>
 
                         <br><br>
@@ -381,9 +381,9 @@
                                   <tbody>
                                     <tr>
                                       <td>
-                                   
-                                        <img src="https://localizaminave.com/img/alerta.png">
-
+                                        <center>
+                                            <img src="https://localizaminave.com/img/alerta2.jpg" width="200">
+                                         <center>
                                       </td>
                                     </tr>
                                   </tbody>
