@@ -364,7 +364,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td><a href="https://localizaminave.com/login" target="_blank" style="background-color:#00bcd4 !important;">Consulta su estatus</a> </td>
+                                      <td><a href="https://localizaminave.com/login" target="_blank" style="background-color:black !important;">Consulta su estatus</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -382,7 +382,8 @@
                                     <tr>
                                       <td>
                                         <center>
-                                            <img src="https://localizaminave.com/img/alerta2.jpg" width="200">
+                                          <br>
+                                            <img src="https://localizaminave.com/img/alerta2.jpg" width="300">
                                          <center>
                                       </td>
                                     </tr>
