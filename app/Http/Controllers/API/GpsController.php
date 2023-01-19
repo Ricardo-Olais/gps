@@ -334,7 +334,7 @@ class GpsController extends Controller
 
                 //############## valida la geocerca activa ############################################################
 
-                    if($activaGeocerca==1 && $geocerca>0){
+                    if($activaGeocerca==1 && $geocerca>0 && $alerta2==0){
 
                              //fórmula de Haversine para Geocerca
 
@@ -357,9 +357,10 @@ class GpsController extends Controller
                                 $distancia=$d*1000;
                                 $isInside = $distancia < 500;
 
-                                if($isInside==false && $alerta2==0){
+                                if($isInside==false){
 
                                      //enviamos correo de notificación
+                                DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta2' =>1));
 
                                 $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
 
