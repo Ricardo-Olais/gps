@@ -927,24 +927,13 @@ class RastreoController extends Controller
        // $email="r.hernandez@lidcorp.mx";
 
         $email=Auth::user()->email;
-     
-
-
-        $gps = DB::table('vehiculos')->where('email',$email)->get();
-
-
+        $gps = DB::table('vehiculos')->where('email',$email)->where('estatus',2)->get();
         date_default_timezone_set('America/Mexico_City');
-
-     
-
-       $datos=array();   
+        $datos=array();   
         if(count($gps)>0){
 
              foreach ($gps as $key => $value) {
-
-               
-            
-                       $datos[]=array(
+                         $datos[]=array(
                                
                                 "id_vehiculo"=>$value->id_vehiculo,
                                  "conductor"=>$value->conductor,
@@ -958,14 +947,38 @@ class RastreoController extends Controller
 
         }
 
-        /* $result = json_encode($datos);
-
-         return $result;*/
-
-
         return view('facturas', ['datos' => $datos]);
     }
 
+
+
+        public function micuenta(){
+
+               // $email="r.hernandez@lidcorp.mx";
+
+                $email=Auth::user()->email;
+                $gps = DB::table('vehiculos')->where('email',$email)->get();
+                date_default_timezone_set('America/Mexico_City');
+                $datos=array();   
+                if(count($gps)>0){
+
+                     foreach ($gps as $key => $value) {
+                                 $datos[]=array(
+                                       
+                                        "id_vehiculo"=>$value->id_vehiculo,
+                                         "conductor"=>$value->conductor,
+                                         "estatus"=>$value->estatus,
+                                         "subscripcion"=>$value->subscripcion,
+                                         "alias"=>$value->alias_vehiculo
+                                      
+                                       
+                                    );
+                        }
+
+                }
+
+                return view('micuenta', ['datos' => $datos]);
+            }
 
          
 
