@@ -99,7 +99,16 @@
   </style>
 
   <script type="text/javascript">
-    var imei="<?php echo $_REQUEST['imei'];?>";
+
+    $(document).ready(function(){
+      
+      var imei="<?php echo $_REQUEST['imei'];?>";
+      $.post("inicializasocketcomparte",{_token:token,imei:imei});
+
+    })
+    
+
+      
   </script>
 
 
@@ -159,7 +168,7 @@
 
   var messages = document.getElementById('messages');
 
-  $.post("inicializasocketcomparte",{_token:token,imei:imei});
+
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
