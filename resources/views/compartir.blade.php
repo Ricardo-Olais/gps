@@ -159,7 +159,7 @@
 
   var messages = document.getElementById('messages');
 
-  $.post("inicializasocketcomparte",{_token:token,imei:"3e480337a87ede4d"});
+  $.post("inicializasocketcomparte",{_token:token,imei:imei});
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
