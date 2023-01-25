@@ -541,8 +541,8 @@ class RastreoController extends Controller
                               'marca' =>$marca,
                               'placa' =>$placas,
                               'tipo' =>$tipovehiculo,
-                              'fecha'=>$fecha,
-                              'estatus'=>$estatus,
+                             // 'fecha'=>$fecha,
+                             // 'estatus'=>$estatus,
                               'geocerca'=>$geocerca,
                               'telefono'=>$telefono
                               
