@@ -667,8 +667,8 @@
 
                         <tr><td class="colorcolum">Acciones</td>  <td class="center-align">
 
-                        <a href="#" ><i class="material-icons pink-text" style="font-size:30px !important;"  onclick="eliminar({{ $valor['id'] }})">clear</i></a>
-                        <a class='modal-trigger' href="#modal1" ><i class="material-icons yellow-text" style="font-size:30px !important;"  onclick="editar({{ $valor['id'] }})">edit</i></a>
+                        <a href="#" ><i class="material-icons pink-text" style="font-size:33px !important;"  onclick="eliminar({{ $valor['id'] }})">clear</i></a>
+                        <a class='modal-trigger' href="#modal1" style="margin-left: 20px;"><i class="material-icons yellow-text" style="font-size:33px !important;"  onclick="editar({{ $valor['id'] }})">edit</i></a>
 
                         </td></tr>
 
