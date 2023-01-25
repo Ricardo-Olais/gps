@@ -187,7 +187,7 @@
               </li>
 
              <li tabindex="0">
-                <a class="grey-text text-darken-1" href="page-faq.html">
+                <a class="grey-text text-darken-1" href="micuenta">
                   <i class="material-icons">help_outline</i>Mi cuenta</a>
               </li>
              
