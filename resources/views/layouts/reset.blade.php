@@ -352,6 +352,10 @@
       </a>
     </li>
    @endif
+   <center>
+    <img src="img/tracking-o.gif" width="120" style="margin-top:50px;">
+  </center>
+
    <div id="inferior">
     <center>
      <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker &#174;</a> All rights reserved.</span></center>

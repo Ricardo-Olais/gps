@@ -529,11 +529,35 @@ class RastreoController extends Controller
             }
            
 
+           if(isset($id_vehi) && $id_vehi!=""){
+
+           // echo "el telefono es: ".$telefono;
+
+              DB::table('vehiculos')->where('id_vehiculo',$id_vehi)
+                            ->update( array(
+
+                             'conductor' =>$conductor, 
+                              'alias_vehiculo'=>$alias,
+                              'marca' =>$marca,
+                              'placa' =>$placas,
+                              'tipo' =>$tipovehiculo,
+                              'fecha'=>$fecha,
+                              'estatus'=>$estatus,
+                              'geocerca'=>$geocerca,
+                              'telefono'=>$telefono
+                              
+
+
+                        ));
+
+
+           }else{
+
             DB::table('vehiculos')->insert(
                   ['email' =>$email,
                   'conductor' =>$conductor, 
                   'alias_vehiculo'=>$alias,
-                  'marca' =>"",
+                  'marca' =>$marca,
                   'modelo' =>"",
                   'placa' =>$placas,
                   'tipo' =>$tipovehiculo,
@@ -551,12 +575,15 @@ class RastreoController extends Controller
 
                  ] );
 
-            $telefono="+52".$telefono;
+           // $telefono="+52".$telefono;
 
-            $consultamax=DB::select("SELECT max(id_vehiculo) as ultimo FROM vehiculos WHERE email='$email' AND id_imei_android=''");
+
+           }
+
+           $consultamax=DB::select("SELECT max(id_vehiculo) as ultimo FROM vehiculos WHERE email='$email' AND id_imei_android=''");
            $ultimo= $consultamax[0]->ultimo;
 
-              $texto="Te damos la bienvenida a localizaminave.con";
+           $texto="Te damos la bienvenida a localizaminave.con";
 
              // Mail::to($email)->send(new Bienvenida($conductor,$texto));
 
