@@ -261,7 +261,7 @@ class GpsController extends Controller
 
 
                 //####################################### Validación de alertas #####################################################
-                    if($fija==1){
+                    if($fija==1 && $alerta==0){
 
                     
                         if($direccion_fija!=""){
@@ -301,9 +301,7 @@ class GpsController extends Controller
                        if($km>.50){ //mayor a 50 metros, activar alerta enviar notificación
 
                     
-                            if($alerta==0){
-
-                              
+                            
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
                                 //enviamos correo de notificación
 
@@ -312,7 +310,6 @@ class GpsController extends Controller
                                 Mail::to($email)->send(new Alertas($name,$texto));
 
 
-                            }
 
                        }
 
@@ -320,16 +317,7 @@ class GpsController extends Controller
                     }
 
 
-                    }else{
-
-                        //borrar campo dirección fija de tabla vehiculos
-
-                         /*if($direccion_fija!=""){
-                             //actualizamos el registro 
-                             DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('direccion_fija' =>"",'alerta'=>0));
-                                    
-                          }*/
-                    }
+                }
 
 
 
@@ -374,21 +362,7 @@ class GpsController extends Controller
           
                 }//fin de geocerca activa
 
-                else{
-
-                        //borrar campo dirección fija de tabla vehiculos
-
-                         /*if($address_geocerca!=""){
-                             //actualizamos el registro 
-                             DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('address_geocerca' =>"",'alerta2'=>0));
-                                    
-                          }*/
-                    }
-
-
-
-
-
+       
 
              }//fin de if activo
 

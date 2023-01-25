@@ -200,15 +200,42 @@
 
         }
 
+
+        $("#modal1").on('hidden.bs.modal', function () {
+                $("#title-modal").html("Nuevo dispositivo");
+        });
+
+    
+
         function editar(id){
+
+
+              $("#title-modal").html("Actualizar Dispositivo");
 
        
                $.post("consultavehi",{id:id,_token:token},
 
                    function(data){
-                    console.log(data);
+                    console.log(data[0].telefono);
+
+                 
+                    $("#tipovehiculo option").each(function(){
+
+                            $("#tipovehiculo option[value='"+data[0].tipo+"']").prop('selected','selected').change(); //lo seleccionamos
+                            $("#tipovehiculo").formSelect();
+                     
+                     });
+
+                     $("#geocerca option").each(function(){
+
+                            $("#geocerca option[value='"+data[0].geocerca+"']").prop('selected','selected').change(); //lo seleccionamos
+                            $("#geocerca").formSelect();
+                     
+                     });
 
 
+                    
+                    $("#id_vehi").val(data[0].id);
 
                     $("#alias").val(data[0].alias_vehiculo);
                     $("#conductor").val(data[0].conductor);
@@ -310,20 +337,22 @@
 <div id="main" >
       <div class="row">
 
+       
+
          <!-- Modal Structure -->
-           <div id="modal1" class="modal" style="z-index: 2000; position: absolute;">
+           <div id="modal1" class="modal" style="z-index: 2000; position: absolute;" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" tabindex="-1">
              <div class="modal-content">
-               <h6>Nuevo dispositivo</h6><br>
+               <h6 id="title-modal">Dispositivo <iconify-icon icon="system-uicons:gps" style='font-size: 30px;'></iconify-icon></h6><br>
 
             <div class="row">
                     <form class="col s12" name="guardavehiculo" id="guardavehiculo">
 
-
+                      <input type="hidden" name="id_vehi" id="id_vehi">
                       <div class="row">
                         <div class="input-field col s12 m2 l6">
                           <i class="material-icons prefix">android</i>
                            <select name="tipovehiculo" id="tipovehiculo" required style="font-size:18px;">
-                                 <option value="" disabled selected>Selecciona Tipo</option>
+                                 <option value="" disabled>Selecciona Tipo</option>
                                  <option value="adulto.png">Adulto</option>
                                  <option value="niño.png">Niño</option>
                                  <option value="auto.png">Auto</option>
@@ -371,7 +400,7 @@
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">android</i>
                            <select name="geocerca" id="geocerca" required style="font-size:18px;">
-                                 <option value="" disabled selected>Metros...</option>
+                                 <option value="" disabled>Metros...</option>
                                  <?php
                                    for($i = 100; $i < 10100; $i+=100){
 
@@ -396,7 +425,7 @@
              </div>
              <div class="modal-footer">
                
-               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+               <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="cerrar">Cerrar</a>
 
                <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
                     <i class="material-icons right">send</i>
