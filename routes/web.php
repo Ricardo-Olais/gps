@@ -89,6 +89,9 @@ Route::get('/facturacion', 'RastreoController@facturas');
 Route::get('/auxgridvehiculos', 'RastreoController@auxgridvehiculos');
 Route::post('/consultavehi', 'RastreoController@consultavehi');
 
+Route::get('/micuenta', 'RastreoController@micuenta');
+
+
 //Notificaciones
 
 Route::get('/whatsappfront', 'RastreoController@whatsappfront');
