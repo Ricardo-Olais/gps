@@ -156,12 +156,7 @@
  
  $(document).ready(function(){
 
-   setTimeout(ejecuta, 2000);
  
-     function ejecuta(){
-
-       $.get("inicializasocketcomparte",{_token:token,imei:imei});
-    }
 
  
 
@@ -171,6 +166,14 @@
   var theMarker = {};
 
   var messages = document.getElementById('messages');
+
+
+    setTimeout(ejecuta, 2000);
+ 
+     function ejecuta(){
+
+       $.post("inicializasocketcomparte",{_token:token,imei:imei});
+    }
 
 
 
