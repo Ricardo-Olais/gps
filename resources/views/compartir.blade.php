@@ -100,12 +100,9 @@
 
   <script type="text/javascript">
 
-    $(document).ready(function(){
 
       var imei="<?php echo $_REQUEST['imei'];?>";
-     
 
-    })
     
 
       
