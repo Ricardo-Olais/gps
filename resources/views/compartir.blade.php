@@ -157,7 +157,7 @@
  $(document).ready(function(){
 
  
-
+$.post("inicializasocketcomparte",{_token:token,imei:imei});
  
 
 //fin de controles
@@ -168,14 +168,7 @@
   var messages = document.getElementById('messages');
 
 
-    setTimeout(ejecuta, 2000);
  
-     function ejecuta(){
-
-       $.post("inicializasocketcomparte",{_token:token,imei:imei});
-    }
-
-
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);

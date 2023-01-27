@@ -94,6 +94,7 @@ class CompartirController extends Controller
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com/soliSocket/ubicaini.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
                
                     $string = curl_exec($ch);
