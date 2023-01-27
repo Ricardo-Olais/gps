@@ -160,7 +160,7 @@
  
      function ejecuta(){
 
-       $.post("inicializasocketcomparte",{_token:token,imei:imei});
+       $.get("inicializasocketcomparte",{_token:token,imei:imei});
     }
 
  
