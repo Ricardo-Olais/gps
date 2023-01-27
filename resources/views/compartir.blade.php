@@ -92,6 +92,11 @@
         background-image: url('img/fondo-login.png');
         }
 
+       p{
+
+        font-size: 18px;
+       }
+
         /* .leaflet-control-attribution{
 
           display: none;
@@ -139,6 +144,59 @@
                  </div>
                </div>
              </div>
+
+             <!--- home-->
+
+    <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
+             <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#00bcd4">GPS tracker (Conóce en donde se encuentran tus seres queridos.)</h3></center>
+          </div>
+
+    <div class="col s12 m2 l12 animate fadeRight">
+         <!-- Total Transaction -->
+         <p style="text-align: justify;">
+         <span style="color:#00bcd4;">Gps Tracker</span> de Localizaminave es una aplicación que permite instalarse en dispositivos android para obtener y monitorear la ubicación de personas, de tu auto. No se requiere comprar ningún localizador, solo instala en el dispositivo que desees localizar y rastrea desde la plataforma <a href="https://localizaminave.com/" style="color:#00bcd4;">https://localizaminave.com</a>
+
+         <center>
+              <a href="https://play.google.com/store/apps/details?id=family.tracker.my&hl=es_MX"> <img src="img/play.png" width="40%" style="margin-top: 10px;"></a>
+
+              <img src="img/home/paso-4.png" width="20%" style="margin-top: 10px;"></center>
+
+        </p>
+         
+         <p style="text-align: justify;">
+         Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma.
+
+        </p>
+             
+        <p style="text-align: justify;">
+        Dale una segunda vida a tu celular, úsalo como GPS tracker, nuestra aplicación se instala fácilmente en equipos con sistema Android. Es importante que cuente con datos para que se comunique con  nuestros servidores.
+        </p>
+
+        <p style="text-align: justify;margin-top: 15px;">
+        Antes de adentrarnos a los detalles y beneficios que puede brindarle nuestro servicio de GPS, es necesario que sepa que un GPS tracker no funciona por sí solo, para acceder a los datos de ubicación, métricas de rendimiento y demás herramientas, deberá implementar una plataforma de control vehicular con sistema GPS tracker <span style="color:#00bcd4;">(https://localizaminave.com)</span>
+        </p>
+
+        <p style="text-align: justify;margin-top: 15px;">
+        Dicho esto, un GPS tracker, conocido también como GPS para carros o rastreador GPS, es un dispositivo que se instala en los vehículos con la finalidad de localizarlos, a través de señales móviles, en cualquier lugar donde se encuentren.
+        </p>
+
+        <p style="text-align: justify;margin-top: 15px;">
+        La función del GPS tracker es simple, se coloca este dispositivo a las unidades que desee monitorear y tendrá acceso a la ubicación precisa de ellas. Esto es posible gracias a que la señal enviada por GPS viaja a gran velocidad, lo que le brinda los datos de ubicación y demás de manera inmediata.
+        </p>
+        
+            
+        
+      </div>
+
+
+
+             <!--- -->
+
+
+
+
+
+
           
           
            </div>
