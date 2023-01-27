@@ -41,6 +41,11 @@
          background-color: #000;
     }
 
+    p{
+
+        font-size: 18px;
+       }
+
     
 </style>
 
