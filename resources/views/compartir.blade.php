@@ -101,9 +101,9 @@
   <script type="text/javascript">
 
     $(document).ready(function(){
-      
+
       var imei="<?php echo $_REQUEST['imei'];?>";
-      $.post("inicializasocketcomparte",{_token:token,imei:imei});
+     
 
     })
     
@@ -158,6 +158,13 @@
 
  
  $(document).ready(function(){
+
+   setTimeout(ejecuta, 2000);
+ 
+     function ejecuta(){
+
+       $.post("inicializasocketcomparte",{_token:token,imei:imei});
+    }
 
  
 
