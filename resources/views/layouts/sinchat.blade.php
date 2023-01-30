@@ -163,11 +163,9 @@
         @else
           <li>
             <a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown">
+              <span>{{ Auth::user()->name }}</span>
               <span class="avatar-status avatar-online">
                 <img src="img/cuenta.jpg" alt="avatar">
-
-
-                <i></i>
               </span>
             </a>
             <ul class="dropdown-content" id="profile-dropdown" tabindex="0">
@@ -175,7 +173,7 @@
                 
 
               <li tabindex="0">
-                <a class="grey-text text-darken-1" href="user-profile-page.html">
+                <a class="grey-text text-darken-1">
                   <i class="material-icons">person_outline</i>{{ Auth::user()->name }}</a>
               </li>
 
