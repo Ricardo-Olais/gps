@@ -11,6 +11,8 @@ use ElephantIO\Engine\SocketIO\Version2X;
 use Mail; 
 use App\Mail\Bienvenida;
 use App\Mail\Alertas;
+use Aws\Sns\SnsClient; 
+use Aws\Exception\AwsException;
 
 
 
@@ -92,6 +94,56 @@ class GpsController extends Controller
 
     }
 
+   public function enviamsgaws($message,$phone){
+
+      
+
+        $key=env('KEY_AWS_SNS');
+        $secret=env('SECRET_AWS_SNS');
+
+        $SnSclient= new SnsClient([
+                   'region' => 'us-east-1',
+                   'version' => '2010-03-31',
+                    'credentials' => [
+                            'key' => $key,
+                            'secret' => $secret,
+                    ]
+            ]);
+
+  
+            
+            $result = $SnSclient->publish([
+                    'Message' => $message,
+                    'PhoneNumber' => $phone,
+                ]);
+
+              try {
+                $result = $SnSclient->publish([
+                    'Message' => $message,
+                    'PhoneNumber' => $phone,
+                ]);
+
+               
+                //var_dump($result);
+            } catch (AwsException $e) {
+                // output error message if fails
+                error_log("error es ". $e->getMessage());
+            } 
+   
+
+
+   }
+
+
+   public function probar(){
+
+        $message = 'Alerta de Geocerca: Hola el vehículo Kia ha salido del área permitida, visita https://localizaminave.com/tracker';
+        $phone = '+525586779297';
+
+        $this->enviamsgaws($message,$phone);
+
+   }
+
 
 
 
@@ -110,10 +162,10 @@ class GpsController extends Controller
       
 
 
-        $sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
+        /*$sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
         $token = 'ad17ead7faeb621196aed6a1e694bafa'; 
 
-        $twilio = new Client($sid, $token);
+        $twilio = new Client($sid, $token);*/
 
         $llave=env('LLAVE_API_MAPS');
 
@@ -307,6 +359,12 @@ class GpsController extends Controller
 
                                 $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion, distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
 
+                               
+                                $phone = '+525586779297';
+
+                                $this->enviamsgaws($texto,$phone);
+
+
                                 Mail::to($email)->send(new Alertas($name,$texto));
 
 
@@ -353,6 +411,10 @@ class GpsController extends Controller
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta2' =>1));
 
                                 $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
+
+                                $phone = '+525586779297';
+
+                                $this->enviamsgaws($texto,$phone);
 
                                 Mail::to($email)->send(new Alertas($name,$texto));
 
