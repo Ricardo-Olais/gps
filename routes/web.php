@@ -111,5 +111,7 @@ Route::get('/testcorreo', 'RastreoController@testcorreo');
 Route::get('/pruebacorreo/{distancia}/{alias}', 'RastreoController@pruebacorreo');
 
 
+Route::get('/msg', 'SMSController@envia');
+
 
 
