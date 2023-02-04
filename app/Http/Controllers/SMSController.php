@@ -27,7 +27,7 @@ class SMSController extends Controller
     public function envia()
     {
         
-        $key="AKIAZIFGW5GSV2N7JU6U";
+        /*$key="AKIAZIFGW5GSV2N7JU6U";
         $secret="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";
 
 
@@ -43,17 +43,12 @@ class SMSController extends Controller
   
             $message = 'Alerta de Geocerca: Hola el vehículo Kia ha salido del área permitida, visita https://localizaminave.com/tracker';
             $phone = '+525586779297';
-
-
             $result = $SnSclient->publish([
                     'Message' => $message,
                     'PhoneNumber' => $phone,
                 ]);
 
-
-            //print_r($result);
-
-            try {
+              try {
                 $result = $SnSclient->publish([
                     'Message' => $message,
                     'PhoneNumber' => $phone,
@@ -64,6 +59,12 @@ class SMSController extends Controller
             } catch (AwsException $e) {
                 // output error message if fails
                 error_log("error es ". $e->getMessage());
-            } 
+            } */
+   
+
+
+
+
+
     }
 }
