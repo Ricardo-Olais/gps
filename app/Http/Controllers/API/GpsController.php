@@ -358,7 +358,7 @@ class GpsController extends Controller
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
                                 //enviamos correo de notificación
 
-                                $texto="Alerta de Parking: El vehículo $alias está en movimiento, se encuentra en $direccion, distancia de $km km., consulta su estatus en localizaminave.com.mx/tracker";
+                                $texto="Alerta de Parking: Hola el vehículo $alias se encuentra en movimiento, visita https://localizaminave.com/tracker";
 
                                
                                 $phone = '+525586779297';
@@ -411,7 +411,7 @@ class GpsController extends Controller
                                      //enviamos correo de notificación
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta2' =>1));
 
-                                $texto="Alerta de GEOCERCA: El vehículo $alias está fuera del área permitida, se encuentra en $direccion, consulta su estatus en localizaminave.com.mx/tracker";
+                                $texto="Alerta de Geocerca: Hola el vehículo $alias ha salido del área permitida, visita https://localizaminave.com/tracker";
 
                                 $phone = '+525586779297';
 
