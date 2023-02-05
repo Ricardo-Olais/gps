@@ -630,8 +630,8 @@ class RastreoController extends Controller
            $texto="Te damos la bienvenida a localizaminave.con";
 
 
-           $message = 'Tu dispositivo $alias se agregó a tu cuenta de manera exitosa, escanea el código QR generado para vincular el sistema gps';
-           
+           $message = "Tu dispositivo $alias se agregó a tu cuenta de manera exitosa, escanea el código QR generado para vincular el sistema gps, visita https://localizaminave.com/";
+
            $phone = '+525586779297';
 
           $this->enviamsgaws($message,$phone);
