@@ -636,7 +636,7 @@ class RastreoController extends Controller
 
           $this->enviamsgaws($message,$phone);
 
-             // Mail::to($email)->send(new Bienvenida($conductor,$texto));
+         //  Mail::to($email)->send(new  Alertas($conductor,$message));
 
            
             /*$mensaje="Bienvenido a localiza mi nave, tu dispositivo $alias se agregó a tu cuenta de manera exitosa, descarga la app localizaminave y scanea el código QR generado para vincular el sistema gps a nuestros servidores.";
@@ -852,7 +852,15 @@ class RastreoController extends Controller
 
         if($ultimo==0 && $subscripcion!=""){
 
-         $texto="La subscripcion se ha activado de manera exitosa, gracias por confiar en localizaminave.com. Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma. Verifique el estatus de sus vehículos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas. Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real.";
+         $texto="La subscripción se ha activado de manera exitósa, gracias por confiar en localizaminave.com. Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma. Verifique el estatus de sus vehículos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas. Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real.";
+
+
+         $message = "La subscripción se ha activado de manera exitósa, gracias por confiar en localizaminave.com, visita https://localizaminave.com";
+
+         $phone = '+525586779297';
+
+         $this->enviamsgaws($message,$phone);
+
 
          Mail::to($email)->send(new Bienvenida($name,$texto));
 
