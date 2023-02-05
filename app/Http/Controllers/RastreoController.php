@@ -9,6 +9,8 @@ use DateTime;
 use Mail; 
 use Twilio\Rest\Client;
 use App\Mail\Bienvenida;
+use Aws\Sns\SnsClient; 
+use Aws\Exception\AwsException;
 
 class RastreoController extends Controller
 {
@@ -497,6 +499,48 @@ class RastreoController extends Controller
 
     }
 
+     public function enviamsgaws($message,$phone){
+
+      
+
+        $key=env('KEY_AWS_SNS');
+        $secret=env('SECRET_AWS_SNS');
+
+        $SnSclient= new SnsClient([
+                   'region' => 'us-east-1',
+                   'version' => '2010-03-31',
+                    'credentials' => [
+                            'key' => $key,
+                            'secret' => $secret,
+                    ],
+                    'http' => ['verify' => false]
+            ]);
+
+  
+            
+            $result = $SnSclient->publish([
+                    'Message' => $message,
+                    'PhoneNumber' => $phone,
+                ]);
+
+              try {
+                $result = $SnSclient->publish([
+                    'Message' => $message,
+                    'PhoneNumber' => $phone,
+                ]);
+
+               
+                //var_dump($result);
+            } catch (AwsException $e) {
+                // output error message if fails
+                error_log("error es ". $e->getMessage());
+            } 
+   
+
+
+   }
+
+
     public function guardavehiculo(){
 
 
@@ -584,6 +628,13 @@ class RastreoController extends Controller
            $ultimo= $consultamax[0]->ultimo;
 
            $texto="Te damos la bienvenida a localizaminave.con";
+
+
+           $message = 'Tu dispositivo $alias se agregó a tu cuenta de manera exitosa, escanea el código QR generado para vincular el sistema gps';
+           
+           $phone = '+525586779297';
+
+          $this->enviamsgaws($message,$phone);
 
              // Mail::to($email)->send(new Bienvenida($conductor,$texto));
 
