@@ -125,7 +125,7 @@ class GpsController extends Controller
                 ]);
 
                
-                //var_dump($result);
+                var_dump($result);
             } catch (AwsException $e) {
                 // output error message if fails
                 error_log("error es ". $e->getMessage());
@@ -363,7 +363,7 @@ class GpsController extends Controller
                                
                                 $phone = '+525586779297';
 
-                                $this->enviamsgaws($texto,$phone);
+                               // $this->enviamsgaws($texto,$phone);
 
 
                                 Mail::to($email)->send(new Alertas($name,$texto));
@@ -415,7 +415,7 @@ class GpsController extends Controller
 
                                 $phone = '+525586779297';
 
-                                $this->enviamsgaws($texto,$phone);
+                                //$this->enviamsgaws($texto,$phone);
 
                                 Mail::to($email)->send(new Alertas($name,$texto));
 

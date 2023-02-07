@@ -634,7 +634,7 @@ class RastreoController extends Controller
 
            $phone = '+525586779297';
 
-          $this->enviamsgaws($message,$phone);
+          //$this->enviamsgaws($message,$phone);
 
          //  Mail::to($email)->send(new  Alertas($conductor,$message));
 
