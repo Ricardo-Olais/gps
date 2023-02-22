@@ -651,11 +651,11 @@ L.control.condensedAttribution({
       navigator.geolocation.getCurrentPosition(function(position) {
         browserLat =  position.coords.latitude;
         browserLong = position.coords.longitude;
-        console.log(browserLat);
-        console.log(browserLong);
-
-
+  
       });
+
+      console.log(browserLat);
+      console.log(browserLong);
 
        
        
