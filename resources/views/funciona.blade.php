@@ -76,7 +76,7 @@
               <p style="text-align:justify;">
                Descarga la aplicación <span style="color:#00bcd4;">GPS TRACKER</span>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
                <center>
-              <a href="https://play.google.com/store/apps/details?id=family.tracker.my&hl=es_MX"> <img src="img/play.png" width="50%" style="margin-top: 10px;"></a>
+              <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps"> <img src="img/play.png" width="50%" style="margin-top: 10px;"></a>
 
               <img src="img/home/paso-4.png" width="40%" style="margin-top: 10px;"></center>
 

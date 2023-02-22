@@ -10,7 +10,49 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry"></script>
 <script type="text/javascript" src="js/gmaps.js"></script>
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
+
+
 <!--script src="js/StreetViewButtons.js"></script-->
+
+<script type="text/javascript">
+  
+var result;
+   
+      var lon = (-102.2563080) - (-102.2568100); //lon nueva - lon antes
+      var lat = (21.8528610) - (21.8546630); //lat nueva - lat antes 
+     // Esto es cuando el marcador no se mueve y evitar la división por cero
+      if (lon == 0 && lat == 0) {
+        result = 0;
+      // Se forma una línea horizontal
+      } else if (lon == 0) {
+        // Mirando hacia arriba (norte)
+        if (lat > 0) {
+          result = 0;
+        // Mirando hacia abajo (sur)
+        } else {
+          result = 180;
+        }
+      // Se forma una línea vertical
+      } else if (lat == 0) {
+        // Mirando hacia la derecha (este)
+        if(lon > 0) {
+          result = 90;
+        // Mirando hacia la izquierda (oeste)
+        } else {
+          result = 270;
+        }
+      } else {
+        // Se calcula el arcotangente, tras haber agotado los valores predeterminados
+        // Como su resultado es en radianes, hay que convertirlo a grados sexagesimales
+        result = Math.atan(lon / lat) * 180 / Math.PI;
+        // Se suma para que pueda tener sentido negativo el marcador.
+        if (lat < 0) {
+          result = result + 180;
+        }
+      }
+   
+     console.log(result);
+</script>
 
 
   <style>
