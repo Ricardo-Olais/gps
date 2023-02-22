@@ -255,6 +255,8 @@
 
   var valorgeo=0;
   var map;
+  var browserLat;
+  var browserLong;
 
   $("#menos").click(function(){
 
@@ -481,24 +483,9 @@ L.control.condensedAttribution({
 
 
 
-  /*var browserLat;
-    var browserLong;
+
 
  
-
-       navigator.geolocation.getCurrentPosition(function(position) {
-        browserLat =  position.coords.latitude;
-        browserLong = position.coords.longitude;
-        console.log(browserLat);
-        console.log(browserLong);
-
-       
-       marker_actual = L.marker([browserLat,browserLong]).addTo(map);
-        marker_actual.bindPopup("yo").openPopup();
-        map.setView([browserLat,browserLong], 18); 
-
-
-    });*/
 
 
   ///---yo
@@ -592,6 +579,14 @@ L.control.condensedAttribution({
       iconAnchor: [25, 50]
     });
 
+
+      var customIcon2 = new L.Icon({
+          iconUrl: 'https://localizaminave.com/img/adulto.png',
+          iconSize: [30, 40],
+          iconAnchor: [25, 50]
+        });
+
+
     console.log(msg.longitud_geocerca);
 
   //geocerca  obtener la latitud y longitud de geocerca y pintarlas
@@ -631,6 +626,10 @@ L.control.condensedAttribution({
     if (theMarker != undefined) {
               map.removeLayer(theMarker);
         };
+
+      if (marker_actual!= undefined) {
+              map.removeLayer(marker_actual);
+        };
       lat=msg.latitud;
       long=msg.longitud
       //https://www.google.com/maps?layer=c&cbll=19.5441708,-99.0785885
@@ -640,8 +639,26 @@ L.control.condensedAttribution({
 
     //rotationAngle: 146
 
+
+
     theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
+
+
+       navigator.geolocation.getCurrentPosition(function(position) {
+        browserLat =  position.coords.latitude;
+        browserLong = position.coords.longitude;
+        console.log(browserLat);
+        console.log(browserLong);
+
+       
+       
+       marker_actual = L.marker([browserLat,browserLong],{icon: customIcon2, draggable: false,
+       autoPan: true}).addTo(map);
+       marker_actual.bindPopup("Tú estás aquí").openPopup();
+     //  map.setView([browserLat,browserLong], 18); 
+
+    });
 
 
 
