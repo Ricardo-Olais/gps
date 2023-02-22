@@ -663,6 +663,10 @@ L.control.condensedAttribution({
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
 
+    console.log("laaaaa: "+browserLat);
+
+    console.log("loooo: "+browserLong);
+
         L.Routing.control({
           waypoints: [
             L.latLng(browserLat, browserLong),
