@@ -640,12 +640,6 @@ L.control.condensedAttribution({
 
     //rotationAngle: 146
 
-
-
-    theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-    autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
-
-
        navigator.geolocation.getCurrentPosition(function(position) {
         browserLat =  position.coords.latitude;
         browserLong = position.coords.longitude;
@@ -662,6 +656,9 @@ L.control.condensedAttribution({
     });
 
 
+
+    theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
+    autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
 
 
