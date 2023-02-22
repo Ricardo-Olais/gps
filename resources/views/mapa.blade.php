@@ -661,6 +661,16 @@ L.control.condensedAttribution({
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
 
+        L.Routing.control({
+          waypoints: [
+            L.latLng(browserLat, browserLong),
+            L.latLng(msg.longitud, msg.latitud)
+          ]
+        }).addTo(map);
+
+
+
+
 
      console.log("aaa ="+msg.latitud_geocerca);
 
