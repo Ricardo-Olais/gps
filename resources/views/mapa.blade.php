@@ -653,7 +653,7 @@ L.control.condensedAttribution({
         browserLat =  position.coords.latitude;
         browserLong = position.coords.longitude;
 
-        recibeubicalat(browserLat,browserLong);
+        recibeubica(browserLat,browserLong);
   
       });
 
