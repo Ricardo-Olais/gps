@@ -655,17 +655,11 @@ L.control.condensedAttribution({
        marker_actual.bindPopup("Tú estás aquí").openPopup();
      //  map.setView([browserLat,browserLong], 18); 
 
-    });
+
+      theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
+      autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
 
-
-    theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-    autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
-
-
-    console.log("laaaaa: "+browserLat);
-
-    console.log("loooo: "+browserLong);
 
         L.Routing.control({
           waypoints: [
@@ -673,6 +667,14 @@ L.control.condensedAttribution({
             L.latLng(msg.longitud, msg.latitud)
           ]
         }).addTo(map);
+
+        
+
+    });
+
+
+
+   
 
 
 
