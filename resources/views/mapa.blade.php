@@ -478,7 +478,27 @@ L.control.condensedAttribution({
   emblem: '<div class="emblem-wrap"><img src="https://localizaminave.com/images/color.png"/ width="50"></div>',
   prefix: '<a href="https://localizaminave.com" title="Travel time analysis by Motion Intelligence"></a>GPS'
 }).addTo(map);
+
+
+
+  /*var browserLat;
+    var browserLong;
+
  
+
+       navigator.geolocation.getCurrentPosition(function(position) {
+        browserLat =  position.coords.latitude;
+        browserLong = position.coords.longitude;
+        console.log(browserLat);
+        console.log(browserLong);
+
+       
+       marker_actual = L.marker([browserLat,browserLong]).addTo(map);
+        marker_actual.bindPopup("yo").openPopup();
+        map.setView([browserLat,browserLong], 18); 
+
+
+    });*/
 
 
   ///---yo
@@ -622,6 +642,10 @@ L.control.condensedAttribution({
 
     theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
     autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
+
+
+
+
 
      console.log("aaa ="+msg.latitud_geocerca);
 

@@ -108,15 +108,11 @@ class GpsController extends Controller
                             'key' => $key,
                             'secret' => $secret,
                     ],
-                    'http' => ['verify' => false]
+                   // 'http' => ['verify' => false]
             ]);
 
   
-            
-            $result = $SnSclient->publish([
-                    'Message' => $message,
-                    'PhoneNumber' => $phone,
-                ]);
+        
 
               try {
                 $result = $SnSclient->publish([
@@ -138,7 +134,7 @@ class GpsController extends Controller
 
    public function probar(){
 
-        $message = 'Alerta de Geocerca: Hola el vehículo Kia ha salido del área permitida, visita https://localizaminave.com/tracker';
+        $message = 'Hola es una prueba';
         $phone = '+525586779297';
 
         $this->enviamsgaws($message,$phone);
