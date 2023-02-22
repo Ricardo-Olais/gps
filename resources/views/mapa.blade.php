@@ -630,9 +630,11 @@ L.control.condensedAttribution({
               map.removeLayer(theMarker);
         };
 
-      if (marker_actual!= undefined) {
+      /*if (marker_actual!= undefined) {
               map.removeLayer(marker_actual);
-        };
+        };*/
+
+
       lat=msg.latitud;
       long=msg.longitud
       //https://www.google.com/maps?layer=c&cbll=19.5441708,-99.0785885
@@ -642,7 +644,7 @@ L.control.condensedAttribution({
 
     //rotationAngle: 146
 
-       navigator.geolocation.getCurrentPosition(function(position) {
+     /*  navigator.geolocation.getCurrentPosition(function(position) {
         browserLat =  position.coords.latitude;
         browserLong = position.coords.longitude;
         console.log(browserLat);
@@ -673,11 +675,12 @@ L.control.condensedAttribution({
 
 
 
-    });
+    });*/
 
 
 
-   
+   theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
+      autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
 
 
