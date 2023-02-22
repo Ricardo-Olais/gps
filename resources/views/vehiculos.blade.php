@@ -535,7 +535,7 @@
                              <span style="color:#45bbc2;">Escanea el código con la app localiza mi nave</span><br
                              >
 
-              <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps"> <img src="img/play.png" width="30%" style="margin-top: 10px;"></a>
+              <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps" target="_blank"> <img src="img/play.png" width="30%" style="margin-top: 10px;"></a>
 
              </center>
 
