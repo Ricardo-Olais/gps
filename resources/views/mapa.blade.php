@@ -451,6 +451,7 @@
 
   var marker;
   var theMarker = {};
+  var marker_actual = {};
 
   var messages = document.getElementById('messages');
 
