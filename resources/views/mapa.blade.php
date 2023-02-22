@@ -257,8 +257,8 @@
 
   var valorgeo=0;
   var map;
-  var browserLat;
-  var browserLong;
+ 
+
 
   $("#menos").click(function(){
 
@@ -454,6 +454,10 @@
   var marker;
   var theMarker = {};
   var marker_actual = {};
+  var routingControl = null;
+  var browserLat;
+  var browserLong;
+
 
   var messages = document.getElementById('messages');
 
@@ -644,15 +648,18 @@ L.control.condensedAttribution({
 
     //rotationAngle: 146
 
-     /*  navigator.geolocation.getCurrentPosition(function(position) {
+      navigator.geolocation.getCurrentPosition(function(position) {
         browserLat =  position.coords.latitude;
         browserLong = position.coords.longitude;
         console.log(browserLat);
         console.log(browserLong);
 
+
+      });
+
        
        
-       marker_actual = L.marker([browserLat,browserLong],{icon: customIcon2, draggable: false,
+     /*  marker_actual = L.marker([browserLat,browserLong],{icon: customIcon2, draggable: false,
        autoPan: true}).addTo(map);
        marker_actual.bindPopup("Tú estás aquí").openPopup();
      //  map.setView([browserLat,browserLong], 18); 
@@ -661,9 +668,14 @@ L.control.condensedAttribution({
       theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
       autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
+        if (routingControl != null) {
+            map.removeControl(routingControl);
+            routingControl = null;
+        }
 
 
-        L.Routing.control({
+
+        routingControl=L.Routing.control({
           waypoints: [
             L.latLng(browserLat, browserLong),
             L.latLng(msg.longitud, msg.latitud)
