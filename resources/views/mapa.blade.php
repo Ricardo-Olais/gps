@@ -591,7 +591,7 @@ L.control.condensedAttribution({
       var customIcon2 = new L.Icon({
           iconUrl: 'https://gpsanywhere.com.mx/images/53454353.gif',
           iconSize: [80, 80],
-          iconAnchor: [25, 50]
+          iconAnchor: [25, 60]
         });
 
 
