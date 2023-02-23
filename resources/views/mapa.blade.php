@@ -589,7 +589,7 @@ L.control.condensedAttribution({
 
 
       var customIcon2 = new L.Icon({
-          iconUrl: 'https://localizaminave.com/img/adulto.png',
+          iconUrl: 'https://gpsanywhere.com.mx/images/53454353.gif',
           iconSize: [30, 40],
           iconAnchor: [25, 50]
         });
