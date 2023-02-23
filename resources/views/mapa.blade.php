@@ -665,7 +665,7 @@ L.control.condensedAttribution({
        
       marker_actual = L.marker([browserLat,browserLong],{icon: customIcon2, draggable: false,
        autoPan: true}).addTo(map);
-       marker_actual.bindPopup("Tú estás aquí").openPopup();
+       marker_actual.bindPopup("Tú estás aquí");
      //  map.setView([browserLat,browserLong], 18); 
 
 
