@@ -635,9 +635,9 @@ L.control.condensedAttribution({
               map.removeLayer(theMarker);
         };
 
-      /*if (marker_actual!= undefined) {
+      if (marker_actual!= undefined) {
               map.removeLayer(marker_actual);
-        };*/
+       };
 
 
       lat=msg.latitud;
