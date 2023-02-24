@@ -674,7 +674,7 @@ L.control.condensedAttribution({
             routingControl = null;
         }
 
-        var distancia = map.distance([msg.longitud, msg.latitud], [browserLat,browserLong];
+        var distancia = map.distance([msg.longitud, msg.latitud], [browserLat,browserLong]);
 
         console.log(distancia);
 
