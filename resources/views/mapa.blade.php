@@ -134,8 +134,9 @@
                <div class="col s12 m2 l5 animate fadeRight">
                <div class="card">
                  <div class="card-content">
+                  <center><span id="estas" style="font-size:10px;color:#00bcd4;"></span></center>
                    <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
-                   </h4><span id="estas"></span>
+                   </h4>
                    <div class="input-field col s12">
                      <select name="vehiculo" id="vehiculo">
                        <option value="" disabled selected>Selecciona Dipositivo</option>
