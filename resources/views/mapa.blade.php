@@ -134,7 +134,7 @@
                <div class="col s12 m2 l5 animate fadeRight">
                <div class="card">
                  <div class="card-content">
-                  <center><span id="estas" style="font-size:10px;color:#00bcd4;"></span></center>
+                  <center><span id="estas" style="font-size:16px;color:#00bcd4;"></span></center>
                    <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
                    </h4>
                    <div class="input-field col s12">
@@ -679,7 +679,7 @@ L.control.condensedAttribution({
 
         console.log(distancia);
 
-        $("#estas").html("Estás a "+distancia+" metros del dispositivo");
+        $("#estas").html("Estás a "+distancia.toFixed(2)+" metros del dispositivo");
 
 
 
