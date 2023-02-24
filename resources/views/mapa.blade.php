@@ -135,7 +135,7 @@
                <div class="card">
                  <div class="card-content">
                    <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
-                   </h4>
+                   </h4><span id="estas"></span>
                    <div class="input-field col s12">
                      <select name="vehiculo" id="vehiculo">
                        <option value="" disabled selected>Selecciona Dipositivo</option>
@@ -677,6 +677,8 @@ L.control.condensedAttribution({
         var distancia = map.distance([msg.longitud, msg.latitud], [browserLat,browserLong]);
 
         console.log(distancia);
+
+        $("#estas").html("Estás a "+distancia+" metros del dispositivo");
 
 
 
