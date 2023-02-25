@@ -583,7 +583,7 @@ L.control.condensedAttribution({
 
 
     var customIcon = new L.Icon({
-      iconUrl: 'https://localizaminave.com/img/globo.gif',
+      iconUrl: 'https://localizaminave.com/img/'+msg.tipo,
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
@@ -743,7 +743,7 @@ L.control.condensedAttribution({
 
     const popup = L.popup()
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .setContent(msg.alias+ "<center><img src='https://localizaminave.com/img/globo.gif' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
     }
