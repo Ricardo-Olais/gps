@@ -589,11 +589,11 @@ var lc = L.control
 
         if(msg.pila<15){
 
-            $("#ubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+            $("#ubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, velocidad "+msg.velocidad+" km/hra, último registro: "+msg.fecha);
 
         }else{
 
-             $("#ubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+             $("#ubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, velocidad "+msg.velocidad+" km/hra, último registro: "+msg.fecha);
 
         }
 

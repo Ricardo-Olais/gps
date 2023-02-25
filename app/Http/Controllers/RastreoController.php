@@ -64,6 +64,8 @@ class RastreoController extends Controller
 
           if(count($vehiclesEstatus)>0){
 
+             $vehiclesGps=DB::select("SELECT velocidad FROM gpslocations WHERE numero='$imei'");
+
              $email=$vehiclesEstatus[0]->email;
              $conductor=$vehiclesEstatus[0]->conductor;
              $alias=$vehiclesEstatus[0]->alias_vehiculo;
@@ -81,6 +83,7 @@ class RastreoController extends Controller
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
+             $velocidad=$vehiclesGps[0]->velocidad
 
              $mensajealerta="";
              $mensajealerta2="";
@@ -120,7 +123,8 @@ class RastreoController extends Controller
                         "msjalerta2"=>$mensajealerta2,
                         "latitud_geocerca"=>$latitud_geocerca,
                         "longitud_geocerca"=>$longitud_geocerca,
-                        "geocerca"=>$geocerca
+                        "geocerca"=>$geocerca,
+                        "velocidad"=>$velocidad
 
                    );
 
