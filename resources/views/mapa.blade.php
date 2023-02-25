@@ -583,14 +583,14 @@ L.control.condensedAttribution({
 
 
     var customIcon = new L.Icon({
-      iconUrl: 'https://localizaminave.com/img/'+msg.tipo,
+      iconUrl: 'https://localizaminave.com/img/globo.gif',
       iconSize: [30, 40],
       iconAnchor: [25, 50]
     });
 
 
       var customIcon2 = new L.Icon({
-          iconUrl: 'https://gpsanywhere.com.mx/images/53454353.gif',
+          iconUrl: 'https://localizaminave.com/img/globo.gif',
           iconSize: [80, 80],
           iconAnchor: [35, 60]
         });
