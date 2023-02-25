@@ -675,11 +675,11 @@ L.control.condensedAttribution({
             routingControl = null;
         }
 
-        var distancia = map.distance([msg.longitud, msg.latitud], [browserLat,browserLong]);
+        var distancia = (map.distance([msg.longitud, msg.latitud], [browserLat,browserLong]))/1000;
 
         console.log(distancia);
 
-        $("#estas").html("Estás a "+(distancia.toFixed(2))/1000+" Km del dispositivo");
+        $("#estas").html("Estás a "+distancia.toFixed(2)+" Km del dispositivo");
 
 
 
