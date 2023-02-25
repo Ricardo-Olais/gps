@@ -235,7 +235,7 @@ class GpsController extends Controller
                         "latitud_geocerca"=>$latitud_geocerca,
                         "longitud_geocerca"=>$longitud_geocerca,
                         "geocerca"=>$geocerca,
-                        "velocidad"=>$velocidad
+                        "velocidad"=>number_format((($velocidad)*3.6), 2, '.', "")
 
                    );
        
