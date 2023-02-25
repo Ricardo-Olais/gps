@@ -566,7 +566,7 @@ class RastreoController extends Controller
 
             //consultar si existe licencia gratis
 
-            $LicenciasInicial=DB::select("SELECT * FROM licencias WHERE email='$email' AND estatus=1");
+            $LicenciasInicial=DB::select("SELECT * FROM licencias WHERE email='$email' AND status=1");
 
 
 
