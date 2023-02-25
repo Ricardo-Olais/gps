@@ -679,7 +679,7 @@ L.control.condensedAttribution({
 
         console.log(distancia);
 
-        $("#estas").html("Estás a "+distancia.toFixed(2)+" metros del dispositivo");
+        $("#estas").html("Estás a "+(distancia.toFixed(2))/1000+" Km del dispositivo");
 
 
 
