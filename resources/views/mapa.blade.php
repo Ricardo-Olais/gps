@@ -495,7 +495,21 @@ L.control.condensedAttribution({
 
 
 
-
+var lc = L.control
+  .locate({
+    position: "topleft",
+    strings: {
+      title: "Donde estoy yo"
+    },
+     maxZoom: 16,
+     initialZoomLevel:false,
+     enableHighAccuracy: true,
+     drawCircle:false,
+     icon:'leaflet-control-locate-location-arrow',
+     iconElementTag:'span',
+     iconLoading:'leaflet-control-locate-spinner'
+  })
+  .addTo(map);
  
 
 
@@ -661,22 +675,6 @@ L.control.condensedAttribution({
         recibeubica(browserLat,browserLong);
   
       });
-
-      var lc = L.control
-  .locate({
-    position: "topleft",
-    strings: {
-      title: "Donde estoy yo"
-    },
-     maxZoom: 16,
-     initialZoomLevel:false,
-     enableHighAccuracy: true,
-     drawCircle:false,
-     icon:'leaflet-control-locate-location-arrow',
-     iconElementTag:'span',
-     iconLoading:'leaflet-control-locate-spinner'
-  })
-  .addTo(map);
 
       function recibeubica(browserLat,browserLong){
 
