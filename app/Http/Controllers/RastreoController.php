@@ -83,7 +83,7 @@ class RastreoController extends Controller
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
-             $velocidad=$vehiclesGps[0]->velocidad
+             $velocidad=$vehiclesGps[0]->velocidad;
 
              $mensajealerta="";
              $mensajealerta2="";
