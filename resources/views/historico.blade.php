@@ -165,6 +165,7 @@
                           
                           <th>Ubicación</th>
                           <th>Fecha</th>
+                          <th>Velocidad km/h</th>
                           <th></th>
                       </tr>
                     </thead>
@@ -176,6 +177,7 @@
                        
                         <td>{{ $valor['direccion'] }}</td>
                         <td>{{ $valor['fecha'] }}</td>
+                        <td>{{ $valor['velocidad'] }}</td>
 
                         <td><a href="https://maps.google.com/?q={{ $valor['long'] }},{{ $valor['lat'] }}" > Ver <i class="material-icons">gps_fixed</i></a></td>
                       </tr>

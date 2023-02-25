@@ -990,7 +990,8 @@ class RastreoController extends Controller
                                 "direccion"=>$value->direccion,
                                 "fecha"=>$value->fecha_gps,
                                 "lat"=>$value->latitud,
-                                "long"=>$value->longitud
+                                "long"=>$value->longitud,
+                                "velocidad"=>$value->velocidad
                                
                             );
                 }
@@ -1003,7 +1004,8 @@ class RastreoController extends Controller
                                 "direccion"=>"",
                                 "fecha"=>"",
                                 "lat"=>"",
-                                "long"=>""
+                                "long"=>"",
+                                "velocidad"=>""
                                
                             );
 

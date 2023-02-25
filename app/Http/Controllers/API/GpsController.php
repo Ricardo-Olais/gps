@@ -282,7 +282,7 @@ class GpsController extends Controller
                                         'sesion'=>$email,
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
-                                        'velocidad'=>$velocidad,
+                                        'velocidad'=>number_format((($velocidad)*3.6), 2, '.', ""),
                                         'fecha_gps'=>date("Y-m-d H:i:s"),
                                         'pila'=>$pila
                                         
@@ -302,7 +302,7 @@ class GpsController extends Controller
                                         'sesion'=>$email,
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
-                                        'velocidad'=>$velocidad,
+                                        'velocidad'=>number_format((($velocidad)*3.6), 2, '.', ""),
                                         'fecha_gps'=>date("Y-m-d H:i:s"),
                                         'pila'=>$pila
                                         
