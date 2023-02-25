@@ -501,7 +501,7 @@ var lc = L.control
     strings: {
       title: "Donde estoy yo"
     },
-     maxZoom: 16,
+    // maxZoom: 16,
      initialZoomLevel:false,
      enableHighAccuracy: true,
      drawCircle:false,
