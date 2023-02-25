@@ -495,21 +495,7 @@ L.control.condensedAttribution({
 
 
 
-var lc = L.control
-  .locate({
-    position: "topleft",
-    strings: {
-      title: "Donde estoy yo"
-    },
-     maxZoom: 16,
-     initialZoomLevel:false,
-     enableHighAccuracy: true,
-     drawCircle:false,
-     icon:'leaflet-control-locate-location-arrow',
-     iconElementTag:'span',
-     iconLoading:'leaflet-control-locate-spinner'
-  })
-  .addTo(map);
+
  
 
 
@@ -676,15 +662,31 @@ var lc = L.control
   
       });
 
+      var lc = L.control
+  .locate({
+    position: "topleft",
+    strings: {
+      title: "Donde estoy yo"
+    },
+     maxZoom: 16,
+     initialZoomLevel:false,
+     enableHighAccuracy: true,
+     drawCircle:false,
+     icon:'leaflet-control-locate-location-arrow',
+     iconElementTag:'span',
+     iconLoading:'leaflet-control-locate-spinner'
+  })
+  .addTo(map);
+
       function recibeubica(browserLat,browserLong){
 
           console.log(browserLat);
           console.log(browserLong);
       
        
-      marker_actual = L.marker([browserLat,browserLong],{icon: customIcon2, draggable: false,
+     /* marker_actual = L.marker([browserLat,browserLong],{icon: customIcon2, draggable: false,
        autoPan: true}).addTo(map);
-       marker_actual.bindPopup("Tú estás aquí");
+       marker_actual.bindPopup("Tú estás aquí");*/
      //  map.setView([browserLat,browserLong], 18); 
 
 
