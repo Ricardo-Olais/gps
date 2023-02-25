@@ -707,7 +707,7 @@ L.control.condensedAttribution({
 
    console.log("aaa ="+msg.latitud_geocerca);
 
-    if(msg.latitud_geocerca!="" || msg.latitud_geocerca!=null) {
+    if(msg.latitud_geocerca!=null) {
      
 
       var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
