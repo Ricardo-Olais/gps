@@ -705,14 +705,16 @@ L.control.condensedAttribution({
 
 
 
+   console.log("aaa ="+msg.latitud_geocerca);
 
-
-     console.log("aaa ="+msg.latitud_geocerca);
+    if(msg.latitud_geocerca!="" || msg.latitud_geocerca!=null) {
+     
 
       var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
+
       var isInside = d < circle.getRadius();
 
-     if(msg.latitud_geocerca!="" || msg.latitud_geocerca!=null) {
+     
 
       if(isInside==false && msg.latitud_geocerca!=""){
 
@@ -726,7 +728,7 @@ L.control.condensedAttribution({
 
     }
 
-     console.log("distancia geocerca"+d);
+    // console.log("distancia geocerca"+d);
 
        /* theMarker.on('drag', function(e) {
         var d = map.distance(e.latlng, circle.getLatLng());
