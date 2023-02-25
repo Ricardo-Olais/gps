@@ -21,6 +21,11 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 <script src="js/leaflet.rotatedMarker.js"></script>
 
+<link rel="stylesheet" href="css/L.Control.Locate.css" />
+<script src="js/L.Control.Locate.js" charset="utf-8"></script>
+
+
+
 <!--script src="js/StreetViewButtons.js"></script-->
 
 
@@ -490,8 +495,21 @@ L.control.condensedAttribution({
 
 
 
-
-
+var lc = L.control
+  .locate({
+    position: "topleft",
+    strings: {
+      title: "Donde estoy yo"
+    },
+     maxZoom: 16,
+     initialZoomLevel:false,
+     enableHighAccuracy: true,
+     drawCircle:false,
+     icon:'leaflet-control-locate-location-arrow',
+     iconElementTag:'span',
+     iconLoading:'leaflet-control-locate-spinner'
+  })
+  .addTo(map);
  
 
 
