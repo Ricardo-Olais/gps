@@ -564,12 +564,27 @@ class RastreoController extends Controller
 
             $consultamosLicencias=DB::select("SELECT * FROM vehiculos WHERE email='$email' AND estatus in(5,2)");
 
+            //consultar si existe licencia gratis
+
+            $LicenciasInicial=DB::select("SELECT * FROM licencias WHERE email='$email' AND estatus=1");
+
+
+
+
             if(count($consultamosLicencias)>0){
 
                 $estatus=1;
             }else{
 
-                $estatus=0;
+                if(count($LicenciasInicial)>0){
+
+                    $estatus=1;
+                }else{
+
+                    $estatus=0;
+                }
+
+                
             }
            
 
@@ -618,6 +633,10 @@ class RastreoController extends Controller
                   "activaGeocerca"=>0
 
                  ] );
+
+            
+
+
 
            // $telefono="+52".$telefono;
 
@@ -904,7 +923,18 @@ class RastreoController extends Controller
                                         'Fecha_termino'=>$fechaFin
 
 
+                              
                                          ));
+
+          //licencias gratis
+
+          DB::table('licencias')->insert(
+                  ['email' =>$email,
+                   'id_vehiculo' =>$id, 
+                   'status'=>1
+               ]);
+
+
 
           $datos['rows']=array("valida"=>"true");
 
