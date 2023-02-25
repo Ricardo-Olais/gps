@@ -173,6 +173,8 @@ class GpsController extends Controller
 
         $vehiclesEstatus=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
 
+        //$vehiclesGps=DB::select("SELECT * FROM gpslocations WHERE numero='$imei'");
+
           if(count($vehiclesEstatus)>0){
 
              $email=$vehiclesEstatus[0]->email;
@@ -232,7 +234,8 @@ class GpsController extends Controller
                         "msjalerta2"=>$mensajealerta2,
                         "latitud_geocerca"=>$latitud_geocerca,
                         "longitud_geocerca"=>$longitud_geocerca,
-                        "geocerca"=>$geocerca
+                        "geocerca"=>$geocerca,
+                        "velocidad"=>$velocidad
 
                    );
        
