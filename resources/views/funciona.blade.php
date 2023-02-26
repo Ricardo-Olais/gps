@@ -93,7 +93,7 @@
                <h4 class="card-title mb-0">3.- Regístra tus dispositivos en la plataforma</h4>
               
               <p style="text-align:justify;">
-               En el menú, selecciona mis dispositivos, haz clic en el botón agregar dispositivo (+), una vez registrado escanea el código QR generado con la aplicación <span style="color:#00bcd4;">Gps Tracker</span> de localizaminave.com.mx, con esto se vinculará el equipo celular con nuestros servidores.</p>
+               En el menú, selecciona mis dispositivos, haz clic en el botón agregar dispositivo (+), una vez registrado escanea el código QR generado con la aplicación <span style="color:#00bcd4;">Gps Tracker</span> de localizaminave, con esto se vinculará el equipo celular con nuestros servidores.</p>
 
                <img src="img/home/paso-2.jpg" width="100%" style="margin-top: 10px;">
 
