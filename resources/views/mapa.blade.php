@@ -9,7 +9,10 @@
 
 <!--script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script-->
 
+<?php  $llave=env('LLAVE_API_MAPS'); ?>
 
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry"></script>
 
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
 
@@ -23,6 +26,19 @@
 
 <link rel="stylesheet" href="css/L.Control.Locate.css" />
 <script src="js/L.Control.Locate.js" charset="utf-8"></script>
+
+
+<!-- interact.js -->
+<script src="https://unpkg.com/interact.js@1.2.8/dist/interact.min.js"></script>
+
+<!-- Leaflet-GoogleMutant -->
+<script src="https://unpkg.com/leaflet.gridlayer.googlemutant@0.10.0/Leaflet.GoogleMutant.js"></script>
+<!-- Leaflet-Pegman -->
+<link rel="stylesheet" href="css/leaflet-pegman.css" />
+<script src="https://unpkg.com/leaflet-pegman@0.1.6/leaflet-pegman.js"></script>
+
+
+
 
 
 
@@ -107,6 +123,27 @@
 
           display: none;
          }*/
+  </style>
+
+  <style>
+    /* Fixes Google Mutant Empty attribution */
+    .leaflet-bottom.leaflet-left,
+    .leaflet-bottom.leaflet-right {
+      margin-bottom: initial !important;
+    }
+
+    /* Make Google Logo/ToS/Feedback links clickable */
+    .leaflet-google-mutant a,
+    .leaflet-google-mutant button {
+      pointer-events: auto;
+    }
+
+    /* Move Google ToS/Feedback to the top */
+    .leaflet-google-mutant .gmnoprint,
+    .leaflet-google-mutant .gm-style-cc {
+      top: 0;
+      bottom: auto !important;
+    }
   </style>
 
 
@@ -516,6 +553,12 @@ var lc = L.control
     }
   })
   .addTo(map);
+
+   var pegmanControl = new L.Control.Pegman({
+    position: 'bottomright', // position of control inside the map
+    theme: "leaflet-pegman-v3-default", // or "leaflet-pegman-v3-default"
+  });
+  pegmanControl.addTo(map);
  
 
 
