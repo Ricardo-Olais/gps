@@ -334,7 +334,7 @@
          imei=$(this).val();
 
          //invocamos al socket
-         map.setZoom(14);
+         map.setZoom(15);
          $.post("inicializasocket",{_token:token,imei:imei});
         
 
