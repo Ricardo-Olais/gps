@@ -145,7 +145,7 @@ function autoplay() {
               
               
               <p style="text-align: justify;">
-               Es lógico que si desea adquirir un sistema GPS tracker lo que requiere conocer es la ubicación en tiempo real sobre los lugares a los que se desplazan sus vehículos, esto puede lograrse al instalar el dispositivo GPS en cada una de las unidades que quiera monitorear y los datos de ubicación podrá conocerlos por medio de la plataforma.
+               Es lógico que si desea adquirir un sistema GPS tracker lo que requiere conocer es la ubicación en tiempo real sobre los lugares a los que se desplazan sus dispositivos, esto puede lograrse al instalar el dispositivo GPS en cada una de las unidades que quiera monitorear y los datos de ubicación podrá conocerlos por medio de la plataforma.
               </p>
 
 
@@ -163,7 +163,7 @@ function autoplay() {
               
               
                <p style="text-align: justify;">
-                  Conozca el histórico de recorridos de los vehículos, puedes consultar hasta 1 año de histórico, podrás descargar la información en un reporte excel.
+                  Conozca el histórico de recorridos de los dispositivos, puedes consultar hasta 1 año de histórico, podrás descargar la información en un reporte excel.
                </p>
 
             <img src="img/home/rutas.png" width="100%">
@@ -184,7 +184,7 @@ function autoplay() {
               
               
                <p style="text-align: justify;">
-                  Verifique el estatus de sus vehículos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas.
+                  Verifique el estatus de sus dispositivos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas, monitorea las métricas de velocidad y ubicación de tus dispositivos.
                </p>
 
                 <img src="img/home/vehiculos.png" width="100%">
@@ -201,7 +201,7 @@ function autoplay() {
               
               
                <p style="text-align: justify;">
-                 Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real.
+                 Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real, compara nuestra plataforma, te proporcionamos una licencia gratuita por un mes, qué esperas comienzas a localizar a tus seres queridos de una forma fácil y precisa.
                </p>
 
             <center>
