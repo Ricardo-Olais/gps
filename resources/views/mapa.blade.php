@@ -334,7 +334,7 @@
          imei=$(this).val();
 
          //invocamos al socket
-         map.setZoom(15);
+         map.setZoom(16);
          $.post("inicializasocket",{_token:token,imei:imei});
         
 
@@ -501,13 +501,19 @@ var lc = L.control
     strings: {
       title: "Donde estoy yo"
     },
+    
     // maxZoom: 16,
+     keepCurrentZoomLevel: false,
      initialZoomLevel:false,
-     enableHighAccuracy: true,
+     
      drawCircle:false,
      icon:'leaflet-control-locate-location-arrow',
      iconElementTag:'span',
-     iconLoading:'leaflet-control-locate-spinner'
+     iconLoading:'leaflet-control-locate-spinner',
+     locateOptions: {
+              maxZoom: 16,
+              enableHighAccuracy: true
+    }
   })
   .addTo(map);
  
