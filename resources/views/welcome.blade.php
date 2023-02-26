@@ -201,7 +201,7 @@ function autoplay() {
               
               
                <p style="text-align: justify;">
-                 Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real, compara nuestra plataforma, te proporcionamos una licencia gratuita por un mes, qué esperas comienzas a localizar a tus seres queridos de una forma fácil y precisa.
+                 Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real, compara nuestra plataforma, te proporcionamos una licencia gratuita por un mes, qué esperas comienza a localizar a tus seres queridos de una forma fácil y precisa.
                </p>
 
             <center>
