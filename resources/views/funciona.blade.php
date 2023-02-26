@@ -74,7 +74,7 @@
               
               
               <p style="text-align:justify;">
-               Descarga la aplicación <span style="color:#00bcd4;">GPS TRACKER</span>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
+               Descarga la aplicación <span style="color:#00bcd4;">Gps Tracker</span>, debes de instalarla en algún equipo celular con sistema operativo Android (este dispositivo es el que se pondrá en el vehículo a rastrear), asegurate que tenga un chip con los datos encendidos, es importante para la comunicación con nuestros servidores.</p>
                <center>
               <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps" target="_blank"> <img src="img/play.png" width="50%" style="margin-top: 10px;"></a>
 
@@ -93,7 +93,7 @@
                <h4 class="card-title mb-0">3.- Regístra tus dispositivos en la plataforma</h4>
               
               <p style="text-align:justify;">
-               En el menú, selecciona mis dispositivos, haz clic en el botón agregar vehículo (+), una vez registrado escanea el código QR generado con la aplicación <span style="color:#00bcd4;">gps tracker</span> de localizaminave.com.mx, con esto se vinculará el equipo celular con nuestros servidores.</p>
+               En el menú, selecciona mis dispositivos, haz clic en el botón agregar dispositivo (+), una vez registrado escanea el código QR generado con la aplicación <span style="color:#00bcd4;">Gps Tracker</span> de localizaminave.com.mx, con esto se vinculará el equipo celular con nuestros servidores.</p>
 
                <img src="img/home/paso-2.jpg" width="100%" style="margin-top: 10px;">
 
@@ -106,12 +106,12 @@
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
-               <h4 class="card-title mb-0">4.- Pagar Licencia</h4>
+               <h4 class="card-title mb-0">4.- Pagar Licencia y Licencia gratuita</h4>
               
               
               <p style="text-align:justify;">
 
-              Seleccionamos Pagar Licencia y elegimos el plan que más te convenga, una vez pagada, abrir la aplicación <span style="color:#00bcd4;">gps tracker</span> (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME, en el menu Rastrear del sitio web podrás seleccionar tu vehículo a localizar.</p>
+              Seleccionamos Pagar Licencia ó adquirir licencia gratuita, elegimos el plan que más te convenga, una vez pagada o activada la licencia, abrir la aplicación <span style="color:#00bcd4;">gps tracker</span> (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME con esto el dispositivo comenzará a enviar métricas gps, en el menu Rastrear del sitio web podrás seleccionar tu vehículo a localizar, así de fácil, gracias por ser parte de localiza mi nave</p>
 
               
                <img src="img/imgapp.jpeg" width="100%" style="margin-top: 10px;">
