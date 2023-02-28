@@ -181,7 +181,7 @@
                    <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
                    </h4>
 
-                   <div id="chart" style="width:100px;height:100px;"></div>
+                  
                    <div class="input-field col s12">
                      <select name="vehiculo" id="vehiculo">
                        <option value="" disabled selected>Selecciona Dipositivo</option>
@@ -204,6 +204,8 @@
                    <center>
                    
                    </center>
+                    <div id="chart" style="width:100px;height:100px;display: none;"></div>
+
                    <h4 class="card-title mb-0 " >Fijar ubicación</h4>
                    <!-- Switch -->
                    <div class="switch">
@@ -654,6 +656,7 @@ var lc = L.control
         }
 
 
+      $("#char").css("display","");
 
     //para el velocimetro
 
