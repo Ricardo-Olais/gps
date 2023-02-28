@@ -36,6 +36,7 @@
 <!-- Leaflet-Pegman -->
 <link rel="stylesheet" href="css/leaflet-pegman.css" />
 <script src="https://unpkg.com/leaflet-pegman@0.1.6/leaflet-pegman.js"></script>
+<script  src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
 
 
 
@@ -179,6 +180,8 @@
                   <center><span id="estas" style="font-size:16px;color:#00bcd4;"></span></center>
                    <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
                    </h4>
+
+                   <div id="chart" style="width:100px;height:100px;"></div>
                    <div class="input-field col s12">
                      <select name="vehiculo" id="vehiculo">
                        <option value="" disabled selected>Selecciona Dipositivo</option>
@@ -292,6 +295,10 @@
 
 
  </div>
+
+ <script type="text/javascript">
+    
+    </script>
 
 <script>
 
@@ -645,6 +652,90 @@ var lc = L.control
              $("#ubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, velocidad "+msg.velocidad+" km/h, último registro: "+msg.fecha);
 
         }
+
+
+
+    //para el velocimetro
+
+    var dom = document.getElementById("chart");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+
+      option = {
+        title: {
+              text: '',
+              left: 'center'
+          },
+          series: [{
+              type: 'gauge',
+              startAngle: 180,
+              endAngle: 0,
+              progress: {
+                  show: false,
+                  width: 10
+              },
+              axisLine: {
+                roundCap: true,
+                  lineStyle: {
+                      width: 10,
+                      color: [
+                          [0.40, '#5BBB06'],
+                          [0.70, '#EFA823'],
+                          [1, '#F03B1F'],
+                      ]
+                  }
+              },
+              axisTick: {
+                  show: false
+              },
+              splitLine: {
+                  length: 15,
+                  lineStyle: {
+                      width: 0,
+                      color: '#999'
+                  }
+              },
+              axisLabel: {
+                  show: false,
+                  distance: 5,
+                  color: '#999',
+                  fontSize: 14
+              },
+            pointer: {
+                  icon: 'path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z',
+                  length: '90%',
+                  width: 6,
+                  offsetCenter: [0, '0']
+              },
+              anchor: {
+                  show: true,
+                  showAbove: true,
+                  size: 10,
+                  itemStyle: {
+                      borderWidth: 3
+                  }
+              },
+              detail: {
+                show: false,
+                  valueAnimation: true,
+                  fontSize: 30,
+                  offsetCenter: [0, '20%']
+              },
+              data: [{
+                  value: msg.velocidad
+              }]
+          }]
+      };
+
+      if (option && typeof option === "object") {
+          myChart.setOption(option, true);
+      }
+
+
+
+
+    //fin
 
     
 
