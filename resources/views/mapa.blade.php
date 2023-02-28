@@ -725,7 +725,7 @@ var lc = L.control
               detail: {
                 show: false,
                   valueAnimation: true,
-                  fontSize: 30,
+                  fontSize: 10,
                   offsetCenter: [0, '20%']
               },
               data: [{
