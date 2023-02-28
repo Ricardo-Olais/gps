@@ -381,6 +381,9 @@
 
          //invocamos al socket
          map.setZoom(16);
+
+         $("#chart").css("display","");
+
          $.post("inicializasocket",{_token:token,imei:imei});
         
 
@@ -656,7 +659,7 @@ var lc = L.control
         }
 
 
-      $("#char").css("display","");
+
 
     //para el velocimetro
 
