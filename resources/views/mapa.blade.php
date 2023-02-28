@@ -202,9 +202,9 @@
                <div class="card">
                  <div class="card-content">
                    <center>
-                   
-                   </center>
                     <div id="chart" style="width:100px;height:100px;display: none;"></div>
+
+                   </center>
 
                    <h4 class="card-title mb-0 " >Fijar ubicación</h4>
                    <!-- Switch -->
