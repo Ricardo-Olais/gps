@@ -202,7 +202,7 @@
                <div class="card">
                  <div class="card-content">
                    <center>
-                    <div id="chart" style="width:100px;height:100px;display: none;"></div>
+                    <div id="chart" style="width:200px;height:200px;display: none;"></div>
 
                    </center>
 
