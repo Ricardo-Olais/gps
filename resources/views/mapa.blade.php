@@ -670,7 +670,7 @@ var lc = L.control
 
       option = {
         title: {
-              text: '',
+              text: 'Velocidad Km/h',
               left: 'center'
           },
           series: [{
