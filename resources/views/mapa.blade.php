@@ -268,7 +268,7 @@
                  <div class="card-content">
 
                   <center>
-                    <div id="chart" style="width:90%;height:200px;display: block;"></div>
+                    <div id="chart" style="width:90%;height:220px;display: block;"></div>
 
                    </center>
                   
