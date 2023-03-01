@@ -748,10 +748,10 @@ var lc = L.control
         }
 
 
-
+    velocidad=Number(msg.velocidad);
 
     //para el velocimetro
-    
+
    Highcharts.chart("chart", {
   chart: {
     type: "gauge",
@@ -815,7 +815,7 @@ var lc = L.control
   series: [
     {
       name: "Speed",
-      data: [20],
+      data: [velocidad],
       tooltip: {
         valueSuffix: " km/h"
       },
