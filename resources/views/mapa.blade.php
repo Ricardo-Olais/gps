@@ -722,6 +722,8 @@ var lc = L.control
         }
 
 
+      velocidad=msg.velocidad;
+
 
 
     //para el velocimetro
@@ -789,7 +791,7 @@ var lc = L.control
           series: [
             {
               name: "Speed",
-              data: [msg.velocidad],
+              data: [velocidad],
               tooltip: {
                 valueSuffix: " km/h"
               },
