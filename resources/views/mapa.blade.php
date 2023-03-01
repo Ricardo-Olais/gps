@@ -36,7 +36,11 @@
 <!-- Leaflet-Pegman -->
 <link rel="stylesheet" href="css/leaflet-pegman.css" />
 <script src="https://unpkg.com/leaflet-pegman@0.1.6/leaflet-pegman.js"></script>
-<script  src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 
 
@@ -147,6 +151,65 @@
     }
   </style>
 
+  <style type="text/css">
+    .highcharts-figure,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 500px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+.highcharts-credits{
+
+    display: none;
+}
+.highcharts-title{
+        display: none !important;
+
+}
+
+.highcharts-no-tooltip{
+
+    display: none !important;
+}
+</style>
+
 
  <div id="main">
   <input type="hidden" name="dir" id="dir">
@@ -198,13 +261,26 @@
                  </div>
                </div>
              </div>
+
+
+               <div class="col s12 m2 l4 animate">
+               <div class="card">
+                 <div class="card-content">
+
+                  <center>
+                    <div id="chart" style="width:90%;height:200px;display: block;"></div>
+
+                   </center>
+                  
+                 </div>
+               </div>
+             </div>
+
+
              <div class="col s12 m2 l3 animate fadeRight">
                <div class="card">
                  <div class="card-content">
-                   <center>
-                    <div id="chart" style="width:200px;height:200px;display: none;"></div>
-
-                   </center>
+                   
 
                    <h4 class="card-title mb-0 " >Fijar ubicación</h4>
                    <!-- Switch -->
@@ -238,7 +314,11 @@
                  </div>
                </div>
              </div>
-             <div class="col s12 m2 l4 animate fadeRight">
+
+
+
+
+             <div class="col s12 m2 l12 animate fadeRight">
                <div class="card">
                  <div class="card-content">
                    <h4 class="card-title mb-0">Acciones <i class="material-icons right">bubble_chart</i>
@@ -254,6 +334,12 @@
                  </div>
                </div>
              </div>
+
+
+             
+
+
+
            </div>
          </div>
        </div>
@@ -571,6 +657,9 @@ var lc = L.control
     theme: "leaflet-pegman-v3-default", // or "leaflet-pegman-v3-default"
   });
   pegmanControl.addTo(map);
+
+
+
  
 
 
@@ -662,82 +751,101 @@ var lc = L.control
 
 
     //para el velocimetro
+    
+   Highcharts.chart("chart", {
+  chart: {
+    type: "gauge",
+    plotBackgroundColor: null,
+    plotBackgroundImage: null,
+    plotBorderWidth: 0,
+    plotShadow: false,
+    height: "80%"
+  },
 
-    var dom = document.getElementById("chart");
-    var myChart = echarts.init(dom);
-    var app = {};
-    option = null;
+  title: {
+    text: "Velocidad"
+  },
 
-      option = {
-        title: {
-              text: 'Velocidad '+msg.velocidad+' Km/h',
-              left: 'center'
-          },
-          series: [{
-              type: 'gauge',
-              startAngle: 180,
-              endAngle: 0,
-              progress: {
-                  show: false,
-                  width: 10
-              },
-              axisLine: {
-                roundCap: true,
-                  lineStyle: {
-                      width: 10,
-                      color: [
-                          [0.40, '#5BBB06'],
-                          [0.70, '#EFA823'],
-                          [1, '#F03B1F'],
-                      ]
-                  }
-              },
-              axisTick: {
-                  show: false
-              },
-              splitLine: {
-                  length: 15,
-                  lineStyle: {
-                      width: 0,
-                      color: '#999'
-                  }
-              },
-              axisLabel: {
-                  show: false,
-                  distance: 5,
-                  color: '#999',
-                  fontSize: 10
-              },
-            pointer: {
-                  icon: 'path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z',
-                  length: '90%',
-                  width: 6,
-                  offsetCenter: [0, '0']
-              },
-              anchor: {
-                  show: true,
-                  showAbove: true,
-                  size: 10,
-                  itemStyle: {
-                      borderWidth: 3
-                  }
-              },
-              detail: {
-                show: false,
-                  valueAnimation: true,
-                  fontSize: 10,
-                  offsetCenter: [0, '20%']
-              },
-              data: [{
-                  value: msg.velocidad
-              }]
-          }]
-      };
+  pane: {
+    startAngle: -90,
+    endAngle: 89.9,
+    background: null,
+    center: ["50%", "75%"],
+    size: "110%"
+  },
 
-      if (option && typeof option === "object") {
-          myChart.setOption(option, true);
+  // the value axis
+  yAxis: {
+    min: 0,
+    max: 200,
+    tickPixelInterval: 72,
+    tickPosition: "inside",
+    tickColor: Highcharts.defaultOptions.chart.backgroundColor || "#FFFFFF",
+    tickLength: 20,
+    tickWidth: 2,
+    minorTickInterval: null,
+    labels: {
+      distance: 20,
+      style: {
+        fontSize: "14px"
       }
+    },
+    plotBands: [
+      {
+        from: 0,
+        to: 120,
+        color: "#55BF3B", // green
+        thickness: 20
+      },
+      {
+        from: 120,
+        to: 160,
+        color: "#DDDF0D", // yellow
+        thickness: 20
+      },
+      {
+        from: 160,
+        to: 200,
+        color: "#DF5353", // red
+        thickness: 20
+      }
+    ]
+  },
 
+  series: [
+    {
+      name: "Speed",
+      data: [20],
+      tooltip: {
+        valueSuffix: " km/h"
+      },
+      dataLabels: {
+        format: "{y} km/h",
+        borderWidth: 0,
+        color:
+          (Highcharts.defaultOptions.title &&
+            Highcharts.defaultOptions.title.style &&
+            Highcharts.defaultOptions.title.style.color) ||
+          "#333333",
+        style: {
+          fontSize: "14px"
+        }
+      },
+      dial: {
+        radius: "80%",
+        backgroundColor: "gray",
+        baseWidth: 12,
+        baseLength: "0%",
+        rearLength: "0%"
+      },
+      pivot: {
+        backgroundColor: "gray",
+        radius: 6
+      }
+    }
+  ]
+});
+    
 
 
 
