@@ -152,7 +152,8 @@ class GpsController extends Controller
 
         $latitud=$gps[0];
         $longitud=$gps[1];
-        $velocidad=$gps[2];
+        $velocidad=(($gps[2]*3600)/1000);
+
         $name="...";
 
 
@@ -235,7 +236,7 @@ class GpsController extends Controller
                         "latitud_geocerca"=>$latitud_geocerca,
                         "longitud_geocerca"=>$longitud_geocerca,
                         "geocerca"=>$geocerca,
-                        "velocidad"=>number_format((($velocidad)*3.6), 2, '.', "")
+                        "velocidad"=>$velocidad
 
                    );
        
@@ -282,7 +283,7 @@ class GpsController extends Controller
                                         'sesion'=>$email,
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
-                                        'velocidad'=>number_format((($velocidad)*3.6), 2, '.', ""),
+                                        'velocidad'=>$velocidad,
                                         'fecha_gps'=>date("Y-m-d H:i:s"),
                                         'pila'=>$pila
                                         
@@ -302,7 +303,7 @@ class GpsController extends Controller
                                         'sesion'=>$email,
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
-                                        'velocidad'=>number_format((($velocidad)*3.6), 2, '.', ""),
+                                        'velocidad'=>$velocidad,
                                         'fecha_gps'=>date("Y-m-d H:i:s"),
                                         'pila'=>$pila
                                         
