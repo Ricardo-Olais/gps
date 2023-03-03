@@ -241,7 +241,9 @@
                <div class="card">
                  <div class="card-content">
                   <center><span id="estas" style="font-size:16px;color:#00bcd4;"></span></center>
-                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='colorgps' style="color:red;">my_location</i>
+                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='sta'>my_location</i> <span id="desEsta"></span>
+
+
                    </h4>
 
                   
@@ -845,6 +847,16 @@ var lc = L.control
 
 
     velocidad=Number(msg.velocidad);
+
+    if(velocidad>5){
+
+      $("#sta").css("color","#00bcd4");
+      $("#desEsta").html("En movimiento");
+    }else{
+
+      $("#sta").css("color","red");
+      $("#desEsta").html("Detenido");
+    }
 
     /*if(velocidad<3){
 
