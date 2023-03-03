@@ -846,10 +846,10 @@ var lc = L.control
 
     velocidad=Number(msg.velocidad);
 
-    if(velocidad<3){
+    /*if(velocidad<3){
 
       velocidad=0;
-    }
+    }*/
 
     //para el velocimetro
 
