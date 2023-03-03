@@ -152,7 +152,7 @@ class GpsController extends Controller
 
         $latitud=$gps[0];
         $longitud=$gps[1];
-        $velocidad=(($gps[2]*3600)/1000);
+        $velocidad=$gps[2];
 
         $name="...";
 
