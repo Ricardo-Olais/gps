@@ -844,7 +844,7 @@ var lc = L.control
         }
 
 
-    velocidad=(Number(msg.velocidad)).toFixed(2);
+    velocidad=Number(msg.velocidad);
 
     /*if(velocidad<3){
 
