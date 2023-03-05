@@ -848,7 +848,7 @@ var lc = L.control
 
     velocidad=Number(msg.velocidad);
 
-    if(velocidad>5){
+    if(velocidad>1){
 
       $("#sta").css("color","#00bcd4");
       $("#desEsta").html("En movimiento");
