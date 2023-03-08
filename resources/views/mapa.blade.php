@@ -219,72 +219,37 @@
        <div class="container">
          <div class="section">
            <div class="row vertical-modern-dashboard">
-             <div id="map" style="width:100%;height: 400px;"></div>
-             <div class="col s12 m2 l12 animate fadeRight">
-               <div class="card">
-                 
-                 <!--span id="msjalerta"></span-->
-                 <center>
-                   <div id="resplandorverde" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Parking <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
-                       </strong>
-                     </div>
+             
 
-                      <div id="resplandorrojo" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Geocerca <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
-                       </strong>
-                     </div>
-                  </center>
-               </div>
-             </div>
+            <div class="col s12 m2 l9">
+             <div id="map" style="width:100%;height: 700px;"></div>
+            </div>
+
+            <div class="col s12 m2 l3">
 
 
-               <div class="col s12 m2 l5 animate fadeRight">
-               <div class="card">
+              <div class="card">
                  <div class="card-content">
                   <center><span id="estas" style="font-size:16px;color:#00bcd4;"></span></center>
-                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='sta'>my_location</i> <span id="desEsta"></span>
-
-
-                   </h4>
-
+                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='sta'>my_location</i> <span id="desEsta"></span></h4>
                   
-                   <div class="input-field col s12">
-                     <select name="vehiculo" id="vehiculo">
-                       <option value="" disabled selected>Selecciona Dipositivo</option>
-                     </select>
-                     <label>Dispositivo</label>
-                   </div>
-                   <span id="ubicacion"></span>
-                   <a class="waves-effect waves-light  modal-trigger" id="comparte">
-                     <i class="material-icons tooltipped " data-position="top" data-tooltip="Compartir" style="cursor:pointer;display: none;" id="share">share</i>
-                   </a>
-                   <div id="espacio">
-                     <p style="color:#fff;">----</p>
-                   </div>
-                 </div>
-               </div>
-             </div>
+                         <select name="vehiculo" id="vehiculo">
+                           <option value="" disabled selected>Selecciona Dipositivo</option>
+                         </select>
+                         <label>Dispositivo</label>
 
+                          <span id="ubicacion"></span>
+                         <a class="waves-effect waves-light  modal-trigger" id="comparte">
+                           <i class="material-icons tooltipped " data-position="top" data-tooltip="Compartir" style="cursor:pointer;display: none;" id="share">share</i>
+                         </a>
+                  
+                     </div>
+              </div>
 
-               <div class="col s12 m2 l4 animate">
+              <!--fijar ubicacion-->
                <div class="card">
                  <div class="card-content">
-
-                  <center>
-                    <div id="chart" style="width:90%;height:220px;display: block;"></div>
-
-                   </center>
-                  
-                 </div>
-               </div>
-             </div>
-
-
-             <div class="col s12 m2 l3 animate fadeRight">
-               <div class="card">
-                 <div class="card-content">
-                   
-
-                   <h4 class="card-title mb-0 " >Fijar ubicación</h4>
+                <h4 class="card-title mb-0 " >Fijar ubicación</h4>
                    <!-- Switch -->
                    <div class="switch">
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
@@ -313,11 +278,46 @@
 
 
                    </div>
+                  </div>
+                </div>
+
+              <!--fin de fijar-->
+
+              <!-- velocimetro-->
+
+               <div class="card">
+                 <div class="card-content">
+
+                  <center>
+                    <div id="chart" style="width:90%;height:220px;display: block;"></div>
+
+                   </center>
+                  
                  </div>
                </div>
+
+
+              <!---fin de velocimetro-->
+
+            </div>
+
+
+
+             <div class="col s12 m2 l12 animate fadeRight">
+               <div class="card">
+                 
+                 <!--span id="msjalerta"></span-->
+                 <center>
+                   <div id="resplandorverde" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Parking <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </div>
+
+                      <div id="resplandorrojo" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Geocerca <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </div>
+                  </center>
+               </div>
              </div>
-
-
 
 
              <div class="col s12 m2 l12 animate fadeRight">
@@ -394,6 +394,8 @@
 
  
  $(document).ready(function(){
+
+  document.body.style.zoom = "80%";
 
   var valorgeo=0;
   var map;
