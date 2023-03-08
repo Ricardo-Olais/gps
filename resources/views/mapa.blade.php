@@ -386,6 +386,7 @@
 
  </div>
 
+
  <script type="text/javascript">
     
     </script>
@@ -395,7 +396,13 @@
  
  $(document).ready(function(){
 
-  document.body.style.zoom = "80%";
+
+
+   
+
+ 
+
+  
 
   var valorgeo=0;
   var map;
