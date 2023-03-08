@@ -251,6 +251,17 @@
                     }
 ?>
 
+<?php if(!isMobile()) { ?>
+
+  <script type="text/javascript">
+    document.body.style.zoom = "80%";
+    
+  </script>
+
+    
+
+ <?php } ?>
+
 
 <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light navbar-full sidenav-active-rounded">
   <div class="brand-sidebar" style="background-color:black !important;">
