@@ -361,7 +361,7 @@
     </li>
    @endif
    <center>
-    <img src="img/tracking-o.gif" width="120" style="margin-top:50px;">
+    <!--img src="img/tracking-o.gif" width="120" style="margin-top:50px;"-->
   </center>
 
    <div id="inferior">
