@@ -6,7 +6,7 @@
     
     body{
 
-        background-image: url('img/fondo-login.png');
+        background-image: url('images/mapar.jpg');
     }
 </style>
 
