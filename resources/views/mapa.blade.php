@@ -11,6 +11,13 @@
 
 <?php  $llave=env('LLAVE_API_MAPS'); ?>
 
+ <?php
+
+          function isMobile2() {
+                      return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+                    }
+?>
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry"></script>
 
@@ -211,6 +218,11 @@
 </style>
 
 
+
+<?php if(!isMobile2()){ ?>
+
+
+
  <div id="main">
   <input type="hidden" name="dir" id="dir">
    <div class="row">
@@ -337,6 +349,142 @@
                </div>
              </div>
 
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+<?php } else { ?>
+
+ <div id="main">
+  <input type="hidden" name="dir" id="dir">
+   <div class="row">
+    
+     <div class="col s12">
+       <div class="container">
+         <div class="section">
+           <div class="row vertical-modern-dashboard">
+             <div id="map" style="width:100%;height: 400px;"></div>
+             <div class="col s12 m2 l12 animate fadeRight">
+               <div class="card">
+                 
+                 <!--span id="msjalerta"></span-->
+                 <center>
+                   <div id="resplandorverde" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Parking <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </div>
+
+                      <div id="resplandorrojo" class="parpadea" style="display:none;font-size: 20px;width: 80%;text-align: center;">Alerta de Geocerca <i class="material-icons" style="color:red;padding: 2px;">notifications</i>
+                       </strong>
+                     </div>
+                  </center>
+               </div>
+             </div>
+
+
+               <div class="col s12 m2 l5 animate fadeRight">
+               <div class="card">
+                 <div class="card-content">
+                  <center><span id="estas" style="font-size:16px;color:#00bcd4;"></span></center>
+                   <h4 class="card-title mb-0">Ubicación actual <i class="material-icons" id='sta'>my_location</i> <span id="desEsta"></span>
+
+
+                   </h4>
+
+                  
+                   <div class="input-field col s12">
+                     <select name="vehiculo" id="vehiculo">
+                       <option value="" disabled selected>Selecciona Dipositivo</option>
+                     </select>
+                     <label>Dispositivo</label>
+                   </div>
+                   <span id="ubicacion"></span>
+                   <a class="waves-effect waves-light  modal-trigger" id="comparte">
+                     <i class="material-icons tooltipped " data-position="top" data-tooltip="Compartir" style="cursor:pointer;display: none;" id="share">share</i>
+                   </a>
+                   <div id="espacio">
+                     <p style="color:#fff;">----</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+               <div class="col s12 m2 l4 animate">
+               <div class="card">
+                 <div class="card-content">
+
+                  <center>
+                    <div id="chart" style="width:90%;height:220px;display: block;"></div>
+
+                   </center>
+                  
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="col s12 m2 l3 animate fadeRight">
+               <div class="card">
+                 <div class="card-content">
+                   
+
+                   <h4 class="card-title mb-0 " >Fijar ubicación</h4>
+                   <!-- Switch -->
+                   <div class="switch">
+                     <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
+                       <span class="lever"></span> On </label>
+                   </div>
+                   <hr style="margin-top:15px;">
+                   <h4 class="card-title mb-0"><b>Geocerca</b></h4>
+                   <!-- Switch -->
+                   <div class="switch">
+                     <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
+                       <span class="lever"></span> On </label>
+                     <!--span id="geocercaactual" class="lever"></span--><br>
+                    <center>
+                     <table>
+                    <thead>
+                      <tr>
+                          
+                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: red;">do_not_disturb_on</i></th>
+                          <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
+                          <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
+                      </tr>
+                    </thead>
+                   </table>
+                   </center>
+
+
+
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+
+
+             <div class="col s12 m2 l12 animate fadeRight">
+               <div class="card">
+                 <div class="card-content">
+                   <h4 class="card-title mb-0">Acciones <i class="material-icons right">bubble_chart</i>
+                   </h4>
+                   <a class="waves-effect waves-warning btn reportar" style="background-color: red;width: 100%;border-radius: 15px;">
+                     <i class="material-icons right">report</i>Reportar </a>
+                   <a href="tel:911" class="waves-effect waves-warning btn" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;">
+                     <i class="material-icons right">local_phone</i>911 </a>
+                   <a class="waves-effect waves-warning btn" id="historico" style="background-color: black;margin-top: 10px;width: 100%;border-radius: 15px;">
+                     <i class="material-icons right">reorder</i>Histórico </a>
+                   <a href='dispositivos' class="waves-effect waves-warning btn" style="background-color: '';margin-top: 10px;width: 100%;border-radius: 15px;">
+                     <i class="material-icons right">drive_eta</i>Mis dispositivos </a>
+                 </div>
+               </div>
+             </div>
+
 
              
 
@@ -347,44 +495,15 @@
        </div>
      </div>
    </div>
-   <!--div class="row">
-     <div class="row vertical-modern-dashboard">
-       <div class="col s12 m2 l12 animate fadeRight">
-         <div class="card">
-           <div class="card-content">
-             <table>
-               <thead>
-                 <tr>
-                   <th>Vehículo</th>
-                   <th>Ubicación</th>
-                   <th>Estatus</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 <tr>
-                   <td>Mi kia</td>
-                   <td>Abundio Gómez 74, Ahuizotla, 53378 Naucalpan de Juárez, Méx., México</td>
-                   <td>
-                     <span style="color: #00bcd4;">En movimiento</span>
-                   </td>
-                 </tr>
-                 <tr>
-                   <td>Auto 2</td>
-                   <td>Jellybean dedede 5</td>
-                   <td>
-                     <span style="color:red;">Detenido</span>
-                   </td>
-                 </tr>
-               </tbody>
-             </table>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div-->
-
 
  </div>
+
+
+
+<?php  } ?>
+
+
+
 
 
  <script type="text/javascript">

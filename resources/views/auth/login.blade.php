@@ -86,7 +86,7 @@ $(document).ready(function () {
 
 
    <div class="col s7">
-      <img src="images/color.png" width="140" style="margin-top:50%;margin-left: 250px;">
+      <!--img src="images/color.png" width="140" style="margin-top:50%;margin-left: 250px;"-->
     
    </div>
 
