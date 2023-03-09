@@ -62,9 +62,16 @@ Route::get('/tracker2', function () {
 Route::get('/tracker3', function () {
     return view('mapa2');
 });
+Route::get('/tracker-mobil', function () {
+    return view('mapa-mobil');
+});
+
+
 Route::get('/tracker4', function () {
     return view('mapa3');
 });
+
+
 
 Route::get('/privacy-policy', function () {
     return view('politicas');

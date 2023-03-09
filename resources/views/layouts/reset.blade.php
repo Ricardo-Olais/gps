@@ -301,10 +301,19 @@
     
     @else
      <li class="bold">
-      <a class="waves-effect waves-cyan " href="https://localizaminave.com/tracker">
+      <?php if(!isMobile()) { ?>
+      <a class="waves-effect waves-cyan " href="tracker">
         <i class="material-icons" style="color:#00bcd4;">location_on</i>
         <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
+    <?php } else {?>
+
+      <a class="waves-effect waves-cyan " href="tracker-mobil">
+        <i class="material-icons" style="color:#00bcd4;">location_on</i>
+        <span class="menu-title" data-i18n="User Profile">Rastrear</span>
+      </a>
+
+    <?php } ?>
     </li>
 
       <li class="bold">
