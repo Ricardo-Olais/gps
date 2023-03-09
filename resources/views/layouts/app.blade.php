@@ -452,6 +452,15 @@
 
     </div>
 
+    <script>
+    $(function () {
+        $(".navbar-toggler").click();
+       
+    });
+
+    
+</script>
+
 
 </body>
 </html>
