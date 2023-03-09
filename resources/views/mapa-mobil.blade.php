@@ -347,42 +347,6 @@
        </div>
      </div>
    </div>
-   <!--div class="row">
-     <div class="row vertical-modern-dashboard">
-       <div class="col s12 m2 l12 animate fadeRight">
-         <div class="card">
-           <div class="card-content">
-             <table>
-               <thead>
-                 <tr>
-                   <th>Vehículo</th>
-                   <th>Ubicación</th>
-                   <th>Estatus</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 <tr>
-                   <td>Mi kia</td>
-                   <td>Abundio Gómez 74, Ahuizotla, 53378 Naucalpan de Juárez, Méx., México</td>
-                   <td>
-                     <span style="color: #00bcd4;">En movimiento</span>
-                   </td>
-                 </tr>
-                 <tr>
-                   <td>Auto 2</td>
-                   <td>Jellybean dedede 5</td>
-                   <td>
-                     <span style="color:red;">Detenido</span>
-                   </td>
-                 </tr>
-               </tbody>
-             </table>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div-->
-
 
  </div>
 
