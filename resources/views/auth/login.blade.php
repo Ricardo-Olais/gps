@@ -6,7 +6,9 @@
     
     body{
 
-        background-image: url('img/fondo-login.png');
+        background-image: url('images/mapa2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
         
     }
 
@@ -17,6 +19,18 @@
     top: 10px;
     cursor: pointer;
     z-index: 2;
+}
+
+.parallax-container{
+
+    display: none !important;
+}
+
+.footer {
+
+    position:fixed; 
+    bottom: 0;
+    width: 100%;
 }
 </style>
 
@@ -69,13 +83,13 @@ $(document).ready(function () {
  <div id="main">
   <div class="row  vertical-modern-dashboard">
 
-   <div class="col s3">
+   <div class="col s7">
      
     
    </div>
 
 
-    <div class="col s12 m2 l5 center-a" >
+    <div class="col s12 m2 l4 center-a" >
       <div class="card" style="border-radius: 10px;opacity:.9;">
         <div class="card-content">
           <center><span class="card-title"><b>Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
@@ -180,8 +194,8 @@ $(document).ready(function () {
                                 @if (Route::has('password.request'))
 
 
-                                    <a style="width: 100%;margin-top: 5px;background-color: #DCDCDC;color:#000;" class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Olvidaste tu contraseña?') }}
+                                    <a style="width: 100%;margin-top: 10px;background-color: #DCDCDC;color:#000;height: 50px;padding: 7px;" class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('¿Olvidaste tu contraseña?') }}
                                     </a>
                                 @endif
                            
