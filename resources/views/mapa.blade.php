@@ -976,7 +976,7 @@ var lc = L.control
 
     velocidad=Number(msg.velocidad);
 
-    if(velocidad>1){
+    if(velocidad>3){
 
       $("#sta").css("color","#00bcd4");
       $("#desEsta").html("En movimiento");
