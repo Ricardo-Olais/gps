@@ -454,7 +454,7 @@
 
     <script>
     $(function () {
-        $(".navbar-toggler").click();
+        //$(".navbar-toggler").click();
        
     });
 
