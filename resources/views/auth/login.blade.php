@@ -32,6 +32,16 @@
     bottom: 0;
     width: 100%;
 }
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 105%;
+  min-height: 100%;
+  transform: translateX(calc((100% - 100vw) / 2));
+  z-index: -2;
+}
 </style>
 
 <script type="text/javascript">
@@ -78,17 +88,36 @@ $(document).ready(function () {
     }
    });
 });
+
+
+
 </script>
 
  <div id="main">
+ <video autoplay loop muted src="images/file.mp4" id="myVideo"></video>
+
+
+ <script>
+var vid = document.getElementById("myVideo");
+
+  vid.playbackRate = .4;
+</script> 
   <div class="row  vertical-modern-dashboard">
 
 
 
    <div class="col s7">
-      <!--img src="images/color.png" width="140" style="margin-top:50%;margin-left: 250px;"-->
+
+ 
+
+
+     
     
    </div>
+
+
+
+
 
 
     <div class="col s12 m2 l4 center-a" >
