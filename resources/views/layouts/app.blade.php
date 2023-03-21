@@ -9,14 +9,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#00bcd4" />
-    <meta name="description" content="Conóce en donde se encuentran tus seres queridos" />
+    <meta name="description" content="Somos una empresa con 3 años de experiencia, especializada en soluciones de localización satelital y telemática aplicadas a logística, distribución y seguridad." />
 
       <!-- Open Graph data -->
-      <meta property="og:title" content="Conoce en donde se encuentran tus seres queridos" />
+      <meta property="og:title" content="Rastreo en tiempo real" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content=" https://localizaminave.com" />
       <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />
-      <meta property="og:description" content="Conoce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma." />
+      <meta property="og:description" content="Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma." />
       <meta property="fb:app_id" content="2813051298827331" />
       
 
