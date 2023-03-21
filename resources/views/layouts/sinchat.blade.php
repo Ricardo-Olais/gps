@@ -9,10 +9,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#00bcd4" />
-    <meta name="description" content="Conóce en donde se encuentran tus seres queridos" />
+    <meta name="description" content="Somos una empresa con 3 años de experiencia, especializada en soluciones de localización satelital y telemática aplicadas a logística, distribución y seguridad." />
 
       <!-- Open Graph data -->
-      <meta property="og:title" content="Conoce en donde se encuentran tus seres queridos" />
+      <meta property="og:title" content="Rastreo en tiempo real" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content=" https://localizaminave.com" />
       <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />
