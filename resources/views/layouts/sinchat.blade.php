@@ -12,7 +12,7 @@
     <meta name="description" content="Conóce en donde se encuentran tus seres queridos" />
 
       <!-- Open Graph data -->
-      <meta property="og:title" content="Visita https://localizaminave.com" />
+      <meta property="og:title" content="Conoce en donde se encuentran tus seres queridos" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content=" https://localizaminave.com" />
       <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />
