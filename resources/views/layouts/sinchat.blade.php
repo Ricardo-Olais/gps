@@ -9,10 +9,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#00bcd4" />
-    <meta name="description" content="Descripcion de pagina. No sueperar los 155 caracteres." />
+    <meta name="description" content="Conóce en donde se encuentran tus seres queridos" />
 
       <!-- Open Graph data -->
-      <meta property="og:title" content="Gps Tracker" />
+      <meta property="og:title" content="Visita https://localizaminave.com" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content=" https://localizaminave.com" />
       <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />

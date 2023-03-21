@@ -47,7 +47,7 @@ class SMSController extends Controller
             $message = 'Hola';
             $phone = '+525586779297';
          
-             try {
+          /*   try {
                 $result = $SnSclient->publish([
                     'Message' => $message,
                     'PhoneNumber' => $phone,
@@ -58,7 +58,7 @@ class SMSController extends Controller
             } catch (AwsException $e) {
                 // output error message if fails
                 error_log("error es ". $e->getMessage());
-            } 
+            } */
    
 
 
