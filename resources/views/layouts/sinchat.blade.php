@@ -15,7 +15,7 @@
       <meta property="og:title" content="Rastreo en tiempo real" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content=" https://localizaminave.com" />
-      <meta property="og:image" content="https://localizaminave.com/img/home/fondo-carro.jpeg" />
+      <meta property="og:image" content="https://localizaminave.com/img/zfunciones.jpeg" />
       <meta property="og:description" content="Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma." />
       <meta property="fb:app_id" content="2813051298827331" />
 
