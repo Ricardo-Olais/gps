@@ -94,7 +94,7 @@ $(document).ready(function () {
 </script>
 
  <div id="main">
- <video autoplay loop muted src="images/file.mp4" id="myVideo"></video>
+ <!--video autoplay loop muted src="images/file.mp4" id="myVideo"></video-->
 
 
  <script>
