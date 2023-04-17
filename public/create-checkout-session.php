@@ -16,7 +16,7 @@ $dispositivo=$_SESSION["id"];
 
 // ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
 $checkout_session = \Stripe\Checkout\Session::create([
-	'invoice_creation' => ['enabled' => true],
+	'invoice_creation' => ['enabled' => true], //se agrega para la nota
 	'success_url' => $domain_url . '/pago?session_id={CHECKOUT_SESSION_ID}&id='.$dispositivo,
 	'cancel_url' => "https://localizaminave.com/planes?id=".$dispositivo,
 	'payment_method_types' => ['card'],
