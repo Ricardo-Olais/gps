@@ -335,7 +335,8 @@ class RastreoController extends Controller
 
                    // echo $dias=@$diff->days; //validación de 7 para usuario normal
                    
-
+                    $activo="active"; //se agrega variable para filtrar a gratis
+                    //$valorExpira="Para siempre";//se agrega variable para filtrar a gratis
                
                     $datos[]=array(
                                 "id"=>$value->id_vehiculo, 
@@ -577,7 +578,7 @@ class RastreoController extends Controller
 
 
 
-            if(count($consultamosLicencias)>0){
+            /*if(count($consultamosLicencias)>0){
 
                 $estatus=1;
             }else{
@@ -591,7 +592,9 @@ class RastreoController extends Controller
                 }
 
                 
-            }
+            }*/
+
+            $estatus=2;
            
 
            if(isset($id_vehi) && $id_vehi!=""){

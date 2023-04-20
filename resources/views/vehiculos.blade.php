@@ -5,6 +5,7 @@
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
  <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+ <script async src="https://js.stripe.com/v3/buy-button.js"></script>
  <script>
 
     var myCanvas = document.createElement('canvas');
@@ -537,6 +538,12 @@
 
               <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps" target="_blank"> <img src="img/play.png" width="30%" style="margin-top: 10px;"></a>
 
+               <stripe-buy-button
+                  buy-button-id="buy_btn_1My6UyA94PugK9gPoWX1R6XA"
+                  publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa"
+                >
+               </stripe-buy-button>
+
              </center>
 
                
@@ -600,14 +607,15 @@
                         <tr>
                             <td class="colorcolum">Subscripción</td>
                             <td>
-                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick='cancelarSub("{{ $valor["subscripcion"] }}");' style="width:100%;height: 40px;padding: 9px;">
+                                <span class="badge pink lighten-5 pink-text text-accent-2 btn"  onclick='cancelarSub("{{ $valor["subscripcion"] }}");' style="width:100%;height: 40px;padding: 9px;">Para siempre
 
+                                <!--
                                  @if ($valor['Fecha_termino']!='' && $valor['Fecha_termino']!='0000-00-00') 
                                     Expira el día {{ $valor['Fecha_termino'] }}
                                  @else
                                  Cancelar Subscripción
 
-                                 @endif
+                                 @endif-->
                                 
 
 
