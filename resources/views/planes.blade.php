@@ -4,6 +4,7 @@
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
  <script src="https://js.stripe.com/v3/"></script>
  <script src="js/script.js" defer></script>
+ <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
  <?php
     session_start(); 
@@ -72,8 +73,22 @@
          </div>
       </div>
 
-       <div class="col s12 m2 l4 animate fadeRight">
-         <!-- Total Transaction -->
+<div class="col s12 m2 l12 animate fadeRight">
+      <center>
+      <img src="img/gratis3.jpg"></center>
+       
+        </center>
+
+</div>
+<center>
+ <stripe-buy-button
+                  buy-button-id="buy_btn_1My6UyA94PugK9gPoWX1R6XA"
+                  publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa"
+                >
+  </stripe-buy-button></center>
+
+       <!--div class="col s12 m2 l4 animate fadeRight">
+        
          <div class="card">
             <div class="card-content">
                <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_not_fixed</i>Prueba Gratuita (1 mes)</b></h4></center><br>
@@ -146,7 +161,7 @@
 
 
       <div class="col s12 m2 l4 animate fadeRight">
-         <!-- Total Transaction -->
+        
          <div class="card">
             <div class="card-content">
                <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_fixed</i>Plan Mensual $29.00 MXN</b></h4></center><br>
@@ -222,7 +237,7 @@
       </div>
 
           <div class="col s12 m2 l4 animate fadeRight">
-         <!-- Total Transaction -->
+      
          <div class="card">
             <div class="card-content">
                <center><h5 class="card-title mb-0"><b><i class="material-icons right">gps_fixed</i>Plan anual $299.00 MXN</b></h5></center><br>
@@ -293,7 +308,7 @@
 
             </div>
          </div>
-      </div>
+      </div-->
 
 
 

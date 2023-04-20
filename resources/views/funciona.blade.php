@@ -2,6 +2,7 @@
 
 @section('content')
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 <script type="text/javascript">
   
 
@@ -106,12 +107,21 @@
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
-               <h4 class="card-title mb-0">4.- Pagar Licencia y Licencia gratuita</h4>
+               <!--h4 class="card-title mb-0">4.- Pagar Licencia y Licencia gratuita</h4-->
+                <h4 class="card-title mb-0">4.- Habilitar aplicación Gps Tracker</h4>
               
               
               <p style="text-align:justify;">
 
-              Seleccionamos Pagar Licencia ó adquirir licencia gratuita, elegimos el plan que más te convenga, una vez pagada o activada la licencia, abrir la aplicación <span style="color:#00bcd4;">gps tracker</span> (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME con esto el dispositivo comenzará a enviar métricas gps, en el menu Rastrear del sitio web podrás seleccionar tu vehículo a localizar, así de fácil, gracias por ser parte de localiza mi nave</p>
+              Abrir la aplicación <span style="color:#00bcd4;">gps tracker</span> (la que instalaste en tu dispositivo) y dar clic al botón de LOCALIZAME con esto el dispositivo comenzará a enviar métricas gps, en el menu Rastrear del sitio web podrás seleccionar tu vehículo a localizar, así de fácil, gracias por ser parte de localiza mi nave</p>
+
+              <center>
+               <br>
+                <stripe-buy-button
+                                 buy-button-id="buy_btn_1My6UyA94PugK9gPoWX1R6XA"
+                                 publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa"
+                               >
+                 </stripe-buy-button></center>
 
               
                <img src="img/imgapp.jpeg" width="100%" style="margin-top: 10px;">
