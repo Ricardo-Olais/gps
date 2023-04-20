@@ -75,7 +75,7 @@
 
 <div class="col s12 m2 l12 animate fadeRight">
       <center>
-      <img src="img/gratis3.jpg"></center>
+      <img src="img/gratis3.jpg" width="100%"></center>
        
         </center>
 
