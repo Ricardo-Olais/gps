@@ -254,7 +254,7 @@
 <?php if(!isMobile()) { ?>
 
   <script type="text/javascript">
-    document.body.style.zoom = "80%";
+    document.body.style.zoom = "90%";
     
   </script>
 
