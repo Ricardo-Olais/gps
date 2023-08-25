@@ -77,6 +77,11 @@ Route::get('/privacy-policy', function () {
     return view('politicas');
 });
 
+Route::get('/beta', function () {
+    return view('beta');
+});
+
+
 
 
 Auth::routes();
