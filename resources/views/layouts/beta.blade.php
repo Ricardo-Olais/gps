@@ -8,7 +8,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="theme-color" content="#00bcd4" />
+  
     <meta name="description" content="Somos una empresa con 3 años de experiencia, especializada en soluciones de localización satelital y telemática aplicadas a logística, distribución y seguridad." />
 
       <!-- Open Graph data -->
@@ -62,7 +62,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    
 
 @guest
   @if (Route::has('register'))
@@ -269,7 +268,8 @@
         <img src="images/color.png" alt="materialize logo">
         <span class="logo-text hide-on-med-and-down">Gps Tracker</span>
       </a>
-      <a class="navbar-toggler" href="#">
+
+      <a class="navbar-toggler" href="#" style="display:none;">
         <i class="material-icons">radio_button_checked</i>
       </a>
     </h1>
@@ -289,62 +289,59 @@
       <!--a class="navigation-header-text" style="color:#00bcd4;">Localiza mi nave</a-->
       <i class="navigation-header-icon material-icons">more_horiz</i>
     </li>
-    <li class="bold">
-      <a class="waves-effect waves-cyan " href="index">
-        <i class="material-icons">home</i>
-        <span class="menu-title" data-i18n="User Profile">Inicio</span>
-      </a>
-    </li>
+
+
+       <div class="card  darken-1" style="height: 90%;">
+        <div class="card-content white-text">
+          <h6>Selecciona dispositivo</h6>
+
+          
+        <!--select name="vehiculo" id="vehiculo" multiple tabindex="-1">
+                         
+                           <option value="3e480337a87ede4d">Mi auto</option>
+                           <option value="3e480337a87ede45">Mi moto</option>
+                           <option value="3e480337a87ede46">Ricardo</option>
+                           <option value="3e480337a87ede47">Diana</option>
+
+                           
+        </select-->
+
+        </div>
+
+         <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
+        
+      </div>
+
+
+
+   
 
     @if (Auth::guest())
     
     @else
-     <li class="bold">
-  
-      <a class="waves-effect waves-cyan " href="tracker">
-        <i class="material-icons" style="color:#00bcd4;">location_on</i>
-        <span class="menu-title" data-i18n="User Profile">Rastrear</span>
-      </a>
- 
-    </li>
+    
 
-      <li class="bold">
-      <a class="waves-effect waves-cyan " href="dispositivos">
-        <i class="material-icons">drive_eta</i>
-        <span class="menu-title" data-i18n="User Profile">Mis dispositivos</span>
-      </a>
-    </li>
     @endif
 
-    <li class="bold">
-      <a class="waves-effect waves-cyan" href="como-funciona">
-        <i class="material-icons">help_outline</i>
-        <span class="menu-title" data-i18n="Support">Cómo funciona</span>
-      </a>
-    </li>
-    <li class="bold">
-      <a class="waves-effect waves-cyan " href="planes">
-        <i class="material-icons">monetization_on</i>
-        <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
-      </a>
-    </li>
    
 
     @if (Auth::guest())
 
-     <li class="bold">
+
+
+     <!--li class="bold">
       <a class="waves-effect waves-cyan " href="register">
         <i class="material-icons">person_add</i>
         <span class="menu-title" data-i18n="User Profile">Regístrate</span>
       </a>
-    </li>
+    </li-->
 
-     <li class="bold">
+     <!--li class="bold">
       <a class="waves-effect waves-cyan " href="login">
         <i class="material-icons">vpn_key</i>
         <span class="menu-title" data-i18n="User Profile">Login</span>
       </a>
-    </li>
+    </li-->
 
 
     
@@ -433,26 +430,130 @@
 
         <main class="py-4">
             @yield('content')
-             <div class="parallax-container">
-                <div class="parallax"><img src="img/home/fondo-carro.jpeg"></div>
-              </div>
+
+
+             
+
+
         </main>
 
-      <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow">
-      <div class="footer-copyright">
-        <div class="container">
+    <style type="text/css">
+      
+      body {
+        margin: 0;
+        margin-bottom: 40px;
+      }
+    footer {
+      background-color: black;
+      position:absolute;
+      bottom: 0;
+      width: 100%;
+      height:45px !important;
+      color: white;
+      z-index: 2000;
+    }
+    </style>
 
-          
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.modal').modal();
+          $('select').formSelect();
+          $('.fixed-action-btn').floatingActionButton();
+          $('.tooltipped').tooltip();
 
-          <span class="left hide-on-small-only"><a href="privacy-policy">Política de privacidad</a></span>
+          $("#menuf").trigger("click");
+     });
+    </script>
+
+     <style type="text/css">
+     
+
+     
+
+      .modal-overlay{
+
+        opacity: 0.7 !important;
+      }
+
+      @keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+     </style>
 
 
-          <span class="right hide-on-small-only"><a href="terminos">Términos y condiciones</a></span></div>
-      </div>
-    </footer>
+   <script>
+function bigImg(x) {
+ 
+  console.log("agrandammos");
 
 
-    </div>
+
+}
+
+function normalImg(x) {
+ 
+}
+</script>
+
+
+     <div class="fixed-action-btn wobble" id="menuf">
+  <a class="btn-floating btn-large black" >
+    <i class="large material-icons">dashboard</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="notificaciones"><i class="material-icons">notifications_active</i>Noticación</a></li>
+    <li onmouseover="bigImg(this)" onmouseout="normalImg(this)" ><a class="btn-floating black modal-trigger tooltipped" href="#modal1" data-position="left" data-tooltip="Localizar"><i class="material-icons">location_on</i>Rastrear</a></li>
+    <li><a class="btn-floating green tooltipped" data-position="left" data-tooltip="Mis vehículos"><i class="material-icons">directions_car</i>Mis vehículos</a></li>
+    <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="Home"><i class="material-icons">home</i></a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
 
     <script>
     $(function () {
