@@ -22,6 +22,7 @@ $tipo=$_REQUEST['tipo'];
 $latitud_geocerca=$_REQUEST['latitud_geocerca'];
 $longitud_geocerca=$_REQUEST['longitud_geocerca'];
 $geocerca=$_REQUEST['geocerca'];
+$velocidad=$_REQUEST['velocidad'];
 
 
 $msjalerta2=$_REQUEST['msjalerta2'];
@@ -45,7 +46,8 @@ $client->emit('send-ubicacion', [
     "msjalerta2"=>$msjalerta2,
     "latitud_geocerca"=>$latitud_geocerca,
     "longitud_geocerca"=>$longitud_geocerca,
-    "geocerca"=>$geocerca
+    "geocerca"=>$geocerca,
+    "velocidad"=>$velocidad
 
 ]);
 $client->close();

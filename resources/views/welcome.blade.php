@@ -77,8 +77,8 @@ function autoplay() {
 
   <div class="col s12 m2 l12" style="background-color: #fff;">
    
-            <center>
-            <span style="color:#00bcd4;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span>
+            <center><!--:#00bcd4-->
+            <span style="color:#000;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span>
               <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
               <div id="iniciogps" style="margin-top:-45px;">
@@ -90,7 +90,7 @@ function autoplay() {
 
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
-   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#00bcd4">GPS tracker (Conóce en donde se encuentran tus seres queridos.)</h3></center>
+   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">Conoce en donde se encuentran tus seres queridos</h3></center>
 </div>
 
 

@@ -8,7 +8,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="theme-color" content="#00bcd4" />
+    <!--meta name="theme-color" content="#00bcd4" />
     <meta name="description" content="Descripcion de pagina. No sueperar los 155 caracteres." />
 
       <!-- Open Graph data -->

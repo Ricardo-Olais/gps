@@ -19,7 +19,7 @@
 ?>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $llave; ?>&libraries=geometry&callback=Function.prototype"></script>
 
 <script src="notificaciones/node_modules/socket.io-client/dist/socket.io.js"></script>
 

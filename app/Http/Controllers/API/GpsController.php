@@ -134,10 +134,10 @@ class GpsController extends Controller
 
    public function probar(){
 
-        $message = 'Hola es una prueba';
-        $phone = '+525586779297';
-
-        $this->enviamsgaws($message,$phone);
+         date_default_timezone_set("America/Mexico_City");
+         $mifecha= date('Y-m-d H:i:s'); 
+         $NuevaFecha = strtotime ( '-1 hour' , strtotime ($mifecha) ) ;
+         $NuevaFecha = date ( 'Y-m-d H:i:s' , $NuevaFecha); 
 
    }
 
@@ -157,8 +157,6 @@ class GpsController extends Controller
         $name="...";
 
 
-      
-
 
         /*$sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
         $token = 'ad17ead7faeb621196aed6a1e694bafa'; 
@@ -168,6 +166,9 @@ class GpsController extends Controller
         $llave=env('LLAVE_API_MAPS');
 
         date_default_timezone_set("America/Mexico_City");
+         $mifecha= date('Y-m-d H:i:s'); 
+         $NuevaFecha = strtotime ( '-1 hour' , strtotime ($mifecha) ) ;
+         $NuevaFecha = date ( 'Y-m-d H:i:s' , $NuevaFecha);
 
 
         //consultar estatus de vehículo
@@ -225,7 +226,7 @@ class GpsController extends Controller
               $fields=array(
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
-                       "direccion"=>$direccion,"pila"=>$pila,"fecha"=>date("Y-m-d H:i:s"),
+                       "direccion"=>$direccion,"pila"=>$pila,"fecha"=>$NuevaFecha,
                         "alias"=>$alias,
                         "conductor"=>$conductor,
                         "fija"=>$fija,
@@ -270,7 +271,7 @@ class GpsController extends Controller
                                         'latitud' =>$latitud,
                                         'longitud' =>$longitud,
                                         'velocidad' =>$velocidad,
-                                        'fecha_gps' =>date("Y-m-d H:i:s"),
+                                        'fecha_gps' =>$NuevaFecha,
                                         'pila' =>$pila,
 
                                   ));
@@ -284,7 +285,7 @@ class GpsController extends Controller
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
-                                        'fecha_gps'=>date("Y-m-d H:i:s"),
+                                        'fecha_gps'=>$NuevaFecha,
                                         'pila'=>$pila
                                         
 
@@ -304,7 +305,7 @@ class GpsController extends Controller
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
-                                        'fecha_gps'=>date("Y-m-d H:i:s"),
+                                        'fecha_gps'=>$NuevaFecha,
                                         'pila'=>$pila
                                         
 
