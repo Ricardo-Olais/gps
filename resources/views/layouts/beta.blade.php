@@ -30,6 +30,9 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/jquery.dataTables.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@4.0.5/bulma.css" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+
 
     
 
@@ -169,6 +172,18 @@
               @endif
 
         @else
+
+
+            <li class="bold">
+      <a class="waves-effect waves-cyan " href="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <i class="material-icons">settings_power</i>
+       
+        <form id="logout-form" action="logout" method="POST" class="d-none">
+            @csrf
+        </form>
+      </a>
+    </li>
+
           <li>
             <a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown">
               <span>{{ Auth::user()->name }}</span>
@@ -291,9 +306,11 @@
     </li>
 
 
-       <div class="card  darken-1" style="height: 90%;">
+       <div class="card  darken-1" style="height: 30%;">
         <div class="card-content white-text">
-          <h6>Selecciona dispositivo</h6>
+          <h6>Ubicación del dispositivo</h6>
+
+          <span id="miubicacion"></span>
 
           
         <!--select name="vehiculo" id="vehiculo" multiple tabindex="-1">
@@ -305,14 +322,21 @@
 
                            
         </select-->
+          
+
+
 
         </div>
 
          <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
         
       </div>
-
-
+      <div class="row" style="text-align:center;">
+      <div class="col s3"><a class="btn-floating green"></a></div>
+      <div class="col s3"><a class="btn-floating green"></a></div>
+      <div class="col s3"><a class="btn-floating green"></a></div>
+   
+    </div>
 
    
 
@@ -349,15 +373,7 @@
 
 
     
-     <li class="bold">
-      <a class="waves-effect waves-cyan " href="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <i class="material-icons">settings_power</i>
-        <span class="menu-title" data-i18n="User Profile">Salir</span>
-        <form id="logout-form" action="logout" method="POST" class="d-none">
-            @csrf
-        </form>
-      </a>
-    </li>
+   
    @endif
    <center>
     <!--img src="img/tracking-o.gif" width="120" style="margin-top:50px;"-->

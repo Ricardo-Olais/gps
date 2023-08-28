@@ -49,7 +49,6 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-
   <style>
   
     .leaflet-container {
@@ -249,6 +248,7 @@ var lc = L.control
 
     $("#cargando").css("display","");
 
+        setTimeout(myGreeting, 3000);
 
         var instancia = M.FormSelect.getInstance($("#vehiculo"));
         var valores = instancia.getSelectedValues();
@@ -262,17 +262,31 @@ var lc = L.control
 
         map.setZoom(16);
 
-         $("#chart").css("display","");
+        
 
-         $.post("inicializasocket",{_token:token,imei:imei});
+        
+
+
+        $.post("inicializasocket",{_token:token,imei:imei});
 
 
 
 
   });
 
+
+  function myGreeting() {
+     $("#cargando").css("display","none");
+   }
+
+
+
+
+
+
 socket.on('ubicacion', function(msg) {
 
+      $("#cargando").css("display","none");
       
       if(msg.imei==imei){
 
@@ -331,6 +345,8 @@ socket.on('ubicacion', function(msg) {
 
          //pintamos el marcador
 
+         $("#miubicacion").html(msg.direccion);
+
           theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
           autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
 
@@ -386,7 +402,7 @@ display: flex;
 <div id="main">
   <div class="container">
     <div class="row">
-      <div class="col s12 m10">
+      <div class="col s12 m12">
            <!-- Current balance & total transactions cards-->
             <div class="row vertical-modern-dashboard">
 
@@ -426,7 +442,7 @@ display: flex;
        <h6>Selecciona dispositivo</h6>
 
           
-        <select name="vehiculo" id="vehiculo" multiple tabindex="-1">
+        <select name="vehiculo" id="vehiculo" tabindex="-1">
                     
 
                            
