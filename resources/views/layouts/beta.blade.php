@@ -310,7 +310,7 @@
         <div class="card-content white-text">
           <h6>Ubicación del dispositivo</h6>
 
-          <span id="miubicacion"></span>
+          <span id="miubicacion" style="color:black !important;"></span>
 
           
         <!--select name="vehiculo" id="vehiculo" multiple tabindex="-1">
