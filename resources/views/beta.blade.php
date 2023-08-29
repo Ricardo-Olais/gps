@@ -215,6 +215,17 @@ socket.on('ubicacion', function(msg) {
 
               console.log(msg.longitud_geocerca);
 
+
+            if(msg.clima=="Limpiar"){
+
+                msg.clima="Despejado";
+            }
+
+            if(msg.clima=="Nubes"){
+
+                msg.clima="Nublado";
+            }
+
             if(msg.pila<15){
 
                $("#miubicacion").html(msg.direccion+ ", temperatura: "+msg.temperatura+", clima: "+msg.clima+" , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
