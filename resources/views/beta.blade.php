@@ -50,99 +50,7 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
   <style>
-  
-    .leaflet-container {
-      height: 400px;
-      width: 80%;
-      max-width: 100%;
-      max-height: 100%;
-    }
 
-
-        /* .leaflet-control-attribution{
-
-          display: none;
-         }*/
-
-    /* Fixes Google Mutant Empty attribution */
-    .leaflet-bottom.leaflet-left,
-    .leaflet-bottom.leaflet-right {
-      margin-bottom: initial !important;
-    }
-
-    /* Make Google Logo/ToS/Feedback links clickable */
-    .leaflet-google-mutant a,
-    .leaflet-google-mutant button {
-      pointer-events: auto;
-    }
-
-    /* Move Google ToS/Feedback to the top */
-    .leaflet-google-mutant .gmnoprint,
-    .leaflet-google-mutant .gm-style-cc {
-      top: 0;
-      bottom: auto !important;
-    }
-
-.highcharts-figure,
-.highcharts-data-table table {
-  min-width: 310px;
-  max-width: 500px;
-  margin: 1em auto;
-}
-
-.highcharts-data-table table {
-  font-family: Verdana, sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #ebebeb;
-  margin: 10px auto;
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-}
-
-.highcharts-data-table caption {
-  padding: 1em 0;
-  font-size: 1.2em;
-  color: #555;
-}
-
-.highcharts-data-table th {
-  font-weight: 600;
-  padding: 0.5em;
-}
-
-.highcharts-data-table td,
-.highcharts-data-table th,
-.highcharts-data-table caption {
-  padding: 0.5em;
-}
-
-.highcharts-data-table thead tr,
-.highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-
-.highcharts-data-table tr:hover {
-  background: #f1f7ff;
-}
-
-.highcharts-credits{
-
-    display: none;
-}
-.highcharts-title{
-        display: none !important;
-
-}
-
-.highcharts-no-tooltip{
-
-    display: none !important;
-}
-
-.dropdown-content {
-       max-height: 250px;
-      }
 </style>
 
 <script type="text/javascript">
@@ -158,6 +66,8 @@ $.post("vehiculosasignados",{_token:token},
                for (var i = 0; i < data.rows.length; i++) {
                   
                 //  alert(data.rows[i].id_imei_android);
+
+                  $("#misdisvonline").append("<tr style='color:#000;'><td>"+data.rows[i].alias_vehiculo+"</td><td><i class='material-icons' style='color:#33FF52;'>lens</i></td><td><i class='material-icons'>settings</i></td><td><i class='material-icons'>location_on</i></td></tr>")
 
                   $("#vehiculo").append("<option value='"+data.rows[i].id_imei_android+"'>"+data.rows[i].alias_vehiculo+"</option>");
                    $("#vehiculo").formSelect();

@@ -71,7 +71,7 @@
      @endif
 
         @else
-    <script type="text/javascript">
+    <!--script type="text/javascript">
           
           function inactividad() {
 
@@ -118,7 +118,7 @@
           };
 
 
-</script>
+</script-->
 
 @endguest
 
@@ -174,15 +174,6 @@
         @else
 
 
-            <li class="bold">
-      <a class="waves-effect waves-cyan " href="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <i class="material-icons">settings_power</i>
-       
-        <form id="logout-form" action="logout" method="POST" class="d-none">
-            @csrf
-        </form>
-      </a>
-    </li>
 
           <li>
             <a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown">
@@ -306,25 +297,11 @@
     </li>
 
 
-       <div class="card  darken-1" style="height: 40%;">
+       <div class="card  darken-1" style="height:auto;">
         <div class="card-content white-text">
           <h6>Ubicación del dispositivo</h6>
 
           <span id="miubicacion" style="color:black !important;"></span>
-
-          
-        <!--select name="vehiculo" id="vehiculo" multiple tabindex="-1">
-                         
-                           <option value="3e480337a87ede4d">Mi auto</option>
-                           <option value="3e480337a87ede45">Mi moto</option>
-                           <option value="3e480337a87ede46">Ricardo</option>
-                           <option value="3e480337a87ede47">Diana</option>
-
-                           
-        </select-->
-          
-
-
 
         </div>
 
@@ -332,33 +309,26 @@
         
       </div>
 
-       <table>
-        <thead>
+
+        <div class="card  darken-1" style="height:auto;">
+        <div class="card-content white-text">
+
+       <table style="text-align: center;">
+        <thead style="background-color:black;color: #fff;">
           <tr>
-              <th>ID</th>
-              <th>Km/hra</th>
+              <th>Alias</th>
               <th>Estatus</th>
+              <th></th>
+              <th></th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+        <tbody id="misdisvonline">
+      
         </tbody>
       </table>
+
+    </div></div>
 
 
       <!--div class="row" style="text-align:center;">
@@ -506,8 +476,8 @@
           $('select').formSelect();
           $('.fixed-action-btn').floatingActionButton();
           $('.tooltipped').tooltip();
-
-          $("#menuf").trigger("click");
+          //$('.fixed-action-btn').addClass( "active" );
+          //$("#menuf").trigger("click");
      });
     </script>
 
@@ -589,8 +559,8 @@ function normalImg(x) {
   <ul>
     <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="notificaciones"><i class="material-icons">notifications_active</i>Noticación</a></li>
     <li onmouseover="bigImg(this)" onmouseout="normalImg(this)" ><a class="btn-floating black modal-trigger tooltipped" href="#modal1" data-position="left" data-tooltip="Localizar"><i class="material-icons">location_on</i>Rastrear</a></li>
-    <li><a class="btn-floating green tooltipped" data-position="left" data-tooltip="Mis vehículos"><i class="material-icons">directions_car</i>Mis vehículos</a></li>
-    <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="Home"><i class="material-icons">home</i></a></li>
+    <li><a href="dispositivos" class="btn-floating green tooltipped" data-position="left" data-tooltip="Mis vehículos"><i class="material-icons">directions_car</i>Mis vehículos</a></li>
+    <li><a href='index' class="btn-floating blue tooltipped" data-position="left" data-tooltip="Home"><i class="material-icons">home</i></a></li>
   </ul>
 </div>
 
