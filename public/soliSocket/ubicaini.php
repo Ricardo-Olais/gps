@@ -24,6 +24,9 @@ $longitud_geocerca=$_REQUEST['longitud_geocerca'];
 $geocerca=$_REQUEST['geocerca'];
 $velocidad=$_REQUEST['velocidad'];
 
+$clima=$_REQUEST['clima'];
+$temperatura=$_REQUEST['temperatura'];
+
 
 $msjalerta2=$_REQUEST['msjalerta2'];
 
@@ -47,7 +50,9 @@ $client->emit('send-ubicacion', [
     "latitud_geocerca"=>$latitud_geocerca,
     "longitud_geocerca"=>$longitud_geocerca,
     "geocerca"=>$geocerca,
-    "velocidad"=>$velocidad
+    "velocidad"=>$velocidad,
+    "clima"=>$clima,
+    "temperatura"=>$temperatura
 
 ]);
 $client->close();
