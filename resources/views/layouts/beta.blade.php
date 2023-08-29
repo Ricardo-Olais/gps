@@ -306,7 +306,7 @@
     </li>
 
 
-       <div class="card  darken-1" style="height: 30%;">
+       <div class="card  darken-1" style="height: 40%;">
         <div class="card-content white-text">
           <h6>Ubicación del dispositivo</h6>
 
@@ -331,12 +331,42 @@
          <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
         
       </div>
-      <div class="row" style="text-align:center;">
-      <div class="col s3"><a class="btn-floating green"></a></div>
+
+       <table>
+        <thead>
+          <tr>
+              <th>ID</th>
+              <th>Km/hra</th>
+              <th>Estatus</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!--div class="row" style="text-align:center;">
+      <div class="col s3"><a class="btn-floating green" style="font-size: 12px !important;"></a></div>
       <div class="col s3"><a class="btn-floating green"></a></div>
       <div class="col s3"><a class="btn-floating green"></a></div>
    
-    </div>
+    </div-->
 
    
 
