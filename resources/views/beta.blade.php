@@ -305,6 +305,18 @@ socket.on('ubicacion', function(msg) {
 
               console.log(msg.longitud_geocerca);
 
+            if(msg.pila<15){
+
+               $("#miubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+
+              }else{
+
+                $("#miubicacion").html(msg.direccion+ " , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+
+             }
+
+
+
           //geocerca  obtener la latitud y longitud de geocerca y pintarlas
            if (circle != undefined) {
               map.removeLayer(circle);
@@ -345,10 +357,78 @@ socket.on('ubicacion', function(msg) {
 
          //pintamos el marcador
 
-         $("#miubicacion").html(msg.direccion);
+        // $("#miubicacion").html(msg.direccion);
 
-          theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
+           navigator.geolocation.getCurrentPosition(function(position) {
+                browserLat =  position.coords.latitude;
+                browserLong = position.coords.longitude;
+
+                recibeubica(browserLat,browserLong);
+  
+          });
+
+         function recibeubica(browserLat,browserLong){
+
+          console.log(browserLat);
+          console.log(browserLong);
+      
+   
+       if (routingControl != null) {
+            map.removeControl(routingControl);
+            routingControl = null;
+        }
+
+        var distancia = (map.distance([msg.longitud, msg.latitud], [browserLat,browserLong]))/1000;
+
+        console.log(distancia);
+
+        $("#estas").html("Estás a "+distancia.toFixed(2)+" Km del dispositivo");
+
+
+
+       /* routingControl=L.Routing.control({
+          waypoints: [
+            L.latLng(browserLat, browserLong),
+            L.latLng(msg.longitud, msg.latitud)
+          ],
+          lineOptions: {
+              styles: [{color:'#00bcd4', opacity: 1, weight: 5}]
+           }
+        }).addTo(map);*/
+
+
+
+       }
+
+        theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
           autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
+
+        if(msg.latitud_geocerca!=null) {
+     
+
+              var d = map.distance([msg.longitud, msg.latitud], circle.getLatLng());
+
+              var isInside = d < circle.getRadius();
+
+             
+
+              if(isInside==false && msg.latitud_geocerca!=""){
+
+                //alert("fuera de geocerca");
+                $("#resplandorrojo").css("display","");
+
+              }else{
+
+                $("#resplandorrojo").css("display","none");
+              }
+
+        }
+
+
+    const popup = L.popup()
+    .setLatLng([msg.longitud, msg.latitud])
+    .setContent(msg.alias+ "<center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .openOn(map);
 
 
 
