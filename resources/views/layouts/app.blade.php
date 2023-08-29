@@ -69,7 +69,7 @@
      @endif
 
         @else
-    <script type="text/javascript">
+    <!--script type="text/javascript">
           
           function inactividad() {
 
@@ -116,7 +116,7 @@
           };
 
 
-</script>
+</script-->
 
 @endguest
 
