@@ -1,6 +1,6 @@
 <?php
        
-       $text=urlencode($_REQUEST['clima']);
+       $text=trim(urlencode($_REQUEST['clima']));
 
         $url="http://api.mymemory.translated.net/get?q=$text&langpair=en|es";
         $json = file_get_contents($url);
