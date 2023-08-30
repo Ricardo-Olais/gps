@@ -331,7 +331,7 @@ socket.on('ubicacion', function(msg) {
                   styles: [{color:'#00bcd4', opacity: 1, weight: 5}]
                },
                autoRoute: true,
-               fitSelectedRoutes: 'smart'
+               fitSelectedRoutes: false,
 
             }).addTo(map);
 
