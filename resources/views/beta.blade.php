@@ -297,16 +297,43 @@ socket.on('ubicacion', function(msg) {
         $("#estas").html("Estás a "+distancia.toFixed(2)+" Km del dispositivo");
 
 
+        var greenIcon = new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        });
 
-        routingControl=L.Routing.control({
-          waypoints: [
-            L.latLng(browserLat, browserLong),
-            L.latLng(msg.longitud, msg.latitud)
-          ],
-          lineOptions: {
-              styles: [{color:'#00bcd4', opacity: 1, weight: 5}]
-           }
-        }).addTo(map);
+
+
+            routingControl=L.Routing.control({
+              waypoints: [
+                L.latLng(browserLat, browserLong),
+                L.latLng(msg.longitud, msg.latitud)
+              ],
+
+            createMarker: function(i, wp, nWps) {
+                    if (i === 0 || i === nWps - 1) {
+                      // here change the starting and ending icons
+                      return L.marker(wp.latLng, {
+                        icon: greenIcon // here pass the custom marker icon instance
+                      });
+                    } else {
+                      // here change all the others
+                      return L.marker(wp.latLng, {
+                        icon: yourOtherCustomIconInstance
+                      });
+                    }
+              },
+              lineOptions: {
+                  styles: [{color:'#00bcd4', opacity: 1, weight: 5}]
+               },
+               autoRoute: true,
+               fitSelectedRoutes: 'smart'
+
+            }).addTo(map);
 
 
 
