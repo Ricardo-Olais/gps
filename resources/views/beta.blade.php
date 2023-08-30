@@ -51,6 +51,13 @@
 
   <style>
 
+    .leaflet-routing-container{
+
+        display: none !important;
+    }
+
+
+
 </style>
 
 <script type="text/javascript">
