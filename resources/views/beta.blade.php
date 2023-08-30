@@ -67,7 +67,7 @@ $.post("vehiculosasignados",{_token:token},
                   
                 //  alert(data.rows[i].id_imei_android);
 
-                  $("#misdisvonline").append("<tr style='color:#000;'><td>"+data.rows[i].alias_vehiculo+"</td><td><i class='material-icons' style='color:#33FF52;'>lens</i></td><td><i class='material-icons'>settings</i></td><td><i class='material-icons'>location_on</i></td></tr>")
+                  $("#misdisvonline").append("<tr style='color:#000;'><td><i class='material-icons' style='color:#33FF52;'>lens</i> "+data.rows[i].alias_vehiculo+"</td><td><i class='material-icons'>settings</i></td><td><i class='material-icons'>location_on</i></td></tr>")
 
                   $("#vehiculo").append("<option value='"+data.rows[i].id_imei_android+"'>"+data.rows[i].alias_vehiculo+"</option>");
                    $("#vehiculo").formSelect();
