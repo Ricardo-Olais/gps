@@ -400,11 +400,11 @@ display: flex;
 
                 <!--loadin de mapa-->
             <div id="cargando" style="display:none;">
-                <img src="img/world.svg" style="position: absolute;z-index: 2000;" width="200">
+                <img src="img/world.svg" style="position: absolute;z-index: 2000;" width="170">
             </div>
 
 
-            <img src="img/tormenta1.png" style="position: relative;z-index: 1000;float:right;" width="100">
+            <!--img src="img/tormenta1.png" style="position: relative;z-index: 1000;float:right;" width="100"-->
                 <!--mapa -->
                 <div id="cont" style="width:100%;height:100%;">
 
