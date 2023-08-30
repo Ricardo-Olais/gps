@@ -229,24 +229,8 @@ class GpsController extends Controller
                 $temp=$obj1->main->temp;
 
                 $temperatura=$temp -273.15;
-                $textt =trim($obj1->weather[0]->main);
-                $text=urlencode($textt);
-
-
-                //  $text=trim(urlencode($_REQUEST['clima']));
-                   $url = "http://api.mymemory.translated.net/get?q=$text&langpair=en|es";
-
-                   $options = array(
-                   "http"=>array(
-                          "header"=>"User-Agent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10\r\n" // i.e. An iPad
-                   )
-                   );
-
-                   $context = stream_context_create($options);
-                   $json = file_get_contents($url, false, $context);
-                   $obj = json_decode($json);
-                   $clima= $obj->responseData->translatedText;
-
+                $textt =trim($obj1->weather[0]->description);
+                $clima=urlencode($textt);
 
                // $urlT=htmlspecialchars_decode("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es");
           
