@@ -229,7 +229,7 @@ class GpsController extends Controller
                 $temp=$obj1->main->temp;
 
                 $temperatura=$temp -273.15;
-                $textt =trim($obj1->weather[0]->description);
+                $textt =trim($obj1->weather[0]->main);
                 $text=urlencode($textt);
 
 
