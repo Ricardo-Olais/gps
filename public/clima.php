@@ -2,7 +2,7 @@
        
        $text=trim(urlencode($_REQUEST['clima']));
 
-       $texto=preg_replace('([^A-Za-z0-9])', '', $texto);
+       $text=preg_replace('([^A-Za-z0-9])', '', $text);
 
         $url="http://api.mymemory.translated.net/get?q=$text&langpair=en|es";
         $json = file_get_contents($url);
