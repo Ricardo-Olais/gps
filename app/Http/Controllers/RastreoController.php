@@ -112,6 +112,21 @@ class RastreoController extends Controller
                 }
 
 
+                $json1 = file_get_contents("http://api.openweathermap.org/data/2.5/weather?lat=$latitud&lon=$longitud&appid=b6e4d569d1718b07a44702443dd0ed77");
+                $obj1 = json_decode($json1);
+                $temp=$obj1->main->temp;
+
+                $temperatura=$temp -273.15;
+                $textt =$obj1->weather[0]->description;
+                $json = file_get_contents('http://api.mymemory.translated.net/get?q='.urlencode($textt).'&langpair=en|es'); 
+                        
+                $obj = json_decode($json);
+
+                $clima= $obj->responseData->translatedText;
+                         $tempe=$temperatura." °C";
+
+
+
               $fields=array(
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
@@ -126,7 +141,9 @@ class RastreoController extends Controller
                         "latitud_geocerca"=>$latitud_geocerca,
                         "longitud_geocerca"=>$longitud_geocerca,
                         "geocerca"=>$geocerca,
-                        "velocidad"=>$velocidad
+                        "velocidad"=>$velocidad,
+                        "clima"=>$clima,
+                        "temperatura"=>$tempe
 
                    );
 

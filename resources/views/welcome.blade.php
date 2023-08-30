@@ -78,12 +78,20 @@ function autoplay() {
   <div class="col s12 m2 l12" style="background-color: #fff;">
    
             <center><!--:#00bcd4-->
-            <span style="color:#000;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span>
+            <!--span style="color:#000;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span-->
               <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
-              <div id="iniciogps" style="margin-top:-45px;">
+
+             
+
+              <!--div id="iniciogps" style="margin-top:-45px;">
                   <a href="dispositivos" class="waves-effect waves-light btn" style="border-radius: 7px;">Totalmente Gratis</a>
-              </div>
+              </div-->
+
+
+
+
+
             </center>
       
   </div>

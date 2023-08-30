@@ -309,19 +309,14 @@
         
       </div>
 
+      
 
         <div class="card  darken-1" style="height:auto;">
-        <div class="card-content white-text">
+        <div class="card-content black-text">
 
+      <h6><b>Mis dispositivos</b></h6>
        <table style="text-align: center;">
-        <thead style="background-color:black;color: #fff;">
-          <tr>
-              <th>Alias</th>
-              <th>Estatus</th>
-              <th></th>
-              <th></th>
-          </tr>
-        </thead>
+       
 
         <tbody id="misdisvonline">
       

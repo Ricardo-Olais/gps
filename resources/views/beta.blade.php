@@ -411,6 +411,9 @@ display: flex;
             <div id="cargando" style="display:none;">
                 <img src="img/world.svg" style="position: absolute;z-index: 2000;" width="200">
             </div>
+
+
+            <img src="img/tormenta1.png" style="position: relative;z-index: 1000;float:right;" width="100">
                 <!--mapa -->
                 <div id="cont" style="width:100%;height:100%;">
 
@@ -451,7 +454,7 @@ display: flex;
    
     <div class="modal-footer" style="width:350px;">
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-      <a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a>
+      <a class="modal-close waves-effect waves-light btn" id="localizar" style="background-color:black;"><i class="material-icons">location_on</i>Localizar</a>
     </div>
   </div>
 </div>
