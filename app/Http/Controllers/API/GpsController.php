@@ -232,8 +232,14 @@ class GpsController extends Controller
                 $textt =trim($obj1->weather[0]->description);
                 $textt=urlencode($textt);
 
-                $urlT=htmlspecialchars_decode("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es");
+               // $urlT=htmlspecialchars_decode("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es");
+          
+                $urlT="http://api.mymemory.translated.net/get?q=$textt&langpair=en|es";
+                $urlT = str_replace('&amp;', '&', $urlT);
                 $json = file_get_contents($urlT); 
+
+
+
                // $json = file_get_contents('http://api.mymemory.translated.net/get?q='.urlencode($textt).'&langpair=en|es'); 
                         
                 $obj = json_decode($json);
