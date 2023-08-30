@@ -298,7 +298,7 @@ socket.on('ubicacion', function(msg) {
 
 
 
-       /* routingControl=L.Routing.control({
+        routingControl=L.Routing.control({
           waypoints: [
             L.latLng(browserLat, browserLong),
             L.latLng(msg.longitud, msg.latitud)
@@ -306,7 +306,7 @@ socket.on('ubicacion', function(msg) {
           lineOptions: {
               styles: [{color:'#00bcd4', opacity: 1, weight: 5}]
            }
-        }).addTo(map);*/
+        }).addTo(map);
 
 
 
