@@ -231,7 +231,9 @@ class GpsController extends Controller
                 $temperatura=$temp -273.15;
                 $textt =trim($obj1->weather[0]->description);
                 $textt=urlencode($textt);
-                $json = file_get_contents("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es"); 
+
+                $urlT=htmlspecialchars_decode("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es");
+                $json = file_get_contents($urlT); 
                // $json = file_get_contents('http://api.mymemory.translated.net/get?q='.urlencode($textt).'&langpair=en|es'); 
                         
                 $obj = json_decode($json);
