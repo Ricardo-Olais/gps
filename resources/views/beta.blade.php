@@ -213,18 +213,9 @@ socket.on('ubicacion', function(msg) {
                   iconAnchor: [35, 60]
                 });
 
-              console.log(msg.longitud_geocerca);
+             // console.log(msg.longitud_geocerca);
 
 
-            if(msg.clima=="Limpiar"){
-
-                msg.clima="Despejado";
-            }
-
-            if(msg.clima=="Nubes"){
-
-                msg.clima="Nublado";
-            }
 
             if(msg.pila<15){
 
