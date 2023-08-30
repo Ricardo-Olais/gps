@@ -222,6 +222,16 @@ socket.on('ubicacion', function(msg) {
 
              // console.log(msg.longitud_geocerca);
 
+              $.post("clima.php",{'clima':msg.clima},
+
+                function(data){
+
+                    msg.clima=data.clima;
+
+
+                },'json');
+
+
 
 
             if(msg.pila<15){
