@@ -222,25 +222,17 @@ socket.on('ubicacion', function(msg) {
 
              // console.log(msg.longitud_geocerca);
 
-              $.post("clima.php",{'clima':msg.clima},
-
-                function(data){
-
-                    msg.clima=data.clima;
-
-
-                },'json');
 
 
 
 
             if(msg.pila<15){
 
-               $("#miubicacion").html(msg.direccion+ ", temperatura: "+msg.temperatura+", clima: "+msg.clima+" , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+               $("#miubicacion").html(msg.direccion+ ", temperatura: "+msg.temperatura+" , <i class='material-icons' style='font-size:16px;color:red;'>battery_alert</i>"+msg.pila+ "%, último registro: "+msg.fecha);
 
               }else{
 
-                $("#miubicacion").html(msg.direccion+ ", temperatura: "+msg.temperatura+", clima: "+msg.clima+" , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, último registro: "+msg.fecha);
+                $("#miubicacion").html(msg.direccion+ ", temperatura: "+msg.temperatura+" , <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, último registro: "+msg.fecha);
 
              }
 
