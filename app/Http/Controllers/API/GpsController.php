@@ -234,9 +234,17 @@ class GpsController extends Controller
 
                // $urlT=htmlspecialchars_decode("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es");
           
-                $urlT="http://api.mymemory.translated.net/get?q=$textt&langpair=en|es";
-                $urlT = str_replace('&amp;', '&', $urlT);
-                $json = file_get_contents($urlT); 
+                $urlT = 'http://api.mymemory.translated.net/get';
+
+                // http_build_query builds the query from an array
+                $query_array = array (
+                    'q' =>$textt,
+                    'langpair' =>'en|es'
+                    
+                );
+
+                $query = http_build_query($query_array);
+                $json = file_get_contents($urlT . '?' . $query);
 
 
 
