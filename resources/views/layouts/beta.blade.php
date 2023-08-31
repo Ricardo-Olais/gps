@@ -303,6 +303,9 @@
 
           <span id="miubicacion" style="color:black !important;"></span>
 
+          <br>
+          <span id="estas"></span>
+
         </div>
 
          <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
