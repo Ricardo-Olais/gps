@@ -253,7 +253,7 @@ socket.on('ubicacion', function(msg) {
 
             var circleOptions = {
              color: '#F04653',
-             fillColor: '#fff',
+             fillColor: '#ff7800',
              fillOpacity: .1
           }
 
