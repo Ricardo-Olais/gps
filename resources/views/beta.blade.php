@@ -163,18 +163,20 @@ var lc = L.control
 
 
 
+    imei=$("#vehiculo").val();
+
     $("#cargando").css("display","");
 
         setTimeout(myGreeting, 3000);
 
-        var instancia = M.FormSelect.getInstance($("#vehiculo"));
+        /*var instancia = M.FormSelect.getInstance($("#vehiculo"));
         var valores = instancia.getSelectedValues();
 
                 for (var i = 0; i < valores.length; i++) {
                        
                             imei=valores[i];
 
-                    }
+                    }*/
 
 
         map.setZoom(16);
@@ -433,7 +435,7 @@ display: flex;
       <div class="col s12 m12">
            <!-- Current balance & total transactions cards-->
             <div class="row vertical-modern-dashboard">
-
+            <span translate="yes">Love</span>
                 <!--loadin de mapa-->
             <div id="cargando" style="display:none;">
                 <img src="img/world.svg" style="position: absolute;z-index: 2000;" width="170">
