@@ -252,7 +252,7 @@ socket.on('ubicacion', function(msg) {
            var circleCenter = [msg.latitud_geocerca, msg.longitud_geocerca];
 
             var circleOptions = {
-             color: '#00bcd4',
+             color: '#F04653',
              fillColor: '#fff',
              fillOpacity: .1
           }
