@@ -299,7 +299,7 @@
 
        <div class="card  darken-1" style="height:auto;font-size: 14px;">
         <div class="card-content white-text">
-          <h6>Ubicación del dispositivo</h6>
+          <h6><b>Ubicación del dispositivo</b> <i class="material-icons">mingcute:navigation-line</i></h6>
 
           <span id="miubicacion" style="color:black !important;"></span>
 
