@@ -297,14 +297,14 @@
     </li>
 
 
-       <div class="card  darken-1" style="height:auto;">
+       <div class="card  darken-1" style="height:auto;font-size: 12px;text-align: justify;">
         <div class="card-content white-text">
           <h6>Ubicación del dispositivo</h6>
 
           <span id="miubicacion" style="color:black !important;"></span>
 
           <br>
-          <span id="estas"></span>
+          <span id="estas" style="color:black !important;"></span>
 
         </div>
 
