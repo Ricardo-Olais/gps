@@ -231,6 +231,7 @@ class GpsController extends Controller
                 $temperatura=$temp -273.15;
                 $textt =trim($obj1->weather[0]->description);
                 $clima=urlencode($textt);
+                $clima=preg_replace('([^A-Za-z0-9])', '', $clima);
 
                // $urlT=htmlspecialchars_decode("http://api.mymemory.translated.net/get?q=$textt&langpair=en|es");
           
