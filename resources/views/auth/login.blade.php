@@ -6,7 +6,7 @@
     
     body{
 
-        background-image: url('images/mapa2.png');
+        background-image: url('img/fondo1.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -120,7 +120,7 @@ var vid = document.getElementById("myVideo");
 
 
 
-    <div class="col s12 m2 l4 center-a" >
+    <div class="col s12 m2 l5 center-a" >
       <div class="card" style="border-radius: 10px;opacity:.9;">
         <div class="card-content">
           <center><span class="card-title"><b>Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
