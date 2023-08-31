@@ -56,6 +56,7 @@
       bottom:50px; /*Abajo deje un espacio de 0px*/
       height:50px; /*alto del div*/
       z-index:0;
+      opacity: .6 !important;
        }
 
      
@@ -153,7 +154,7 @@
 
 <header class="page-topbar" id="header">
   <div class="navbar navbar-fixed">
-    <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-shadow" style="background-color:black !important;">
+    <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-shadow" style="background-color:black !important;opacity: .9 !important;">
       <div class="nav-wrapper">
         </div-->
         <ul class="navbar-list right">
@@ -311,6 +312,8 @@
          <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
         
       </div>
+
+      
 
       
 

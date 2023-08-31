@@ -151,7 +151,7 @@
 
 <header class="page-topbar" id="header">
   <div class="navbar navbar-fixed">
-    <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-shadow" style="background-color:black !important;">
+    <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-shadow" style="background-color:black !important;opacity: .9 !important;">
       <div class="nav-wrapper">
         </div-->
         <ul class="navbar-list right">
@@ -438,7 +438,7 @@
               </div>
         </main>
 
-      <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow">
+      <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow" style="opacity: .9 !important;">
       <div class="footer-copyright">
         <div class="container">
 

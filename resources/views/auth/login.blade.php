@@ -6,7 +6,7 @@
     
     body{
 
-        background-image: url('img/fondo1.jpeg');
+        background-image: url('img/slider_cosoavl4.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         

@@ -428,7 +428,7 @@
               </div>
         </main>
 
-      <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow">
+      <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-white gradient-shadow navbar-border navbar-shadow" style="opacity: .9;">
       <div class="footer-copyright">
         <div class="container">
 
