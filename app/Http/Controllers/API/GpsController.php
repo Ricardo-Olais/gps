@@ -224,7 +224,7 @@ class GpsController extends Controller
 
 
 
-                $json1 = file_get_contents("http://api.openweathermap.org/data/2.5/weather?lat=$latitud&lon=$longitud&appid=b6e4d569d1718b07a44702443dd0ed77");
+                $json1 = file_get_contents("http://api.openweathermap.org/data/2.5/weather?lat=$latitud&lon=$longitud&appid=b6e4d569d1718b07a44702443dd0ed77&lang=es");
                 $obj1 = json_decode($json1);
                 $temp=$obj1->main->temp;
 
