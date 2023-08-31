@@ -6,7 +6,9 @@
     
     body{
 
-        background-image: url('images/mapar.jpg');
+       background-image: url('img/slider_cosoavl4.jpg');
+       background-repeat: no-repeat;
+        background-size: cover;
     }
 </style>
 
@@ -31,8 +33,8 @@
    <div class="col s7"></div>
 
 
-    <div class="col s12 m2 l4 center-a">
-      <div class="card" style="border-radius: 10px;">
+    <div class="col s12 m2 l5 center-a">
+      <div class="card" style="border-radius: 10px;opacity: .9;">
         <div class="card-content">
             <center><h2 class="card-title mb-0"><b>Registro a Gps Tracker</b></h2></center>
 
