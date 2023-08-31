@@ -314,7 +314,7 @@
 
       
 
-        <div class="card  darken-1" style="height:auto;">
+      <div class="card  darken-1" style="height:300px;overflow-y: scroll;">
         <div class="card-content black-text">
 
       <h6><b>Mis dispositivos</b></h6>
