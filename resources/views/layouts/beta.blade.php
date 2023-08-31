@@ -297,7 +297,7 @@
     </li>
 
 
-       <div class="card  darken-1" style="height:auto;font-size: 12px;text-align: justify;">
+       <div class="card  darken-1" style="height:auto;font-size: 14px;">
         <div class="card-content white-text">
           <h6>Ubicación del dispositivo</h6>
 
