@@ -55,8 +55,8 @@
       right:0px; /*A la izquierda deje un espacio de 0px*/
       bottom:50px; /*Abajo deje un espacio de 0px*/
       height:50px; /*alto del div*/
-      z-index:0;
-      opacity: .6 !important;
+      z-index:100;
+     
        }
 
      
@@ -449,7 +449,7 @@
             @yield('content')
 
 
-             
+
 
 
         </main>
@@ -467,7 +467,7 @@
       width: 100%;
       height:45px !important;
       color: white;
-      z-index: 2000;
+      //z-index: 2000;
     }
     </style>
 

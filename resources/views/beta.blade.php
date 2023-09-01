@@ -225,7 +225,8 @@ socket.on('ubicacion', function(msg) {
              // console.log(msg.longitud_geocerca);
 
 
-
+            $("#tem").html(msg.temperatura);
+            $("#cli").html(msg.clima);
 
 
             if(msg.pila<15){
@@ -435,11 +436,13 @@ display: flex;
       <div class="col s12 m12">
            <!-- Current balance & total transactions cards-->
             <div class="row vertical-modern-dashboard">
-            <span translate="yes">Love</span>
+          
                 <!--loadin de mapa-->
             <div id="cargando" style="display:none;">
                 <img src="img/world.svg" style="position: absolute;z-index: 2000;" width="170">
             </div>
+
+            
 
 
             <!--img src="img/tormenta1.png" style="position: relative;z-index: 1000;float:right;" width="100"-->
@@ -448,13 +451,49 @@ display: flex;
 
                     <?php if(!isMobile2()) { ?>
 
-                         <div id="map" style="width:79%;"></div>
+                      <div id="map" style="width:79%;"></div>
+                      <div class="row" style="position: absolute;bottom: 25px;right:30px; height: 40px;z-index: 1500; width:79%;">
+                      <div class="col s3">
+                          
+                    <a class="waves-effect waves-light btn" style="background-color:black;"><i class="material-icons">wb_incandescent</i> Temperatura : <span id="tem"></span></a>
+                      </div>
+                      <div class="col s3">
+                          <a class="waves-effect waves-light btn" style="background-color:black;"><i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span></a>
+                      </div>
+                      <div class="col s3">
+                          <a class="waves-effect waves-light btn" style="background-color:black;"><i class="material-icons">network_check</i> 50 Km/hra.</a>
+                      </div>
+                      
+
+                </div>
+
+
                     <?php } else { ?>
 
                          <div id="map" style="width:100%;"></div>
+
+                         <div class="row" style="position: absolute;bottom:25px;right:30px; height: 40px;z-index: 1500; width:100%;background-color: red;">
+                     <div class="col s3">
+                          
+                          <a class="waves-effect waves-light btn"><iconify-icon icon="emojione:thermometer" style="font-size: 24px;"></iconify-icon>40 °C</a>
+                      </div>
+                      <div class="col s3">
+                          <a class="waves-effect waves-light btn">Tormenta</a>
+                      </div>
+                      <div class="col s3">
+                          <a class="waves-effect waves-light btn">50 Km/hra.</a>
+                      </div>
+
+                      </div>
                     <?php } ?>
-                 
-                </div>
+               
+
+
+              
+
+              
+
+
               
               <!--div class="col s12 m1"></div-->
 
