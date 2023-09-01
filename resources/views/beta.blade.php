@@ -552,6 +552,7 @@ display: flex;
 
 
 <div id="main">
+     <input type="hidden" name="dir" id="dir">
   <div class="container">
     <div class="row">
       <div class="col s12 m12">
