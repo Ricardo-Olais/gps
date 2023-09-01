@@ -322,7 +322,12 @@
 
            <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
            <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
-           <i class="material-icons">network_check</i> <span id="vel"></span>
+           <i class="material-icons">network_check</i> <span id="vel"></span><br>
+           <i class="material-icons"  id="enmov">fiber_manual_record</i> <span id="mov"></span>
+
+           
+
+
 
       <!--h6><b>Mis dispositivos</b></h6>
        <table style="text-align: center;">
