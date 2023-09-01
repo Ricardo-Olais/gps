@@ -242,7 +242,19 @@ socket.on('ubicacion', function(msg) {
              }
 
             velocidad=Number(msg.velocidad);
-            $("#vel").html(velocidad);
+
+            if(velocidad>5){
+
+                $("#vel").html(velocidad+ " Km/hra.");
+                $("#enmov").css("color","#8EF046");
+                $("#mov").html("En movimiento");
+            }else{
+
+                $("#vel").html("0 Km/hra.");
+                $("#enmov").css("color","red");
+                $("#mov").html("Detenido");
+            }
+            
 
 
 
