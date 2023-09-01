@@ -91,6 +91,9 @@ $.post("vehiculosasignados",{_token:token},
  },'json');
 
 
+//$("#lo").trigger("click");
+
+
     
 //fin de controles
   var socket = io('https://localizaminave.com:3000'); //187.245.4.2
