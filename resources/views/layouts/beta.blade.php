@@ -344,7 +344,7 @@
                     <thead>
                       <tr>
                           
-                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: red;">do_not_disturb_on</i></th>
+                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: black;">do_not_disturb_on</i></th>
                           <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
                           <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
                       </tr>
