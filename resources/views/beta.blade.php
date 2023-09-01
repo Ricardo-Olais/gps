@@ -327,6 +327,23 @@ socket.on('ubicacion', function(msg) {
 
              // console.log(msg.longitud_geocerca);
 
+               if(msg.fija==1){
+
+                     $("#fijaubi").prop( "checked", true );
+
+                  }else{
+
+                    $("#fijaubi").prop( "checked", false);
+                  }
+
+                  if(msg.activaGeocerca==1){
+
+                      $("#activageocerca").prop( "checked", true );
+                  }else{
+
+                     $("#activageocerca").prop( "checked", false );
+                  }
+
 
             $("#tem").html(msg.temperatura);
             $("#cli").html(msg.clima);
