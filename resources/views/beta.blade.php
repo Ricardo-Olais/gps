@@ -179,7 +179,7 @@ $.post("vehiculosasignados",{_token:token},
 
              var auxDir=$("#dir").val();
 
-             alert(auxDir);
+            // alert(auxDir);
 
             if($(this).prop('checked') ) {
           
