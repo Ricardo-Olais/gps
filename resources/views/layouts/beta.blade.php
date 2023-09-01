@@ -321,8 +321,8 @@
         <div class="card-content black-text">
 
            <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
-                        <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
-                        <i class="material-icons">network_check</i> 50 Km/hra.
+           <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
+           <i class="material-icons">network_check</i> <span id="vel"></span>
 
       <!--h6><b>Mis dispositivos</b></h6>
        <table style="text-align: center;">
