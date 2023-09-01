@@ -328,6 +328,7 @@ socket.on('ubicacion', function(msg) {
 
             $("#tem").html(msg.temperatura);
             $("#cli").html(msg.clima);
+            $("#dir").val(msg.direccion);
 
 
             if(msg.pila<15){
