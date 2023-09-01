@@ -179,6 +179,8 @@ $.post("vehiculosasignados",{_token:token},
 
              var auxDir=$("#dir").val();
 
+             alert(auxDir);
+
             if($(this).prop('checked') ) {
           
                 $.post("activageocerca",{numero:imei,_token:token,estatus:1,direcciongeocerca: auxDir},
