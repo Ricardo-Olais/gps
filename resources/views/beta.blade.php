@@ -65,6 +65,11 @@
 
 $(document).ready(function(){
 
+
+
+
+
+
 //consultamos los vehiculos
 $.post("vehiculosasignados",{_token:token},
             function(data){
@@ -100,7 +105,103 @@ $.post("vehiculosasignados",{_token:token},
   var circle;
   var browserLat;
   var browserLong;
+  var valorgeo=0;
 
+
+
+  $("#menos").click(function(){
+
+    valorgeo=Number(valorgeo)-100;
+
+    $("#geo").html(valorgeo+ " mtros.");
+
+    //actualizamos la geocerca establecidad en relación al imei
+    $.post("actualizageocerca",{_token:token,imei:imei, geocerca: valorgeo},
+      function(data){
+
+          $.post("inicializasocket",{_token:token,imei:imei});
+      },'json');
+
+
+  });
+
+   $("#mas").click(function(){
+
+    valorgeo=Number(valorgeo)+100;
+
+   // console.log(geo);
+
+   $("#geo").html(valorgeo+ " mtros.");
+
+   $.post("actualizageocerca",{_token:token,imei:imei, geocerca: valorgeo},
+      function(data){
+
+          $.post("inicializasocket",{_token:token,imei:imei});
+      },'json');
+
+
+
+  });
+
+
+   //fijar ubicación
+         $("#fijaubi").click(function(){
+
+          var auxDir=$("#dir").val();
+
+         
+
+            if($(this).prop('checked') ) {
+          
+                $.post("guardafijo",{numero:imei,_token:token,estatus:1, direccionfija: auxDir},
+                   function(data){
+                       $("#fijaubi").prop( "checked", true );
+                       $.post("inicializasocket",{_token:token,imei:imei});
+                  },'json');
+
+
+               
+             }else{
+              $.post("guardafijo",{numero:imei,_token:token,estatus:0},
+                   function(data){
+                      $("#fijaubi").prop( "checked", false );
+                      $.post("inicializasocket",{_token:token,imei:imei});
+                  },'json');
+              
+
+             //  $("#resplandorverde").css("display","none");
+             }
+
+        });
+
+ //activar geocerca 
+        $("#activageocerca").click(function(){
+
+             var auxDir=$("#dir").val();
+
+            if($(this).prop('checked') ) {
+          
+                $.post("activageocerca",{numero:imei,_token:token,estatus:1,direcciongeocerca: auxDir},
+                   function(data){
+
+                       $("#activageocerca").prop( "checked", true );
+                        $.post("inicializasocket",{_token:token,imei:imei});
+                  },'json');
+
+
+               
+             }else{
+              $.post("activageocerca",{numero:imei,_token:token,estatus:0},
+                   function(data){
+                      $("#activageocerca").prop( "checked", false );
+                      $.post("inicializasocket",{_token:token,imei:imei});
+                  },'json');
+              
+
+              //$("#resplandorrojo").css("display","none");
+             }
+
+        });
  
 
 
