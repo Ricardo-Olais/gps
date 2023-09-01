@@ -452,17 +452,22 @@ display: flex;
                     <?php if(!isMobile2()) { ?>
 
                       <div id="map" style="width:79%;"></div>
-                      <div class="row" style="position: absolute;bottom: 25px;right:30px; height: 40px;z-index: 1500; width:79%;">
-                      <div class="col s3">
+                      <div class="row" style="position: absolute;bottom: 25px;right:30px; height: 40px;z-index: 1500; width:75%;">
+                      
+                        <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span>
+                        <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span>
+                        <i class="material-icons">network_check</i> 50 Km/hra.
+
+                      <!--div class="col s4">
                           
-                    <a class="waves-effect waves-light btn" style="background-color:black;"><i class="material-icons">wb_incandescent</i> Temperatura : <span id="tem"></span></a>
+                    <a class="waves-effect waves-light btn-large" style="background-color:black;width: 100%;"><i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span></a>
+                      </div>
+                      <div class="col s4">
+                          <a class="waves-effect waves-light btn-large" style="background-color:black;width: 100%;"><i class="material-icons">cloud_queue</i> Clima : wdwdwddwdwdwdwdwd<span id="cli"></span></a>
                       </div>
                       <div class="col s3">
-                          <a class="waves-effect waves-light btn" style="background-color:black;"><i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span></a>
-                      </div>
-                      <div class="col s3">
-                          <a class="waves-effect waves-light btn" style="background-color:black;"><i class="material-icons">network_check</i> 50 Km/hra.</a>
-                      </div>
+                          <a class="waves-effect waves-light btn-large" style="background-color:black;width: 100%;"><i class="material-icons">network_check</i> 50 Km/hra.</a>
+                      </div-->
                       
 
                 </div>
