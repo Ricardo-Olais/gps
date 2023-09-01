@@ -174,7 +174,7 @@
 
         @else
 
-
+          
 
           <li>
             <a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown">
@@ -320,14 +320,18 @@
       <div class="card  darken-1" style="height:300px;overflow-y: scroll;">
         <div class="card-content black-text">
 
-      <h6><b>Mis dispositivos</b></h6>
+           <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
+                        <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
+                        <i class="material-icons">network_check</i> 50 Km/hra.
+
+      <!--h6><b>Mis dispositivos</b></h6>
        <table style="text-align: center;">
        
 
         <tbody id="misdisvonline">
       
         </tbody>
-      </table>
+      </table-->
 
     </div></div>
 
