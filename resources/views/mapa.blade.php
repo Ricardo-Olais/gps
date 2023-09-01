@@ -438,6 +438,8 @@
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
                        <span class="lever"></span> On </label>
                    </div>
+
+                   
                    <hr style="margin-top:15px;">
                    <h4 class="card-title mb-0"><b>Geocerca</b></h4>
                    <!-- Switch -->

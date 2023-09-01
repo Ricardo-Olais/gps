@@ -317,36 +317,49 @@
 
       
 
-      <div class="card  darken-1" style="height:150px;">
+      <div class="card  darken-1" style="height:45%;">
         <div class="card-content black-text">
 
            <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
            <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
            <i class="material-icons">network_check</i> <span id="vel"></span><br>
-           <i class="material-icons"  id="enmov">fiber_manual_record</i> <span id="mov"></span>
+           <i class="material-icons"  id="enmov">fiber_manual_record</i> <span id="mov"></span><br>
 
-           
+           <h4 class="card-title mb-0 " >Parking</h4>
+                   <!-- Switch -->
+                   <div class="switch">
+                     <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
+                       <span class="lever"></span> On </label>
+                   </div>
+
+                    <hr style="margin-top:15px;">
+                   <h4 class="card-title mb-0"><b>Geocerca</b></h4>
+                   <!-- Switch -->
+                   <div class="switch">
+                     <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
+                       <span class="lever"></span> On </label>
+                     <!--span id="geocercaactual" class="lever"></span--><br>
+                    <center>
+                     <table>
+                    <thead>
+                      <tr>
+                          
+                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: red;">do_not_disturb_on</i></th>
+                          <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
+                          <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
+                      </tr>
+                    </thead>
+                   </table>
+                   </center>
 
 
 
-      <!--h6><b>Mis dispositivos</b></h6>
-       <table style="text-align: center;">
-       
+                   </div>
 
-        <tbody id="misdisvonline">
-      
-        </tbody>
-      </table-->
+          
 
-    </div></div>
+      </div></div>
 
-
-      <!--div class="row" style="text-align:center;">
-      <div class="col s3"><a class="btn-floating green" style="font-size: 12px !important;"></a></div>
-      <div class="col s3"><a class="btn-floating green"></a></div>
-      <div class="col s3"><a class="btn-floating green"></a></div>
-   
-    </div-->
 
    
 
