@@ -317,7 +317,7 @@
 
       
 
-      <div class="card  darken-1" style="height:300px;overflow-y: scroll;">
+      <div class="card  darken-1" style="height:150px;">
         <div class="card-content black-text">
 
            <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
