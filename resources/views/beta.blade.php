@@ -241,6 +241,9 @@ socket.on('ubicacion', function(msg) {
                  /*$("#miubicacion").html(msg.direccion+ ", temperatura: "+msg.temperatura+" , clima: "+msg.clima+" <i class='material-icons' style='font-size:16px;color:#37E209;'>battery_std</i>"+msg.pila+ "%, último registro: "+msg.fecha);*/
              }
 
+            velocidad=Number(msg.velocidad);
+            $("#vel").html(velocidad);
+
 
 
           //geocerca  obtener la latitud y longitud de geocerca y pintarlas
