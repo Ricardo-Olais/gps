@@ -91,6 +91,8 @@ $.post("vehiculosasignados",{_token:token},
  },'json');
 
 
+$('#lo')[0].click();
+
 //$("#lo").trigger("click");
 
 
