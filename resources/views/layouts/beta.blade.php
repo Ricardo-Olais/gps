@@ -298,7 +298,7 @@
     </li>
 
 
-       <div class="card  darken-1" style="height:auto;font-size: 14px;">
+       <div class="card  darken-1" style="height:auto;font-size: 12px;">
         <div class="card-content white-text">
           <h6><b>Ubicación actual</b></h6>
 
@@ -402,11 +402,11 @@
     <!--img src="img/tracking-o.gif" width="120" style="margin-top:50px;"-->
   </center>
 
-   <div id="inferior">
+   <!--div id="inferior">
     <center>
 
      <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker &#174;</a> All rights reserved.</span></center>
-  </div>
+  </div-->
 
 
     
