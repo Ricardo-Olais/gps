@@ -116,6 +116,7 @@ $('#lo')[0].click();
   var browserLat;
   var browserLong;
   var valorgeo=0;
+  var movimiento="";
 
 
 
@@ -379,12 +380,14 @@ socket.on('ubicacion', function(msg) {
                 $("#vel").html(velocidad+ " Km/hra.");
                 $("#enmov").css("color","#8EF046");
                 $("#mov").html("En movimiento");
+                movimiento="En movimiento";
             }else{
 
                 velocidad=0;
                 $("#vel").html("0 Km/hra.");
                 $("#enmov").css("color","red");
                 $("#mov").html("Detenido");
+                movimiento="Detenido";
             }
             
 
@@ -527,7 +530,7 @@ socket.on('ubicacion', function(msg) {
         //{className: "custom-popup"}
     const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+" <br>"+velocidad+" km/hra. <center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .setContent("<b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento+" <center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
 
