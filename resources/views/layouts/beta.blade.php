@@ -298,7 +298,7 @@
     </li>
 
 
-       <div class="card  darken-1" style="height:auto;font-size: 12px;">
+       <div class="card  darken-1" style="height:auto;font-size: 14px;">
         <div class="card-content white-text">
           <h6><b>Ubicación actual</b></h6>
 
