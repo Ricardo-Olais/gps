@@ -56,29 +56,11 @@
         display: none !important;
     }
 
-    .custom-popup, .leaflet-popup-content-wrapper {
-    background:#2c3e50;
-    color:#fff;
-    font-size:12px;
-    line-height:10px;
-    border-radius: 10px;
-    }
-
-.custom-popup, .leaflet-popup-content-wrapper a {
-    color:rgba(255,255,255,0.1);
-    }
-
-.custom-popup, .leaflet-popup-tip-container {
-    width:30px;
-    height:15px;
-    }
-
-.custom-popup, .leaflet-popup-tip {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    }
-
+  .custom .leaflet-popup-tip,
+  .custom .leaflet-popup-content-wrapper {
+    background: #e93434;
+    color: #ffffff;
+   }
 
 
 </style>
