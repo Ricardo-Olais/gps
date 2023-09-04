@@ -58,10 +58,14 @@
 
   .custom .leaflet-popup-tip,
   .custom .leaflet-popup-content-wrapper {
-    background: #e93434;
-    color: #ffffff;
+    background: #fff;
+    color: #000;
+    padding: 1px;
+    text-align: center;
+    border-radius: 80px;
    }
 
+  
 
 </style>
 
