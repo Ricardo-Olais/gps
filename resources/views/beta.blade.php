@@ -524,7 +524,7 @@ socket.on('ubicacion', function(msg) {
         }
 
         //{className: "custom-popup"}
-    const popup = L.popup()
+    const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
     .setContent(msg.alias+ "<center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
