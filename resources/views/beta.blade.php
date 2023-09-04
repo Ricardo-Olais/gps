@@ -530,7 +530,7 @@ socket.on('ubicacion', function(msg) {
         //{className: "custom-popup"}
     const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent("<b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento)
+    .setContent("<center><b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento+"</center>")
     .openOn(map);
 
 
