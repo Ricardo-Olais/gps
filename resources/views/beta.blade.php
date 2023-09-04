@@ -58,11 +58,7 @@
 
   .custom .leaflet-popup-tip,
   .custom .leaflet-popup-content-wrapper {
-    background: #fff;
-    color: #000;
-    padding: 1px;
-    text-align: center;
-    border-radius: 80px;
+      border-color:#00bcd4;
    }
 
   
@@ -385,6 +381,7 @@ socket.on('ubicacion', function(msg) {
                 $("#mov").html("En movimiento");
             }else{
 
+                velocidad=0;
                 $("#vel").html("0 Km/hra.");
                 $("#enmov").css("color","red");
                 $("#mov").html("Detenido");
@@ -528,9 +525,9 @@ socket.on('ubicacion', function(msg) {
         }
 
         //{className: "custom-popup"}
-    const popup = L.popup()
+    const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent(msg.alias+ "<center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
+    .setContent(msg.alias+" "+velocidad+" km/hra. <center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
     .openOn(map);
 
 
