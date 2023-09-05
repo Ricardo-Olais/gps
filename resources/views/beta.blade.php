@@ -525,8 +525,6 @@ socket.on('ubicacion', function(msg) {
 
               var isInside = d < circle.getRadius();
 
-             
-
               if(isInside==false && msg.latitud_geocerca!=""){
 
                 //alert("fuera de geocerca");
