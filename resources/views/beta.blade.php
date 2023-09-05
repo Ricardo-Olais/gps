@@ -58,11 +58,23 @@
 
   .custom .leaflet-popup-tip,
   .custom .leaflet-popup-content-wrapper {
-      border-color:#00bcd4;
+      //border-color:#00bcd4;
+      //background-image: url("img/iconoo-removebg-preview.png");
    }
 
-  
 
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: #1d3821;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+   
+  
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+
+    color: #fff !important;
+}
 </style>
 
 <script type="text/javascript">
@@ -530,8 +542,14 @@ socket.on('ubicacion', function(msg) {
         //{className: "custom-popup"}
     const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent("<center><b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento+"</center>")
+    .setContent("<center><b style='font-size:16px;'>"+msg.alias+"</b></center>")
     .openOn(map);
+
+
+   /* const popup = L.popup({className: "custom"})
+    .setLatLng([msg.longitud, msg.latitud])
+    .setContent("<center><b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento+"</center>")
+    .openOn(map);*/
 
 
     /* const popup = L.popup({className: "custom"})
