@@ -658,7 +658,7 @@ display: flex;
     </div>
    </div>
   <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px">
+  <div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px">
     <div class="modal-content">
       <h6 id="title-modal">Dispositivo <i class="material-icons">directions_car</i></h6><br>
        <h6>Selecciona dispositivo</h6>
