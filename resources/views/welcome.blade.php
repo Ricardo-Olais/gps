@@ -98,13 +98,156 @@ function autoplay() {
 
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
-   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">Conoce en donde se encuentran tus seres queridos</h3></center>
+   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">LL301 Rastreador GPS</h3></center>
 </div>
+
+
+
+<div class="col s12 m2 l12 animate fadeRight">
+
+<p style="text-align: justify;">El LL301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
+
+<br><br>Con múltiples sistemas de posicionamiento y cobertura de señal interior y exterior, el dispositivo también admite alertas instantáneas de eventos atípicos como extracción del dispositivo, vibración, etc. 
+
+<br><br>También ofrecemos a los usuarios monitoreo remoto del objetivo a través de nuestra plataforma en la nube y aplicación móvil, que es adecuada para escenarios de aplicación como alquiler de vehículos, gestión de flotas, transporte logístico, etc.
+</p>
+</div>
+
+<div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
+   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">Características</h3></center>
+</div>
+
+<div class="col s12 m2 l6 animate fadeRight">
+
+<table>
+    
+    <tr>
+        <td><img src="img/c1.png"></td>
+        <td>
+           
+            <span style="font-size: 22px;">Posicionamiento GPS</span>
+            <p style="text-align: justify;">
+            Una sinergia de múltiples sistemas de posicionamiento garantiza que las ubicaciones se muestren con precisión en la plataforma en la nube.
+            </p> 
+        </td>
+    </tr>
+</table>
+
+
+<table>
+    
+    <tr>
+        <td><img src="img/c2.png"></td>
+        <td>
+            <span style="font-size: 22px;">Batería recargable de 10.000 mAh.</span>
+           <p style="text-align: justify;">
+            
+            La batería de alta capacidad admite aplicaciones de espera prolongada y se recarga fácilmente para volver a implementarla.
+            </p> 
+        </td>
+    </tr>
+</table>
+
+<table>
+    
+    <tr>
+        <td><img src="img/c3.png"></td>
+        <td>
+            <span style="font-size: 22px;">Múltiples alertas.</span>
+           <p style="text-align: justify;">
+            
+           
+           Alertas instantáneas de eventos atípicos como retiro de tapa, retiro de dispositivo, vibración anormal, batería baja, etc.
+            </p> 
+        </td>
+    </tr>
+</table>
+
+<table>
+    
+    <tr>
+        <td><img src="img/c4.png"></td>
+        <td>
+            <span style="font-size: 22px;">Base magnética fuerte.</span>
+           <p style="text-align: justify;">
+            
+           
+           
+            Instalación casi nula; el LL301 se fija firmemente y sin esfuerzo a la mayoría de las superficies metálicas.
+            </p> 
+        </td>
+    </tr>
+</table>
+
+
+
+</div>
+
+
+<div class="col s12 m2 l6 animate fadeRight">
+
+        <table>
+    
+    <tr>
+        <td><img src="img/c5.png"></td>
+        <td>
+            <span style="font-size: 22px;">Red LTE y GSM.</span>
+           <p style="text-align: justify;">
+           
+             Comunicación a través de redes 4G LTE con respaldo 2G GSM.
+            </p> 
+        </td>
+    </tr>
+  </table>
+
+
+<table>
+    
+    <tr>
+        <td><img src="img/c6.png"></td>
+        <td>
+            <span style="font-size: 22px;">Escucha remota (VoLTE)</span>
+           <p style="text-align: justify;">
+           
+             
+             El micrófono discreto permite el monitoreo de audio remoto del entorno alrededor del dispositivo.
+            </p> 
+        </td>
+    </tr>
+  </table>
+
+
+  <table>
+    
+    <tr>
+        <td><img src="img/c7.png"></td>
+        <td>
+            <span style="font-size: 22px;">Múltiples modos de trabajo.</span>
+           <p style="text-align: justify;">
+           
+             
+             Modos de trabajo configurables según sus demandas reales.
+            </p> 
+        </td>
+    </tr>
+  </table>
+
+
+
+</div>
+
+
+
 
 
 
  <div class="col s12 m2 l12 animate fadeRight">
          <!-- Total Transaction -->
+
+
+
+
+
          <p style="text-align: justify;">
          <span style="color:#00bcd4;">Gps Tracker</span> de Localizaminave es una aplicación que permite instalarse en dispositivos android para obtener y monitorear la ubicación de personas, de tu auto. No se requiere comprar ningún localizador, solo instala en el dispositivo que desees localizar y rastrea desde la plataforma <a href="https://localizaminave.com/" style="color:#00bcd4;">https://localizaminave.com</a>
 
