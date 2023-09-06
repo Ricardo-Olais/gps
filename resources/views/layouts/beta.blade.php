@@ -614,7 +614,7 @@ function normalImg(x) {
     <i class="large material-icons">dashboard</i>
   </a>
   <ul>
-    <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="notificaciones"><i class="material-icons">notifications_active</i>Noticación</a></li>
+    <!--li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="notificaciones"><i class="material-icons">notifications_active</i>Noticación</a></li-->
     <li onmouseover="bigImg(this)" onmouseout="normalImg(this)" ><a class="btn-floating black modal-trigger tooltipped" href="#modal1" data-position="left" data-tooltip="Localizar" id="lo"><i class="material-icons">location_on</i>Rastrear</a></li>
     <li><a href="dispositivos" class="btn-floating green tooltipped" data-position="left" data-tooltip="Mis vehículos"><i class="material-icons">directions_car</i>Mis vehículos</a></li>
     <li><a href='index' class="btn-floating blue tooltipped" data-position="left" data-tooltip="Home"><i class="material-icons">home</i></a></li>
