@@ -371,7 +371,7 @@ socket.on('ubicacion', function(msg) {
             $("#tem").html(msg.temperatura);
             $("#cli").html(msg.clima);
             $("#dir").val(msg.direccion);
-            $("#bat").html(msg.pila);
+            $("#bat").html(msg.pila+" %");
             $("#reg").html(msg.fecha);
 
 
