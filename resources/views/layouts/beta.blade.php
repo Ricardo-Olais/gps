@@ -353,7 +353,7 @@
 
       <div class="card  darken-1" style="height:auto;">
         <div class="card-content black-text">
-           <i class="material-icons">gps_not_fixed</i> Último registro: <span id="reg"></span><br>
+           <i class="material-icons">update</i> <span id="reg"></span><br>
            <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
            <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
            <i class="material-icons">network_check</i> <span id="vel"></span><br>
