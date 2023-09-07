@@ -338,6 +338,8 @@
           <br>
           <span id="estas" style="color:black !important;"></span>
 
+          <i class="material-icons" style="color:black">share</i>
+
         </div>
 
          <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
@@ -359,7 +361,7 @@
            <i class="material-icons">network_check</i> <span id="vel"></span><br>
            <i class="material-icons">battery_std</i> <span id="bat"></span><br>
            <i class="material-icons"  id="enmov">fiber_manual_record</i> <span id="mov"></span><br>
-
+           <hr style="margin-top:15px;">
            <h4 class="card-title mb-0 " >Parking</h4>
                    <!-- Switch -->
                    <div class="switch">
