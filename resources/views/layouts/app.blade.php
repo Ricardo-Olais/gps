@@ -342,7 +342,7 @@
      <li class="bold">
       <a class="waves-effect waves-cyan " href="login">
         <i class="material-icons">vpn_key</i>
-        <span class="menu-title" data-i18n="User Profile">Login</span>
+        <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
     </li>
 
