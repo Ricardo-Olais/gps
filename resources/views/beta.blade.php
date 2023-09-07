@@ -476,7 +476,7 @@ socket.on('ubicacion', function(msg) {
 
         console.log(distancia);
 
-        $("#estas").html("<br><b>Estás a "+distancia.toFixed(2)+" Km del dispositivo</");
+        $("#estas").html("<br><b style='font-size:12px;'>Estás a "+distancia.toFixed(2)+" Km del dispositivo</b>");
 
 
         var greenIcon = new L.Icon({
