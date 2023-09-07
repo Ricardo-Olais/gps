@@ -73,6 +73,10 @@ function autoplay() {
 
         font-size: 18px;
        }
+       body{
+
+        background-color:#fff;
+       }
    </style>
 
   <div class="col s12 m2 l12" style="background-color: #fff;">
@@ -97,6 +101,7 @@ function autoplay() {
   </div>
 
 
+
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
    <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">LL301 Rastreador GPS</h3></center>
 </div>
@@ -119,13 +124,13 @@ function autoplay() {
 
 <div class="col s12 m2 l6 animate fadeRight">
 
-<table>
+<table class="striped">
     
     <tr>
         <td><img src="img/c1.png"></td>
         <td>
            
-            <span style="font-size: 22px;">Posicionamiento GPS</span>
+            <span style="font-size: 22px;color: #000;">Posicionamiento GPS</span>
             <p style="text-align: justify;">
             Una sinergia de múltiples sistemas de posicionamiento garantiza que las ubicaciones se muestren con precisión en la plataforma en la nube.
             </p> 
@@ -134,12 +139,12 @@ function autoplay() {
 </table>
 
 
-<table>
+<table class="striped">
     
     <tr>
         <td><img src="img/c2.png"></td>
         <td>
-            <span style="font-size: 22px;">Batería recargable de 10.000 mAh.</span>
+            <span style="font-size: 22px;color: #000;">Batería recargable de 10.000 mAh.</span>
            <p style="text-align: justify;">
             
             La batería de alta capacidad admite aplicaciones de espera prolongada y se recarga fácilmente para volver a implementarla.
@@ -148,12 +153,12 @@ function autoplay() {
     </tr>
 </table>
 
-<table>
+<table class="striped">
     
     <tr>
         <td><img src="img/c3.png"></td>
         <td>
-            <span style="font-size: 22px;">Múltiples alertas.</span>
+            <span style="font-size: 22px;color: #000;">Múltiples alertas.</span>
            <p style="text-align: justify;">
             
            
@@ -163,12 +168,52 @@ function autoplay() {
     </tr>
 </table>
 
-<table>
+
+
+
+
+</div>
+
+
+<div class="col s12 m2 l6 animate fadeRight">
+
+        <table class="striped">
+    
+    <tr>
+        <td><img src="img/c5.png"></td>
+        <td>
+            <span style="font-size: 22px;color: #000;">Red LTE y GSM.</span>
+           <p style="text-align: justify;">
+           
+             Comunicación a través de redes 4G LTE con respaldo 2G GSM.
+            </p> 
+        </td>
+    </tr>
+  </table>
+
+
+<table class="striped">
+    
+    <tr>
+        <td><img src="img/c6.png"></td>
+        <td>
+            <span style="font-size: 22px;color: #000;">Escucha remota (VoLTE)</span>
+           <p style="text-align: justify;">
+           
+             
+             El micrófono discreto permite el monitoreo de audio remoto del entorno alrededor del dispositivo.
+            </p> 
+        </td>
+    </tr>
+  </table>
+
+
+ <table class="striped">
     
     <tr>
         <td><img src="img/c4.png"></td>
         <td>
-            <span style="font-size: 22px;">Base magnética fuerte.</span>
+            <span style="font-size: 22px;color: #000;">Base magnética fuerte.</span>
            <p style="text-align: justify;">
             
            
@@ -181,56 +226,7 @@ function autoplay() {
 
 
 
-</div>
 
-
-<div class="col s12 m2 l6 animate fadeRight">
-
-        <table>
-    
-    <tr>
-        <td><img src="img/c5.png"></td>
-        <td>
-            <span style="font-size: 22px;">Red LTE y GSM.</span>
-           <p style="text-align: justify;">
-           
-             Comunicación a través de redes 4G LTE con respaldo 2G GSM.
-            </p> 
-        </td>
-    </tr>
-  </table>
-
-
-<table>
-    
-    <tr>
-        <td><img src="img/c6.png"></td>
-        <td>
-            <span style="font-size: 22px;">Escucha remota (VoLTE)</span>
-           <p style="text-align: justify;">
-           
-             
-             El micrófono discreto permite el monitoreo de audio remoto del entorno alrededor del dispositivo.
-            </p> 
-        </td>
-    </tr>
-  </table>
-
-
-  <table>
-    
-    <tr>
-        <td><img src="img/c7.png"></td>
-        <td>
-            <span style="font-size: 22px;">Múltiples modos de trabajo.</span>
-           <p style="text-align: justify;">
-           
-             
-             Modos de trabajo configurables según sus demandas reales.
-            </p> 
-        </td>
-    </tr>
-  </table>
 
 
 
@@ -241,8 +237,11 @@ function autoplay() {
 
 
 
- <div class="col s12 m2 l12 animate fadeRight">
-         <!-- Total Transaction -->
+
+
+
+ <!--div class="col s12 m2 l12 animate fadeRight">
+        
 
 
 
@@ -281,7 +280,7 @@ function autoplay() {
         
             
         
-      </div>
+      </div-->
 
 
 
@@ -294,6 +293,13 @@ function autoplay() {
         
          </div>
     </div>
+
+
+
+
+
+
+
 
 
       <div class="col s12 m2 l6 animate fadeRight">
@@ -400,8 +406,8 @@ function autoplay() {
 
 
 
-  <div class="col s12 m2 l12 animate fadeRight">
-         <!-- Total Transaction -->
+  <!--div class="col s12 m2 l12 animate fadeRight">
+      
          <div class="card" style="background-color: #000;padding: 1px;border-radius: 15px;cursor: pointer;">
 
 
@@ -413,7 +419,7 @@ function autoplay() {
          </div>
       </div>
 
-<div class="col s12 m2 l12 animate fadeRight">
+<!--div class="col s12 m2 l12 animate fadeRight">
       <center>
       <img src="img/gratis3.jpg" width="100%"></center>
 
@@ -424,7 +430,7 @@ function autoplay() {
                   buy-button-id="buy_btn_1My6UyA94PugK9gPoWX1R6XA"
                   publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa"
                 >
-  </stripe-buy-button></center>
+  </stripe-buy-button></center-->
        <!--div class="col s12 m2 l4 animate fadeRight">
        
          <div class="card">
