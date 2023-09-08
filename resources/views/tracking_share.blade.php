@@ -1,4 +1,4 @@
-@extends('layouts.beta')
+@extends('layouts.betashare')
 
 @section('content')
 
@@ -175,6 +175,8 @@ var lc = L.control
 
 
 $.post("inicializasocket",{_token:token,imei:imei});
+
+map.setZoom(16);
 
 
 socket.on('ubicacion', function(msg) {
