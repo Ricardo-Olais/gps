@@ -94,14 +94,6 @@
 $(document).ready(function(){
 
 
-Swal.fire({
-    icon: 'warning',
-    text: "Alerta de Geocerca",
-    toast: true,
-    position: 'top-right',
-    showConfirmButton: false,
-    timer: 500000
-});
 
 
 
