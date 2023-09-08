@@ -75,6 +75,17 @@
 
     color: #fff !important;
 }
+
+.swal2-container .select-wrapper{
+
+    display: none !important;
+}
+
+.swal2-popup.swal2-toast{
+
+    background-color: red !important;
+    color: #fff;
+}
 </style>
 
 <script type="text/javascript">
@@ -83,6 +94,14 @@
 $(document).ready(function(){
 
 
+Swal.fire({
+    icon: 'warning',
+    text: "Alerta de Geocerca",
+    toast: true,
+    position: 'top-right',
+    showConfirmButton: false,
+    timer: 500000
+});
 
 
 
@@ -534,6 +553,15 @@ socket.on('ubicacion', function(msg) {
               if(isInside==false && msg.latitud_geocerca!=""){
 
                 //alert("fuera de geocerca");
+                Swal.fire({
+                    icon: 'warning',
+                    text: "Alerta de Geocerca",
+                    toast: true,
+                    position: 'top-right',
+                    showConfirmButton: false,
+                    timer: 1800
+                });
+
                 $("#resplandorrojo").css("display","");
 
               }else{
