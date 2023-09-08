@@ -419,7 +419,7 @@ socket.on('ubicacion', function(msg) {
         //{className: "custom-popup"}
     const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent("<center><b style='font-size:11px;'>"+msg.alias+" está compartiendo su ubicación</b></center>")
+    .setContent("<center><b style='font-size:11px;'>"+msg.alias+" <br>está compartiendo<br>su ubicación</b></center>")
     .openOn(map);
 
 
