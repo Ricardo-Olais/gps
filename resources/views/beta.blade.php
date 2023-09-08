@@ -554,7 +554,7 @@ socket.on('ubicacion', function(msg) {
                     timer: 1800
                 });
 
-                $("#resplandorrojo").css("display","");
+               // $("#resplandorrojo").css("display","");
 
               }else{
 
