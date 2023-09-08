@@ -117,6 +117,9 @@ $(document).ready(function(){
   var movimiento="";
 
 
+  $("#cargando").css("display","");
+
+
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
  map = L.map('map',{condensedAttributionControl: false}).setView([19.45105, -99.125519], 5);
