@@ -502,7 +502,7 @@ socket.on('ubicacion', function(msg) {
 
 
         var greenIcon = new L.Icon({
-          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+          iconUrl: '',
           shadowUrl: 'https://localizaminave.com/img/iconper.png',
           iconSize: [25, 41],
           iconAnchor: [12, 41],
