@@ -551,7 +551,7 @@ socket.on('ubicacion', function(msg) {
                     toast: true,
                     position: 'top-right',
                     showConfirmButton: false,
-                    timer: 1800
+                    timer: 1500
                 });
 
                // $("#resplandorrojo").css("display","");
