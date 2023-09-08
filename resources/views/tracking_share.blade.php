@@ -88,44 +88,19 @@
 }
 </style>
 
+ <script type="text/javascript">
+
+
+      var imei="<?php echo $_REQUEST['imei'];?>";
+      
+  </script>
+
 <script type="text/javascript">
 
 
 $(document).ready(function(){
 
 
-
-
-
-
-//consultamos los vehiculos
-$.post("vehiculosasignados",{_token:token},
-            function(data){
-
-              // alert(data.rows.length);
-               for (var i = 0; i < data.rows.length; i++) {
-                  
-                //  alert(data.rows[i].id_imei_android);
-
-                  $("#misdisvonline").append("<tr style='color:#000;'><td><i class='material-icons' style='color:#33FF52;font-size: 12px;'>lens</i> "+data.rows[i].alias_vehiculo+"</td><td><i class='material-icons'>settings</i></td><td><i class='material-icons'>location_on</i></td></tr>")
-
-                  $("#vehiculo").append("<option value='"+data.rows[i].id_imei_android+"'>"+data.rows[i].alias_vehiculo+"</option>");
-                   $("#vehiculo").formSelect();
-
-
-
-               }
-
- },'json');
-
-
-$('#lo')[0].click();
-
-//$("#lo").trigger("click");
-
-
-    
-//fin de controles
   var socket = io('https://localizaminave.com:3000'); //187.245.4.2
 
 
@@ -133,7 +108,7 @@ $('#lo')[0].click();
   var theMarker = {};
   var marker_actual = {};
   var routingControl = null;
-  var imei=0;
+ // var imei=0;
   var messages = document.getElementById('messages');
   var circle;
   var browserLat;
@@ -141,104 +116,6 @@ $('#lo')[0].click();
   var valorgeo=0;
   var movimiento="";
 
-
-
-  $("#menos").click(function(){
-
-    valorgeo=Number(valorgeo)-100;
-
-    $("#geo").html(valorgeo+ " mtros.");
-
-    //actualizamos la geocerca establecidad en relación al imei
-    $.post("actualizageocerca",{_token:token,imei:imei, geocerca: valorgeo},
-      function(data){
-
-          $.post("inicializasocket",{_token:token,imei:imei});
-      },'json');
-
-
-  });
-
-   $("#mas").click(function(){
-
-    valorgeo=Number(valorgeo)+100;
-
-   // console.log(geo);
-
-   $("#geo").html(valorgeo+ " mtros.");
-
-   $.post("actualizageocerca",{_token:token,imei:imei, geocerca: valorgeo},
-      function(data){
-
-          $.post("inicializasocket",{_token:token,imei:imei});
-      },'json');
-
-
-
-  });
-
-
-   //fijar ubicación
-         $("#fijaubi").click(function(){
-
-          var auxDir=$("#dir").val();
-
-         
-
-            if($(this).prop('checked') ) {
-          
-                $.post("guardafijo",{numero:imei,_token:token,estatus:1, direccionfija: auxDir},
-                   function(data){
-                       $("#fijaubi").prop( "checked", true );
-                       $.post("inicializasocket",{_token:token,imei:imei});
-                  },'json');
-
-
-               
-             }else{
-              $.post("guardafijo",{numero:imei,_token:token,estatus:0},
-                   function(data){
-                      $("#fijaubi").prop( "checked", false );
-                      $.post("inicializasocket",{_token:token,imei:imei});
-                  },'json');
-              
-
-             //  $("#resplandorverde").css("display","none");
-             }
-
-        });
-
- //activar geocerca 
-        $("#activageocerca").click(function(){
-
-             var auxDir=$("#dir").val();
-
-            // alert(auxDir);
-
-            if($(this).prop('checked') ) {
-          
-                $.post("activageocerca",{numero:imei,_token:token,estatus:1,direcciongeocerca: auxDir},
-                   function(data){
-
-                       $("#activageocerca").prop( "checked", true );
-                        $.post("inicializasocket",{_token:token,imei:imei});
-                  },'json');
-
-
-               
-             }else{
-              $.post("activageocerca",{numero:imei,_token:token,estatus:0},
-                   function(data){
-                      $("#activageocerca").prop( "checked", false );
-                      $.post("inicializasocket",{_token:token,imei:imei});
-                  },'json');
-              
-
-              //$("#resplandorrojo").css("display","none");
-             }
-
-        });
- 
 
 
  // const map = L.map('map',{condensedAttributionControl: false}).setView([19.451054, -99.125519], 15);
@@ -296,48 +173,8 @@ var lc = L.control
   pegmanControl.addTo(map);
 
 
-  $("#localizar").click(function(){
 
-
-
-    imei=$("#vehiculo").val();
-
-    $("#cargando").css("display","");
-
-        setTimeout(myGreeting, 3000);
-
-        /*var instancia = M.FormSelect.getInstance($("#vehiculo"));
-        var valores = instancia.getSelectedValues();
-
-                for (var i = 0; i < valores.length; i++) {
-                       
-                            imei=valores[i];
-
-                    }*/
-
-
-        map.setZoom(16);
-
-        
-
-        
-
-
-        $.post("inicializasocket",{_token:token,imei:imei});
-
-
-
-
-  });
-
-
-  function myGreeting() {
-     $("#cargando").css("display","none");
-   }
-
-
-
-
+$.post("inicializasocket",{_token:token,imei:imei});
 
 
 socket.on('ubicacion', function(msg) {
@@ -351,11 +188,11 @@ socket.on('ubicacion', function(msg) {
 
           $("#comparte").click(function(){
 
-                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta https://localizaminave.com/tracking_share?imei='+imei;
+                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta https://localizaminave.com/compartiendo?imei='+imei;
 
             });
 
-
+          
 
             var customIcon = new L.Icon({
               iconUrl: 'https://localizaminave.com/img/'+msg.tipo,
@@ -580,17 +417,6 @@ socket.on('ubicacion', function(msg) {
     .setContent("<center><b style='font-size:16px;'>"+msg.alias+"</b></center>")
     .openOn(map);
 
-
-   /* const popup = L.popup({className: "custom"})
-    .setLatLng([msg.longitud, msg.latitud])
-    .setContent("<center><b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento+"</center>")
-    .openOn(map);*/
-
-
-    /* const popup = L.popup({className: "custom"})
-    .setLatLng([msg.longitud, msg.latitud])
-    .setContent("<b>"+msg.alias+"</b> <br>"+velocidad+" km/hra.<br>"+movimiento+" <center><img src='https://localizaminave.com/img/"+msg.tipo+"' style='width: 20px; height: 30px;'></center>")
-    .openOn(map);*/
 
 
 

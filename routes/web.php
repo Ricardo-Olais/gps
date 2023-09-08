@@ -39,9 +39,15 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+Route::get('/tracking_share', function () {
+    return view('tracking_share');
+});
+
 Route::get('/compartiendo', function () {
     return view('compartir');
 });
+
+
 
 
 Route::get('/terminos', function () {
