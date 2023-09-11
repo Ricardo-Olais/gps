@@ -269,7 +269,7 @@
         <img src="images/color.png" alt="materialize logo">
         <span class="logo-text hide-on-med-and-down">Gps Tracker</span>
       </a>
-      <a class="navbar-toggler" href="#">
+      <a class="navbar-toggler" href="#" style="display:none;">
         <i class="material-icons">radio_button_checked</i>
       </a>
     </h1>
