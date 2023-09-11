@@ -306,8 +306,10 @@ var lc = L.control
 
         setTimeout(myGreeting, 3000);
 
-        /*var instancia = M.FormSelect.getInstance($("#vehiculo"));
-        var valores = instancia.getSelectedValues();
+        var instancia = M.FormSelect.getInstance($("#vehiculo"));
+
+        console.log(instancia);
+       /* var valores = instancia.getSelectedValues();
 
                 for (var i = 0; i < valores.length; i++) {
                        

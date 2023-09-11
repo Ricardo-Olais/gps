@@ -4,7 +4,7 @@ require_once 'shared.php';
 
 $domain_url = $config['domain'];
 
-$dispositivo=$_SESSION["id"];
+//$dispositivo=$_SESSION["id"];
 
 // Create new Checkout Session for the order
 // Other optional params include:
@@ -17,10 +17,10 @@ $dispositivo=$_SESSION["id"];
 // ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
 $checkout_session = \Stripe\Checkout\Session::create([
 	'invoice_creation' => ['enabled' => true], //se agrega para la nota
-	'success_url' => $domain_url . '/pago?session_id={CHECKOUT_SESSION_ID}&id='.$dispositivo,
-	'cancel_url' => "https://localizaminave.com/planes?id=".$dispositivo,
+	'success_url' => $domain_url . '/pago?session_id={CHECKOUT_SESSION_ID}&id=1',
+	'cancel_url' => "https://localizaminave.com/planes?id=1",
 	'payment_method_types' => ['card'],
-	'mode' => 'subscription',
+	'mode' => 'payment', //subscription
 	'line_items' => [[
 	  'price' => $body->priceId,
 	  'quantity' => 1,
