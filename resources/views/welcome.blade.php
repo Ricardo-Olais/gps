@@ -4,49 +4,24 @@
 
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 
- <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+ 
 
-
-
-
+ <script src="https://js.stripe.com/v3/"></script>
+ <script src="js/script.js" defer></script>
 
 <script type="text/javascript">
-     document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
 
-  // Or with jQuery
+     $(document).ready(function(){
+    
+      $("#basic-plan-btn").click(function(){
 
-  $(document).ready(function(){
-    $('.carousel').carousel();
-    $('.fixed-action-btn').floatingActionButton();
+        $("#plan1").css("display","");
 
+       });
+     });
 
-     var instance = M.Carousel.init({
-    fullWidth: true
-  });
-
-  // Or with jQuery
-
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true
-  });
-
-  $('.carousel').carousel({
-    padding: 200    
-});
-autoplay();
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 7000);
-}
-
-
-
-
-  });
 </script>
+
 
 <div id="main" >
       <div class="row">
@@ -103,14 +78,14 @@ function autoplay() {
 
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
-   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">LL301 Rastreador GPS</h3></center>
+   <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">JR301 Rastreador GPS</h3></center>
 </div>
 
 
 
 <div class="col s12 m2 l12 animate fadeRight">
 
-<p style="text-align: justify;">El LL301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
+<p style="text-align: justify;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
 
 <br><br>Con múltiples sistemas de posicionamiento y cobertura de señal interior y exterior, el dispositivo también admite alertas instantáneas de eventos atípicos como extracción del dispositivo, vibración, etc. 
 
@@ -310,7 +285,7 @@ function autoplay() {
               
               
               <p style="text-align: justify;">
-               Es lógico que si desea adquirir un sistema GPS tracker lo que requiere conocer es la ubicación en tiempo real sobre los lugares a los que se desplazan sus dispositivos, esto puede lograrse al instalar el dispositivo GPS en cada una de las unidades que quiera monitorear y los datos de ubicación podrá conocerlos por medio de la plataforma.
+               Es lógico que si desea adquirir un sistema GPS tracker lo que requiere conocer es la ubicación en tiempo real sobre los lugares a los que se desplazan sus activos, esto puede lograrse al instalar el dispositivo GPS en cada una de las unidades que quiera monitorear y los datos de ubicación podrá conocerlos por medio de la plataforma.
               </p>
 
 
@@ -345,11 +320,11 @@ function autoplay() {
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
-               <center><h4 class="card-title mb-0"><b>Estado actual del vehículo</b></h4></center>
+               <center><h4 class="card-title mb-0"><b>Estado actual de activos</b></h4></center>
               
               
                <p style="text-align: justify;">
-                  Verifique el estatus de sus dispositivos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas, monitorea las métricas de velocidad y ubicación de tus dispositivos.
+                  Verifique el estatus de sus activos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas, monitorea las métricas de velocidad y ubicación en tiempo real.
                </p>
 
                 <img src="img/home/vehiculos.png" width="100%">
@@ -366,7 +341,7 @@ function autoplay() {
               
               
                <p style="text-align: justify;">
-                 Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real, compara nuestra plataforma, te proporcionamos una licencia gratuita por un mes, qué esperas comienza a localizar a tus seres queridos de una forma fácil y precisa.
+                 Comparte la ubicación de tus activos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real, compara nuestra plataforma, qué esperas comienza a localizar a tus seres queridos, flota,  de una forma fácil y precisa.
                </p>
 
             <center>
@@ -377,6 +352,93 @@ function autoplay() {
             </div>
          </div>
       </div>
+
+ <div class="col s12 m5 l12 animate fadeRight">
+      <div class="card">
+            <div class="card-content">
+               <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_fixed</i>Aquiere tu Gps Tracker</b></h4></center><br>
+              
+            
+
+      <ul class="collection with-header">
+       
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico</li>
+      </ul>
+
+               
+
+              <center><img src="img/LL301.png" width="20%"></center>
+
+
+
+             <a class="btn waves-effect waves-light" id="basic-plan-btn"  style="width:100%;background-color: black;">Comprar
+                <i class="material-icons right">send</i>
+                <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan1">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
+              </a>
+
+
+            </div>
+         </div>
+
+</div>
+
+
+
+
+
+
+      <!--script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1NpFi5A94PugK9gPtArTVENl"
+publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa">
+</stripe-pricing-table-->
 
 
 

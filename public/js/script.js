@@ -39,12 +39,12 @@ fetch("./config.php")
 
         
 
-       if(sesion==""){
+       /*if(sesion==""){
 
           location.href="login";
         }
 
-        else{
+        else{*/
         createCheckoutSession(basicPriceId).then(function(data) {
           // Call Stripe.js method to redirect to the new Checkout page
           stripe
@@ -54,7 +54,7 @@ fetch("./config.php")
             .then(handleResult);
         });
 
-       }
+       //}
 
 
       });
