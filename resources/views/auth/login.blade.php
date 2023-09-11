@@ -6,7 +6,7 @@
     
     body{
 
-        background-image: url('img/slider_cosoavl4.jpg');
+        background-image: url('img/prueba4.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -123,14 +123,14 @@ var vid = document.getElementById("myVideo");
     <div class="col s12 m2 l5 center-a" >
       <div class="card" style="border-radius: 10px;opacity:.9;">
         <div class="card-content">
-          <center><span class="card-title"><b>Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
+          <center><span class="card-title"><b style="color: #000;">Acceso a Gps Tracker <i class="material-icons right">location_on</i></b></span></center>
           
           <div class="card-body" style="margin-top:20px;">
                     <form method="POST" action="{{ route('login') }}" id="slogin2">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Correo electrónico</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Correo electrónico</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus style="font-size: 18px;">
@@ -146,7 +146,7 @@ var vid = document.getElementById("myVideo");
 
                     <div class='input-field col-md-12'>
                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" required autocomplete="current-password" style="font-size: 18px;">
-                     <label for="password" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Contraseña</label>
+                     <label for="password" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Contraseña</label>
                       <span toggle="#password" class="field-icon toggle-password"><span class="material-icons">visibility</span></span>
                      </div>
 

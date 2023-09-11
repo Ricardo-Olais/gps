@@ -6,7 +6,7 @@
     
     body{
 
-       background-image: url('img/slider_cosoavl4.jpg');
+       background-image: url('img/prueba4.jpg');
        background-repeat: no-repeat;
         background-size: cover;
     }
@@ -43,7 +43,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Nombre completo</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Nombre completo</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus style="font-size:18px;">
@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Correo Electrónico</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Correo Electrónico</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" style="font-size:18px;">
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Contraseña</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Contraseña</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" style="font-size:18px;">
@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="font-size:18px;">Confirmar Contraseña</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Confirmar Contraseña</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">

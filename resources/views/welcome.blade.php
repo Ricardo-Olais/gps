@@ -356,7 +356,10 @@
  <div class="col s12 m5 l12 animate fadeRight">
       <div class="card">
             <div class="card-content">
-               <center><h4 class="card-title mb-0"><b><i class="material-icons right">gps_fixed</i>Aquiere tu Gps Tracker</b></h4></center><br>
+               <center>
+
+                <h3 class="card-title mb-0"><i class="material-icons right">gps_fixed</i><b style="font-size:24px">Aquiere tu Gps Tracker</b></h3>
+            </center><br>
               
             
 
