@@ -49,7 +49,16 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+
+
   <style>
+
+     body{
+
+       background-image: url('img/prueba7.jpg');
+       background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     .leaflet-routing-container{
 
@@ -314,7 +323,7 @@ var lc = L.control
                 for (var i = 0; i < valores.length; i++) {
                        
                             imei=valores[i];
-
+3
                     }*/
 
 
@@ -623,6 +632,7 @@ socket.on('ubicacion', function(msg) {
  
   height: 87%;
  // z-index: -1000;
+ opacity: 1;
 }
 #cargando{
 display: flex;
