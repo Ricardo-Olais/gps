@@ -49,10 +49,10 @@
 <style type="text/css">
    body{
 
-       background-image: url('img/prueba11.jpg');
+     //  background-image: url('img/prueba11.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: #000;
+        background-color: #fff;
     }
 </style>
 
@@ -77,30 +77,30 @@
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
-                    <li class="collection-item">
+                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo
-                    </li>
-                    <li class="collection-item">
+                    </li-->
+                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia
-                    </li>
+                    </li-->
                     <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas
                     </li-->
                     <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija
                     </li-->
-                    <li class="collection-item">
+                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 mes)
+                    </li-->
+                    <!--li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo
+                    </li-->
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat
                     </li>
                     <li class="collection-item">
-                      <i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo
-                    </li>
-                    <!--li class="collection-item">
-                      <i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat
-                    </li-->
-                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico
-                    </li-->
+                    </li>
                   </ul>
                   <center>
                     <img src="img/LL301.png" width="20%">
@@ -157,13 +157,13 @@
               </div>
             </div>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9;background-color:#00bcd4;">
+              <div class="card" style="opacity:.9;background-color:#B4F6E2;">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
                       <i class="material-icons right">gps_fixed</i>
                       <b style="font-size:18px">Plan medio + plataforma Pro </b>
-                      <b style="color:#fff;">(Recomendado)</b>
+                      <b style="color:#000;font-size: 20px;">(Recomendado)</b>
                     </h6>
                   </center>
                   <br>
@@ -171,18 +171,18 @@
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
-                    <li class="collection-item">
+                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo
-                    </li>
-                    <li class="collection-item">
+                    </li-->
+                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia
-                    </li>
+                    </li-->
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas
                     </li>
-                    <li class="collection-item">
+                    <!--li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija
-                    </li>
+                    </li-->
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)
                     </li>
@@ -199,7 +199,7 @@
                   <center>
                     <img src="img/LL301.png" width="20%">
                   </center>
-                  <a class="btn waves-effect waves-light" id="basic-plan-btn-2" style="width:100%;background-color: black;">Comprar <i class="material-icons right">send</i>
+                  <a class="btn waves-effect waves-light" id="basic-plan-btn-2" style="width:100%;background-color: #00bcd4;">Comprar <i class="material-icons right">send</i>
                     <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan2">
                       <div class="spinner-layer spinner-blue">
                         <div class="circle-clipper left">
@@ -256,7 +256,7 @@
                   <center>
                     <h6 class="card-title mb-0">
                       <i class="material-icons right">gps_fixed</i>
-                      <b style="font-size:18px">Plan PRO + subscripción </b>
+                      <b style="font-size:18px">Plan PRO + subscripción mensual </b>
                     </h6>
                   </center>
                   <br>
