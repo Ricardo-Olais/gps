@@ -55,7 +55,7 @@
       z-index:0;
        }
 
-       
+
      
 
 
@@ -324,9 +324,9 @@
       </a>
     </li>
     <li class="bold">
-      <a class="waves-effect waves-cyan " href="planes">
+      <a class="waves-effect waves-cyan " href="compra_gps">
         <i class="material-icons">monetization_on</i>
-        <span class="menu-title" data-i18n="User Profile">Nuestros planes</span>
+        <span class="menu-title" data-i18n="User Profile">Comprar</span>
       </a>
     </li>
    

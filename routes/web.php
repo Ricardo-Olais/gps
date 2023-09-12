@@ -54,7 +54,7 @@ Route::get('/terminos', function () {
     return view('terminos');
 });
 
-Route::get('/planes', function () {
+Route::get('/compra_gps', function () {
     return view('planes');
 });
 

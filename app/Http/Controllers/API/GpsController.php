@@ -98,7 +98,7 @@ class GpsController extends Controller
 
       
 
-        $SnSclient= new SnsClient([
+       /* $SnSclient= new SnsClient([
                    'region' => 'us-east-1',
                    'version' => '2010-03-31',
                     'credentials' => [
@@ -119,7 +119,7 @@ class GpsController extends Controller
             } catch (AwsException $e) {
                 // output error message if fails
                 error_log("error es ". $e->getMessage());
-            } 
+            } */
    
 
 
