@@ -50,11 +50,15 @@
        }
        body{
 
-        background-color:#fff;
-       }
+      // background-image: url('img/prueba8.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+       
+    }
+
    </style>
 
-  <div class="col s12 m2 l12" style="background-color: #fff;">
+  <div class="col s12 m2 l12" style="background-color: #fff;opacity: .95;">
    
             <center><!--:#00bcd4-->
             <!--span style="color:#000;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span-->
@@ -83,9 +87,9 @@
 
 
 
-<div class="col s12 m2 l12 animate fadeRight">
+<div class="col s12 m2 l12 animate fadeRight" style=" background-image: url('img/prueba13.jpg'); background-repeat: no-repeat;background-size: cover;">
 
-<p style="text-align: justify;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
+<p style="text-align: justify;color: #fff;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
 
 <br><br>Con múltiples sistemas de posicionamiento y cobertura de señal interior y exterior, el dispositivo también admite alertas instantáneas de eventos atípicos como extracción del dispositivo, vibración, etc. 
 
@@ -97,7 +101,7 @@
    <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">Características</h3></center>
 </div>
 
-<div class="col s12 m2 l6 animate fadeRight">
+<div class="col s12 m2 l6 animate fadeRight" >
 
 <table class="striped">
     
@@ -316,7 +320,7 @@
 
 
 
-    <div class="col s12 m5 l12 animate fadeRight">
+    <div class="col s12 m5 l12 animate fadeRight" >
          <!-- Total Transaction -->
          <div class="card">
             <div class="card-content">
@@ -353,8 +357,8 @@
          </div>
       </div>
 
- <div class="col s12 m5 l12 animate fadeRight">
-      <div class="card">
+ <div class="col s12 m5 l12 animate fadeRight" style=" background-image: url('img/prueba12.jpg'); background-repeat: no-repeat;background-size: cover;">
+      <div class="card" style="opacity:.9">
             <div class="card-content">
                <center>
 

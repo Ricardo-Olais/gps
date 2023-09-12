@@ -18,7 +18,10 @@
    }
     body{
 
-        background-image: url('img/fondo-login.png');
+        background-image: url('img/prueba12.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000;
     }
 </style>
 

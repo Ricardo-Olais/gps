@@ -5,6 +5,7 @@
  <script src="https://js.stripe.com/v3/"></script>
  <script src="js/script.js" defer></script>
  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+ 
 
  <?php
     session_start(); 
@@ -48,7 +49,10 @@
 <style type="text/css">
    body{
 
-        background-image: url('img/fondo-login.png');
+       background-image: url('img/prueba11.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000;
     }
 </style>
 
@@ -63,29 +67,90 @@
    <!-- Current balance & total transactions cards-->
    <div class="row vertical-modern-dashboard">
 
-  <div class="col s12 m2 l12 animate fadeRight">
-         <!-- Total Transaction -->
-         <div class="card" style="background-color: #00bcd4;border-radius: 15px;padding:1px;">
-           
-               <center><h5 style="color:#fff !important;">Conoce nuestros planes</h5></center>
-          
+ 
+    <div class="col s12 m5 l6 animate fadeRight">
+      <div class="card" style="opacity:.9">
+            <div class="card-content">
+               <center>
 
-         </div>
-      </div>
+                <h3 class="card-title mb-0"><i class="material-icons right">gps_fixed</i><b style="font-size:24px">Aquiere tu Gps Tracker</b></h3>
+            </center><br>
+              
+            
 
-<div class="col s12 m2 l12 animate fadeRight">
-      <center>
-      <img src="img/gratis3.jpg" width="100%"></center>
+      <ul class="collection with-header" style="color:#000">
        
-        </center>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat</li>
+        <li class="collection-item"><i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico</li>
+      </ul>
+
+               
+
+              <center><img src="img/LL301.png" width="20%"></center>
+
+
+
+             <a class="btn waves-effect waves-light" id="basic-plan-btn"  style="width:100%;background-color: black;">Comprar
+                <i class="material-icons right">send</i>
+                <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan1">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                </div>
+              </a>
+
+
+            </div>
+         </div>
 
 </div>
-<center>
- <stripe-buy-button
-                  buy-button-id="buy_btn_1My6UyA94PugK9gPoWX1R6XA"
-                  publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa"
-                >
-  </stripe-buy-button></center>
+
+
+
+
 
        <!--div class="col s12 m2 l4 animate fadeRight">
         
