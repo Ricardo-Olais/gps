@@ -12,6 +12,8 @@
 <script type="text/javascript">
 
      $(document).ready(function(){
+
+        $('.collapsible').collapsible();
     
       $("#basic-plan-btn").click(function(){
 
@@ -53,7 +55,7 @@
       // background-image: url('img/prueba8.jpg');
        background-repeat: no-repeat;
        background-size: cover;
-       
+
     }
 
    </style>
@@ -87,9 +89,9 @@
 
 
 
-<div class="col s12 m2 l12 animate fadeRight" style=" background-image: url('img/prueba13.jpg'); background-repeat: no-repeat;background-size: cover;">
+<div class="col s12 m2 l12 animate fadeRight">
 
-<p style="text-align: justify;color: #fff;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
+<p style="text-align: justify;color: #000;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
 
 <br><br>Con múltiples sistemas de posicionamiento y cobertura de señal interior y exterior, el dispositivo también admite alertas instantáneas de eventos atípicos como extracción del dispositivo, vibración, etc. 
 
@@ -103,7 +105,13 @@
 
 <div class="col s12 m2 l6 animate fadeRight" >
 
-<table class="striped">
+
+  <ul class="collapsible popout">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Posicionamiento GPS</div>
+      <div class="collapsible-body">
+          
+          <table class="striped">
     
     <tr>
         <td><img src="img/c1.png"></td>
@@ -116,9 +124,15 @@
         </td>
     </tr>
 </table>
+      </div>
+    </li>
 
 
-<table class="striped">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Batería recargable de 10.000 mAh.</div>
+      <div class="collapsible-body">
+          
+          <table class="striped">
     
     <tr>
         <td><img src="img/c2.png"></td>
@@ -131,8 +145,17 @@
         </td>
     </tr>
 </table>
+      </div>
+    </li>
 
-<table class="striped">
+
+
+
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Múltiples alertas.</div>
+      <div class="collapsible-body">
+          
+        <table class="striped">
     
     <tr>
         <td><img src="img/c3.png"></td>
@@ -147,16 +170,15 @@
     </tr>
 </table>
 
+      </div>
+    </li>
 
 
 
-
-</div>
-
-
-<div class="col s12 m2 l6 animate fadeRight">
-
-        <table class="striped">
+     <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Red LTE y GSM.</div>
+      <div class="collapsible-body">
+         <table class="striped">
     
     <tr>
         <td><img src="img/c5.png"></td>
@@ -170,22 +192,33 @@
     </tr>
   </table>
 
+      </div>
+    </li>
 
-<table class="striped">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Escucha remota (VoLTE)</div>
+      <div class="collapsible-body">
+         <table class="striped">
     
     <tr>
-        <td><img src="img/c6.png"></td>
+        <td><img src="img/c5.png"></td>
         <td>
             <span style="font-size: 22px;color: #000;">Escucha remota (VoLTE)</span>
            <p style="text-align: justify;">
            
-             
-             El micrófono discreto permite el monitoreo de audio remoto del entorno alrededor del dispositivo.
+             Comunicación a través de redes 4G LTE con respaldo 2G GSM.
             </p> 
         </td>
     </tr>
   </table>
 
+      </div>
+    </li>
+
+
+        <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Base magnética fuerte.</div>
+      <div class="collapsible-body">
 
  <table class="striped">
     
@@ -202,6 +235,43 @@
         </td>
     </tr>
 </table>
+
+
+      </div>
+    </li>
+
+
+
+
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="col s12 m2 l6 animate fadeRight">
+
+
+
+
+      
+
+ <center><img src="img/satelital-copia.png" width="100%" class="responsive-img"></center>
+
 
 
 
