@@ -18,7 +18,7 @@ $domain_url = $config['domain'];
 $checkout_session = \Stripe\Checkout\Session::create([
 	'invoice_creation' => ['enabled' => true], //se agrega para la nota
 	'success_url' => $domain_url . '/pago?session_id={CHECKOUT_SESSION_ID}&id=1',
-	'cancel_url' => "https://localizaminave.com/planes?id=1",
+	'cancel_url' => "https://localizaminave.com/compra_gps?id=1",
 	'payment_method_types' => ['card'],
 	'mode' => 'payment', //subscription
 	'line_items' => [[

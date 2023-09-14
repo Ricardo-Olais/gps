@@ -54,6 +54,19 @@
         background-size: cover;
         background-color: #fff;
     }
+
+    .card, .card-panel{
+      border-color: red;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,.10), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.9);
+     }
+
+     .centrado{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
 </style>
 
 <div id="main">
@@ -63,17 +76,36 @@
         <div class="section">
           <!-- Current balance & total transactions cards-->
           <div class="row vertical-modern-dashboard">
+
+            <div class="col s12 m5 l12 animate fadeRight">
+
+
+
+              <img src="img/prueba8.jpg" width="100%">
+
+              
+              <div class="centrado">Expertos en localización</div>
+
+
+
+            </div>
+
+            <center><span style="font-size:24px;">Planes y precios de Gps Tracker</span></center>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9">
+              <div class="card" style="opacity:.9;border-color: coral !important;">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
                       <i class="material-icons right">gps_fixed</i>
-                      <b style="font-size:18px">Plan dispositivo + plataforma básica pago único x $2900.00 MXN</b>
+                      <b style="font-size:18px">Dispositivo + plataforma básica pago único x $2900.00 MXN</b>
                     </h6>
                   </center>
                   <br>
                   <ul class="collection with-header" style="color:#000">
+
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">phonelink_ring</i> Dispositivo GPS
+                    </li>
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
@@ -162,12 +194,16 @@
                   <center>
                     <h6 class="card-title mb-0">
                       <i class="material-icons right">gps_fixed</i>
-                      <b style="font-size:18px">Plan medio + plataforma Pro </b>
+                      <b style="font-size:18px">Dispositivo + plataforma Pro </b>
                       <b style="color:#000;font-size: 20px;">(Recomendado)</b>
                     </h6>
                   </center>
                   <br>
                   <ul class="collection with-header" style="color:#000">
+
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">phonelink_ring</i> Dispositivo GPS
+                    </li>
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
@@ -289,9 +325,7 @@
                       <i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico
                     </li>
                   </ul>
-                  <center>
-                    <img src="img/LL301.png" width="20%">
-                  </center>
+                 
                   <a class="btn waves-effect waves-light" id="basic-plan-btn-3" style="width:100%;background-color: black;">Comprar <i class="material-icons right">send</i>
                     <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan3">
                       <div class="spinner-layer spinner-blue">
@@ -366,6 +400,13 @@
                   </center>
                   <br>
                   <ul class="collection with-header" style="color:#000">
+
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">phonelink_ring</i> Instala la app GPS Tracker 
+                      <center>
+                     <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps" target="_blank"> <img src="img/play.png" width="40%" style="margin-top: 10px;"></a></center>
+                    </li>
+
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
@@ -394,9 +435,7 @@
                       <i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico
                     </li>
                   </ul>
-                  <center>
-                    <img src="img/LL301.png" width="20%">
-                  </center>
+               
                   <a class="btn waves-effect waves-light" id="basic-plan-btn-4" style="width:100%;background-color: black;">Comprar <i class="material-icons right">send</i>
                     <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan4">
                       <div class="spinner-layer spinner-blue">
@@ -460,6 +499,12 @@
                   <br>
                   <ul class="collection with-header" style="color:#000">
                     <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">phonelink_ring</i> Instala la app GPS Tracker
+                      <center>
+                     <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps" target="_blank"> <img src="img/play.png" width="40%" style="margin-top: 10px;"></a></center>
+                    </li>
+                    
+                    <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
                     <li class="collection-item">
@@ -487,9 +532,7 @@
                       <i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico
                     </li>
                   </ul>
-                  <center>
-                    <img src="img/LL301.png" width="20%">
-                  </center>
+                
                   <a class="btn waves-effect waves-light" id="basic-plan-btn-5" style="width:100%;background-color: black;">Comprar <i class="material-icons right">send</i>
                     <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan5">
                       <div class="spinner-layer spinner-blue">
