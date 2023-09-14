@@ -52,7 +52,7 @@
      //  background-image: url('img/prueba11.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: #fff;
+        background-color: #000;
     }
 
     .card, .card-panel{
@@ -83,7 +83,7 @@
 
               <img src="img/prueba8.jpg" width="100%">
 
-              
+
               <div class="centrado">Expertos en localización</div>
 
 
