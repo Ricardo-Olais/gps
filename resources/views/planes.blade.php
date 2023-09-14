@@ -92,7 +92,7 @@
 
             <center><span style="font-size:24px;">Planes y precios de Gps Tracker</span></center>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9;border-color: coral !important;">
+              <div class="card" style="opacity:1;border-color: coral !important;">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9;background-color:#B4F6E2;">
+              <div class="card" style="opacity:1;background-color:#B4F6E2;">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
@@ -287,7 +287,7 @@
               </div>
             </div>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9">
+              <div class="card" style="opacity:1">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
@@ -390,7 +390,7 @@
           <div class="row vertical-modern-dashboard">
             <div class="col s12 m5 l2 animate fadeRight"></div>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9">
+              <div class="card" style="opacity:1">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
@@ -488,7 +488,7 @@
               </div>
             </div>
             <div class="col s12 m5 l4 animate fadeRight">
-              <div class="card" style="opacity:.9;">
+              <div class="card" style="opacity:1;">
                 <div class="card-content">
                   <center>
                     <h6 class="card-title mb-0">
