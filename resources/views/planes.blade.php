@@ -84,7 +84,7 @@
               <img src="img/prueba12.jpg" width="100%">
 
 
-              <div class="centrado">Expertos en localización</div>
+              <!--div class="centrado">Expertos en localización</div-->
 
 
 
