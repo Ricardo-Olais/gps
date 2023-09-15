@@ -427,7 +427,7 @@
          </div>
       </div>
 
- <div class="col s12 m5 l12 animate fadeRight" style=" background-image: url('img/prueba12.jpg'); background-repeat: no-repeat;background-size: cover;">
+ <!--div class="col s12 m5 l12 animate fadeRight" style=" background-image: url('img/prueba12.jpg'); background-repeat: no-repeat;background-size: cover;">
       <div class="card" style="opacity:.9">
             <div class="card-content">
                <center>
@@ -505,7 +505,7 @@
             </div>
          </div>
 
-</div>
+</div-->
 
 
 
