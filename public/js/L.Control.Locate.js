@@ -4,6 +4,7 @@ Copyright (c) 2016 Dominik Moritz
 This file is part of the leaflet locate control. It is licensed under the MIT license.
 You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 */
+var bandera=0;
 (function (factory, window) {
   // see https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md#module-loaders
   // for details on how to structure a leaflet plugin.
@@ -41,6 +42,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
    */
   const LocationMarker = L.Marker.extend({
     initialize(latlng, options) {
+      // alert("inicia");
+       bandera=1;
       L.Util.setOptions(this, options);
       this._latlng = latlng;
       this.createIcon();
@@ -50,6 +53,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
      * Create a styled circle location marker
      */
     createIcon() {
+
+
       const opt = this.options;
 
       let style = "";
@@ -538,6 +543,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
       if (!this.options.cacheLocation) {
         this._event = undefined;
       }
+
+     // alert("apagado");
+      bandera=0;
 
       // unbind event listeners
       this._map.off("locationfound", this._onLocationFound, this);

@@ -128,7 +128,8 @@ $.post("vehiculosasignados",{_token:token},
  },'json');
 
 
-$('#lo')[0].click();
+
+
 
 //$("#lo").trigger("click");
 
@@ -273,6 +274,43 @@ L.control.condensedAttribution({
   emblem: '<div class="emblem-wrap"><img src="https://localizaminave.com/images/color.png"/ width="50"></div>',
   prefix: '<a href="https://localizaminave.com" title="Travel time analysis by Motion Intelligence"></a>GPS'
 }).addTo(map);
+
+
+var botonesControl = L.control({position: 'topright'}); // creación del contenedor de botones
+    botonesControl.onAdd = function() {                     // creación de los botones
+        var botones = L.DomUtil.create('div', 'class-css-botones');
+     
+
+        botones.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a>`;
+
+        botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style='margin-left:5px;'><i class="material-icons">location_on</i>Rastrear</a>`;
+
+         botones.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">format_list_bulleted</i></a>`;
+
+          botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">directions</i></a>`;
+
+           botones.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">home</i></a>`;
+
+
+        return botones;
+    };
+    botonesControl.addTo(map); 
+
+
+    document.getElementById('mostrar-vehiculos').addEventListener('click', function() {
+        
+      //  alert("hola2");
+    });
+    /*document.getElementById('localizar-car').addEventListener('click', function() {
+        alert("hola");
+    });*/
+
+     document.getElementById('historico-car').addEventListener('click', function() {
+      //  alert("hola");
+    });
+
+
+     
 
 
 
@@ -522,12 +560,14 @@ socket.on('ubicacion', function(msg) {
         });
 
 
-
+        document.getElementById('ir-car').addEventListener('click', function() {
+        
             routingControl=L.Routing.control({
               waypoints: [
                 L.latLng(browserLat, browserLong),
                 L.latLng(msg.longitud, msg.latitud)
               ],
+
 
             createMarker: function(i, wp, nWps) {
                     if (i === 0 || i === nWps - 1) {
@@ -549,6 +589,8 @@ socket.on('ubicacion', function(msg) {
                fitSelectedRoutes: false,
 
             }).addTo(map);
+
+            });
 
 
 
