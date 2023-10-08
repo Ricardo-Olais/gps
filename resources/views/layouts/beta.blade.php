@@ -340,7 +340,7 @@
           <br>
           <span id="estas" style="color:black !important;"></span>
 
-          <i class="material-icons" style="color:black;cursor:pointer;" id="comparte">share</i>
+          <!--i class="material-icons" style="color:black;cursor:pointer;" id="comparte">share</i-->
 
         </div>
 
