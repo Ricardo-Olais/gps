@@ -276,25 +276,43 @@ L.control.condensedAttribution({
 }).addTo(map);
 
 
-var botonesControl = L.control({position: 'topright'}); // creación del contenedor de botones
+var botonesControl = L.control({position: 'topleft'}); // creación del contenedor de botones
     botonesControl.onAdd = function() {                     // creación de los botones
         var botones = L.DomUtil.create('div', 'class-css-botones');
      
 
-        botones.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a>`;
+        botones.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a><br>`;
 
-        botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style='margin-left:5px;'><i class="material-icons">location_on</i>Rastrear</a>`;
+        botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style="margin-top:5px;"><i class="material-icons">location_on</i>Rastrear</a><br>`;
 
-         botones.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">format_list_bulleted</i></a>`;
+         botones.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">format_list_bulleted</i></a><br>`;
 
-          botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">directions</i></a>`;
+          botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">directions</i></a><br>`;
 
-           botones.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">home</i></a>`;
+           botones.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">home</i></a>`;
 
 
         return botones;
     };
     botonesControl.addTo(map); 
+
+
+    var botonesControl2 = L.control({position: 'topright'}); // creación del contenedor de botones
+    botonesControl2.onAdd = function() {                     // creación de los botones
+        var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
+     
+
+        botones2.innerHTML = `<span id="miubicacion2" style="color:black !important;"></span>`;
+
+
+
+        return botones2;
+    };
+    botonesControl2.addTo(map); 
+
+
+
+
 
 
     document.getElementById('mostrar-vehiculos').addEventListener('click', function() {
@@ -703,6 +721,8 @@ display: flex;
       <div class="col s12 m12">
            <!-- Current balance & total transactions cards-->
             <div class="row vertical-modern-dashboard">
+
+                 
           
                 <!--loadin de mapa-->
             <div id="cargando" style="display:none;">
@@ -715,6 +735,8 @@ display: flex;
             <!--img src="img/tormenta1.png" style="position: relative;z-index: 1000;float:right;" width="100"-->
                 <!--mapa -->
                 <div id="cont" style="width:100%;height:100%;">
+
+
 
                     <?php if(!isMobile2()) { ?>
 
