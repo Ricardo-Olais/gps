@@ -302,7 +302,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<span id="miubicacion2" style="color:black !important;"></span>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:black;height:25px;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
 
 
 
@@ -722,7 +722,7 @@ display: flex;
            <!-- Current balance & total transactions cards-->
             <div class="row vertical-modern-dashboard">
 
-                 
+
           
                 <!--loadin de mapa-->
             <div id="cargando" style="display:none;">

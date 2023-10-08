@@ -335,7 +335,7 @@
         <div class="card-content white-text">
           <h6><b>Ubicación actual</b></h6>
 
-          <span id="miubicacion" style="color:black !important;"></span>
+          <span id="miubicacion2" style="color:black !important;"></span>
 
           <br>
           <span id="estas" style="color:black !important;"></span>
