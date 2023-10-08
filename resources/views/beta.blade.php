@@ -313,7 +313,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:black;height:30px;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:100%;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
 
 
 
