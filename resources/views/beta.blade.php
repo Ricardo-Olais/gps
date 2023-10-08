@@ -95,6 +95,13 @@
     background-color: red !important;
     color: #fff;
 }
+
+td, th {
+   
+    padding:0px !important;
+    font-size: 10px;
+    
+}
 </style>
 
 <script type="text/javascript">
@@ -283,11 +290,15 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
 
         botones.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a><br>`;
 
-        botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style="margin-top:5px;"><i class="material-icons">location_on</i>Rastrear</a><br>`;
+        botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style="margin-top:5px;"><i class="material-icons" style="color:#00bcd4;">location_on</i>Rastrear</a><br>`;
 
          botones.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">format_list_bulleted</i></a><br>`;
 
           botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">directions</i></a><br>`;
+
+          botones.innerHTML += `<a id="ir-confi" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">settings</i></a><br>`;
+
+          botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#000;margin-top:5pxcursor:pointer;;"><i class="material-icons" id="comparte">share</i></a><br>`;
 
            botones.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">home</i></a>`;
 
@@ -302,7 +313,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:black;height:25px;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:black;height:30px;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
 
 
 
@@ -648,7 +659,8 @@ socket.on('ubicacion', function(msg) {
         //{className: "custom-popup"}
     const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
-    .setContent("<center><b style='font-size:16px;'>"+msg.alias+"</b></center>")
+    //.setContent("<center><b style='font-size:16px;'>"+msg.alias+"</b></center>")
+    .setContent("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Mode:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td></tr></table>")
     .openOn(map);
 
 
