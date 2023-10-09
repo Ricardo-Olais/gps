@@ -51,6 +51,10 @@
 
 
 
+
+
+
+
   <style>
 
      body{
@@ -267,6 +271,11 @@ $.post("vehiculosasignados",{_token:token},
         'true': 'Salir'
     }
 }));
+
+
+
+/* var ggl = new L.Google('ROADMAP');
+ map.addLayer(ggl);*/
   
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -288,24 +297,47 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones = L.DomUtil.create('div', 'class-css-botones');
      
 
-        botones.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a><br>`;
 
         botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style="margin-top:5px;"><i class="material-icons" style="color:#00bcd4;">location_on</i>Rastrear</a><br>`;
 
-         botones.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">format_list_bulleted</i></a><br>`;
+        botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">directions</i></a><br>`;
 
-          botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">directions</i></a><br>`;
 
-          botones.innerHTML += `<a id="ir-confi" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">settings</i></a><br>`;
+         botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#000;margin-top:5pxcursor:pointer;margin-top:5px;"><i class="material-icons" id="comparte">share</i></a>`;
 
-          botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#000;margin-top:5pxcursor:pointer;;"><i class="material-icons" id="comparte">share</i></a><br>`;
-
-           botones.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">home</i></a>`;
+     
 
 
         return botones;
     };
     botonesControl.addTo(map); 
+
+
+
+    var botonesControl1 = L.control({position: 'bottomleft'}); // creación del contenedor de botones
+    botonesControl1.onAdd = function() {                     // creación de los botones
+        var botones1 = L.DomUtil.create('div', 'class-css-botones');
+     
+
+        botones1.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a>`;
+
+     
+
+         botones1.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">format_list_bulleted</i></a>`;
+
+      
+          botones1.innerHTML += `<a id="ir-confi" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">settings</i></a>`;
+
+         
+
+           botones1.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">home</i></a>`;
+
+
+        return botones1;
+    };
+    botonesControl1.addTo(map); 
+
+
 
 
     var botonesControl2 = L.control({position: 'topright'}); // creación del contenedor de botones
