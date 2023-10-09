@@ -326,7 +326,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
          botones1.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">format_list_bulleted</i></a>`;
 
       
-          botones1.innerHTML += `<a id="ir-confi" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">settings</i></a>`;
+          botones1.innerHTML += `<a id="ir-confi" class="btn-floating modal-trigger" href="#configuraciones" style="background-color:#000;margin-left:5px;"><i class="material-icons">settings</i></a>`;
 
          
 
@@ -834,6 +834,51 @@ display: flex;
   </div>
 </div>
 
+
+
+<!-- Modal Structure -->
+  <div id="configuraciones" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px">
+    <div class="modal-content">
+      <h6 id="title-modal">Configuraciones <i class="material-icons">directions_car</i></h6><br>
+           
+          <h6 class="card-title mb-0 " >Parking</h6>
+                   <!-- Switch -->
+                   <div class="switch">
+                     <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
+                       <span class="lever"></span> On </label>
+                   </div>
+
+                    <hr style="margin-top:15px;">
+                   <h6 class="card-title mb-0"><b>Geocerca</b></h6>
+                   <!-- Switch -->
+                   <div class="switch">
+                     <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
+                       <span class="lever"></span> On </label>
+                     <!--span id="geocercaactual" class="lever"></span--><br>
+                    <center>
+                     <table>
+                    <thead>
+                      <tr>
+                          
+                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: black;">do_not_disturb_on</i></th>
+                          <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
+                          <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
+                      </tr>
+                    </thead>
+                   </table>
+                   </center>
+
+
+
+                   </div>
+
+   
+    <div class="modal-footer" style="width:350px;">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+     
+    </div>
+  </div>
+</div>
 
 
 
