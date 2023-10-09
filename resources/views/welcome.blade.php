@@ -192,7 +192,7 @@
     <b>Alerta múltiple</b>
     <p style="text-align:justify;font-size: 14px;">
    
-    Puede iniciar sesión en la plataforma de seguimiento: LNCOON en su aplicación móvil/computadora/tableta para recibir varias alertas: Alerta de batería baja, Alerta eliminada, Alerta de vibración, Alerta de exceso de velocidad, Geo-valla, Alerta de apagado....</p>
+    Puede iniciar sesión en la plataforma de seguimiento de localizaminave.com en su aplicación móvil/computadora/tableta para recibir varias alertas: Alerta de batería baja, Alerta eliminada, Alerta de vibración, Alerta de exceso de velocidad, Geo-valla, Alerta de apagado....</p>
 </div>
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
