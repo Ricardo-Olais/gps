@@ -55,6 +55,7 @@
       // background-image: url('img/prueba8.jpg');
        background-repeat: no-repeat;
        background-size: cover;
+       background-color: #fff;
 
     }
 
@@ -91,13 +92,120 @@
 
 <div class="col s12 m2 l12 animate fadeRight">
 
-<p style="text-align: justify;color: #000;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
+
+ <img src="img/home/img-home-9.jpeg" width="100%">   
+
+<!--p style="text-align: justify;color: #000;">El JR301 es un rastreador GPS de activos 4G Cat 1 que permite un tiempo de espera ultralargo gracias a una batería de gran capacidad de 10 000 mAh y una carcasa duradera. 
 
 <br><br>Con múltiples sistemas de posicionamiento y cobertura de señal interior y exterior, el dispositivo también admite alertas instantáneas de eventos atípicos como extracción del dispositivo, vibración, etc. 
 
 <br><br>También ofrecemos a los usuarios monitoreo remoto del objetivo a través de nuestra plataforma en la nube y aplicación móvil, que es adecuada para escenarios de aplicación como alquiler de vehículos, gestión de flotas, transporte logístico, etc.
-</p>
+</p-->
 </div>
+
+
+
+
+
+
+
+<div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
+   
+    <img src="img/home/img-home-8.jpeg" width="100%">
+
+    <b>Alerta eliminada</b>
+
+    <p style="text-align:justify;font-size: 14px;">
+
+        Cuando el dispositivo está conectado a un vehículo, el botón antimanipulación permanecerá presionado. Si el dispositivo está desconectado, el botón antimanipulación retrocederá, lo que hará que el dispositivo envíe una alerta de manipulación. En el modo de espera prolongado, el dispositivo habilitará el seguimiento durante 20 minutos después de que se envíe el mensaje de alerta. La función de alerta de manipulación se puede desactivar mediante un comando.
+
+   </p>
+
+
+
+</div>
+
+
+<div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
+   
+    <img src="img/home/img-home-5.jpeg" width="100%">
+
+    <b>IP65 a prueba de agua</b>
+    <p style="text-align:justify;font-size: 14px;">
+    El diseño robusto y resistente al polvo y al agua IP65 garantiza un rendimiento óptimo continuo, incluso en las condiciones más duras.</p>
+
+</div>
+
+
+
+<div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
+  <img src="img/home/img-home-10.jpeg" width="100%">
+
+    <b>Tamaño del rastreador</b>
+    <p style="text-align:justify;font-size: 14px;">
+   
+    Dimensiones: 6,1*10,8*3 cm
+    Peso: 245g</p>
+</div>
+
+
+<div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
+
+</div>
+
+
+
+<div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
+   
+    <img src="img/home/img-home-6.jpeg" width="100%">
+
+    <b>Posicionamiento preciso</b>
+
+    <p style="text-align:justify;font-size: 14px;">
+
+        La frecuencia de actualización de la ubicación del GPS es de hasta 10 s, el posicionamiento frecuente hace que su ruta histórica sea más clara.
+
+   </p>
+
+
+
+</div>
+
+
+<div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
+   
+    <img src="img/home/img-home-7.jpeg" width="100%">
+
+    <b>Personaliza vallas para todos los vehículos.</b>
+    <p style="text-align:justify;font-size: 14px;">
+    <li>Reciba una alarma cuando un vehículo entre o salga del límite de la cerca.<br>
+    <li>Admite la búsqueda de puntos de referencia, localiza con precisión el centro del círculo.<br>
+    <li>Radio de soporte personalizado.</p>
+
+</div>
+
+
+
+<div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
+  <img src="img/home/img-home-10.jpeg" width="100%">
+
+    <b>Alerta múltiple</b>
+    <p style="text-align:justify;font-size: 14px;">
+   
+    Puede iniciar sesión en la plataforma de seguimiento: LNCOON en su aplicación móvil/computadora/tableta para recibir varias alertas: Alerta de batería baja, Alerta eliminada, Alerta de vibración, Alerta de exceso de velocidad, Geo-valla, Alerta de apagado....</p>
+</div>
+
+<div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
+   <img src="img/home/img-home-3.jpeg" width="100%">
+</div>
+
+
+
+
+
+
+
+
 
 <div class="col s12 m2 l12 animate fadeRight" style="color:#000;">
    <center><h3 style="font-weight: bold;font-family: secondary; font-size: 25px;color:#000">Características</h3></center>
@@ -358,7 +466,7 @@
                <center><h2 class="card-title mb-0"><b>Ubicación en tiempo real</b></h2></center>
               
               
-              <p style="text-align: justify;">
+              <p style="text-align: justify;font-size: 14px;">
                Es lógico que si desea adquirir un sistema GPS tracker lo que requiere conocer es la ubicación en tiempo real sobre los lugares a los que se desplazan sus activos, esto puede lograrse al instalar el dispositivo GPS en cada una de las unidades que quiera monitorear y los datos de ubicación podrá conocerlos por medio de la plataforma.
               </p>
 
@@ -376,7 +484,7 @@
                <center><h4 class="card-title mb-0"><b>Historial de rutas</b></h4></center>
               
               
-               <p style="text-align: justify;">
+               <p style="text-align: justify;font-size: 14px;">
                   Conozca el histórico de recorridos de los dispositivos, puedes consultar hasta 1 año de histórico, podrás descargar la información en un reporte excel.
                </p>
 
@@ -397,7 +505,7 @@
                <center><h4 class="card-title mb-0"><b>Estado actual de activos</b></h4></center>
               
               
-               <p style="text-align: justify;">
+               <p style="text-align: justify;font-size: 14px;">
                   Verifique el estatus de sus activos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas, monitorea las métricas de velocidad y ubicación en tiempo real.
                </p>
 
@@ -414,7 +522,7 @@
                <center><h4 class="card-title mb-0"><b>Comparte la ubicación</b></h4></center>
               
               
-               <p style="text-align: justify;">
+               <p style="text-align: justify;font-size: 14px;">
                  Comparte la ubicación de tus activos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real, compara nuestra plataforma, qué esperas comienza a localizar a tus seres queridos, flota,  de una forma fácil y precisa.
                </p>
 
