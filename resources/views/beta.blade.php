@@ -161,6 +161,7 @@ $.post("vehiculosasignados",{_token:token},
   var browserLong;
   var valorgeo=0;
   var movimiento="";
+  var colore="";
 
 
 
@@ -541,6 +542,18 @@ socket.on('ubicacion', function(msg) {
             }
             
 
+            if(msg.pila==0){
+
+                colore="red";
+
+                $("#st").css("color","red !important");
+                $("#st1").css("color","red !important");
+            }else{
+                colore="#8EF046";
+                 $("#st").css("color","#8EF046 !important");
+                 $("#st1").css("color","#8EF046 !important");
+            }
+
 
 
           //geocerca  obtener la latitud y longitud de geocerca y pintarlas
@@ -610,6 +623,8 @@ socket.on('ubicacion', function(msg) {
 
         $("#estas").html("<br><b style='font-size:12px;'>Estás a "+distancia.toFixed(2)+" Km del dispositivo</b>");
 
+         $("#estasinput").val(distancia.toFixed(2));
+
 
         var greenIcon = new L.Icon({
           iconUrl: '',
@@ -658,7 +673,7 @@ socket.on('ubicacion', function(msg) {
        }
 
         theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-          autoPan: true}).addTo(map).bindPopup("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Mode:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td></tr></table>").openPopup();
+          autoPan: true}).addTo(map).bindPopup("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Modo:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st1' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
      
@@ -692,7 +707,7 @@ socket.on('ubicacion', function(msg) {
     const popup = L.popup({className: "custom"})
     .setLatLng([msg.longitud, msg.latitud])
     //.setContent("<center><b style='font-size:16px;'>"+msg.alias+"</b></center>")
-    .setContent("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Mode:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td></tr></table>")
+    .setContent("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Modo:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>")
     .openOn(map);
 
 
@@ -754,6 +769,16 @@ display: flex;
 
 
     }
+
+ .dropdown-content li > a, .dropdown-content li > span {
+    color: #fb8c00 !important;
+}
+
+.select-dropdown .dropdown-trigger{
+
+    color:#fff !important;
+    background-color: red;
+}
 </style>
 
 
@@ -765,7 +790,7 @@ display: flex;
       <div class="col s12 m12">
            <!-- Current balance & total transactions cards-->
             <div class="row vertical-modern-dashboard">
-
+            <input type="hidden" id="estasinput" name="estasinput">
 
           
                 <!--loadin de mapa-->
@@ -815,13 +840,15 @@ display: flex;
     </div>
    </div>
   <!-- Modal Structure -->
-  <div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px">
+
+  <!--div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;background-image: url('img/prueba10.jpg');background-repeat: no-repeat;background-size: cover;"-->
+  <div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;">
     <div class="modal-content">
-      <h6 id="title-modal">Dispositivo <i class="material-icons">directions_car</i></h6><br>
-       <h6>Selecciona dispositivo</h6>
+      <h6 id="title-modal" style="color:#000;">Dispositivo <i class="material-icons">directions_car</i></h6><br>
+       <h6 style="color:#000;">Selecciona dispositivo</h6>
 
           
-        <select name="vehiculo" id="vehiculo" tabindex="-1">
+        <select name="vehiculo" id="vehiculo" tabindex="-1" style="color:#fff;">
                     
 
                            
@@ -837,11 +864,11 @@ display: flex;
 
 
 <!-- Modal Structure -->
-  <div id="configuraciones" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px">
+  <div id="configuraciones" class="modal modal-fixed-footer"  tabindex="-1" style="width:380px;height:400px;background-image: url('img/prueba1.jpg');background-repeat: no-repeat;background-size: cover;">
     <div class="modal-content">
-      <h6 id="title-modal">Configuraciones <i class="material-icons">directions_car</i></h6><br>
+      <h6 id="title-modal" style="color:#fff;">Configuraciones <i class="material-icons">directions_car</i></h6><br>
            
-          <h6 class="card-title mb-0 " >Parking</h6>
+          <h6 class="card-title mb-0 " style="color:#fff;">Parking</h6>
                    <!-- Switch -->
                    <div class="switch">
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
@@ -849,19 +876,21 @@ display: flex;
                    </div>
 
                     <hr style="margin-top:15px;">
-                   <h6 class="card-title mb-0"><b>Geocerca</b></h6>
+                   <h6 class="card-title mb-0" style="color:#fff;"><b>Geocerca</b></h6>
                    <!-- Switch -->
+             
                    <div class="switch">
                      <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
                        <span class="lever"></span> On </label>
                      <!--span id="geocercaactual" class="lever"></span--><br>
                     <center>
+                    <br>
                      <table>
                     <thead>
                       <tr>
                           
-                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: black;">do_not_disturb_on</i></th>
-                          <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
+                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: lightyellow;">do_not_disturb_on</i></th>
+                          <th><span id='geo' style="font-size:18px;color:#fff;">0 mtros.</span></th>
                           <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
                       </tr>
                     </thead>
@@ -871,10 +900,11 @@ display: flex;
 
 
                    </div>
+               
 
    
-    <div class="modal-footer" style="width:350px;">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    <div class="modal-footer" style="width:350px;background-color: black;">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" style="color:#fff !important;">Cerrar</a>
      
     </div>
   </div>
