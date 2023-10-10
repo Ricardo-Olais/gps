@@ -658,7 +658,7 @@ socket.on('ubicacion', function(msg) {
        }
 
         theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-          autoPan: true}).addTo(map).bindPopup('<b>Dispositivo '+msg.alias+' se encuentra en </b><br />'+msg.direccion+ ', conductor: '+msg.conductor).openPopup();
+          autoPan: true}).addTo(map).bindPopup("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Mode:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td></tr></table>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
      
