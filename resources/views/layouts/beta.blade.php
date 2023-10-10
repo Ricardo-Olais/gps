@@ -308,7 +308,6 @@
         <img src="images/color.png" alt="materialize logo">
         <span class="logo-text hide-on-med-and-down">Gps Tracker</span>
       </a>
-
       <a class="navbar-toggler" href="#" style="display:none;">
         <i class="material-icons">radio_button_checked</i>
       </a>
@@ -329,105 +328,62 @@
       <!--a class="navigation-header-text" style="color:#00bcd4;">Localiza mi nave</a-->
       <i class="navigation-header-icon material-icons">more_horiz</i>
     </li>
-
-
-       <div class="card  darken-1" style="height:auto;font-size: 14px;">
-        <div class="card-content white-text">
-          <h6><b>Ubicación actual</b></h6>
-
-          <span id="miubicacion2" style="color:black !important;"></span>
-
-          <br>
-          <span id="estas" style="color:black !important;"></span>
-
-          <!--i class="material-icons" style="color:black;cursor:pointer;" id="comparte">share</i-->
-
-        </div>
-
-         <!--a class="modal-close waves-effect waves-light btn" id="localizar"><i class="material-icons">location_on</i>Localizar</a-->
-        
-      </div>
-
-      <div class="card  darken-1 parpadea" style="background-color: red;text-align: center;color: #fff;display: none;" id="resplandorrojo">
-
-        Alerta <i class="material-icons">notifications_active</i>
-      </div>
-
-      
-
-      <div class="card  darken-1" style="height:auto;">
-        <div class="card-content black-text">
-           <i class="material-icons">update</i> <span id="reg"></span><br>
-           <i class="material-icons">wb_incandescent</i> Temperatura :<span id="tem"></span><br>
-           <i class="material-icons">cloud_queue</i> Clima : <span id="cli"></span><br>
-           <i class="material-icons">network_check</i> <span id="vel"></span><br>
-           <i class="material-icons">battery_std</i> <span id="bat"></span><br>
-           <i class="material-icons"  id="enmov">fiber_manual_record</i> <span id="mov"></span><br>
-           <hr style="margin-top:15px;">
-           <!--h4 class="card-title mb-0 " >Parking</h4>
-                 
-                   <div class="switch">
-                     <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
-                       <span class="lever"></span> On </label>
-                   </div>
-
-                    <hr style="margin-top:15px;">
-                   <h4 class="card-title mb-0"><b>Geocerca</b></h4>
-                
-                   <div class="switch">
-                     <label> Off <input type="checkbox" id="activageocerca" name="activageocerca">
-                       <span class="lever"></span> On </label>
-                  
-                    <center>
-                     <table>
-                    <thead>
-                      <tr>
-                          
-                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: black;">do_not_disturb_on</i></th>
-                          <th><span id='geo' style="font-size:18px;">0 mtros.</span></th>
-                          <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
-                      </tr>
-                    </thead>
-                   </table>
-                   </center>
-
-
-
-                   </div-->
-
-          
-
-      </div></div>
-
-
-   
+    <li class="bold">
+      <a class="waves-effect waves-cyan " href="index">
+        <i class="material-icons">home</i>
+        <span class="menu-title" data-i18n="User Profile">Inicio</span>
+      </a>
+    </li>
 
     @if (Auth::guest())
     
     @else
-    
+     <li class="bold">
+  
+      <a class="waves-effect waves-cyan " href="tracker">
+        <i class="material-icons" style="color:#00bcd4;">location_on</i>
+        <span class="menu-title" data-i18n="User Profile">Rastrear</span>
+      </a>
+ 
+    </li>
 
+      <li class="bold">
+      <a class="waves-effect waves-cyan " href="dispositivos">
+        <i class="material-icons">drive_eta</i>
+        <span class="menu-title" data-i18n="User Profile">Mis dispositivos</span>
+      </a>
+    </li>
     @endif
 
+    <li class="bold">
+      <a class="waves-effect waves-cyan" href="como-funciona">
+        <i class="material-icons">help_outline</i>
+        <span class="menu-title" data-i18n="Support">Cómo funciona</span>
+      </a>
+    </li>
+    <li class="bold">
+      <a class="waves-effect waves-cyan " href="compra_gps">
+        <i class="material-icons">monetization_on</i>
+        <span class="menu-title" data-i18n="User Profile">Comprar</span>
+      </a>
+    </li>
    
 
     @if (Auth::guest())
 
-
-
-     <!--li class="bold">
+     <li class="bold">
       <a class="waves-effect waves-cyan " href="register">
         <i class="material-icons">person_add</i>
         <span class="menu-title" data-i18n="User Profile">Regístrate</span>
       </a>
-    </li-->
+    </li>
 
-     <!--li class="bold">
+     <li class="bold">
       <a class="waves-effect waves-cyan " href="login">
         <i class="material-icons">vpn_key</i>
-        <span class="menu-title" data-i18n="User Profile">Login</span>
+        <span class="menu-title" data-i18n="User Profile">Rastrear</span>
       </a>
-    </li-->
+    </li>
 
 
     
@@ -435,17 +391,25 @@
 
 
     
-   
+     <li class="bold">
+      <a class="waves-effect waves-cyan " href="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <i class="material-icons">settings_power</i>
+        <span class="menu-title" data-i18n="User Profile">Salir</span>
+        <form id="logout-form" action="logout" method="POST" class="d-none">
+            @csrf
+        </form>
+      </a>
+    </li>
    @endif
    <center>
     <!--img src="img/tracking-o.gif" width="120" style="margin-top:50px;"-->
   </center>
 
-   <!--div id="inferior">
+   <div id="inferior">
     <center>
 
      <span style="font-size:12px;">© <?php echo date("Y");?> <a href="https://localizaminave.com" target="_blank" style="color:#00bcd4;">Gps Tracker &#174;</a> All rights reserved.</span></center>
-  </div-->
+  </div>
 
 
     
