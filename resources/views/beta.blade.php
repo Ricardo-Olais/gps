@@ -896,7 +896,7 @@ display: flex;
 
    
     <div class="modal-footer" style="width:350px;">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat" style="color:#000 !important;">Cerrar</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" style="color:#000 !important;font-size: 22px;">Cerrar</a>
      
     </div>
   </div>
