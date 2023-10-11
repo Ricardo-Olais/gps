@@ -704,11 +704,11 @@ socket.on('ubicacion', function(msg) {
         }
 
         //{className: "custom-popup"}
-    const popup = L.popup({className: "custom"})
+    /*const popup = L.popup({className: "custom-popup"})
     .setLatLng([msg.longitud, msg.latitud])
     //.setContent("<center><b style='font-size:16px;'>"+msg.alias+"</b></center>")
     .setContent("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Modo:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>")
-    .openOn(map);
+    .openOn(map);*/
 
 
    /* const popup = L.popup({className: "custom"})
@@ -770,15 +770,7 @@ display: flex;
 
     }
 
- .dropdown-content li > a, .dropdown-content li > span {
-    color: #fb8c00 !important;
-}
 
-.select-dropdown .dropdown-trigger{
-
-    color:#fff !important;
-    background-color: red;
-}
 </style>
 
 
@@ -864,11 +856,11 @@ display: flex;
 
 
 <!-- Modal Structure -->
-  <div id="configuraciones" class="modal modal-fixed-footer"  tabindex="-1" style="width:380px;height:400px;background-image: url('img/prueba1.jpg');background-repeat: no-repeat;background-size: cover;">
+  <div id="configuraciones" class="modal modal-fixed-footer"  tabindex="-1" style="width:380px;height:400px;">
     <div class="modal-content">
-      <h6 id="title-modal" style="color:#fff;">Configuraciones <i class="material-icons">directions_car</i></h6><br>
+      <h6 id="title-modal" style="color:#000;">Configuraciones <i class="material-icons">directions_car</i></h6><br>
            
-          <h6 class="card-title mb-0 " style="color:#fff;">Parking</h6>
+          <h6 class="card-title mb-0 " style="color:#000;">Parking</h6>
                    <!-- Switch -->
                    <div class="switch">
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
@@ -876,7 +868,7 @@ display: flex;
                    </div>
 
                     <hr style="margin-top:15px;">
-                   <h6 class="card-title mb-0" style="color:#fff;"><b>Geocerca</b></h6>
+                   <h6 class="card-title mb-0" style="color:#000;"><b>Geocerca</b></h6>
                    <!-- Switch -->
              
                    <div class="switch">
@@ -889,8 +881,8 @@ display: flex;
                     <thead>
                       <tr>
                           
-                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: lightyellow;">do_not_disturb_on</i></th>
-                          <th><span id='geo' style="font-size:18px;color:#fff;">0 mtros.</span></th>
+                          <th><i class="material-icons" id='menos' style="cursor:pointer;font-size: 50px;color: black;">do_not_disturb_on</i></th>
+                          <th><span id='geo' style="font-size:18px;color:#000;">0 mtros.</span></th>
                           <th><i class="material-icons" id='mas'  style="cursor:pointer;font-size: 50px;color: #00bcd4;">add_circle</i></th>
                       </tr>
                     </thead>
@@ -903,8 +895,8 @@ display: flex;
                
 
    
-    <div class="modal-footer" style="width:350px;background-color: black;">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat" style="color:#fff !important;">Cerrar</a>
+    <div class="modal-footer" style="width:350px;">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" style="color:#000 !important;">Cerrar</a>
      
     </div>
   </div>
