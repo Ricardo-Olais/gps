@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.horizontal')
 
 @section('content')
 
@@ -25,7 +25,7 @@
 </script>
 
 
-<div id="main" >
+<!--div id="main"-->
       <div class="row">
 
 
@@ -793,7 +793,7 @@ publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hi
 
 
 </div>
-</div>
+<!--/div-->
 
 
  

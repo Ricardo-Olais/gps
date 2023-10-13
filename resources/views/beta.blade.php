@@ -1,4 +1,4 @@
-@extends('layouts.beta')
+@extends('layouts.horizontal')
 
 @section('content')
 
@@ -747,9 +747,9 @@ socket.on('ubicacion', function(msg) {
   #map{
   position: absolute;
   top: 60px;
-  bottom: 50;
+  bottom: 10;
  
-  height: 87%;
+  height: 90%;
  // z-index: -1000;
  opacity: 1;
 }
@@ -775,13 +775,8 @@ display: flex;
 
 
 
-<div id="main">
      <input type="hidden" name="dir" id="dir">
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m12">
-           <!-- Current balance & total transactions cards-->
-            <div class="row vertical-modern-dashboard">
+
             <input type="hidden" id="estasinput" name="estasinput">
 
           
@@ -801,7 +796,7 @@ display: flex;
 
                     <?php if(!isMobile2()) { ?>
 
-                      <div id="map" style="width:79%;"></div>
+                      <div id="map" style="width:100%;"></div>
                       
 
 
@@ -811,26 +806,8 @@ display: flex;
 
                     <?php } ?>
                
+                </div>
 
-
-              
-
-              
-
-
-              
-              <!--div class="col s12 m1"></div-->
-
-
-            </div>
-        
-      </div>
-
-   
-
-
-    </div>
-   </div>
   <!-- Modal Structure -->
 
   <!--div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;background-image: url('img/prueba10.jpg');background-repeat: no-repeat;background-size: cover;"-->
@@ -906,8 +883,6 @@ display: flex;
 
 
 
-
-</div>
 @endsection
 
 
