@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.horizontal')
 
 @section('content')
 
@@ -8,11 +8,12 @@
      $(document).ready(function(){
 
         $('.tooltipped').tooltip();
+      
+         $('#textarea1').trigger('autoresize');
 
 
 });
      
-
     function cargar(id){
 
          $("#"+id).css("display","");
@@ -49,14 +50,137 @@
     
 </style>
 
+<center><h4 style="color:#fff;">Mi cuenta</h4></center>
+
+<div class="col s12 m2 l4 animate fadeRight">
+         <!-- Total Transaction -->
+         <div class="card">
+            <div class="card-content">
+               <center><h4 class="card-title mb-0" style="font-size: 30px;">
+              <a class='modal-trigger' href="#cuenta" style="text-decoration: none;color:#000;">
+                <b>Información <i class="material-icons" style="font-size: 30px;">account_circle</i></b></a>
+
+            </h4></center>
+            </div>
+         </div>
+</div>
 
 
 
 
+<div class="col s12 m2 l4 animate fadeRight">
+         <!-- Total Transaction -->
+         <div class="card">
+            <div class="card-content">
+               <center><h4 class="card-title mb-0" style="font-size: 30px;">
+              <a class='modal-trigger' href="#soporte-info" style="text-decoration: none;color:#000;">  <b>Soporte <i class="material-icons" style="font-size: 30px;">comment</i></b></a>
+            </h4></center>
+            </div>
+         </div>
+</div>
 
 
 
-<div id="main" >
+<div class="col s12 m2 l4 animate fadeRight">
+         <!-- Total Transaction -->
+         <div class="card">
+            <div class="card-content">
+               <center><h4 class="card-title mb-0" style="font-size: 30px;"><b>Historial de Pedidos <i class="material-icons" style="font-size: 30px;">comment</i></b></h4></center>
+            </div>
+         </div>
+</div>
+
+
+
+
+  <div id="cuenta" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;">
+    <div class="modal-content">
+      <h6 id="title-modal" style="color:#000;font-size: 30px;">Información de la cuenta</h6><br>
+
+
+
+        <div class="row">
+            <div class="input-field col s12" >
+              <input value="{{ auth()->user()->name}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
+              <label class="active" for="first_name2" style="font-size:22px !important;">Nombre Completo</label>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="input-field col s12" >
+              <input value="{{ auth()->user()->email}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
+              <label class="active" for="first_name2" style="font-size:22px !important;">Correo electrónico</label>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="input-field col s12" >
+              <input value="{{ auth()->user()->telefono}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
+              <label class="active" for="first_name2" style="font-size:22px !important;">Teléfono</label>
+            </div>
+          </div>
+               
+   
+    <div class="modal-footer" style="width:350px;">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      <a href="#!" class="waves-effect waves-green btn-flat btn" style="background-color:red;color:#fff;" id='elimina-cuenta'>Eliminar cuenta</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <div id="soporte-info" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;">
+    <div class="modal-content">
+      <h6 id="title-modal" style="color:#000;font-size: 30px;">Soporte</h6><br>
+
+
+
+        <div class="row">
+            <div class="input-field col s12" >
+              <input value="{{ auth()->user()->name}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
+              <label class="active" for="first_name2" style="font-size:22px !important;">Nombre Completo</label>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="input-field col s12" >
+              <input value="{{ auth()->user()->email}}" id="first_name2" type="email" class="validate" style="font-size:22px !important;">
+              <label class="active" for="first_name2" style="font-size:22px !important;">Correo electrónico</label>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="input-field col s12" >
+              <input value="{{ auth()->user()->email}}" id="first_name2" type="number" class="validate" style="font-size:22px !important;">
+              <label class="active" for="first_name2" style="font-size:22px !important;">Teléfono</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea" style="font-size:22px !important;"></textarea>
+                  <label for="textarea1" style="font-size:22px !important;">Comentarios</label>
+                </div>
+              </div>
+            </form>
+          </div>
+               
+   
+    <div class="modal-footer" style="width:350px;">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      <a href="#!" class="waves-effect waves-green btn-flat btn" style="background-color:black;color:#fff;" id='elimina-cuenta'>Enviar</a>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--div id="main" >
       <div class="row">
 
          <center>
@@ -127,7 +251,7 @@
 
       
 </div>
-</div>
+</div-->
 
 
  
