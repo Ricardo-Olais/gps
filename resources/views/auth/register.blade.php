@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.horizontal')
 
 @section('content')
 
@@ -27,7 +27,7 @@
 </script>
 
 
-<div id="main">
+<!--div id="main"-->
   <div class="row  vertical-modern-dashboard">
 
    <div class="col s7"></div>
@@ -166,6 +166,6 @@
   </div>
  </div>
 
-</div>
+<!--/div-->
 
 @endsection

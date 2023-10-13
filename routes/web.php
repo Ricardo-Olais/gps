@@ -33,8 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/tracker', function () {
            // return view('mapa');
-
-            return view('beta');
+         return view('beta');
         });
 
 });

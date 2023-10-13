@@ -108,6 +108,13 @@
 
 </head>
 <body>
+
+   <?php
+
+          function isMobile() {
+                      return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+                    }
+?>
    <div id="fb-root"></div>
       <script>
         window.fbAsyncInit = function() {
@@ -224,9 +231,94 @@
   <ul class="sidenav" id="mobile-demo">
      <li><a href="index"><i class="material-icons">home</i> Inicio</a></li>
         <li><a href="tracker"><i class="material-icons" style="color:#00bcd4;">location_on</i> Rastrear</a></li>
-        <li><a href="dispositivos"><i class="material-icons">drive_eta</i> Dispositivos</a></li>
         <li><a href="compra_gps"><i class="material-icons">monetization_on</i> Planes de Servicio</a></li>
-        <li><a href="compra_gps"><i class="material-icons">description</i> Reportes</a></li>
+
+        @if (Auth::guest())
+
+          <li class="bold">
+            <a class="waves-effect waves-cyan " href="register">
+              <i class="material-icons">person_add</i>
+              <span class="menu-title" data-i18n="User Profile">Regístrate</span>
+            </a>
+          </li>
+
+          <li class="bold">
+              <a class="waves-effect waves-cyan " href="login">
+                <i class="material-icons" style="color:#00bcd4;">location_on</i>
+                <span class="menu-title" data-i18n="User Profile">Iniciar Sesión</span>
+              </a>
+            </li>
+        
+        
+
+
+
+           @else
+           <li><a href="dispositivos"><i class="material-icons">drive_eta</i> Dispositivos</a></li>
+           <li><a href="reportes"><i class="material-icons">description</i> Reportes</a></li>
+
+
+
+
+
+           <?php if(isMobile()) { ?>
+
+
+
+           <ul class="navbar-list right">
+             <li>
+            <a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown">
+              <span><b>{{ Auth::user()->name }}</b></span>
+              <span class="avatar-status avatar-online">
+                <img src="img/cuenta.jpg" alt="avatar">
+              </span>
+            </a>
+
+            
+            <ul class="dropdown-content" id="profile-dropdown" tabindex="0">
+
+
+             <li tabindex="0">
+
+                <a class="grey-text text-darken-1" href="micuenta">
+                  <i class="material-icons">help_outline</i>Mi cuenta</a>
+              </li>
+             
+              
+              <li class="divider" tabindex="0"></li>
+              <li tabindex="0">
+                <a class="grey-text text-darken-1" href="facturacion">
+                  <i class="material-icons">lock_outline</i> Factura</a>
+              </li>
+              <li tabindex="0">
+
+                <a class="grey-text text-darken-1" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       <i class="material-icons">keyboard_tab</i> {{ __('Salir') }}
+                                    </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+
+      <?php } ?>
+
+
+
+        @endif
+        
+
+
+        
+
+
+        
         <!--li><a href="register"><i class="material-icons">person_add</i> Regístrate</a></li-->
         <!--li><a href="login"><i class="material-icons">vpn_key</i> Login</a></li-->
   </ul>
