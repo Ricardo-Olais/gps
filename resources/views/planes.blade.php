@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.horizontal')
 
 @section('content')
  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
@@ -69,7 +69,7 @@
 }
 </style>
 
-<div id="main">
+<!--div id="main"-->
   <div class="row">
     <div class="col s12">
       <div class="container">
@@ -81,7 +81,7 @@
 
 
 
-              <img src="img/prueba12.jpg" width="100%">
+              <img src="img/prueba12-min.jpg" width="100%">
 
 
               <!--div class="centrado">Expertos en localización</div-->
@@ -589,7 +589,7 @@
       </div>
     </div>
   </div>
-</div>
+<!--/div-->
  
 
 

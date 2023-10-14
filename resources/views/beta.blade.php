@@ -59,7 +59,7 @@
 
      body{
 
-       background-image: url('img/prueba7.jpg');
+       background-image: url('img/prueba7-min.jpg');
        background-repeat: no-repeat;
         background-size: cover;
     }
