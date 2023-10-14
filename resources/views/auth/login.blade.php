@@ -6,7 +6,7 @@
     
     body{
 
-        background-image: url('img/prueba8.jpg');
+        background-image: url('img/prueba8-min.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         

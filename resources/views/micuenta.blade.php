@@ -38,8 +38,10 @@
     
     body{
 
-         //background-image: url('img/fondo-login.png');
-         background-color: #000;
+         background-image: url('img/prueba12-min.jpg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         //background-color: #000;
     }
 
     p{
@@ -54,7 +56,7 @@
 
 <div class="col s12 m2 l4 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card">
+         <div class="card" style="opacity:.9;">
             <div class="card-content">
                <center><h4 class="card-title mb-0" style="font-size: 30px;">
               <a class='modal-trigger' href="#cuenta" style="text-decoration: none;color:#000;">
@@ -70,7 +72,7 @@
 
 <div class="col s12 m2 l4 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card">
+         <div class="card" style="opacity:.9;">
             <div class="card-content">
                <center><h4 class="card-title mb-0" style="font-size: 30px;">
               <a class='modal-trigger' href="#soporte-info" style="text-decoration: none;color:#000;">  <b>Soporte <i class="material-icons" style="font-size: 30px;">comment</i></b></a>
@@ -83,7 +85,7 @@
 
 <div class="col s12 m2 l4 animate fadeRight">
          <!-- Total Transaction -->
-         <div class="card">
+         <div class="card" style="opacity:.9;">
             <div class="card-content">
                <center><h4 class="card-title mb-0" style="font-size: 30px;"><b>Historial de Pedidos <i class="material-icons" style="font-size: 30px;">comment</i></b></h4></center>
             </div>
