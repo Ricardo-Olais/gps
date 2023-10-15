@@ -1,0 +1,8 @@
+
+16/10/2023 00:37:47 llegando petición
+16/10/2023 00:39:09 llegando petición
+16/10/2023 00:40:30 llegando petición
+16/10/2023 00:40:43 llegando petición
+16/10/2023 00:40:52 llegando petición
+16/10/2023 00:41:22 llegando petición Array
+16/10/2023 00:43:50 llegando petición - hola = dedede
