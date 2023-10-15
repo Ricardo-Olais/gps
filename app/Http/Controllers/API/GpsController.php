@@ -13,7 +13,7 @@ use App\Mail\Bienvenida;
 use App\Mail\Alertas;
 use Aws\Sns\SnsClient; 
 use Aws\Exception\AwsException;
-
+use Illuminate\Support\Facades\Log;
 
 
 class GpsController extends Controller
@@ -34,7 +34,11 @@ class GpsController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
+    public function llc301(Request $request){
 
+        Log::info($request);
+
+    }
 
 
 

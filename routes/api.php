@@ -28,3 +28,7 @@ Route::get('/socketweb', 'API\GpsController@socketweb');
 Route::get('/enviac/{distancia}/{alias}', 'API\GpsController@enviac');
 
 Route::get('probar', 'API\GpsController@probar');
+
+Route::get('/llc301', 'API\GpsController@llc301');
+
+
