@@ -156,7 +156,7 @@ class RastreoController extends Controller
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com/soliSocket/ubicaini.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com.mx/soliSocket/ubicaini.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
@@ -680,7 +680,7 @@ class RastreoController extends Controller
            $texto="Te damos la bienvenida a localizaminave.con";
 
 
-           $message = "Tu dispositivo $alias se agregó a tu cuenta de manera exitosa, escanea el código QR generado, visita https://localizaminave.com/dispositivos";
+           $message = "Tu dispositivo $alias se agregó a tu cuenta de manera exitosa, escanea el código QR generado, visita https://localizaminave.com.mx/dispositivos";
 
            $phone = '+525586779297';
 
@@ -905,7 +905,7 @@ class RastreoController extends Controller
          $texto="La subscripción se ha activado de manera exitósa, gracias por confiar en localizaminave.com. Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma. Verifique el estatus de sus vehículos, conozca si se encuentran con o sin movimiento, detecte las alertas de parking, alertas de geocercas. Comparte la ubicación de tus vehículos con las personas que desees, sin tiempo limite, la ubicación se comparte en tiempo real.";
 
 
-         $message = "La subscripción se ha activado de manera exitósa, gracias por confiar en localizaminave.com, visita https://localizaminave.com";
+         $message = "La subscripción se ha activado de manera exitósa, gracias por confiar en localizaminave.com, visita https://localizaminave.com.mx";
 
          $phone = '+525586779297';
 
