@@ -71,7 +71,7 @@ class GpsController extends Controller
        
                     $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com/soliSocket/index.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com.mx/soliSocket/index.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
@@ -295,7 +295,7 @@ class GpsController extends Controller
        
               $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com/soliSocket/ubicaini.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com.mx/soliSocket/ubicaini.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
@@ -411,7 +411,7 @@ class GpsController extends Controller
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta' =>1));
                                 //enviamos correo de notificación
 
-                                $texto="Alerta de Parking: Hola el vehículo $alias se encuentra en movimiento, visita https://localizaminave.com/tracker";
+                                $texto="Alerta de Parking: Hola el vehículo $alias se encuentra en movimiento, visita https://localizaminave.com.mx/tracker";
 
                                
                                 $phone = '+525586779297';
@@ -464,7 +464,7 @@ class GpsController extends Controller
                                      //enviamos correo de notificación
                                 DB::table('vehiculos')->where('id_imei_android', $imei)->update(array('alerta2' =>1));
 
-                                $texto="Alerta de Geocerca: Hola el vehículo $alias ha salido del área permitida, visita https://localizaminave.com/tracker";
+                                $texto="Alerta de Geocerca: Hola el vehículo $alias ha salido del área permitida, visita https://localizaminave.com.mx/tracker";
 
                                 $phone = '+525586779297';
 
