@@ -772,16 +772,6 @@ socket.on('ubicacion', function(msg) {
     
 </script>
 
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-    
-  
-  var elemento = document.querySelector('#online');
-  var instance = M.Modal.getInstance(elemento);
-  instance.open();
-  
-  });
-</script>
 
 
 
