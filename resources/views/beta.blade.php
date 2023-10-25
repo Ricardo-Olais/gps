@@ -106,6 +106,33 @@ td, th {
     font-size: 10px;
     
 }
+
+.btn-floating i {
+    font-size: 1.6rem;
+    line-height: 40px;
+    display: inline-block;
+    width: inherit;
+    color: #fff;
+    margin-top: -4px !important;
+}
+
+.btn-floating {
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    vertical-align: middle;
+    color: #fff;
+    border-radius: 0% !important;
+    /* border-radius: 50%; */
+}
 </style>
 
 <script type="text/javascript">
@@ -147,7 +174,7 @@ $.post("vehiculosasignados",{_token:token},
 
     
 //fin de controles
-  var socket = io('https://localizaminave.com:3000'); //187.245.4.2
+  var socket = io('https://localizaminave.com.mx:3000'); //187.245.4.2
 
 
   var marker;
@@ -281,15 +308,15 @@ $.post("vehiculosasignados",{_token:token},
 
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 25,
-    attribution: '&copy; <a href="https://localizaminave.com">LocalizaMiNave</a>'
+    attribution: '&copy; <a href="https://localizaminave.com.mx">LocalizaMiNave</a>'
   }).addTo(map);
 
 
 
 
 L.control.condensedAttribution({
-  emblem: '<div class="emblem-wrap"><img src="https://localizaminave.com/images/color.png"/ width="50"></div>',
-  prefix: '<a href="https://localizaminave.com" title="Travel time analysis by Motion Intelligence"></a>GPS'
+  emblem: '<div class="emblem-wrap"><img src="https://localizaminave.com.mx/images/color.png"/ width="50"></div>',
+  prefix: '<a href="https://localizaminave.com.mx" title="Travel time analysis by Motion Intelligence"></a>GPS'
 }).addTo(map);
 
 
@@ -299,12 +326,15 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
      
 
 
-        botones.innerHTML += `<a class="btn-floating black modal-trigger" href="#online" style="margin-top:5px;"><i class="material-icons" style="color:#00bcd4;">location_on</i>Rastrear</a><br>`;
+        botones.innerHTML += `<a class="btn-floating modal-trigger" href="#online" style="margin-top:5px;background-color:#fff;"><i class="material-icons" style="color:#00bcd4;" id='ini'>location_on</i>Rastrear</a><br>`;
 
-        botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#000;margin-top:5px;"><i class="material-icons">directions</i></a><br>`;
+        botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>directions</i></a><br>`;
 
 
-         botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#000;margin-top:5pxcursor:pointer;margin-top:5px;"><i class="material-icons" id="comparte">share</i></a>`;
+         botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#fff;margin-top:5pxcursor:pointer;margin-top:5px;"><i class="material-icons" id="comparte" style='color:#000;'>share</i></a>`;
+
+
+
 
      
 
@@ -313,6 +343,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
     };
     botonesControl.addTo(map); 
 
+   
 
 
     var botonesControl1 = L.control({position: 'bottomleft'}); // creación del contenedor de botones
@@ -320,18 +351,18 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones1 = L.DomUtil.create('div', 'class-css-botones');
      
 
-        botones1.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#000;"><i class="material-icons">directions_car</i></a>`;
+        botones1.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#fff;"><i class="material-icons" style='color:#000;'>directions_car</i></a>`;
 
      
 
-         botones1.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">format_list_bulleted</i></a>`;
+         botones1.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>format_list_bulleted</i></a>`;
 
       
-          botones1.innerHTML += `<a id="ir-confi" class="btn-floating modal-trigger" href="#configuraciones" style="background-color:#000;margin-left:5px;"><i class="material-icons">settings</i></a>`;
+          botones1.innerHTML += `<a id="ir-confi" class="btn-floating modal-trigger" href="#configuraciones" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>settings</i></a>`;
 
          
 
-           botones1.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#000;margin-left:5px;"><i class="material-icons">home</i></a>`;
+           botones1.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>home</i></a>`;
 
 
         return botones1;
@@ -346,7 +377,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:100%;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:80%;padding:5px;border-radius:7px;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
 
 
 
@@ -354,7 +385,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
     };
     botonesControl2.addTo(map); 
 
-
+//$("#ini")[0].click();
 
 
 
@@ -462,21 +493,21 @@ socket.on('ubicacion', function(msg) {
 
           $("#comparte").click(function(){
 
-                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta https://localizaminave.com/tracking_share?imei='+imei;
+                window.location.href='https://api.whatsapp.com/send?text=Hola, estoy en camino sigue mi viaje, en estos momentos me encuentro en '+msg.direccion+ ', consulta https://localizaminave.com.mx/tracking_share?imei='+imei;
 
             });
 
 
 
             var customIcon = new L.Icon({
-              iconUrl: 'https://localizaminave.com/img/'+msg.tipo,
+              iconUrl: 'https://localizaminave.com.mx/img/'+msg.tipo,
               iconSize: [30, 40],
               iconAnchor: [25, 50]
             });     
 
 
               var customIcon2 = new L.Icon({
-                  iconUrl: 'https://localizaminave.com/img/globo.gif',
+                  iconUrl: 'https://localizaminave.com.mx/img/globo.gif',
                   iconSize: [80, 80],
                   iconAnchor: [35, 60]
                 });
@@ -628,7 +659,7 @@ socket.on('ubicacion', function(msg) {
 
         var greenIcon = new L.Icon({
           iconUrl: '',
-          shadowUrl: 'https://localizaminave.com/img/iconper.png',
+          shadowUrl: 'https://localizaminave.com.mx/img/iconper.png',
           iconSize: [25, 41],
           iconAnchor: [12, 41],
           popupAnchor: [1, -34],
@@ -739,6 +770,17 @@ socket.on('ubicacion', function(msg) {
 });
 
     
+</script>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    
+  
+  var elemento = document.querySelector('#online');
+  var instance = M.Modal.getInstance(elemento);
+  instance.open();
+  
+  });
 </script>
 
 
