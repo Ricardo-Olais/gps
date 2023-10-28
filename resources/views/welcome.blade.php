@@ -113,7 +113,7 @@
    
     <img src="img/home/img-home-8.jpeg" width="100%">
 
-    <b>Alerta eliminada</b>
+    <center><b>Alerta eliminada</b></center>
 
     <p style="text-align:justify;font-size: 14px;">
 
@@ -130,7 +130,7 @@
    
     <img src="img/home/img-home-5.jpeg" width="100%">
 
-    <b>IP65 a prueba de agua</b>
+    <center><b>IP65 a prueba de agua</b></center>
     <p style="text-align:justify;font-size: 14px;">
     El diseño robusto y resistente al polvo y al agua IP65 garantiza un rendimiento óptimo continuo, incluso en las condiciones más duras.</p>
 
@@ -141,7 +141,7 @@
 <div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
   <img src="img/home/img-home-10.jpeg" width="100%">
 
-    <b>Tamaño del rastreador</b>
+    <center><b>Tamaño del rastreador</b></center>
     <p style="text-align:justify;font-size: 14px;">
    
     Dimensiones: 6,1*10,8*3 cm
@@ -159,7 +159,7 @@
    
     <img src="img/home/img-home-6.jpeg" width="100%">
 
-    <b>Posicionamiento preciso</b>
+    <center><b>Posicionamiento preciso</b></center>
 
     <p style="text-align:justify;font-size: 14px;">
 
@@ -176,7 +176,7 @@
    
     <img src="img/home/img-home-7.jpeg" width="100%">
 
-    <b>Personaliza vallas para todos los vehículos.</b>
+    <center><b>Personaliza vallas para todos los vehículos.</b></center>
     <p style="text-align:justify;font-size: 14px;">
     <li>Reciba una alarma cuando un vehículo entre o salga del límite de la cerca.<br>
     <li>Admite la búsqueda de puntos de referencia, localiza con precisión el centro del círculo.<br>
@@ -187,9 +187,9 @@
 
 
 <div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
-  <img src="img/home/img-home-10.jpeg" width="100%">
+  <center><img src="img/home/disloca.jpeg" width="65%"></center>
 
-    <b>Alerta múltiple</b>
+    <center><b>Alerta múltiple</b></center>
     <p style="text-align:justify;font-size: 14px;">
    
     Puede iniciar sesión en la plataforma de seguimiento de localizaminave.com en su aplicación móvil/computadora/tableta para recibir varias alertas: Alerta de batería baja, Alerta eliminada, Alerta de vibración, Alerta de exceso de velocidad, Geo-valla, Alerta de apagado....</p>
