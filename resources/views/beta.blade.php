@@ -77,9 +77,9 @@
 
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-    //background: #1d3821;
-    background: #fff;
-    color: #000;
+    background: #1d3821;
+    //background: #fff;
+    color: #fff;
     box-shadow: 0 4px 14px rgba(0,0,0,0.4);
    
   
