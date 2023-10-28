@@ -77,8 +77,9 @@
 
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-    background: #1d3821;
-    color: #fff;
+    //background: #1d3821;
+    background: #fff;
+    color: #000;
     box-shadow: 0 4px 14px rgba(0,0,0,0.4);
    
   
@@ -704,7 +705,7 @@ socket.on('ubicacion', function(msg) {
        }
 
         theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-          autoPan: true}).addTo(map).bindPopup("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Modo:GPS</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st1' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>").openPopup();
+          autoPan: true}).addTo(map).bindPopup("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Disp:LL301</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st1' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
      
