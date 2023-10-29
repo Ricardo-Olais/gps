@@ -461,7 +461,7 @@ var lc = L.control
                     }*/
 
 
-        map.setZoom(16);
+        map.setZoom(17);
 
         
 
