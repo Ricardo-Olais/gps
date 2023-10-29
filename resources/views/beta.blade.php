@@ -380,7 +380,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:#00bcd4;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#000 !important;"></span></div>`;
 
 
 
@@ -707,7 +707,7 @@ socket.on('ubicacion', function(msg) {
        }
 
         theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-          autoPan: true}).addTo(map).bindPopup("<center>"+msg.alias+"</center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Disp:LL301</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st1' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>").openPopup();
+          autoPan: true}).addTo(map).bindPopup("<center><b style='color:#00bcd4;'>"+msg.alias+"</b></center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Disp:LL301</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+"</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st1' style='color:"+colore+";'>fiber_manual_record</i></td></tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr></td></table>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
      
