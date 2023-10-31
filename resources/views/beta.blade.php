@@ -50,6 +50,11 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
 
 
 
@@ -135,17 +140,219 @@ td, th {
     /* border-radius: 50%; */
 }
 
+.highcharts-exporting-group{
+
+    display: none !important;
+}
+
+.highcharts-credits{
+
+    display: none !important;
+}
+
+/*svg{
+  position: absolute;
+  margin: auto;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right:0;
+  
+}
+
+path#ponteirog {
+  transform-origin: bottom center;
+  animation: rotaciona-ponteiro 5s stop;
+}
+
+path#ponteirop {
+  transform-origin: top center;
+  animation: rotaciona-ponteiro 5s stop;
+}
+
+@keyframes rotaciona-ponteiro{
+  0%{
+    transform: rotate(-110deg);
+    transform: -moz-rotate(-110deg);
+  }
+  
+   50%{
+    transform: rotate(0deg);
+    transform: -moz-rotate(0deg);
+  }
+   100%{
+    transform: rotate(60deg);
+    transform: -moz-rotate(6deg);
+  }
+}*/
+
+
 
 </style>
 
+
 <script type="text/javascript">
+
+
+   $(document).ready(function(){
+
+
+    
+    Highcharts.chart('velocimetro', {
+
+    chart: {
+        type: 'gauge',
+        plotBackgroundColor: null,
+        plotBackgroundImage: null,
+        plotBorderWidth: 0,
+        plotShadow: false
+    },
+
+    title: {
+        text: 'Velocidad'
+    },
+
+    pane: {
+        startAngle: -150,
+        endAngle: 150,
+        background: [{
+            backgroundColor: {
+                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                stops: [
+                    [0, '#FFF'],
+                    [1, '#333']
+                ]
+            },
+            borderWidth: 0,
+            outerRadius: '109%'
+        }, {
+            backgroundColor: {
+                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                stops: [
+                    [0, '#333'],
+                    [1, '#FFF']
+                ]
+            },
+            borderWidth: 1,
+            outerRadius: '107%'
+        }, {
+            // default background
+        }, {
+            backgroundColor: '#DDD',
+            borderWidth: 0,
+            outerRadius: '105%',
+            innerRadius: '103%'
+        }]
+    },
+
+    // the value axis
+    yAxis: {
+        min: 0,
+        max: 120,
+
+        minorTickInterval: 'auto',
+        minorTickWidth: 1,
+        minorTickLength: 10,
+        minorTickPosition: 'inside',
+        minorTickColor: '#666',
+
+        tickPixelInterval: 30,
+        tickWidth: 2,
+        tickPosition: 'inside',
+        tickLength: 10,
+        tickColor: '#666',
+        labels: {
+            step: 2,
+            rotation: 'auto'
+        },
+        title: {
+            text: ''
+        },
+        plotBands: [{
+            from: 0,
+            to: 15,
+            color: '#55BF3B' // red
+            
+        }, {
+            from: 15,
+            to: 35,
+            color: '#DDDF0D' // yellow
+        }, {
+            from: 35,
+            to: 50,
+            color: '#DF5353' // greencolor: '#55BF3B' // red
+        }]
+    },
+
+    series: [{
+        name: 'Produtividade',
+        data: [0],
+        tooltip: {
+            valueSuffix: ''
+        }
+    }]
+
+},
+
+// Add some life
+function (chart) {
+    if (!chart.renderer.forExport) {
+        setInterval(function () {
+            var point = chart.series[0].points[0],
+                newVal,
+                inc = Math.round((Math.random() - 0.5) * 20);
+          var meta = 3;
+          var qtdProdutividade = 0;
+          if(true){
+            qtdProdutividade = qtdProdutividade + 15;
+          }
+          
+          var valorMax = 50;
+          newVal = point.y + qtdProdutividade; 
+          
+            if (newVal >= valorMax) {
+                newVal = valorMax;
+            }
+
+            point.update(newVal);
+
+        }, 3000);
+    }
+});
+
+
+   
+});
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+
 
 
 $(document).ready(function(){
 
 
+    setTimeout(() => {
+       $("#btn-1").trigger("click");
+
+      
+    }, "2000");
+
+     $('.modal').modal({
+        dismissible: false
+       });
+
+ //$('#online').modal('show');
 
 
+//return false;
+
+  
 
 
 //consultamos los vehiculos
@@ -363,9 +570,9 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
       
           botones1.innerHTML += `<a id="ir-confi" class="btn-floating modal-trigger" href="#configuraciones" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>settings</i></a>`;
 
-         
+      
 
-           botones1.innerHTML += `<a href='index' id="ir-home" class="btn-floating" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>home</i></a>`;
+           botones1.innerHTML += `<a href='#gps' id="ir-home" class="btn-floating waves-effect waves-light btn modal-trigger" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>expand_less</i></a>`;
 
 
         return botones1;
@@ -831,6 +1038,8 @@ display: flex;
 
                     <?php if(!isMobile2()) { ?>
 
+                        <button data-target="online" class="btn modal-trigger" id="btn-1" style="display:none;">Modal</button>
+
                       <div id="map" style="width:100%;"></div>
                       
 
@@ -843,10 +1052,63 @@ display: flex;
                
                 </div>
 
+
+<!-- Modal Trigger -->
+  
+
+  <!-- Modal Structure -->
+ 
+
+  <!-- Modal Structure -->
+  <div id="online" class="modal" >
+    <div class="modal-content">
+      <h6 id="title-modal" style="color:#000;">Dispositivo <i class="material-icons">directions_car</i></h6><br>
+       <h6 style="color:#000;">Selecciona dispositivo</h6>
+
+          
+        <select name="vehiculo" id="vehiculo" tabindex="-1" style="color:#fff;">
+                    
+
+                           
+        </select>
+
+
+
+    </div>
+    <div class="modal-footer">
+      <!--a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a-->
+      <a class="modal-close waves-light btn" id="localizar"><i class="material-icons left">location_on</i>Localizar</a>
+     
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal Trigger -->
+  
+
+  <!-- Modal Structure -->
+  <div id="gps" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h6>Información del díspositivo</h6>
+      
+      <div id="velocimetro" style="min-width:200px; max-width:200px; height: 200px; margin: 0 auto"></div>
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
+
   <!-- Modal Structure -->
 
-  <!--div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;background-image: url('img/prueba10.jpg');background-repeat: no-repeat;background-size: cover;"-->
-  <div id="online" class="modal modal-fixed-footer"  tabindex="-1" style="width:400px;">
+ 
+  <!--div id="online" class="modal modal-fixed-footer"  tabindex="-1">
     <div class="modal-content">
       <h6 id="title-modal" style="color:#000;">Dispositivo <i class="material-icons">directions_car</i></h6><br>
        <h6 style="color:#000;">Selecciona dispositivo</h6>
@@ -858,12 +1120,12 @@ display: flex;
                            
         </select>
    
-    <div class="modal-footer" style="width:350px;">
+    <div class="modal-footer" >
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
       <a class="modal-close waves-effect waves-light btn" id="localizar" style="background-color:black;"><i class="material-icons">location_on</i>Localizar</a>
     </div>
   </div>
-</div>
+</div-->
 
 
 
