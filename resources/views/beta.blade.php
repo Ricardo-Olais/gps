@@ -186,6 +186,23 @@ path#ponteirop {
   }
 }*/
 
+.highcharts-background{
+
+    background-color: black !important;
+}
+
+
+
+.modal.bottom-sheet {
+    top: auto;
+    bottom: -100%;
+    width: 100%;
+    max-height: 45%;
+    margin: 0;
+    border-radius: 12px !important;
+    will-change: bottom,opacity;
+}
+
 
 
 </style>
@@ -209,7 +226,7 @@ path#ponteirop {
     },
 
     title: {
-        text: 'Velocidad'
+        text: ''
     },
 
     pane: {
@@ -285,7 +302,7 @@ path#ponteirop {
     },
 
     series: [{
-        name: 'Produtividade',
+        name: 'km/hra',
         data: [0],
         tooltip: {
             valueSuffix: ''
@@ -1089,11 +1106,149 @@ display: flex;
   
 
   <!-- Modal Structure -->
-  <div id="gps" class="modal bottom-sheet">
+  <div id="gps" class="modal bottom-sheet" style="background-color:#ffffff !important">
     <div class="modal-content">
-      <h6>Información del díspositivo</h6>
+     
+
+      <center> <a class="modal-close" id="cerr"><i class="material-icons" style="font-size:30px;">expand_more</i></a></center>
+
+      <div class="row">
+                
+                     <div class="col s12 m2 l2" style="background-color: #fff;opacity:1;">
+
+                        <center><div id="velocimetro" style="min-width:180px; max-width:180px; height: 180px;"></div></center>
+                      
+                      </div>
+
+                       <div class="col s12 m2 l3" style="background-color: #fff;opacity: 1;">
+
+                             <table style="width: 100%;margin: auto;">
+                            
+
+                                <tbody>
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Estatus</b></td>
+                                    <td style="font-size: 12px !important;">Detenido</td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Batería</b></td>
+                                    <td style="font-size: 12px !important;">75%</td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Velocidad</b></td>
+                                    <td style="font-size: 12px !important;">45 km/hra.</td>
+                                   
+                                  </tr>
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Geocerca</b></td>
+                                    <td style="font-size: 12px !important;">500 mts.</td>
+                                   
+                                  </tr>
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Última actualización</b></td>
+                                    <td style="font-size: 12px !important;">2023-10-11 14:00:00</td>
+                                 
+                                  </tr>
+
+                                    <tr>
+                                    <td style="font-size: 12px !important;"><b>Última posición</b></td>
+                                    <td style="font-size: 12px !important;">2023-10-11 12:00:00</td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Satélites</b></td>
+                                    <td style="font-size: 12px !important;">7</td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Clima</b></td>
+                                    <td style="font-size: 12px !important;">Tormenta</td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Temperatura</b></td>
+                                    <td style="font-size: 12px !important;">19 °C</td>
+                                   
+                                  </tr>
+                                </tbody>
+                              </table>
+
+
+
+
+
+
+
+                       </div>
+
+
+
+
+
+                        <div class="col s12 m2 l7" style="background-color: #fff;opacity: 1;">
+
+
+                            <!--p style="color:#00bcd4 !important;">Top 5 de ubicaciones</p-->
+
+                                 <table style="width:100%" class="striped">
+                                    <thead>
+                                      <tr>
+                                          <th style="font-size: 12px !important;">Dirección (Top 5)</th>
+                                          <th style="font-size: 12px !important;">Fecha</th>
+                                         
+                                      </tr>
+                                    </thead>
+
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-size: 10px !important;">Tacuba 1595, Argentina Poniente, Miguel Hidalgo, 11230 Ciudad de México, CDMX, Mexico</td>
+                                        <td style="font-size: 12px !important;">2023-10-01 12:00:00</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <td style="font-size: 10px !important;">Abundio Gómez 74, Ahuizotla, 53378 Naucalpan de Juárez, Méx., Mexico</td>
+                                        <td style="font-size: 12px !important;">2023-10-01 11:00:00</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <td style="font-size: 10px !important;">Av. Ingenieros Militares 105, Argentina Poniente, Miguel Hidalgo, 11210 Ciudad de México, CDMX, Mexico</td>
+                                        <td style="font-size: 12px !important;">2023-10-01 10:00:00</td>
+                                       
+                                      </tr>
+                                       <tr>
+                                        <td style="font-size: 10px !important;">Av. Ingenieros Militares 105, Argentina Poniente, Miguel Hidalgo, 11210 Ciudad de México, CDMX, Mexico</td>
+                                        <td style="font-size: 12px !important;">2023-10-01 10:00:00</td>
+                                       
+                                      </tr>
+                                       <tr>
+                                        <td style="font-size: 10px !important;">Av. Ingenieros Militares 105, Argentina Poniente, Miguel Hidalgo, 11210 Ciudad de México, CDMX, Mexico</td>
+                                        <td style="font-size: 12px !important;">2023-10-01 10:00:00</td>
+                                       
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+
+                                <div id="actuall" style="width: 100%;font-size: 14px;margin-top: 5px;"><b>Ubicación actual:<br>Tacuba 1595, Argentina Poniente, Miguel Hidalgo, 11230 Ciudad de México, CDMX, Mexico</b></div>
+
+
+
+
+                       </div>
+             
+        </div>
+
+
+
       
-      <div id="velocimetro" style="min-width:200px; max-width:200px; height: 200px; margin: 0 auto"></div>
+      
+
+
 
 
 
@@ -1128,10 +1283,10 @@ display: flex;
 </div-->
 
 
-
-<!-- Modal Structure -->
-  <div id="configuraciones" class="modal modal-fixed-footer"  tabindex="-1" style="width:380px;height:400px;">
+ <div id="configuraciones" class="modal" >
     <div class="modal-content">
+     
+
       <h6 id="title-modal" style="color:#000;">Configuraciones <i class="material-icons">directions_car</i></h6><br>
            
           <h6 class="card-title mb-0 " style="color:#000;">Parking</h6>
@@ -1166,15 +1321,19 @@ display: flex;
 
 
                    </div>
-               
 
-   
-    <div class="modal-footer" style="width:350px;">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat" style="color:#000 !important;font-size: 22px;">Cerrar</a>
+
+
+    </div>
+    <div class="modal-footer">
+      <!--a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a-->
+      <a class="modal-close waves-light btn"><i class="material-icons left">highlight_off</i>Cerrar</a>
      
     </div>
   </div>
-</div>
+
+
+
 
 
 
