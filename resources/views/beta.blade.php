@@ -55,6 +55,15 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
 
+<?php $alto="45%"; if(isMobile2()) { 
+
+                 $alto="95%";
+
+
+                  }
+
+
+  ?>
 
 
 
@@ -197,7 +206,7 @@ path#ponteirop {
     top: auto;
     bottom: -100%;
     width: 100%;
-    max-height: 45%;
+    max-height:<?php echo $alto;?> !important;
     margin: 0;
     border-radius: 12px !important;
     will-change: bottom,opacity;
@@ -1110,7 +1119,7 @@ display: flex;
     <div class="modal-content">
      
 
-      <center> <a class="modal-close" id="cerr"><i class="material-icons" style="font-size:30px;">expand_more</i></a></center>
+      <center> <a class="modal-close" id="cerr"><i class="material-icons" style="font-size:60px;">expand_more</i></a></center>
 
       <div class="row">
                 
@@ -1187,10 +1196,24 @@ display: flex;
                        </div>
 
 
+                       <?php $margin=""; if(isMobile2()) { 
+
+                                $margin="30px";
+
+
+                            }
+
+
+                         ?>
+
+                            
+
+                    
 
 
 
-                        <div class="col s12 m2 l7" style="background-color: #fff;opacity: 1;">
+
+                        <div class="col s12 m2 l7" style="background-color: #fff;opacity: 1;margin-top: <?php echo $margin;?>">
 
 
                             <!--p style="color:#00bcd4 !important;">Top 5 de ubicaciones</p-->
@@ -1234,7 +1257,7 @@ display: flex;
                                   </table>
 
 
-                                <div id="actuall" style="width: 100%;font-size: 14px;margin-top: 5px;"><b>Ubicación actual:<br>Tacuba 1595, Argentina Poniente, Miguel Hidalgo, 11230 Ciudad de México, CDMX, Mexico</b></div>
+                                <div id="actuall" style="width: 100%;font-size: 14px;margin-top: <?php echo $margin;?>"><b>Ubicación actual:<br>Tacuba 1595, Argentina Poniente, Miguel Hidalgo, 11230 Ciudad de México, CDMX, Mexico</b></div>
 
 
 
