@@ -1318,7 +1318,7 @@ display: flex;
            <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">keyboard</i>
                            <input placeholder="Comando a ejecutar STATUS#" id="comando" type="text" class="validate" name="comando">
-                           <label for="comando" style="font-size:18px;">Comando</label>
+                           <label for="comando" style="font-size:20px;">Comando</label>
             </div>
 
            <a class="waves-effect waves-light btn" style="width:100%;"><i class="material-icons right">keyboard_arrow_right</i>Enviar</a>
