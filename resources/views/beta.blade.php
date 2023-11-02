@@ -1311,8 +1311,20 @@ display: flex;
      
 
       <h6 id="title-modal" style="color:#000;">Configuraciones <i class="material-icons">directions_car</i></h6><br>
+
+
+          
+
+           <div class="input-field input-field col s12 m2 l6">
+                          <i class="material-icons prefix">keyboard</i>
+                           <input placeholder="Comando a ejecutar STATUS#" id="comando" type="text" class="validate" name="comando">
+                           <label for="comando" style="font-size:18px;">Comando</label>
+            </div>
+
+           <a class="waves-effect waves-light btn" style="width:100%;"><i class="material-icons right">keyboard_arrow_right</i>Enviar</a>
+
            
-          <h6 class="card-title mb-0 " style="color:#000;">Parking</h6>
+          <h6 class="card-title mb-0 " style="color:#000;margin-top: 20px;">Parking</h6>
                    <!-- Switch -->
                    <div class="switch">
                      <label> Off <input type="checkbox" id="fijaubi" name="fijaubi">
