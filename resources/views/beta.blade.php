@@ -55,7 +55,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
 
-<?php $alto="45%"; if(isMobile2()) { 
+<?php $alto="60%"; if(isMobile2()) { 
 
                  $alto="95%";
 
