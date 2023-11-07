@@ -737,8 +737,8 @@ socket.on('ubicacion', function(msg) {
 
             var customIcon = new L.Icon({
               iconUrl: 'https://localizaminave.com.mx/img/'+msg.tipo,
-              iconSize: [30, 40],
-              iconAnchor: [25, 50]
+              iconSize: [25, 36],
+              iconAnchor: [25, 7]
             });     
 
 
@@ -953,7 +953,7 @@ socket.on('ubicacion', function(msg) {
        
 
         theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-          autoPan: true}).addTo(map).bindPopup("<center><b style='color:#00bcd4;'>"+msg.alias+"</b></center>").openPopup();
+          autoPan: true}).addTo(map).bindPopup("<center><b style='color:#fff;'>"+msg.alias+"</b></center>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
      
