@@ -1302,9 +1302,9 @@ display: flex;
 
 
     </div>
-    <div class="modal-footer">
+    <!--div class="modal-footer">
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-    </div>
+    </div-->
   </div>
 
   <!-- Modal Structure -->
