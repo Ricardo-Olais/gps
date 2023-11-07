@@ -613,7 +613,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:#00bcd4;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
 
 
 
@@ -939,8 +939,21 @@ socket.on('ubicacion', function(msg) {
 
        }
 
+       $("#tablealias").html(msg.alias);
+       $("#tableimei").html(imei);
+       $("#tablestatus").html(movimiento);
+       $("#tablebateria").html(msg.pila);
+       $("#tablevelocidad").html(velocidad);
+       $("#tablegeo").html(msg.geocerca);
+       $("#tableultimaAc").html(msg.fecha);
+       $("#tableultimapos").html(msg.fecha);
+       $("#tableclima").html(msg.clima);
+       $("#tabletemperatura").html(msg.temperatura);
+
+       
+
         theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
-          autoPan: true}).addTo(map).bindPopup("<center><b style='color:#00bcd4;'>"+msg.alias+"</b></center><br><table><tr><td>Estatus:"+movimiento+"</td><td>Disp:LL301</td></tr><tr><td>Batería:"+msg.pila+"%</td><td>GPS:GLONASS</td></tr><tr><td>Velocidad:"+velocidad+" km/hra.</td><td>Geocerca:"+msg.geocerca+" mtros.</td><tr><td>Clima:"+msg.clima+"</td><td>Temp.:"+msg.temperatura+"</td></tr></tr><tr><td>Fecha: "+msg.fecha+"</td><td><i class='material-icons'  id='st1' style='color:"+colore+";'>fiber_manual_record</i></td><!--/tr><tr><td>Estás a "+$('#estasinput').val()+" km del dispositivo</tr--></td></table>").openPopup();
+          autoPan: true}).addTo(map).bindPopup("<center><b style='color:#00bcd4;'>"+msg.alias+"</b></center>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
      
@@ -1135,35 +1148,46 @@ display: flex;
                             
 
                                 <tbody>
+                                    <tr>
+                                    <td style="font-size: 12px !important;"><b>Nombre</b></td>
+                                    <td style="font-size: 12px !important;" id="tablealias">Ricardo Olais</td>
+                                    
+                                  </tr>
+
+                                  <tr>
+                                    <td style="font-size: 12px !important;"><b>Imei</b></td>
+                                    <td style="font-size: 12px !important;" id="tableimei">43434343fdfdf4343</td>
+                                    
+                                  </tr>
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Estatus</b></td>
-                                    <td style="font-size: 12px !important;">Detenido</td>
+                                    <td style="font-size: 12px !important;" id="tablestatus">Detenido</td>
                                     
                                   </tr>
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Batería</b></td>
-                                    <td style="font-size: 12px !important;">75%</td>
+                                    <td style="font-size: 12px !important;" id="tablebateria">75%</td>
                                     
                                   </tr>
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Velocidad</b></td>
-                                    <td style="font-size: 12px !important;">45 km/hra.</td>
+                                    <td style="font-size: 12px !important;" id="tablevelocidad">45 km/hra.</td>
                                    
                                   </tr>
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Geocerca</b></td>
-                                    <td style="font-size: 12px !important;">500 mts.</td>
+                                    <td style="font-size: 12px !important;" id="tablegeo">500 mts.</td>
                                    
                                   </tr>
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Última actualización</b></td>
-                                    <td style="font-size: 12px !important;">2023-10-11 14:00:00</td>
+                                    <td style="font-size: 12px !important;" id="tableultimaAc">2023-10-11 14:00:00</td>
                                  
                                   </tr>
 
                                     <tr>
                                     <td style="font-size: 12px !important;"><b>Última posición</b></td>
-                                    <td style="font-size: 12px !important;">2023-10-11 12:00:00</td>
+                                    <td style="font-size: 12px !important;" id="tableultimapos">2023-10-11 12:00:00</td>
                                    
                                   </tr>
 
@@ -1175,13 +1199,13 @@ display: flex;
 
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Clima</b></td>
-                                    <td style="font-size: 12px !important;">Tormenta</td>
+                                    <td style="font-size: 12px !important;" id="tableclima">Tormenta</td>
                                    
                                   </tr>
 
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Temperatura</b></td>
-                                    <td style="font-size: 12px !important;">19 °C</td>
+                                    <td style="font-size: 12px !important;" id="tabletemperatura">19 °C</td>
                                    
                                   </tr>
                                 </tbody>
