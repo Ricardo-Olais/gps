@@ -380,6 +380,9 @@ $(document).ready(function(){
 
 //return false;
 
+
+
+
   
 
 
@@ -569,7 +572,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>directions</i></a><br>`;
 
 
-         botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#fff;margin-top:5pxcursor:pointer;margin-top:5px;"><i class="material-icons" id="comparte" style='color:#000;'>share</i></a>`;
+         botones.innerHTML += `<a id="ir-comparte" class="btn-floating" style="background-color:#fff;margin-top:5pxcursor:pointer;margin-top:5px;"><i class="material-icons" id="comparte" style='color:#000;'>share</i></a><br>`;
 
 
 
@@ -584,23 +587,23 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
    
 
 
-    var botonesControl1 = L.control({position: 'bottomleft'}); // creación del contenedor de botones
+    var botonesControl1 = L.control({position: 'topleft'}); // creación del contenedor de botones bottomleft
     botonesControl1.onAdd = function() {                     // creación de los botones
         var botones1 = L.DomUtil.create('div', 'class-css-botones');
      
 
-        botones1.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#fff;"><i class="material-icons" style='color:#000;'>directions_car</i></a>`;
+        botones1.innerHTML = `<a href="dispositivos" id="mostrar-vehiculos" class="btn-floating" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>directions_car</i></a><br>`;
 
      
 
-         botones1.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>format_list_bulleted</i></a>`;
+         botones1.innerHTML += `<a id="historico-car" class="btn-floating" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>format_list_bulleted</i></a><br>`;
 
       
-          botones1.innerHTML += `<a id="ir-confi" class="btn-floating modal-trigger" href="#configuraciones" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>settings</i></a>`;
+          botones1.innerHTML += `<a id="ir-confi" class="btn-floating modal-trigger" href="#configuraciones" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>settings</i></a><br>`;
 
       
 
-           botones1.innerHTML += `<a href='#gps' id="ir-home" class="btn-floating waves-effect waves-light btn modal-trigger" style="background-color:#fff;margin-left:5px;"><i class="material-icons" style='color:#000;'>expand_less</i></a>`;
+           botones1.innerHTML += `<a href='#gps' id="ir-home" class="btn-floating waves-effect waves-light btn modal-trigger" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>chevron_right</i></a><br>`;
 
 
         return botones1;
@@ -610,7 +613,10 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
 
 
 
-    var botonesControl2 = L.control({position: 'topright'}); // creación del contenedor de botones
+  
+
+
+     var botonesControl2 = L.control({position: 'topright'}); // creación del contenedor de botones
     botonesControl2.onAdd = function() {                     // creación de los botones
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
@@ -727,6 +733,22 @@ socket.on('ubicacion', function(msg) {
       if(msg.imei==imei){
 
 
+           $.post("api/ultimasdiez",{imei:imei},
+
+                function(data){
+
+                    $("#dirtabla").empty();
+
+                    for(i=0;i<data.rows.length;i++){
+
+                        $("#dirtabla").append("<tr><td style='font-size: 12px !important;'>"+data.rows[i].direccion+"</td></tr>");
+
+                    }
+
+
+                },'json');
+
+
         //funcionalidad para compartir
 
           $("#comparte").click(function(){
@@ -777,7 +799,8 @@ socket.on('ubicacion', function(msg) {
             $("#reg").html(msg.fecha);
 
 
-             $("#miubicacion").html(msg.direccion);
+             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha);
+             $("#actuall").html("<br><br><b>Ubicación actual:</b> <br>"+msg.direccion);
             
 
 
@@ -1247,43 +1270,20 @@ display: flex;
                                  <table style="width:100%" class="striped">
                                     <thead>
                                       <tr>
-                                          <th style="font-size: 12px !important;">Dirección (Top 5)</th>
-                                          <th style="font-size: 12px !important;">Fecha</th>
+                                          <th style="font-size: 12px !important;">últimas 5 direcciones</th>
+                                         
                                          
                                       </tr>
                                     </thead>
 
-                                    <tbody>
-                                      <tr>
-                                        <td style="font-size: 10px !important;">Tacuba 1595, Argentina Poniente, Miguel Hidalgo, 11230 Ciudad de México, CDMX, Mexico</td>
-                                        <td style="font-size: 12px !important;">2023-10-01 12:00:00</td>
-                                       
-                                      </tr>
-                                      <tr>
-                                        <td style="font-size: 10px !important;">Abundio Gómez 74, Ahuizotla, 53378 Naucalpan de Juárez, Méx., Mexico</td>
-                                        <td style="font-size: 12px !important;">2023-10-01 11:00:00</td>
-                                       
-                                      </tr>
-                                      <tr>
-                                        <td style="font-size: 10px !important;">Av. Ingenieros Militares 105, Argentina Poniente, Miguel Hidalgo, 11210 Ciudad de México, CDMX, Mexico</td>
-                                        <td style="font-size: 12px !important;">2023-10-01 10:00:00</td>
-                                       
-                                      </tr>
-                                       <tr>
-                                        <td style="font-size: 10px !important;">Av. Ingenieros Militares 105, Argentina Poniente, Miguel Hidalgo, 11210 Ciudad de México, CDMX, Mexico</td>
-                                        <td style="font-size: 12px !important;">2023-10-01 10:00:00</td>
-                                       
-                                      </tr>
-                                       <tr>
-                                        <td style="font-size: 10px !important;">Av. Ingenieros Militares 105, Argentina Poniente, Miguel Hidalgo, 11210 Ciudad de México, CDMX, Mexico</td>
-                                        <td style="font-size: 12px !important;">2023-10-01 10:00:00</td>
-                                       
-                                      </tr>
+                                    <tbody id="dirtabla">
+                                     
+                                     
                                     </tbody>
                                   </table>
 
 
-                                <div id="actuall" style="width: 100%;font-size: 14px;margin-top: <?php echo $margin;?>"><b>Ubicación actual:<br>Tacuba 1595, Argentina Poniente, Miguel Hidalgo, 11230 Ciudad de México, CDMX, Mexico</b></div>
+                                <div id="actuall" style="width: 100%;font-size: 14px;margin-top: <?php echo $margin;?>"></div>
 
 
 

@@ -40,6 +40,29 @@ class GpsController extends Controller
 
     }
 
+    public function ultimasdiez(Request $request){
+
+
+        $imei=$request->imei;
+
+
+         $consulta=DB::select("SELECT DISTINCT direccion from gpslocations_hist WHERE numero='$imei' ORDER BY id_gps DESC LIMIT 5");
+         $datos=array();
+
+         for($i=0;$i<count($consulta);$i++){
+     
+            $datos['rows'][]=array("direccion"=>$consulta[$i]->direccion);
+
+         }
+
+
+           $result = json_encode($datos);
+
+            return $result;
+
+
+    }
+
 
 
     public function recibeqr($datos){
