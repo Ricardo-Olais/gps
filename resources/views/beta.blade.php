@@ -819,7 +819,7 @@ socket.on('ubicacion', function(msg) {
 
 
              $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha);
-             $("#actuall").html("<br><br><b>Ubicación actual:</b> <br>"+msg.direccion);
+             $("#actuall").html("<br><b>Ubicación actual:</b> <br>"+msg.direccion);
             
 
 
@@ -1182,7 +1182,7 @@ display: flex;
                 
                      <div class="col s12 m2 l2" style="background-color: #fff;opacity:1;">
 
-                        <center><div id="velocimetro" style="min-width:160px; max-width:180px; height: 160px;"></div></center>
+                        <center><div id="velocimetro" style="min-width:150px; max-width:150px; height: 150px;"></div></center>
                       
                       </div>
 
