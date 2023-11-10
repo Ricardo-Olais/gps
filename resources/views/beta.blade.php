@@ -567,7 +567,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
      
 
 
-        botones.innerHTML += `<a class="btn-floating modal-trigger" href="#online" style="margin-top:5px;background-color:#fff;"><i class="material-icons" style="color:#00bcd4;" id='ini'>location_on</i>Rastrear</a><br>`;
+        botones.innerHTML += `<a class="btn-floating modal-trigger" href="#online" style="margin-top:5px;background-color:#fff;"><i class="material-icons" style="color:#00bcd4;" id='ini'>location_on</i>Rastrear</a><br><br><br>`;
 
         botones.innerHTML += `<a id="ir-car" class="btn-floating" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>directions</i></a><br>`;
 
