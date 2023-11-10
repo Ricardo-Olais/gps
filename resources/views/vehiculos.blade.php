@@ -1,4 +1,4 @@
-@extends('layouts.sinchat')
+@extends('layouts.horizontal')
 
 @section('content')
 
