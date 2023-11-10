@@ -550,11 +550,11 @@
 
               <a href="https://play.google.com/store/apps/details?id=com.localizaminave.gps" target="_blank"> <img src="img/play.png" width="30%" style="margin-top: 10px;"></a>
 
-               <stripe-buy-button
+               <!--stripe-buy-button
                   buy-button-id="buy_btn_1My6UyA94PugK9gPoWX1R6XA"
                   publishable-key="pk_live_51My4BjA94PugK9gPVi42fynUV5Z1ytdMU1DAqHC6Zsie4QHefYZ2hirnb2QBw73Xpkr2kd4pr4sxcrR2eH9r0rM50095ZYctPa"
                 >
-               </stripe-buy-button>
+               </stripe-buy-button-->
 
              </center>
 
