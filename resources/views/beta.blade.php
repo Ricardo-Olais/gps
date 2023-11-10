@@ -57,7 +57,7 @@
 
 <?php $alto="60%"; if(isMobile2()) { 
 
-                 $alto="95%";
+                 $alto="99%";
 
 
                   }
@@ -603,8 +603,6 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
 
       
 
-           botones1.innerHTML += `<a href='#gps' id="ir-home" class="btn-floating waves-effect waves-light btn modal-trigger" style="background-color:#fff;margin-top:5px;"><i class="material-icons" style='color:#000;'>chevron_right</i></a><br>`;
-
 
         return botones1;
     };
@@ -629,7 +627,28 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
     };
     botonesControl2.addTo(map); 
 
+
+
+
+      var botonesControl3 = L.control({position: 'bottomleft'}); // creación del contenedor de botones
+    botonesControl3.onAdd = function() {                     // creación de los botones
+        var botones3 = L.DomUtil.create('div', 'class-css-botones-ubi');
+     
+        var medida=screen.width;
+
+        var controlMedio=medida/2;
+
+        botones3.innerHTML += `<a href='#gps' id="ir-home" class="btn-floating waves-effect waves-light btn modal-trigger" style="background-color:#fff;margin-left:`+controlMedio+`px;"><i class="material-icons" style='color:#000;'>expand_less</i></a><br>`;
+
+
+
+        return botones3;
+    };
+    botonesControl3.addTo(map); 
+
 //$("#ini")[0].click();
+
+    console.log("el ancho es "+screen.width);
 
 
 
