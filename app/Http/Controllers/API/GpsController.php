@@ -217,9 +217,9 @@ class GpsController extends Controller
          $mifecha= date('Y-m-d H:i:s'); 
 
          //$NuevaFecha = strtotime ( '-1 hour' , strtotime ($mifecha) ) ;
-         $NuevaFecha = date ('F j, Y, g:i a' , $mifecha);
+         //$NuevaFecha = date ('Y-m-d H:i:s' , $NuevaFecha);
 
-        // $NuevaFecha = date ('Y-m-d H:i:s');
+         $NuevaFecha = date ('Y-m-d H:i:s');
 
 
         //consultar estatus de vehículo
