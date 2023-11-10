@@ -103,22 +103,22 @@
 
         <div class="row">
             <div class="input-field col s12" >
-              <input value="{{ auth()->user()->name}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
-              <label class="active" for="first_name2" style="font-size:22px !important;">Nombre Completo</label>
+              <input value="{{ auth()->user()->name}}" id="nombre" type="text" name="nombre" class="validate" style="font-size:22px !important;">
+              <label class="active" for="nombre" style="font-size:22px !important;">Nombre Completo</label>
             </div>
           </div>
 
            <div class="row">
             <div class="input-field col s12" >
-              <input value="{{ auth()->user()->email}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
-              <label class="active" for="first_name2" style="font-size:22px !important;">Correo electrónico</label>
+              <input value="{{ auth()->user()->email}}" id="correo" name="correo" type="text" class="validate" style="font-size:22px !important;">
+              <label class="active" for="correo" style="font-size:22px !important;">Correo electrónico</label>
             </div>
           </div>
 
            <div class="row">
             <div class="input-field col s12" >
-              <input value="{{ auth()->user()->telefono}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
-              <label class="active" for="first_name2" style="font-size:22px !important;">Teléfono</label>
+              <input value="{{ auth()->user()->telefono}}" id="telefono" name="telefono" type="text" class="validate" style="font-size:22px !important;">
+              <label class="active" for="telefono" style="font-size:22px !important;">Teléfono</label>
             </div>
           </div>
                
@@ -140,22 +140,22 @@
 
         <div class="row">
             <div class="input-field col s12" >
-              <input value="{{ auth()->user()->name}}" id="first_name2" type="text" class="validate" style="font-size:22px !important;">
-              <label class="active" for="first_name2" style="font-size:22px !important;">Nombre Completo</label>
+              <input value="{{ auth()->user()->name}}" id="nombreso" type="text" name="nombreso" class="validate" style="font-size:22px !important;">
+              <label class="active" for="nombreso" style="font-size:22px !important;">Nombre Completo</label>
             </div>
           </div>
 
            <div class="row">
             <div class="input-field col s12" >
-              <input value="{{ auth()->user()->email}}" id="first_name2" type="email" class="validate" style="font-size:22px !important;">
-              <label class="active" for="first_name2" style="font-size:22px !important;">Correo electrónico</label>
+              <input value="{{ auth()->user()->email}}" id="correoso" name="correoso" type="email" class="validate" style="font-size:22px !important;">
+              <label class="active" for="correoso" style="font-size:22px !important;">Correo electrónico</label>
             </div>
           </div>
 
            <div class="row">
             <div class="input-field col s12" >
-              <input value="{{ auth()->user()->email}}" id="first_name2" type="number" class="validate" style="font-size:22px !important;">
-              <label class="active" for="first_name2" style="font-size:22px !important;">Teléfono</label>
+              <input value="{{ auth()->user()->email}}" id="telefonoso" type="number" name='telefonoso' class="validate" style="font-size:22px !important;">
+              <label class="active" for="telefonoso" style="font-size:22px !important;">Teléfono</label>
             </div>
           </div>
 
@@ -163,8 +163,8 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea" style="font-size:22px !important;"></textarea>
-                  <label for="textarea1" style="font-size:22px !important;">Comentarios</label>
+                  <textarea id="comen" class="materialize-textarea" name="comen" style="font-size:22px !important;"></textarea>
+                  <label for="comen" style="font-size:22px !important;">Comentarios</label>
                 </div>
               </div>
             </form>
