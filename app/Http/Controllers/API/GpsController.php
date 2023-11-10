@@ -215,8 +215,11 @@ class GpsController extends Controller
 
         date_default_timezone_set("America/Mexico_City");
          $mifecha= date('Y-m-d H:i:s'); 
-         $NuevaFecha = strtotime ( '-1 hour' , strtotime ($mifecha) ) ;
-         $NuevaFecha = date ( 'Y-m-d H:i:s' , $NuevaFecha);
+
+         //$NuevaFecha = strtotime ( '-1 hour' , strtotime ($mifecha) ) ;
+         //$NuevaFecha = date ('Y-m-d H:i:s' , $NuevaFecha);
+
+         $NuevaFecha = date ('Y-m-d H:i:s');
 
 
         //consultar estatus de vehículo

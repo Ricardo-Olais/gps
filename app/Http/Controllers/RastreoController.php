@@ -422,7 +422,7 @@ class RastreoController extends Controller
        
                    $fields_string = http_build_query($fields);
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com:8081/gps/public/consultaSubscripcion.php?".$fields_string);
+                    curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com.mx:8081/gps/public/consultaSubscripcion.php?".$fields_string);
                     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
                     
