@@ -19,7 +19,7 @@
     });
 
 
-  var socket = io('https://localizaminave.com:3000');
+  var socket = io('https://localizaminave.com.mx:3000');
 
   var messages = document.getElementById('messages');
 
@@ -368,37 +368,47 @@
                         </div>
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">data_usage</i>
-                          <input id="alias" name='alias' type="text" class="validate" placeholder="Por ejemplo: Mi carro rojo" required style="font-size:18px;">
-                          <label for="icon_telephone" style="font-size:18px;">Alias del dispositivo</label>
+                          <input id="alias" name='alias' type="text" class="validate" placeholder="" required style="font-size:18px;">
+                          <label for="icon_telephone" style="font-size:18px;">Nombre</label>
                         </div>
                       </div>
+
+                      <div class="row">
+                        <div class="input-field input-field col s12 m2 l6">
+                          <i class="material-icons prefix">keyboard</i>
+                          <input  id="imei" name="imei" type="text" class="validate" placeholder="" required style="font-size:18px;">
+                          <label for="icon_prefix" style="font-size:18px;">IMEI</label>
+                        </div>
+
+                      </div>
+
 
                     <div class="row">
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">account_circle</i>
-                          <input  id="conductor" name="conductor" type="text" class="validate" placeholder="Juán Pérez" required style="font-size:18px;">
-                          <label for="icon_prefix" style="font-size:18px;">Nombre de familiar</label>
+                          <input  id="conductor" name="conductor" type="text" class="validate" placeholder="" required style="font-size:18px;">
+                          <label for="icon_prefix" style="font-size:18px;">Nombre de conductor</label>
                         </div>
 
                         <div class="input-field input-field col s12 m2 l6">
                           <i class="material-icons prefix">phone</i>
-                          <input id="telefono" name="telefono" type="number" class="validate" placeholder="Opcional" style="font-size:18px;">
-                          <label for="icon_telephone" style="font-size:18px;">Teléfono</label>
+                          <input id="telefono" name="telefono" type="number" class="validate" placeholder="" style="font-size:18px;">
+                          <label for="icon_telephone" style="font-size:18px;">Teléfono (SIM asignada)</label>
                         </div>
                       </div>
 
 
                        <div class="row">
-                        <div class="input-field col s12 m2 l4">
+                        <!--div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">directions_car</i>
                           <input id="marca" name='marca' type="text" class="validate" placeholder="Opcional" style="font-size:18px;">
                           <label for="icon_prefix" style="font-size:18px;">Marca</label>
-                        </div>
-                        <div class="input-field col s12 m2 l4">
+                        </div-->
+                        <!--div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">event_note</i>
                           <input id="placas" name='placas' type="text" class="validate" placeholder="Opcional" style="font-size:18px;">
                           <label for="icon_telephone" style="font-size:18px;">No.Placas</label>
-                        </div>
+                        </div-->
 
                         <div class="input-field col s12 m2 l4">
                           <i class="material-icons prefix">android</i>
