@@ -1182,7 +1182,7 @@ display: flex;
                 
                      <div class="col s12 m2 l2" style="background-color: #fff;opacity:1;">
 
-                        <center><div id="velocimetro" style="min-width:180px; max-width:180px; height: 180px;"></div></center>
+                        <center><div id="velocimetro" style="min-width:160px; max-width:180px; height: 160px;"></div></center>
                       
                       </div>
 
