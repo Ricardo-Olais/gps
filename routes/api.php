@@ -31,4 +31,6 @@ Route::get('probar', 'API\GpsController@probar');
 
 Route::get('/llc301', 'API\GpsController@llc301');
 
+Route::post('/ultimasdiez', 'API\GpsController@ultimasdiez');
+
 
