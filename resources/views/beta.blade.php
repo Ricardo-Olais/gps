@@ -760,7 +760,7 @@ socket.on('ubicacion', function(msg) {
 
                     for(i=0;i<data.rows.length;i++){
 
-                        $("#dirtabla").append("<tr><td style='font-size: 12px !important;'><li></li>"+data.rows[i].direccion+"</td></tr>");
+                        $("#dirtabla").append("<tr><td style='font-size: 12px !important;'>"+data.rows[i].direccion+"</td></tr>");
 
                     }
 
