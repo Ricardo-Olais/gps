@@ -2,11 +2,26 @@
 
 @section('content')
 
+   <?php
+
+          function isMobile3() {
+                      return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+                    }
+?>
+
 <style type="text/css">
     
     body{
 
-        background-image: url('img/prueba8-min.jpg');
+        <?php if(isMobile3()){ ?>
+
+        background-image: url('img/fondoml.jpg');
+
+    <?php } else{ ?>
+        background-image: url('img/car-driving-5.gif');
+
+    <?php }  ?>
+
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -34,8 +49,7 @@
 }
 
 video {
-  position: fixed;
-  right: 0;
+  position: fixfondoml.jpg
   bottom: 0;
   min-width: 105%;
   min-height: 100%;
@@ -130,7 +144,7 @@ var vid = document.getElementById("myVideo");
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Correo electrónico</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="font-size:18px;color: #000;">Usuario</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus style="font-size: 18px;">

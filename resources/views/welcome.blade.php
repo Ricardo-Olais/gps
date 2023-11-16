@@ -64,7 +64,7 @@
   <div class="col s12 m2 l12" style="background-color: #fff;opacity: .95;">
    
             <center><!--:#00bcd4-->
-            <!--span style="color:#000;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span-->
+            <span style="color:#000;font-size: 18px;"> Expertos en localización vehicular, controla tus vehículos con nuestro centro de monitoreo.</span>
               <video  autoplay muted loop id="video"  src="img/home/home.mp4"></video>
 
 
@@ -187,7 +187,7 @@
 
 
 <div class="col s12 m2 l4 animate fadeRight" style="color:#000;">
-  <center><img src="img/home/disloca.jpeg" width="65%"></center>
+  <center><img src="img/home/dis-blanco.jpeg" width="65%"></center>
 
     <center><b>Alerta múltiple</b></center>
     <p style="text-align:justify;font-size: 14px;">
