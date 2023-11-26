@@ -19,6 +19,8 @@
       <meta property="og:description" content="Conóce en donde se encuentran tus seres queridos, localizador familiar preciso y seguro, encuentra a sus seres queridos y sepa dónde están. Ahora es el mejor momento para garantizar la seguridad de su familia. Podrás localizarlos en tiempo real, compara nuestra plataforma." />
       <meta property="fb:app_id" content="2813051298827331" />
 
+    <link rel="icon" href="https://localizaminave.com.mx/img/cropped-favicon-32x32.png" sizes="32x32" />
+
     <link href="css/vendors.min.css" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
