@@ -91,7 +91,7 @@
             </div>
 
             <center><span style="font-size:24px;">Planes y precios de Gps Tracker</span></center>
-            <div class="col s12 m5 l4 animate fadeRight">
+            <div class="col s12 m5 l3 animate fadeRight">
               <div class="card" style="opacity:1;border-color: coral !important;">
                 <div class="card-content">
                   <center>
@@ -163,7 +163,107 @@
                 </div>
               </div>
             </div>
-            <div class="col s12 m5 l4 animate fadeRight">
+
+             <div class="col s12 m5 l3 animate fadeRight">
+              <div class="card" style="opacity:1;">
+                <div class="card-content">
+                  <center>
+                    <h6 class="card-title mb-0">
+                      <i class="material-icons right">gps_fixed</i>
+                      <b style="font-size:18px">Solo plataforma</b>
+                      <br><span>Renta mensual $49.00 MXN.</span>
+                     
+                    </h6>
+                  </center>
+                  <br>
+                  <ul class="collection with-header" style="color:#000">
+
+                  
+                     <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">account_circle</i> Cuentas espejo ilimitadas
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">location_on</i> Configura Geocercas
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">hdr_weak</i> Configura ubicación fija
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">format_list_bulleted</i> Consulta Histórico (1 año)
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">perm_data_setting</i> Herramientas de reporte de robo
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">headset_mic</i> Atención personalizada por chat
+                    </li>
+                    <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">notifications</i> Alertas vía whatsapp y correo electrónico
+                    </li>
+
+                  </ul>
+                
+                  <a class="btn waves-effect waves-light" id="basic-plan-btn-2" style="width:100%;background-color: #00bcd4;">Comprar <i class="material-icons right">send</i>
+                    <div class="preloader-wrapper big active" style="width:20px;height: 20px;display: none;" id="plan2">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                          <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col s12 m5 l3 animate fadeRight">
               <div class="card" style="opacity:1;background-color:#B4F6E2;">
                 <div class="card-content">
                   <center>
@@ -181,6 +281,10 @@
                       <i class="material-icons" style="color:#00bcd4;">phonelink_ring</i> Incluye dispositivo GPS
                     </li>
 
+                     <li class="collection-item">
+                      <i class="material-icons" style="color:#00bcd4;">battery_charging_full</i> Batería de respaldo
+                    </li>
+
                     <li class="collection-item">
                           
                       <i class="material-icons prefix">keyboard</i> Envió de comandos
@@ -189,7 +293,7 @@
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
                     <li class="collection-item">
-                      <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo
+                      <i class="material-icons" style="color:#00bcd4;">account_circle</i> Cuentas espejo ilimitadas
                     </li>
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia
@@ -368,7 +472,7 @@
 
 
 
-            <div class="col s12 m5 l4 animate fadeRight">
+            <div class="col s12 m5 l3 animate fadeRight">
               <div class="card" style="opacity:1">
                 <div class="card-content">
                   <center>
@@ -391,7 +495,7 @@
                       <i class="material-icons" style="color:#00bcd4;">location_on</i> Ubicación en tiempo real
                     </li>
                     <li class="collection-item">
-                      <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Cuentas espejo
+                      <i class="material-icons" style="color:#00bcd4;">account_circle</i> Cuentas espejo ilimitadas
                     </li>
                     <li class="collection-item">
                       <i class="material-icons" style="color:#00bcd4;">gps_fixed</i> Plataforma de monitoreo propia
