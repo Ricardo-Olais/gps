@@ -5,7 +5,7 @@
     ob_implicit_flush();
     $hoy = date('Y-m-d h:i:s');
     
-    $servidor='127.0.0.1';
+    $servidor='187.245.4.2';
     $puerto ='21100';
   
     
