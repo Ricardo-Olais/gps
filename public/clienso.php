@@ -1,5 +1,5 @@
 <?php
-$fp = stream_socket_client("tcp://127.0.0.1:21100", $errno, $errstr, 30);
+$fp = stream_socket_client("tcp://187.245.4.2:3001", $errno, $errstr, 30);
 if (!$fp) {
     echo "$errstr ($errno)<br />\n";
 } else {

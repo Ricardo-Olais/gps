@@ -6,7 +6,7 @@
     $hoy = date('Y-m-d h:i:s');
     
     $servidor='localhost';
-    $puerto ='22100';
+    $puerto ='3001';
   
     
     $pid = getmypid();
