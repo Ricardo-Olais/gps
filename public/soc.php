@@ -49,7 +49,7 @@
                 //$data = fread($socket, 128);
 
               //  $data=stream_socket_recvfrom($socket, 1500);
-
+                $ip = stream_socket_get_name($socket, true );
                 $buffer = stream_get_contents($socket);
 
 
