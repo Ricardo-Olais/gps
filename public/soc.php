@@ -54,10 +54,10 @@
 
 
                      if ($buffer == false) {
-                              echo "Client Disconnected from $ip\n";
+                              echo "Cliente desconectado desde $ip\n";
                               @fclose($changed_socket);
                                     $found_socket = array_search($socket,$client_sockets);
-                                    unset($clients[$found_socket]);
+                                    unset($client_sockets[$found_socket]);
                         }
 
                       $unmasked = unmask($buffer);
