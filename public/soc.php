@@ -68,7 +68,7 @@
                    $response = mask($unmasked);
 
                     echo ">data: " . $response . "\n";
-                    send_message($client_sockets, $response);
+                   // send_message($client_sockets, $response);
 
                // echo "Data: '" . stream_socket_recvfrom($socket, 1500) . "'\n";
 
