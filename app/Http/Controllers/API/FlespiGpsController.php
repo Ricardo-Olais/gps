@@ -86,6 +86,9 @@ class FlespiGpsController extends Controller
       $fecha='timestamp';
       $voltaje='battery.voltage';
 
+          if(isset($respuesta[0]->{$latitude})){
+
+
       $latitud=$respuesta[0]->{$latitude};
 
       $longitud=$respuesta[0]->{$longitude};
@@ -244,6 +247,10 @@ class FlespiGpsController extends Controller
 
 
        }
+
+
+
+    }
 
       http_response_code(200);
  
