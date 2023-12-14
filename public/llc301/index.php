@@ -2,6 +2,10 @@
   // Receive HTTP POST request body
  $json_string = file_get_contents('php://input');
 
+  $file_handle = fopen('messages.json', 'w');
+  fwrite($file_handle, $json_string); // Write received messages to file
+  fclose($file_handle);
+
 
 $datos=json_decode($json_string);
 
@@ -25,7 +29,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
 
 $string = curl_exec($ch);
 
-print_r($string);
+
 
 
 http_response_code(200);
