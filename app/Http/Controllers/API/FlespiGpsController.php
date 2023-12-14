@@ -107,6 +107,8 @@ class FlespiGpsController extends Controller
       $outputFrom = json_decode($geocodeFrom);
       $direccion=$outputFrom->results[0]->formatted_address;
 
+      $NuevaFecha = date ('Y-m-d H:i:s');
+
 
       $vehiclesEstatus=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
 
@@ -153,7 +155,8 @@ class FlespiGpsController extends Controller
                         "longitud"=>$latitud,
                         "imei"=>$imei,
                         "direccion"=>$direccion,
-                        "pila"=>$pila,"fecha"=>$NuevaFecha,
+                        "pila"=>$bateria,
+                        "fecha"=>$NuevaFecha,
                         "alias"=>$alias,
                         "conductor"=>$conductor,
                         "fija"=>$fija,
@@ -194,7 +197,7 @@ class FlespiGpsController extends Controller
                                         'longitud' =>$longitud,
                                         'velocidad' =>$velocidad,
                                         'fecha_gps' =>$NuevaFecha,
-                                        'pila' =>$pila,
+                                        'pila' =>$bateria,
 
                                   ));
                          //insertamos registro en bitácora
@@ -208,7 +211,7 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$pila
+                                        'pila'=>$bateria
                                         
 
                                       ]);
@@ -228,7 +231,7 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$pila
+                                        'pila'=>$bateria
                                         
 
                                       ]);
