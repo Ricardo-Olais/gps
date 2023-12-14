@@ -34,11 +34,15 @@ class FlespiGpsController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function recibegps(){
+    public function recibegps(Request $request){
 
         date_default_timezone_set("America/Mexico_City");
 
-        $json_string = file_get_contents('php://input');
+      //  $json_string = file_get_contents('php://input');
+
+        $json_string=$request->getContent();
+
+         Log::info($json_string);
 
         $file_handle = fopen('messages.json', 'w');
           fwrite($file_handle, $json_string); // Write received messages to file
@@ -75,7 +79,9 @@ class FlespiGpsController extends Controller
                 }
             ]';*/
 
-      $respuesta=json_decode($json_string);
+      //$respuesta=json_decode($json_string);
+
+      $respuesta = json_decode($request->getContent());
       
       $latitude='position.latitude';
       $longitude='position.longitude';
