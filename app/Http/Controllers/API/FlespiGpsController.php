@@ -157,7 +157,7 @@ class FlespiGpsController extends Controller
                         "latitud"=>$longitud,
                         "longitud"=>$latitud,
                         "imei"=>$imei,
-                        "direccion"=>$direccion,
+                        "direccion"=>$direccion.", ".$fechaserver,
                         "pila"=>$bateria,
                         "fecha"=>$NuevaFecha,
                         "alias"=>$alias,
