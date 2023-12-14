@@ -161,9 +161,9 @@ class FlespiGpsController extends Controller
                         "conductor"=>$conductor,
                         "fija"=>$fija,
                         "activaGeocerca"=>$activaGeocerca,
-                        "msjalerta1"=>$mensajealerta,
+                        "msjalerta1"=>'',
                         "tipo"=>$tipo,
-                        "msjalerta2"=>$mensajealerta2,
+                        "msjalerta2"=>'',
                         "latitud_geocerca"=>$latitud_geocerca,
                         "longitud_geocerca"=>$longitud_geocerca,
                         "geocerca"=>$geocerca,
@@ -224,8 +224,8 @@ class FlespiGpsController extends Controller
                         DB::table('gpslocations')->insert(
                                       [
                                       
-                                        'latitud'=>$longitud,
-                                        'longitud'=>$latitud,
+                                        'latitud'=>$latitud,
+                                        'longitud'=>$longitud,
                                         'sesion'=>$email,
                                         'numero'=>$imei,
                                         'direccion'=>$direccion,
@@ -243,13 +243,7 @@ class FlespiGpsController extends Controller
          }
 
 
-
-
-
-
- 
-
-    }
+       }
 
       http_response_code(200);
  
