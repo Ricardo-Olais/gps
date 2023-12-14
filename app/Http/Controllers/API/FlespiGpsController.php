@@ -40,6 +40,10 @@ class FlespiGpsController extends Controller
 
         $json_string = file_get_contents('php://input');
 
+        $file_handle = fopen('messages.json', 'w');
+          fwrite($file_handle, $json_string); // Write received messages to file
+          fclose($file_handle);
+
         /* $json_string='[
                 {
                     "battery.charging.status": false,
@@ -243,6 +247,8 @@ class FlespiGpsController extends Controller
  
 
     }
+
+      http_response_code(200);
  
   }
 
