@@ -1,34 +1,31 @@
 <?php
   // Receive HTTP POST request body
-  $json_string = file_get_contents('php://input');
+ $json_string = file_get_contents('php://input');
 
- 
-  $file_handle = fopen('messages.json', 'w');
-  fwrite($file_handle, $json_string); // Write received messages to file
-  fclose($file_handle);
 
 $datos=json_decode($json_string);
 
+//$json_string=json_encode($datos[0]);
+
+
 date_default_timezone_set("America/Mexico_City");
 
-  $headers = array(
-        'Content-Type: application/json',
-        'Content-Length: ' . strlen($json_string), // Abajo podríamos agregar más encabezados
-        'Personalizado: ¡Hola mundo!', # Un encabezado personalizado
-);
+ 
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com.mx:8080/api/flespi");
+curl_setopt($ch, CURLOPT_URL, "http://localhost/gps/public/api/flespi");
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_POST,false);
-curl_setopt($ch, CURLOPT_POSTFIELDS,$datos); 
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+curl_setopt($ch, CURLOPT_POST,true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,$json_string); 
 
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
 
 $string = curl_exec($ch);
+
+print_r($string);
 
 
 http_response_code(200);

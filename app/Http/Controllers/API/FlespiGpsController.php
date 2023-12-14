@@ -42,11 +42,13 @@ class FlespiGpsController extends Controller
 
         $json_string=$request->getContent();
 
-         Log::info($json_string);
 
-        $file_handle = fopen('messages.json', 'w');
-          fwrite($file_handle, $json_string); // Write received messages to file
-          fclose($file_handle);
+         $respuesta = json_decode($request->getContent());
+
+        // print_r($respuesta);
+
+
+        // Log::info($json_string);
 
         /* $json_string='[
                 {
@@ -98,6 +100,7 @@ class FlespiGpsController extends Controller
       $latitud=$respuesta[0]->{$latitude};
 
       $longitud=$respuesta[0]->{$longitude};
+
       $imei=$respuesta[0]->{$ident};
       $position=$respuesta[0]->{$direc};
       $satelites=$respuesta[0]->{$satelites};
