@@ -18,7 +18,7 @@ date_default_timezone_set("America/Mexico_City");
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://localhost/gps/public/api/flespi");
+curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com.mx:8080/api/flespi");
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 curl_setopt($ch, CURLOPT_POST,true);
