@@ -110,6 +110,7 @@ class FlespiGpsController extends Controller
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
+             $ultima=$vehiclesEstatus[0]->ultimap;
 
 
 
@@ -163,7 +164,7 @@ class FlespiGpsController extends Controller
               $fields=array(
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
-                       "direccion"=>$direccion."<br>Última posición ".$ultimaPosi,
+                       "direccion"=>$direccion,
                        "pila"=>$pila,
                        "fecha"=>$NuevaFecha,
                         "alias"=>$alias,
@@ -178,7 +179,8 @@ class FlespiGpsController extends Controller
                         "geocerca"=>$geocerca,
                         "velocidad"=>$velocidad,
                         "clima"=>$clima,
-                        "temperatura"=>$tempe
+                        "temperatura"=>$tempe,
+                        "ultimap"=>$ultima
 
                    );
        
