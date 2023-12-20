@@ -214,6 +214,7 @@ class FlespiGpsController extends Controller
                                         'velocidad' =>$velocidad,
                                         'fecha_gps' =>$NuevaFecha,
                                         'pila' =>$pila,
+                                        'ultimap' =>$ultimaPosi
 
                                   ));
                          //insertamos registro en bitácora

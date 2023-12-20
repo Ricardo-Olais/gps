@@ -84,6 +84,7 @@ class RastreoController extends Controller
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
              $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
+             $ultima=$vehiclesEstatus[0]->ultimap;
 
             // number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
 
@@ -148,7 +149,8 @@ class RastreoController extends Controller
                         "geocerca"=>$geocerca,
                         "velocidad"=>$velocidad,
                         "clima"=>$clima,
-                        "temperatura"=>$tempe
+                        "temperatura"=>$tempe,
+                        "ultimap"=>$ultima
 
                    );
 
