@@ -306,7 +306,7 @@ class FlespiGpsController extends Controller
                                
                                 $phone = '+525586779297';
 
-                                $this->enviamsgaws($texto,$phone);
+                               // $this->enviamsgaws($texto,$phone);
 
 
                                 Mail::to($email)->send(new Alertas($name,$texto));
@@ -358,7 +358,7 @@ class FlespiGpsController extends Controller
 
                                 $phone = '+525586779297';
 
-                                $this->enviamsgaws($texto,$phone);
+                                //$this->enviamsgaws($texto,$phone);
 
                                 Mail::to($email)->send(new Alertas($name,$texto));
 
