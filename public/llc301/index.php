@@ -2,17 +2,22 @@
   // Receive HTTP POST request body
   $json_string = file_get_contents('php://input');
 
+
+  $json_string=json_decode($json_string);
+
+  $device='device.id';
+
+
+  $id=$json_string[0]->{$device};
+
   $file_handle = fopen('messages.json', 'w');
-  fwrite($file_handle, $json_string); // Write received messages to file
+  fwrite($file_handle, $id); // Write received messages to file
   fclose($file_handle);
 
 
 
 
-  $json_string=json_decode($json_string);
-
-  $device='device.id';
-  $id=$json_string[0]->{$device};
+ 
 
 
   //$id="5416447";
@@ -72,8 +77,8 @@ $fechaSistema="Fecha actualización: ".date("d/m/Y H:i:s");
 
   $datos=array(
 
-        "latitud"=>$longitud,
-        "longitud"=>$latitud,
+        "latitud"=>$latitud,
+        "longitud"=>$longitud,
         "imei"=>$imei,
          "pila"=>$bateria,
         "ultimaPosicion"=>$fechaserver,
@@ -86,18 +91,17 @@ $fechaSistema="Fecha actualización: ".date("d/m/Y H:i:s");
 
  $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, "https://localizaminave.com.mx:8080/api/flespi");
+        curl_setopt($ch, CURLOPT_URL, "http://localizaminave.com.mx:8080/api/flespi");
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
-        curl_setopt($ch, CURLOPT_POST,false);
+        curl_setopt($ch, CURLOPT_POST,true);
         curl_setopt($ch, CURLOPT_POSTFIELDS,$datos); 
 
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
 
         $string = curl_exec($ch);
-               
-        $string = curl_exec($ch);
+      
 
 
   // NOTE: it's important to send HTTP 200 OK status

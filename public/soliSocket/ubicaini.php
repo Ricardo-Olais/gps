@@ -25,12 +25,30 @@ $geocerca=$_REQUEST['geocerca'];
 $velocidad=$_REQUEST['velocidad'];
 
 $clima=$_REQUEST['clima'];
+
+
+/*$urlT = 'http://api.mymemory.translated.net/get';
+$query_array = array (
+                    'q' =>$clima,
+                    'langpair' =>'en|es'
+                    
+                );
+$query = http_build_query($query_array);
+$json = file_get_contents($urlT . '?' . $query);
+
+$obj = json_decode($json);
+$clima= $obj->responseData->translatedText;*/
+
+
+
+
+
 $temperatura=$_REQUEST['temperatura'];
 
 
 $msjalerta2=$_REQUEST['msjalerta2'];
 
-$client = new Client(new Version2X('https://localizaminave.com:3000'));
+$client = new Client(new Version2X('https://localizaminave.com.mx:3000'));
 $client->initialize();
 $client->emit('send-ubicacion', [
     'email' => 'r.hernandez@lidcorp.mx',

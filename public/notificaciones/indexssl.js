@@ -1,9 +1,9 @@
 
 var fs = require('fs');
 var options = {
-  key: fs.readFileSync('llaveRicardo.PEM'),
-  cert: fs.readFileSync('56e8a554ae8e2452.PEM'),
-  ca: fs.readFileSync('gd_bundle-g2-g1.crt')
+  key: fs.readFileSync('llave2.PEM'),
+  cert: fs.readFileSync('principal.PEM'),
+  ca: fs.readFileSync('DigiCertCA.crt')
  
 };
 

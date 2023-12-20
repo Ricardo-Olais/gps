@@ -15,7 +15,9 @@
     function inicia_socket($servidor,$puerto)
     {
         $server = stream_socket_server("tcp://{$servidor}:{$puerto}", $errno, $errorMessage);
+         $hoy = date('Y-m-d h:i:s');
 
+        echo "Corriendo en el puerto 3001";
 
 
         if($server === false)
@@ -38,7 +40,7 @@
 
                 if($new_client)
                 {
-                    echo "IN: " . stream_socket_get_name($new_client, true) . "\n";
+                    echo "Nueva conexión: " . stream_socket_get_name($new_client, true) . "\n";
                     $client_sockets[] = $new_client;
                     echo "Conexiones Totales: " . count($client_sockets) . "\n\n";
                 }
@@ -46,28 +48,35 @@
             }
             foreach($read_sockets as $socket)
             {
-                //$data = fread($socket, 128);
+            
+                
+
+                $data = fread($socket, 1024);
 
               //  $data=stream_socket_recvfrom($socket, 1500);
-                $ip = stream_socket_get_name($socket, true );
-                $buffer = stream_get_contents($socket);
+             
+               // $buffer = stream_get_contents($socket,5);
+
+                $unmasked = unmask($data);
+
+               // echo "unmask: ".$unmasked;
 
 
-                     if ($buffer == false) {
-                              echo "Cliente desconectado desde $ip\n";
-                              @fclose($changed_socket);
-                                    $found_socket = array_search($socket,$client_sockets);
-                                    unset($client_sockets[$found_socket]);
-                        }
 
-                      $unmasked = unmask($buffer);
+                if (!$data)
+                {
+                    unset($client_sockets[array_search($socket, $client_sockets) ]);
+                    @fclose($socket);
+                    echo "cliente desconectado. total clientes: " . count($client_sockets) . "\n";
+                    continue;
+                }
 
 
-                if ($unmasked != "") { echo "\nReceived a Message from $ip:\n\"$unmasked\" \n"; }
+                if ($unmasked != "") { echo $unmasked; }
 
                    $response = mask($unmasked);
 
-                    echo ">data: " . $response . "\n";
+                    echo ">Response: $hoy--> " . $response."\n\n";
                    // send_message($client_sockets, $response);
 
                // echo "Data: '" . stream_socket_recvfrom($socket, 1500) . "'\n";
