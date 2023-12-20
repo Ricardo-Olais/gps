@@ -110,7 +110,7 @@ class FlespiGpsController extends Controller
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
-             $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
+            // $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
              $ultima=$vehiclesEstatus[0]->ultimap;
 
 
