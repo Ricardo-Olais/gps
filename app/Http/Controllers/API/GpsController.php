@@ -206,6 +206,10 @@ class GpsController extends Controller
 
 
 
+
+
+
+
         /*$sid = 'ACfa9f8841463c6cf3778c5d76cb42be00';
         $token = 'ad17ead7faeb621196aed6a1e694bafa'; 
 
@@ -518,6 +522,7 @@ class GpsController extends Controller
 
         
     }
+
 
     
 
