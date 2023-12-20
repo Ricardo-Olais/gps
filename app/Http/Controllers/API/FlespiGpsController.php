@@ -488,7 +488,7 @@ class FlespiGpsController extends Controller
              $email=$vehiclesEstatus[0]->email;
              $conductor=$vehiclesEstatus[0]->conductor;
              $geocerca=$vehiclesEstatus[0]->geocerca;
-             $address_geocerca=$vehiclesEstatus[0]->address_geocerca;
+             //$address_geocerca=$vehiclesEstatus[0]->address_geocerca;
              $fija=$vehiclesEstatus[0]->fija;
              $notificaciones=$vehiclesEstatus[0]->notificaciones;
              $activaGeocerca=$vehiclesEstatus[0]->activaGeocerca;
