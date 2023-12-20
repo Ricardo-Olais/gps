@@ -95,23 +95,22 @@ class FlespiGpsController extends Controller
 
              $email=$vehiclesEstatus[0]->email;
              $conductor=$vehiclesEstatus[0]->conductor;
-             $geocerca=$vehiclesEstatus[0]->geocerca;
-            
-             $fija=$vehiclesEstatus[0]->fija;
-             $notificaciones=$vehiclesEstatus[0]->notificaciones;
-             $activaGeocerca=$vehiclesEstatus[0]->activaGeocerca;
-             $estatus=$vehiclesEstatus[0]->estatus;
-             $telefono=$vehiclesEstatus[0]->telefono;
-             $direccion_fija=$vehiclesEstatus[0]->direccion_fija;
-             $alerta=$vehiclesEstatus[0]->alerta;
              $alias=$vehiclesEstatus[0]->alias_vehiculo;
-             $alerta2=$vehiclesEstatus[0]->alerta2;
           
+             
+             $latitud=$vehiclesEstatus[0]->latitud;
+             $longitud=$vehiclesEstatus[0]->longitud;
+             $pila=$vehiclesEstatus[0]->pila;
+             $fecha=$vehiclesEstatus[0]->fecha_gps;
+             $fija=$vehiclesEstatus[0]->fija;
+             $activaGeocerca=$vehiclesEstatus[0]->activaGeocerca;
+             $alerta=$vehiclesEstatus[0]->alerta;
+             $alerta2=$vehiclesEstatus[0]->alerta2;
              $tipo=$vehiclesEstatus[0]->tipo;
-
              $latitud_geocerca=$vehiclesEstatus[0]->latitud_geocerca;
              $longitud_geocerca=$vehiclesEstatus[0]->longitud_geocerca;
              $geocerca=$vehiclesEstatus[0]->geocerca;
+             $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
              $ultima=$vehiclesEstatus[0]->ultimap;
 
 
