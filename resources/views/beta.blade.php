@@ -996,7 +996,7 @@ socket.on('ubicacion', function(msg) {
 
        
 
-        theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false,
+        theMarker = L.marker([msg.longitud, msg.latitud],{icon: customIcon, draggable: false, rotationAngle:msg.pila,
           autoPan: true}).addTo(map).bindPopup("<center><b style='color:#fff;'>"+msg.alias+"</b></center>").openPopup();
 
         if(msg.latitud_geocerca!=null) {
