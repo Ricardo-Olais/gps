@@ -85,7 +85,9 @@ class FlespiGpsController extends Controller
 
         //consultar estatus de vehículo
 
-        $vehiclesEstatus=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
+       // $vehiclesEstatus=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
+
+        $vehiclesEstatus=DB::select("SELECT * FROM v_gps WHERE id_imei_android='$imei'");
 
         //$vehiclesGps=DB::select("SELECT * FROM gpslocations WHERE numero='$imei'");
 
