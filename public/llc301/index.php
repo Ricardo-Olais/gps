@@ -70,7 +70,7 @@ $satelites=$respuesta->result[$key]->{$satelites};
 $velocidad=$respuesta->result[$key]->{$speed};
 $mil = $respuesta->result[$key]->{$fecha}; 
 $seconds = $mil; 
-$fechaserver=date("d/m/Y H:i:s", $seconds);
+$fechaserver=date("Y-m-d H:i:s", $seconds);
 $fechaSistema="Fecha actualización: ".date("d/m/Y H:i:s");
 
 
