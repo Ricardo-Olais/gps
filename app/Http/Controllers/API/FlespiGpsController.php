@@ -163,7 +163,7 @@ class FlespiGpsController extends Controller
               $fields=array(
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
-                       "direccion"=>$direccion.", última posición: ".$ultimaPosi,
+                       "direccion"=>$direccion."<br>Última posición ".$ultimaPosi,
                        "pila"=>$pila,
                        "fecha"=>$NuevaFecha,
                         "alias"=>$alias,
