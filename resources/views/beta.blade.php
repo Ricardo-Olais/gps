@@ -91,8 +91,8 @@
 
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-    background: #1d3821;
-    //background: #fff;
+   // background: #1d3821;
+    background: #000;
     color: #fff;
     box-shadow: 0 4px 14px rgba(0,0,0,0.4);
    
@@ -619,7 +619,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#fff !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#fff !important;font-size:0.95rem !important;"></span></div>`;
 
 
 
