@@ -85,9 +85,11 @@ class FlespiGpsController extends Controller
 
         //consultar estatus de vehículo
 
-       // $vehiclesEstatus=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
+        $vehiclesEs=DB::select("SELECT * FROM vehiculos WHERE id_imei_android='$imei'");
 
         $vehiclesEstatus=DB::select("SELECT * FROM v_gps WHERE id_imei_android='$imei'");
+
+
 
         //$vehiclesGps=DB::select("SELECT * FROM gpslocations WHERE numero='$imei'");
 
@@ -112,6 +114,7 @@ class FlespiGpsController extends Controller
              $geocerca=$vehiclesEstatus[0]->geocerca;
             // $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
              $ultima=$vehiclesEstatus[0]->ultimap;
+             $estatus=$vehiclesEs[0]->estatus;
 
 
 
