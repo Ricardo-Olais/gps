@@ -211,7 +211,7 @@ path#ponteirop {
     border-radius: 12px !important;
     will-change: bottom,opacity;
 }
-
+.modal { max-height: 100%; overflow: visible}
 
 
 </style>
@@ -1386,7 +1386,7 @@ display: flex;
                      <!--span id="geocercaactual" class="lever"></span--><br>
                     <center>
                     <br>
-                     <table>
+                     <table width="100%">
                     <thead>
                       <tr>
                           
@@ -1407,7 +1407,7 @@ display: flex;
     </div>
     <div class="modal-footer">
       <!--a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a-->
-      <a class="modal-close waves-light btn"><i class="material-icons left">highlight_off</i>Cerrar</a>
+      <a class="modal-close waves-light btn" style="background-color:black;"><i class="material-icons left">highlight_off</i>Cerrar</a>
      
     </div>
   </div>
