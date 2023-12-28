@@ -1001,7 +1001,7 @@ socket.on('ubicacion', function(msg) {
        $("#tablevelocidad").html(velocidad);
        $("#tablegeo").html(msg.geocerca);
        $("#tableultimaAc").html(msg.fecha);
-       $("#tableultimapos").html(msg.fecha);
+       $("#tableultimapos").html(msg.ultimap);
        $("#tableclima").html(msg.clima);
        $("#tabletemperatura").html(msg.temperatura);
 
