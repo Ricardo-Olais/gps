@@ -225,7 +225,7 @@ class FlespiGpsController extends Controller
                                         'longitud' =>$longitud,
                                         'velocidad' =>$velocidad,
                                         'fecha_gps' =>$NuevaFecha,
-                                        'pila' =>$pila,
+                                        'pila' =>$pila-270,
                                         'ultimap' =>$ultimaPosi
 
                                   ));
@@ -240,7 +240,7 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$pila
+                                        'pila'=>$pila-270
                                         
 
                                       ]);
