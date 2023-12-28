@@ -26,6 +26,7 @@ $velocidad=$_REQUEST['velocidad'];
 
 $clima=$_REQUEST['clima'];
 $ultimap=$_REQUEST['ultimap'];
+$diasdetenido=$_REQUEST['diasdetenido'];
 
 
 /*$urlT = 'http://api.mymemory.translated.net/get';
@@ -72,7 +73,8 @@ $client->emit('send-ubicacion', [
     "velocidad"=>$velocidad,
     "clima"=>$clima,
     "temperatura"=>$temperatura,
-    "ultimap"=>$ultimap
+    "ultimap"=>$ultimap,
+    "diasdetenido"=>$diasdetenido
 
 ]);
 $client->close();

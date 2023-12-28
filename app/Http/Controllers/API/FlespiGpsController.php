@@ -161,6 +161,11 @@ class FlespiGpsController extends Controller
 
                 //$clima= $obj->responseData->translatedText;
                 $tempe=$temperatura." °C";
+
+            $currentDate = Carbon::createFromFormat('Y-m-d H:i:s', $mifecha);
+            $ultimaDate = Carbon::createFromFormat('Y-m-d H:i:s', $ultima);
+
+            $diferencia_en_dias = $currentDate->diffInDays($ultimaDate);
                         
 
 
@@ -183,7 +188,8 @@ class FlespiGpsController extends Controller
                         "velocidad"=>$velocidad,
                         "clima"=>$clima,
                         "temperatura"=>$tempe,
-                        "ultimap"=>$ultima
+                        "ultimap"=>$ultima,
+                        "diasdetenido"=>$diferencia_en_dias
 
                    );
        

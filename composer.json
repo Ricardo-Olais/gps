@@ -16,6 +16,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "2.4",
+        "nesbot/carbon": "^2.72",
         "simplesoftwareio/simple-qrcode": "~2",
         "stripe/stripe-php": "^9.7",
         "twilio/sdk": "^6.41",
