@@ -25,6 +25,7 @@ $geocerca=$_REQUEST['geocerca'];
 $velocidad=$_REQUEST['velocidad'];
 
 $clima=$_REQUEST['clima'];
+$ultimap=$_REQUEST['ultimap'];
 
 
 /*$urlT = 'http://api.mymemory.translated.net/get';
@@ -70,7 +71,8 @@ $client->emit('send-ubicacion', [
     "geocerca"=>$geocerca,
     "velocidad"=>$velocidad,
     "clima"=>$clima,
-    "temperatura"=>$temperatura
+    "temperatura"=>$temperatura,
+    "ultimap"=>$ultimap
 
 ]);
 $client->close();

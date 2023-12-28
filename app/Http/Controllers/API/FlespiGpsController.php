@@ -100,8 +100,7 @@ class FlespiGpsController extends Controller
              $alias=$vehiclesEstatus[0]->alias_vehiculo;
           
              
-             $latitud=$vehiclesEstatus[0]->latitud;
-             $longitud=$vehiclesEstatus[0]->longitud;
+            
              $pila=$vehiclesEstatus[0]->pila;
              $fecha=$vehiclesEstatus[0]->fecha_gps;
              $fija=$vehiclesEstatus[0]->fija;
