@@ -14,6 +14,7 @@ use App\Mail\Alertas;
 use Aws\Sns\SnsClient; 
 use Aws\Exception\AwsException;
 use Illuminate\Support\Facades\Log;
+use Carbon\Carbon;
 
 
 class FlespiGpsController extends Controller
