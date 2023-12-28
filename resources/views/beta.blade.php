@@ -943,7 +943,7 @@ socket.on('ubicacion', function(msg) {
 
         console.log(distancia);
 
-        $("#estas").html("<br><b style='font-size:12px;'>Estás a "+distancia.toFixed(2)+" Km del dispositivo</b>");
+        $("#estas").html("<br><b>Estás a "+distancia.toFixed(2)+" Km del dispositivo</b>");
 
          $("#estasinput").val(distancia.toFixed(2));
 
