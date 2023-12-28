@@ -11,6 +11,7 @@ use Twilio\Rest\Client;
 use App\Mail\Bienvenida;
 use Aws\Sns\SnsClient; 
 use Aws\Exception\AwsException;
+use Carbon\Carbon;
 
 class RastreoController extends Controller
 {
@@ -52,6 +53,11 @@ class RastreoController extends Controller
 
          $imei=$_REQUEST['imei'];
         // $llave=env('LLAVE_API_MAPS');
+         date_default_timezone_set("America/Mexico_City");
+         $mifecha= date('Y-m-d H:i:s'); 
+
+         
+
 
          //consultamos la llave de google maps. google_maps
 
@@ -129,11 +135,16 @@ class RastreoController extends Controller
                // $obj = json_decode($json);
 
                // $clima= $obj->responseData->translatedText;
-                         $tempe=$temperatura." °C";
+              $tempe=$temperatura." °C";
 
 
 
-              $fields=array(
+            $currentDate = Carbon::createFromFormat('Y-m-d H:i:s', $mifecha);
+            $ultimaDate = Carbon::createFromFormat('Y-m-d H:i:s', $ultima);
+
+            $diferencia_en_dias = $currentDate->diffInDays($ultimaDate);
+
+            $fields=array(
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
                        "direccion"=>$direccion,"pila"=>$pila,"fecha"=>$fecha,
@@ -150,7 +161,8 @@ class RastreoController extends Controller
                         "velocidad"=>$velocidad,
                         "clima"=>$clima,
                         "temperatura"=>$tempe,
-                        "ultimap"=>$ultima
+                        "ultimap"=>$ultima,
+                        "diasdetenido"=>$diferencia_en_dias
 
                    );
 
