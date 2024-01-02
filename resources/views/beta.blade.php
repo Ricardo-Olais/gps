@@ -822,6 +822,9 @@ socket.on('ubicacion', function(msg) {
 
                 textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
 
+            }else{
+
+                textDetenido="<br><b style='color:#00bcd4;'>En movimiento</b>";
             }
          
 
