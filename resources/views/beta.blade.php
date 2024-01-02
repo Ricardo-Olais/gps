@@ -818,14 +818,16 @@ socket.on('ubicacion', function(msg) {
             $("#reg").html(msg.fecha);
 
             var textDetenido="";
-            if(msg.banderaMin>4){
+
+             textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
+           /* if(msg.banderaMin>4){
 
                 textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
 
             }else{
 
                 textDetenido="<br><b style='color:#00bcd4;'>En movimiento</b>";
-            }
+            }*/
          
 
              $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span>"+textDetenido);
