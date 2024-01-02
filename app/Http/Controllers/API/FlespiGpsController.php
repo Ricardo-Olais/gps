@@ -169,7 +169,7 @@ class FlespiGpsController extends Controller
 
 
         $currentDate = Carbon::createFromFormat('Y-m-d H:i:s', $mifecha);
-        $ultimaDate = Carbon::createFromFormat('Y-m-d H:i:s', $ultima);
+        $ultimaDate = Carbon::createFromFormat('Y-m-d H:i:s', $ultimaPosi);
 
           $resultado="";
           $texto="";
@@ -248,7 +248,7 @@ class FlespiGpsController extends Controller
                         "velocidad"=>$velocidad,
                         "clima"=>$clima,
                         "temperatura"=>$tempe,
-                        "ultimap"=>$ultima,
+                        "ultimap"=>$ultimaPosi,
                         "diasdetenido"=>$resultado,
                         "banderaMin"=>$bandera
 
