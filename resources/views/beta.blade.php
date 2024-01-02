@@ -817,19 +817,9 @@ socket.on('ubicacion', function(msg) {
             $("#bat").html(msg.pila+" %");
             $("#reg").html(msg.fecha);
 
-            var dias;
+         
 
-            if(msg.diasdetenido>1){
-
-                dias="días";
-
-            }else{
-
-                dias="día";
-            }
-
-
-             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span><br><b style='color:red;'>DETENIDO</b> hace "+msg.diasdetenido+" "+dias);
+             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span><br><b style='color:red;'>DETENIDO</b> hace "+msg.diasdetenido);
              $("#actuall").html("<br><b>Ubicación actual:</b> <br>"+msg.direccion);
             
 
