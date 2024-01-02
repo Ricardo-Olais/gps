@@ -173,10 +173,12 @@ class FlespiGpsController extends Controller
 
           $resultado="";
           $texto="";
+          $bandera=0;
            
-           $soloDias = $currentDate->diff($ultimaDate)->format('%d');
+          $soloDias = $currentDate->diff($ultimaDate)->format('%d');
 
           $soloMinutos=ltrim($currentDate->diff($ultimaDate)->format('%i'),"0");
+          $bandera=$soloMinutos;
 
            if($soloDias==0){
 
@@ -206,7 +208,7 @@ class FlespiGpsController extends Controller
                     $texto="Minuto";
                 }
 
-
+               
                 $resultado="Hace ".$soloMinutos." ".$texto;
               }
 
@@ -247,7 +249,8 @@ class FlespiGpsController extends Controller
                         "clima"=>$clima,
                         "temperatura"=>$tempe,
                         "ultimap"=>$ultima,
-                        "diasdetenido"=>$resultado
+                        "diasdetenido"=>$resultado,
+                        "banderaMin"=$bandera
 
                    );
        

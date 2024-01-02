@@ -817,9 +817,15 @@ socket.on('ubicacion', function(msg) {
             $("#bat").html(msg.pila+" %");
             $("#reg").html(msg.fecha);
 
+            var textDetenido="";
+            if(msg.banderaMin>4){
+
+                textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
+
+            }
          
 
-             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span><br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido);
+             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span>"+textDetenido);
              $("#actuall").html("<br><b>Ubicación actual:</b> <br>"+msg.direccion);
             
 

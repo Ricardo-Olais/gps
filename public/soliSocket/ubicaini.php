@@ -28,6 +28,8 @@ $clima=$_REQUEST['clima'];
 $ultimap=$_REQUEST['ultimap'];
 $diasdetenido=$_REQUEST['diasdetenido'];
 
+$banderaMin=$_REQUEST['banderaMin'];
+
 
 /*$urlT = 'http://api.mymemory.translated.net/get';
 $query_array = array (
@@ -74,7 +76,8 @@ $client->emit('send-ubicacion', [
     "clima"=>$clima,
     "temperatura"=>$temperatura,
     "ultimap"=>$ultimap,
-    "diasdetenido"=>$diasdetenido
+    "diasdetenido"=>$diasdetenido,
+    "banderaMin"=>$banderaMin
 
 ]);
 $client->close();

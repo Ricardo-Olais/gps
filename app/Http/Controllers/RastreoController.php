@@ -146,10 +146,12 @@ class RastreoController extends Controller
 
           $resultado="";
           $texto="";
+          $bandera=0;
            
            $soloDias = $currentDate->diff($ultimaDate)->format('%d');
 
           $soloMinutos=ltrim($currentDate->diff($ultimaDate)->format('%i'),"0");
+          $bandera=$soloMinutos;
 
            if($soloDias==0){
 
@@ -179,6 +181,7 @@ class RastreoController extends Controller
                     $texto="Minuto";
                 }
 
+                
 
                 $resultado="Hace ".$soloMinutos." ".$texto;
               }
@@ -215,7 +218,8 @@ class RastreoController extends Controller
                         "clima"=>$clima,
                         "temperatura"=>$tempe,
                         "ultimap"=>$ultima,
-                        "diasdetenido"=>$resultado
+                        "diasdetenido"=>$resultado,
+                        "banderaMin"=$bandera
 
                    );
 
