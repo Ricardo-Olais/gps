@@ -819,7 +819,7 @@ socket.on('ubicacion', function(msg) {
 
          
 
-             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span><br><b style='color:red;'>DETENIDO</b> hace "+msg.diasdetenido);
+             $("#miubicacion").html(msg.direccion+"  <br><b>fecha de actualización:</b> "+msg.fecha+"<br><b>Última posición:</b> "+msg.ultimap+"<span id='estas'></span><br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido);
              $("#actuall").html("<br><b>Ubicación actual:</b> <br>"+msg.direccion);
             
 
