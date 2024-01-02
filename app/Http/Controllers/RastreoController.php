@@ -219,7 +219,7 @@ class RastreoController extends Controller
                         "temperatura"=>$tempe,
                         "ultimap"=>$ultima,
                         "diasdetenido"=>$resultado,
-                        "banderaMin"=$bandera
+                        "banderaMin"=>$bandera
 
                    );
 
