@@ -53,7 +53,7 @@ class FlespiGpsController extends Controller
 
         $imei=$request->imei;
 
-        $pila=$request->pila;
+        $grados=$request->pila;
 
         $velocidad=$request->velocidad;
 
@@ -174,7 +174,7 @@ class FlespiGpsController extends Controller
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
                        "direccion"=>$direccion,
-                       "pila"=>$pila,
+                       "pila"=>$grados-270,
                        "fecha"=>$NuevaFecha,
                         "alias"=>$alias,
                         "conductor"=>$conductor,
@@ -225,7 +225,7 @@ class FlespiGpsController extends Controller
                                         'longitud' =>$longitud,
                                         'velocidad' =>$velocidad,
                                         'fecha_gps' =>$NuevaFecha,
-                                        'pila' =>$pila-270,
+                                        'pila' =>$grados-270,
                                         'ultimap' =>$ultimaPosi
 
                                   ));
@@ -240,7 +240,7 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$pila-270
+                                        'pila'=>$grados-270
                                         
 
                                       ]);
@@ -260,7 +260,7 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$pila
+                                        'pila'=>$grados-270
                                         
 
                                       ]);
