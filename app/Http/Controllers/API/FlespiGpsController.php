@@ -15,6 +15,7 @@ use Aws\Sns\SnsClient;
 use Aws\Exception\AwsException;
 use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
+use Carbon\CarbonInterface;
 
 
 class FlespiGpsController extends Controller
@@ -82,6 +83,7 @@ class FlespiGpsController extends Controller
          //$NuevaFecha = date ('Y-m-d H:i:s' , $NuevaFecha);
 
          $NuevaFecha = date ('Y-m-d H:i:s');
+     
 
 
         //consultar estatus de vehículo
@@ -163,11 +165,66 @@ class FlespiGpsController extends Controller
                 //$clima= $obj->responseData->translatedText;
                 $tempe=$temperatura." °C";
 
-            $currentDate = Carbon::createFromFormat('Y-m-d H:i:s', $mifecha);
-            $ultimaDate = Carbon::createFromFormat('Y-m-d H:i:s', $ultima);
 
-            $diferencia_en_dias = $currentDate->diffInDays($ultimaDate);
-                        
+
+
+        $currentDate = Carbon::createFromFormat('Y-m-d H:i:s', $mifecha);
+        $ultimaDate = Carbon::createFromFormat('Y-m-d H:i:s', $ultima);
+
+          $resultado="";
+          $texto="";
+           
+           $soloDias = $currentDate->diff($ultimaDate)->format('%d');
+
+          $soloMinutos=ltrim($currentDate->diff($ultimaDate)->format('%i'),"0");
+
+           if($soloDias==0){
+
+              $hora=ltrim($currentDate->diff($ultimaDate)->format('%H'),"0");
+
+
+              if($hora!=""){
+
+               if($hora>1){
+
+                  $texto="Horas";
+               }else{
+
+                  $texto="Hora";
+               }
+
+
+                $resultado = "Hace ".$hora." ".$texto;
+
+              } else{
+
+                if($soloMinutos>1){
+
+                    $texto="Minutos";
+                }else{
+
+                    $texto="Minuto";
+                }
+
+
+                $resultado="Hace ".$soloMinutos." ".$texto;
+              }
+
+
+            }else{
+
+                if($soloDias>1){
+
+                  $texto="días";
+                }else{
+
+                  $texto="día";
+                }
+
+                $resultado="Hace ".$soloDias." ".$texto;
+            }
+
+       
 
 
               $fields=array(
@@ -190,7 +247,7 @@ class FlespiGpsController extends Controller
                         "clima"=>$clima,
                         "temperatura"=>$tempe,
                         "ultimap"=>$ultima,
-                        "diasdetenido"=>$diferencia_en_dias
+                        "diasdetenido"=>$resultado
 
                    );
        
