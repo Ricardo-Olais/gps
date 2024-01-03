@@ -121,10 +121,29 @@ class FlespiGpsController extends Controller
 
 
 
-              $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
+              /*$geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
               $outputFrom = json_decode($geocodeFrom);
-              $direccion=$outputFrom->results[0]->formatted_address;
+              @$direccion=$outputFrom->results[0]->formatted_address;*/
+
+
+
+                    $ch = curl_init();
+
+                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+                    curl_setopt($ch, CURLOPT_POST,false);
+                    //curl_setopt($ch, CURLOPT_POSTFIELDS,$datos); 
+
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+
+                    $string = curl_exec($ch);
+
+                    $string=json_decode($string);
+
+                    @$direccion=$string->results[0]->formatted_address;
 
               $mensajealerta="";
               $mensajealerta2="";
