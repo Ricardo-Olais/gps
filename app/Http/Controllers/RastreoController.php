@@ -101,7 +101,7 @@ class RastreoController extends Controller
 
 
 
-             $ch = curl_init();
+            /* $ch = curl_init();
 
             curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
             curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
@@ -116,17 +116,17 @@ class RastreoController extends Controller
 
             $string=json_decode($string);
 
-            @$direccion=$string->results[0]->formatted_address;
+            @$direccion=$string->results[0]->formatted_address;*/
 
           
 
 
-             /* $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
+              $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
 
 
               $outputFrom = json_decode($geocodeFrom);
-              @$direccion=@$outputFrom->results[0]->formatted_address;*/
+              @$direccion=@$outputFrom->results[0]->formatted_address;
 
              // $direccion="---";
 
