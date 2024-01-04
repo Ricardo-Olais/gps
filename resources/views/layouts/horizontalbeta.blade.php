@@ -147,7 +147,7 @@
 
 
 
- <div class="navbar-fixed">
+ <div class="navbar-fixed" style="opacity:.85;">
   <nav>
     <div class="nav-wrapper" style="background-color:black;">
       <a href="#!" class="brand-logo">
