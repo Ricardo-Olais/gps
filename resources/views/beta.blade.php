@@ -1,4 +1,4 @@
-@extends('layouts.horizontal')
+@extends('layouts.horizontalbeta')
 
 @section('content')
 
