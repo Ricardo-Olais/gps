@@ -820,7 +820,7 @@ socket.on('ubicacion', function(msg) {
             var textDetenido="";
 
             // textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
-            if(msg.banderaMin>2 && msg.banderaMin<4){
+            if(msg.banderaMin>4 && msg.banderaMin<6){
 
                 textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
 
