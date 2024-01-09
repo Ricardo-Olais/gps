@@ -999,7 +999,7 @@ socket.on('ubicacion', function(msg) {
        $("#tablealias").html(msg.alias);
        $("#tableimei").html(imei);
        $("#tablestatus").html(movimiento);
-       $("#tablebateria").html(msg.pila);
+       $("#tablebateria").html(msg.voltaje);
        $("#tablevelocidad").html(velocidad);
        $("#tablegeo").html(msg.geocerca);
        $("#tableultimaAc").html(msg.fecha);
