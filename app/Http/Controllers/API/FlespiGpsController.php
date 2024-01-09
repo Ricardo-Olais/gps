@@ -60,6 +60,8 @@ class FlespiGpsController extends Controller
 
         $ultimaPosi=$request->ultimaPosicion;
 
+        $voltaje=$request->voltaje;
+
 
 
         /* "latitud"=>$longitud,
@@ -117,6 +119,7 @@ class FlespiGpsController extends Controller
             // $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
              $ultima=$vehiclesEstatus[0]->ultimap;
              $estatus=$vehiclesEs[0]->estatus;
+             $voltaje=$vehiclesEs[0]->voltaje;
 
 
 
@@ -269,7 +272,8 @@ class FlespiGpsController extends Controller
                         "temperatura"=>$tempe,
                         "ultimap"=>$ultima,
                         "diasdetenido"=>$resultado,
-                        "banderaMin"=>$bandera
+                        "banderaMin"=>$bandera,
+                        "voltaje"=>$voltaje
 
                    );
        
@@ -304,8 +308,9 @@ class FlespiGpsController extends Controller
                                         'longitud' =>$longitud,
                                         'velocidad' =>$velocidad,
                                         'fecha_gps' =>$NuevaFecha,
-                                        'pila' =>$grados-270,
-                                        'ultimap' =>$ultimaPosi
+                                        'pila' =>$grados,
+                                        'ultimap' =>$ultimaPosi,
+                                        'voltaje'=>$voltaje
 
                                   ));
                          //insertamos registro en bitácora
@@ -319,7 +324,8 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$grados-270
+                                        'pila'=>$grados,
+                                        'voltaje'=>$voltaje
                                         
 
                                       ]);
@@ -339,7 +345,8 @@ class FlespiGpsController extends Controller
                                         'direccion'=>$direccion,
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
-                                        'pila'=>$grados-270
+                                        'pila'=>$grados,
+                                        'voltaje'=>$voltaje
                                         
 
                                       ]);

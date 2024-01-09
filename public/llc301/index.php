@@ -75,17 +75,43 @@ $fechaSistema="Fecha actualización: ".date("d/m/Y H:i:s");
 
 
 
+curl_setopt($ch, CURLOPT_URL, "https://flespi.io/gw/devices/$id/messages?data=%7B%22count%22%3A1%2C%22reverse%22%3Atrue%2C%22fields%22%3A%22%22%2C%22filter%22%3A%22battery.voltage%3E0%22%2C%22from%22%3A0%7D");
+curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_POST,false);
+//curl_setopt($ch, CURLOPT_POSTFIELDS,$datos); 
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+
+$string = curl_exec($ch);
+
+$respuesta=json_decode($string);
+
+$bateria='battery.voltage';
+$carga='battery.charging.status';
+
+//battery.charging.status
+
+$voltaje=(($respuesta->result[0]->{$bateria})*100)/4.5;
+$cargando=($respuesta->result[0]->{$carga}) ? 'Cargando...': "";
+
+$voltaje=number_format($voltaje,2)." % ".$cargando;
+
+
+
   $datos=array(
 
         "latitud"=>$latitud,
         "longitud"=>$longitud,
         "imei"=>$imei,
-         "pila"=>$bateria,
+        "pila"=>$bateria,
         "ultimaPosicion"=>$fechaserver,
-        "velocidad"=>$velocidad
+        "velocidad"=>$velocidad,
+        "voltaje"=>$voltaje
                     
 
       );
+
 
 
 
