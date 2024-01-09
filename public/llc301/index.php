@@ -95,7 +95,7 @@ $carga='battery.charging.status';
 
 //battery.charging.status
 
-$voltaje=(($respuesta->result[0]->{$bate})*100)/4.5;
+$voltaje=(($respuesta->result[0]->{$bate})*100)/4.15;
 $cargando=($respuesta->result[0]->{$carga}) ? 'Cargando...': "";
 
 $voltaje=number_format($voltaje,2)."% ".$cargando;
