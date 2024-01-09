@@ -121,7 +121,7 @@ class FlespiGpsController extends Controller
             // $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
              $ultima=$vehiclesEstatus[0]->ultimap;
              $estatus=$vehiclesEs[0]->estatus;
-             $voltaje=$vehiclesEstatus[0]->voltaje;
+            // $voltaje=$vehiclesEstatus[0]->voltaje;
 
 
 
@@ -255,8 +255,7 @@ class FlespiGpsController extends Controller
                 $resultado="Hace ".$soloDias." ".$texto;
             }
 
-       
-
+            
 
               $fields=array(
 
