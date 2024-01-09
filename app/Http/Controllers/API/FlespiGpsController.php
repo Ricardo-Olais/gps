@@ -96,6 +96,8 @@ class FlespiGpsController extends Controller
 
 
 
+
+
         //$vehiclesGps=DB::select("SELECT * FROM gpslocations WHERE numero='$imei'");
 
           if(count($vehiclesEstatus)>0){
@@ -119,7 +121,7 @@ class FlespiGpsController extends Controller
             // $velocidad=number_format((($vehiclesGps[0]->velocidad)*3.6), 2, '.', "");
              $ultima=$vehiclesEstatus[0]->ultimap;
              $estatus=$vehiclesEs[0]->estatus;
-             $voltaje=$vehiclesEs[0]->voltaje;
+             $voltaje=$vehiclesEstatus[0]->voltaje;
 
 
 
@@ -127,7 +129,12 @@ class FlespiGpsController extends Controller
               $geocodeFrom = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitud,$longitud&key=$llave");
 
               $outputFrom = json_decode($geocodeFrom);
-              @$direccion=$outputFrom->results[0]->formatted_address;
+              $direccion=$outputFrom->results[0]->formatted_address;
+
+
+             // $direccion="--";
+
+            
 
 
 
@@ -255,7 +262,7 @@ class FlespiGpsController extends Controller
 
                        "latitud"=>$longitud,"longitud"=>$latitud,"imei"=>$imei,
                        "direccion"=>$direccion,
-                       "pila"=>$grados-270,
+                       "pila"=>$grados,
                        "fecha"=>$NuevaFecha,
                         "alias"=>$alias,
                         "conductor"=>$conductor,
