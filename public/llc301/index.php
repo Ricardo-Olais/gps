@@ -20,7 +20,7 @@
  
 
 
-  //$id="5416447";
+ // $id="5416447";
 
 date_default_timezone_set("America/Mexico_City");
 
@@ -46,6 +46,7 @@ $string = curl_exec($ch);
 //print_r($string);
 
 $respuesta=json_decode($string);
+
 
 
 //print_r($respuesta->result);
@@ -87,12 +88,14 @@ $string = curl_exec($ch);
 
 $respuesta=json_decode($string);
 
-$bateria='battery.voltage';
+
+
+$bate='battery.voltage';
 $carga='battery.charging.status';
 
 //battery.charging.status
 
-$voltaje=(($respuesta->result[0]->{$bateria})*100)/4.5;
+$voltaje=(($respuesta->result[0]->{$bate})*100)/4.5;
 $cargando=($respuesta->result[0]->{$carga}) ? 'Cargando...': "";
 
 $voltaje=number_format($voltaje,2)."% ".$cargando;
@@ -127,8 +130,8 @@ $voltaje=number_format($voltaje,2)."% ".$cargando;
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
 
         $string = curl_exec($ch);
-      
 
+     
 
   // NOTE: it's important to send HTTP 200 OK status
   // to acknowledge successful messages delivering
