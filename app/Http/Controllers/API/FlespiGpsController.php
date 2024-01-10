@@ -210,7 +210,7 @@ class FlespiGpsController extends Controller
           $soloDias = $currentDate->diff($ultimaDate)->format('%d');
 
           $soloMinutos=ltrim($currentDate->diff($ultimaDate)->format('%i'),"0");
-          $bandera=$soloMinutos;
+          $bandera=0;
 
            if($soloDias==0){
 
@@ -235,10 +235,15 @@ class FlespiGpsController extends Controller
                 if($soloMinutos>1){
 
                     $texto="Minutos";
+                    $bandera=$soloMinutos;
+
                 }else{
 
                     $texto="Minuto";
+                    $bandera=0;
                 }
+
+                
 
                
                 $resultado="Hace ".$soloMinutos." ".$texto;
