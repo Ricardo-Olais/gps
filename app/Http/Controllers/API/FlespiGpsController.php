@@ -62,6 +62,9 @@ class FlespiGpsController extends Controller
 
         $voltaje=$request->voltaje;
 
+        $satelites=$request->satelites;
+        $kilometrosR=$request->kilometros;
+
 
 
         /* "latitud"=>$longitud,
@@ -279,7 +282,9 @@ class FlespiGpsController extends Controller
                         "ultimap"=>$ultima,
                         "diasdetenido"=>$resultado,
                         "banderaMin"=>$bandera,
-                        "voltaje"=>$voltaje
+                        "voltaje"=>$voltaje,
+                        "satelites"=>$satelites,
+                        "kilometros"=>$kilometrosR
 
                    );
        
@@ -316,7 +321,9 @@ class FlespiGpsController extends Controller
                                         'fecha_gps' =>$NuevaFecha,
                                         'pila' =>$grados,
                                         'ultimap' =>$ultimaPosi,
-                                        'voltaje'=>$voltaje
+                                        'voltaje'=>$voltaje,
+                                        'satelites'=>$satelites,
+                                        "kilometros"=>$kilometrosR
 
                                   ));
                          //insertamos registro en bitácora
@@ -331,7 +338,9 @@ class FlespiGpsController extends Controller
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
                                         'pila'=>$grados,
-                                        'voltaje'=>$voltaje
+                                        'voltaje'=>$voltaje,
+                                        'satelites'=>$satelites,
+                                        "kilometros"=>$kilometrosR
                                         
 
                                       ]);
@@ -352,7 +361,9 @@ class FlespiGpsController extends Controller
                                         'velocidad'=>$velocidad,
                                         'fecha_gps'=>$NuevaFecha,
                                         'pila'=>$grados,
-                                        'voltaje'=>$voltaje
+                                        'voltaje'=>$voltaje,
+                                        'satelites'=>$satelites,
+                                        "kilometros"=>$kilometrosR
                                         
 
                                       ]);

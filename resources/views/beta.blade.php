@@ -1006,6 +1006,10 @@ socket.on('ubicacion', function(msg) {
        $("#tableultimapos").html(msg.ultimap);
        $("#tableclima").html(msg.clima);
        $("#tabletemperatura").html(msg.temperatura);
+       $("#satelites").html(msg.satelites);
+       $("#kilos").html(msg.kilometros);
+
+
 
        
 
@@ -1248,9 +1252,17 @@ display: flex;
                                    
                                   </tr>
 
+                                   </tr>
+
+                                    <tr>
+                                    <td style="font-size: 12px !important;"><b>Kilómetros recorridos</b></td>
+                                    <td style="font-size: 12px !important;" id="kilos"></td>
+                                   
+                                  </tr>
+
                                   <tr>
                                     <td style="font-size: 12px !important;"><b>Satélites</b></td>
-                                    <td style="font-size: 12px !important;">7</td>
+                                    <td style="font-size: 12px !important;" id="satelites">7</td>
                                    
                                   </tr>
 
