@@ -31,6 +31,8 @@ $diasdetenido=$_REQUEST['diasdetenido'];
 $banderaMin=$_REQUEST['banderaMin'];
 $voltaje=$_REQUEST['voltaje'];
 
+$satelites=$_REQUEST['satelites'];
+$kilometros=$_REQUEST['kilometros'];
 /*$urlT = 'http://api.mymemory.translated.net/get';
 $query_array = array (
                     'q' =>$clima,
@@ -78,7 +80,9 @@ $client->emit('send-ubicacion', [
     "ultimap"=>$ultimap,
     "diasdetenido"=>$diasdetenido,
     "banderaMin"=>$banderaMin,
-    "voltaje"=>$voltaje
+    "voltaje"=>$voltaje,
+    "satelites"=>$satelites,
+    "kilometros"=>$kilometros
 
 ]);
 $client->close();

@@ -20,7 +20,7 @@
  
 
 
- // $id="5416447";
+  //$id="5416447";
 
 date_default_timezone_set("America/Mexico_City");
 
@@ -58,6 +58,7 @@ $satelites='position.satellites';
 $speed='position.speed';
 $fecha='timestamp';
 $text='position.latitude';
+$kilometrosR='vehicle.mileage';
 
 $key=0;
 
@@ -74,6 +75,8 @@ $seconds = $mil;
 $fechaserver=date("Y-m-d H:i:s", $seconds);
 $fechaSistema="Fecha actualización: ".date("d/m/Y H:i:s");
 
+$kilometros=$respuesta->result[$key]->{$kilometrosR};
+
 
 
 curl_setopt($ch, CURLOPT_URL, "https://flespi.io/gw/devices/$id/messages?data=%7B%22count%22%3A1%2C%22reverse%22%3Atrue%2C%22fields%22%3A%22%22%2C%22filter%22%3A%22battery.voltage%3E0%22%2C%22from%22%3A0%7D");
@@ -87,6 +90,8 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
 $string = curl_exec($ch);
 
 $respuesta=json_decode($string);
+
+
 
 
 
@@ -110,7 +115,9 @@ $voltaje=number_format($voltaje,2)."% ".$cargando;
         "pila"=>$bateria,
         "ultimaPosicion"=>$fechaserver,
         "velocidad"=>$velocidad,
-        "voltaje"=>$voltaje
+        "voltaje"=>$voltaje,
+        "satelites"=>$satelites,
+        "kilometros"=>$kilometros
                     
 
       );
