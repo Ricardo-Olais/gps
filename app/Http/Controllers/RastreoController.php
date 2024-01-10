@@ -179,6 +179,7 @@ class RastreoController extends Controller
 
           $soloMinutos=ltrim($currentDate->diff($ultimaDate)->format('%i'),"0");
           $bandera=$soloMinutos;
+          $bandera=0;
 
            if($soloDias==0){
 
@@ -203,9 +204,11 @@ class RastreoController extends Controller
                 if($soloMinutos>1){
 
                     $texto="Minutos";
+                    $bandera=$soloMinutos;
                 }else{
 
                     $texto="Minuto";
+                    $bandera=0;
                 }
 
                 
