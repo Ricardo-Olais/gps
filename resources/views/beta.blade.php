@@ -1197,11 +1197,11 @@ display: flex;
 
       <div class="row">
                 
-                     <div class="col s12 m2 l2" style="background-color: #fff;opacity:1;">
+                     <!--div class="col s12 m2 l2" style="background-color: #fff;opacity:1;">
 
                         <center><div id="velocimetro" style="min-width:150px; max-width:150px; height: 150px;"></div></center>
                       
-                      </div>
+                      </div-->
 
                        <div class="col s12 m2 l3" style="background-color: #fff;opacity: 1;">
 
@@ -1210,71 +1210,71 @@ display: flex;
 
                                 <tbody>
                                     <tr>
-                                    <td style="font-size: 12px !important;"><b>Nombre</b></td>
-                                    <td style="font-size: 12px !important;" id="tablealias">Ricardo Olais</td>
+                                    <td style="font-size: 14px !important;"><b>Nombre</b></td>
+                                    <td style="font-size: 14px !important;" id="tablealias">Ricardo Olais</td>
                                     
                                   </tr>
 
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Imei</b></td>
-                                    <td style="font-size: 12px !important;" id="tableimei">43434343fdfdf4343</td>
+                                    <td style="font-size: 14px !important;"><b>Imei</b></td>
+                                    <td style="font-size: 14px !important;" id="tableimei">43434343fdfdf4343</td>
                                     
                                   </tr>
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Estatus</b></td>
-                                    <td style="font-size: 12px !important;" id="tablestatus">Detenido</td>
+                                    <td style="font-size: 14px !important;"><b>Estatus</b></td>
+                                    <td style="font-size: 14px !important;" id="tablestatus">Detenido</td>
                                     
                                   </tr>
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Batería</b></td>
-                                    <td style="font-size: 12px !important;" id="tablebateria">75%</td>
+                                    <td style="font-size: 14px !important;"><b>Batería</b></td>
+                                    <td style="font-size: 14px !important;" id="tablebateria">75%</td>
                                     
                                   </tr>
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Velocidad</b></td>
-                                    <td style="font-size: 12px !important;" id="tablevelocidad">45 km/hra.</td>
+                                    <td style="font-size: 14px !important;"><b>Velocidad</b></td>
+                                    <td style="font-size: 14px !important;" id="tablevelocidad">45 km/hra.</td>
                                    
                                   </tr>
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Geocerca</b></td>
-                                    <td style="font-size: 12px !important;" id="tablegeo">500 mts.</td>
+                                    <td style="font-size: 14px !important;"><b>Geocerca</b></td>
+                                    <td style="font-size: 14px !important;" id="tablegeo">500 mts.</td>
                                    
                                   </tr>
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Última actualización</b></td>
-                                    <td style="font-size: 12px !important;" id="tableultimaAc">2023-10-11 14:00:00</td>
+                                    <td style="font-size: 14px !important;"><b>Última actualización</b></td>
+                                    <td style="font-size: 14px !important;" id="tableultimaAc">2023-10-11 14:00:00</td>
                                  
                                   </tr>
 
                                     <tr>
-                                    <td style="font-size: 12px !important;"><b>Última posición</b></td>
-                                    <td style="font-size: 12px !important;" id="tableultimapos">2023-10-11 12:00:00</td>
+                                    <td style="font-size: 14px !important;"><b>Última posición</b></td>
+                                    <td style="font-size: 14px !important;" id="tableultimapos">2023-10-11 12:00:00</td>
                                    
                                   </tr>
 
                                    </tr>
 
                                     <tr>
-                                    <td style="font-size: 12px !important;"><b>Kilómetros recorridos</b></td>
-                                    <td style="font-size: 12px !important;" id="kilos"></td>
+                                    <td style="font-size: 14px !important;"><b>Kilómetros recorridos</b></td>
+                                    <td style="font-size: 14px !important;" id="kilos"></td>
                                    
                                   </tr>
 
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Satélites</b></td>
-                                    <td style="font-size: 12px !important;" id="satelites">7</td>
+                                    <td style="font-size: 14px !important;"><b>Satélites</b></td>
+                                    <td style="font-size: 14px !important;" id="satelites">7</td>
                                    
                                   </tr>
 
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Clima</b></td>
-                                    <td style="font-size: 12px !important;" id="tableclima">Tormenta</td>
+                                    <td style="font-size: 14px !important;"><b>Clima</b></td>
+                                    <td style="font-size: 14px !important;" id="tableclima">Tormenta</td>
                                    
                                   </tr>
 
                                   <tr>
-                                    <td style="font-size: 12px !important;"><b>Temperatura</b></td>
-                                    <td style="font-size: 12px !important;" id="tabletemperatura">19 °C</td>
+                                    <td style="font-size: 14px !important;"><b>Temperatura</b></td>
+                                    <td style="font-size: 14px !important;" id="tabletemperatura">19 °C</td>
                                    
                                   </tr>
                                 </tbody>
