@@ -33,6 +33,10 @@ Route::get('/llc301', 'API\GpsController@llc301');
 
 Route::post('/ultimasdiez', 'API\GpsController@ultimasdiez');
 
+Route::get('/listacoordenadas', 'API\GpsController@listacoordenadas');
+
+
+
 
 Route::post('/flespi', 'API\FlespiGpsController@gps');
 
