@@ -54,10 +54,12 @@ class GpsController extends Controller
                 CONCAT ('[',longitud, ',',latitud,'],') as Coordenadas
 
                  from gpslocations_hist  
-                where (fecha_gps  >= '2022-09-26 22:00' AND fecha_gps  <= '2022-09-27 22:00')
-                AND numero='3e480337a87ede4d'
-                ORDER BY id_gps asc");
+               where (fecha_gps  >= '2024-01-13 08:00:00' AND fecha_gps  <= '2024-01-13 09:59:00')
+                AND numero='864032050080231'
+                ORDER BY id_gps asc LIMIT 10");
 
+
+       // print_r($consulta);
          for($i=0;$i<count($consulta);$i++){
      
             $datos.=$consulta[$i]->Coordenadas;
@@ -65,7 +67,7 @@ class GpsController extends Controller
          }
          $datos = substr($datos, 0, -1);
 
-          // $result = json_encode($datos);
+     
 
          return $datos;
 
