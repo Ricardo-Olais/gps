@@ -46,30 +46,35 @@ class GpsController extends Controller
         $fechaIni=$request->inicia;
         $fechaFin=$request->fin;
 
-         $datos="";
+         $datos=array();
 
 
         $consulta=DB::select("SELECT DISTINCT
 
-                CONCAT ('[',longitud, ',',latitud,'],') as Coordenadas
+                CONCAT (longitud, ',',latitud) as Coordenadas
 
                  from gpslocations_hist  
+
                where (fecha_gps  >= '2024-01-13 08:00:00' AND fecha_gps  <= '2024-01-13 09:59:00')
                 AND numero='864032050080231'
                 ORDER BY id_gps asc LIMIT 10");
 
 
+
        // print_r($consulta);
          for($i=0;$i<count($consulta);$i++){
      
-            $datos.=$consulta[$i]->Coordenadas;
+           // $datos.=$consulta[$i]->Coordenadas;
+
+            $datos[]=array($consulta[$i]->Coordenadas);
 
          }
-         $datos = substr($datos, 0, -1);
+        // $datos = substr($datos, 0, -1);
 
-     
 
-         return $datos;
+
+
+         return $result;
 
 
 
