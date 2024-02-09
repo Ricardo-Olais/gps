@@ -18,7 +18,7 @@
         background-image: url('img/fondoml.jpg');
 
     <?php } else{ ?>
-        background-image: url('img/car-driving-5.gif');
+        //background-image: url('img/car-driving-5.gif');
 
     <?php }  ?>
 
@@ -48,13 +48,22 @@
     width: 100%;
 }
 
-video {
-  position: fixfondoml.jpg
-  bottom: 0;
-  min-width: 105%;
-  min-height: 100%;
-  transform: translateX(calc((100% - 100vw) / 2));
-  z-index: -2;
+  #video{
+
+        width: 100%;
+        outline:none;
+        border:none;
+       
+       }
+
+       video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 105%;
+      min-height: 100%;
+      transform: translateX(calc((70% - 100vw) / 2));
+      z-index: -2;
 }
 </style>
 
@@ -108,6 +117,11 @@ $(document).ready(function () {
 </script>
 
  <div id="main">
+
+
+    <video src="images/file.mp4" autoplay="true" muted="true" loop="true" poster="images/loginf.jpg"></video>
+
+
  <!--video autoplay loop muted src="images/file.mp4" id="myVideo"></video-->
 
 
