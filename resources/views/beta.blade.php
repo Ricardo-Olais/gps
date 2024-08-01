@@ -213,7 +213,10 @@ path#ponteirop {
 }
 .modal { max-height: 100%; overflow: visible}
 
+.leaflet-popup{
 
+    opacity: .35 !important;
+}
 </style>
 
 
@@ -619,7 +622,7 @@ var botonesControl = L.control({position: 'topleft'}); // creación del contened
         var botones2 = L.DomUtil.create('div', 'class-css-botones-ubi');
      
 
-        botones2.innerHTML = `<div id="contubi" style="background-color:black;width:80%;padding:5px;border-radius:7px;margin-left: 20% !important;"><span id="miubicacion" style="color:#fff !important;font-size:0.95rem !important;"></span></div>`;
+        botones2.innerHTML = `<div id="contubi" style="background-color:#E7FCCF;width:80%;padding:5px;border-radius:12px;margin-left: 20% !important;opacity:.87;"><span id="miubicacion" style="color:#000 !important;font-size:0.95rem !important;"></span></div>`;
 
 
 
@@ -781,17 +784,17 @@ socket.on('ubicacion', function(msg) {
             var customIcon = new L.Icon({
               iconUrl: 'https://localizaminave.com.mx/img/'+msg.tipo,
               iconSize: [25, 36],
-              iconAnchor: [25, 7]
+              iconAnchor: [15, 10]
             });     
 
 
               var customIcon2 = new L.Icon({
-                  iconUrl: 'https://localizaminave.com.mx/img/globo.gif',
-                  iconSize: [80, 80],
-                  iconAnchor: [35, 60]
+                  iconUrl: 'https://localizaminave.com.mx/img/location.png',
+                  iconSize: [20, 20]
+                 // iconAnchor: [15, 10]
                 });
 
-             // console.log(msg.longitud_geocerca);
+             // console.log(msg.longit3d_g3ocerca);
 
                if(msg.fija==1){
 
@@ -819,7 +822,16 @@ socket.on('ubicacion', function(msg) {
 
             var textDetenido="";
 
-            textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
+            if(msg.diasdetenido=='Hace  Minuto'){
+
+                 textDetenido="<br><b style='color:#00bcd4;'>En movimiento</b> ";
+
+            }else{
+
+                textDetenido="<br><b style='color:red;'>DETENIDO</b> "+msg.diasdetenido;
+            }
+
+            
 
             /*if(msg.banderaMin>4 && msg.banderaMin<6){
 
@@ -959,13 +971,34 @@ socket.on('ubicacion', function(msg) {
           shadowSize: [41, 41]
         });
 
+        console.log("estoo"+browserLat);
+        te1=Number(19.461291);
+        //te2=Number();
+
 
         document.getElementById('ir-car').addEventListener('click', function() {
+
+            alert("abrir modal para ingresar fecha y generar la ruta");
+
         
-            routingControl=L.Routing.control({
+
+       // document.getElementById('ir-car').addEventListener('click', function() {
+        
+          /*  routingControl=L.Routing.control({
+             
+
               waypoints: [
-                L.latLng(browserLat, browserLong),
-                L.latLng(msg.longitud, msg.latitud)
+               // L.latLng(browserLat, browserLong),
+              //  L.latLng(msg.longitud, msg.latitud),
+               // L.latLng(19.461291,-99.215351),
+            
+                L.latLng(19.457682,-99.213769),
+L.latLng(19.457662,-99.213849),
+L.latLng(19.457449,-99.213938)
+
+
+
+
               ],
 
 
@@ -973,24 +1006,49 @@ socket.on('ubicacion', function(msg) {
                     if (i === 0 || i === nWps - 1) {
                       // here change the starting and ending icons
                       return L.marker(wp.latLng, {
-                        icon: greenIcon // here pass the custom marker icon instance
+                        icon: customIcon2 // here pass the custom marker icon instance
                       });
                     } else {
                       // here change all the others
                       return L.marker(wp.latLng, {
-                        icon: yourOtherCustomIconInstance
+                        icon: customIcon2
                       });
                     }
               },
               lineOptions: {
-                  styles: [{color:'#00bcd4', opacity: 1, weight: 5}]
+                  styles: [{color:'#00bcd4', opacity: 1, weight: 5}] //#00bcd4
                },
                autoRoute: true,
                fitSelectedRoutes: false,
 
-            }).addTo(map);
+            }).addTo(map);*/
+            $.get("api/listacoordenadas",
 
-            });
+                    function(data){
+
+                        console.log(data);
+
+
+            var datosconsulta = [
+                  [19.457682,-99.213769],[19.457662,-99.213849],[19.457449,-99.213938],[19.457,-99.214116],[19.456687,-99.21424],[19.456427,-99.21424],[19.45638,-99.214098],[19.456198,-99.213591],[19.455731,-99.21224],[19.45548,-99.211022]
+              ];
+
+              console.log(datosconsulta);
+
+            map.fitBounds(datosconsulta);
+            L.polyline(datosconsulta, {color:'#00bcd4',weight: 5}).addTo(map);
+
+
+
+                    },'html');
+
+
+
+
+
+     });
+
+          //  });
 
 
 
