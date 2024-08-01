@@ -1123,9 +1123,11 @@ display: flex;
 
           
                 <!--loadin de mapa-->
-            <div id="cargando" style="display:none;">
+            <center>
+            <div id="cargando" style="display:flex;justify-content: center;">
                 <img src="img/world.svg" style="position: absolute;z-index: 2000;" width="170">
             </div>
+        </center>
 
             
 
